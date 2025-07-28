@@ -80,16 +80,29 @@ def ocr_pdf_with_gemini(pdf_path: str) -> str:
         return ""
     cache = Cache("pdf_cache.json")
     try:
-        return ocr_text_extraction(pdf_path, gemini_service, cache)
+        # Combine page text so paragraphs can span across page boundaries
+        return ocr_text_extraction(pdf_path, gemini_service, cache, combine_pages=True)
     except Exception as e:
         logging.error(f"Failed during OCR for PDF '{pdf_path}': {e}")
         return ""
 
-def chunk_text(text: str, max_chars: int = 1000) -> list[str]:
-    """Splits text into semantic chunks."""
-    logging.info(f"Chunking text of length {len(text)} into chunks of max {max_chars} characters.")
+def chunk_text(text: str, max_chars: int = 1000, by_paragraph: bool = False) -> list[str]:
+    """Split text into chunks. If ``by_paragraph`` is True each paragraph is its own chunk."""
+    logging.info(
+        f"Chunking text of length {len(text)} using by_paragraph={by_paragraph} and max {max_chars} characters."
+    )
+
+    # Remove page break markers that may appear from OCR
+    text = re.sub(r"\n?-+ PAGE BREAK -+\n?", "\n\n", text)
+
+    paragraphs = [p.strip() for p in re.split(r"\n\s*\n", text) if p.strip()]
+
+    if by_paragraph:
+        logging.info(f"Created {len(paragraphs)} paragraph chunks.")
+        return paragraphs
+
     chunks, current_chunk = [], ""
-    for para in re.split(r'\n\s*\n', text):
+    for para in paragraphs:
         if len(current_chunk) + len(para) < max_chars:
             current_chunk += para + "\n\n"
         else:
@@ -154,7 +167,8 @@ def process_pdf(pdf_path: Path, root_dir: Path):
         logging.warning(f"Skipping '{relative_path}' due to text extraction failure.")
         return
 
-    chunks = chunk_text(text)
+    # Use paragraph-based chunking for better semantic separation
+    chunks = chunk_text(text, by_paragraph=True)
     if not chunks:
         logging.warning(f"Skipping '{relative_path}' as no text chunks were generated.")
         return

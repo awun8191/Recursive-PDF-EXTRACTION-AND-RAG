@@ -180,7 +180,8 @@ class CourseOutlineGenerator:
 
     def intelligent_chunking(self, text: str, max_chunk_size_words: int = 300, overlap_words: int = 50) -> List[str]:
         if not text.strip(): return []
-        paragraphs = re.split(r'\n\s*\n', text.strip())
+        cleaned = re.sub(r"\n?-+ PAGE BREAK -+\n?", "\n\n", text.strip())
+        paragraphs = re.split(r'\n\s*\n', cleaned)
         chunks, current_chunk = [], ""
         for para in paragraphs:
             if not para.strip(): continue

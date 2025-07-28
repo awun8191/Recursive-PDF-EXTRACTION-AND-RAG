@@ -36,3 +36,7 @@ provided.
 ## Gemini Service
 
 The project includes a `GeminiService` class in `Services/Gemini` which wraps the Google Generative AI client. It defaults to `gemini-2.5-flash` for generation and `gemini-2.5-flash-lite` for OCR. A custom Pydantic `GeminiConfig` model provides type-checked generation settings.
+
+## Paragraph-based Chunking
+
+Text extraction utilities now support paragraph-level chunking. The `ocr_text_extraction` helper can combine OCR output across pages (pass `combine_pages=True`) and `chunk_text` accepts a `by_paragraph` flag to return one chunk per paragraph.

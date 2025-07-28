@@ -96,9 +96,18 @@ def extract_engineering_content(content_type: str, text: str) -> Dict:
     return structured_content
 
 
-def ocr_text_extraction(file_path: str, gemini_service,
-                        cache: Cache | None = None) -> str:
-    """Perform OCR on a PDF and cache the results."""
+def ocr_text_extraction(
+    file_path: str,
+    gemini_service,
+    cache: Cache | None = None,
+    *,
+    combine_pages: bool = False,
+) -> str:
+    """Perform OCR on a PDF and cache the results.
+
+    If ``combine_pages`` is True the returned text will contain no page break markers,
+    allowing downstream paragraph-based chunking.
+    """
     cache_key = Path(file_path).stem
 
     if cache:
@@ -151,6 +160,9 @@ def ocr_text_extraction(file_path: str, gemini_service,
         except Exception as e:
             logging.warning(f"Failed to cache OCR results: {e}")
 
-    return "\n\n--- PAGE BREAK ---\n\n".join(
+    joined = "\n\n--- PAGE BREAK ---\n\n".join(
         pages_data[str(i + 1)]["text"] for i in range(len(images))
     )
+    if combine_pages:
+        joined = re.sub(r"\n?-+ PAGE BREAK -+\n?", "\n\n", joined)
+    return joined
