@@ -352,9 +352,10 @@ def main():
     try:
         with CourseOutlineGenerator(api_key="AIzaSyB1qxAZA6G327lxiaI8pwkFKYRe1JDRz0o") as generator:
             # --- CONFIGURATION ---
+            from config import load_config
+            config = load_config()
             document_sources = [
-                # # A local file
-                '/home/awun/Documents/UNDEFINED MAIN/StudyMaterials/StudyMaterials/500/CVL/1/CVE 503_ STRUCTURAL ENGINEERING/CVE 503 PQ.pdf',
+                config.document_source,
             ]
             force_reprocessing = False
 

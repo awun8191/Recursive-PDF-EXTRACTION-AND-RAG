@@ -7,12 +7,15 @@ from dotenv import load_dotenv
 import re
 import logging
 import json
+import argparse
+from config import load_config
 
 # --- Configuration ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 load_dotenv()
 logging.info("Attempting to load environment variables from .env file.")
+config = load_config()
 
 GOOGLE_API_KEY = "AIzaSyB1qxAZA6G327lxiaI8pwkFKYRe1JDRz0o"
 if not GOOGLE_API_KEY:
@@ -227,9 +230,16 @@ def get_embeddings_by_collection(collection_name: str):
 if __name__ == "__main__":
     logging.info("========== Script Execution Started ==========")
     if GOOGLE_API_KEY and chroma_client:
-        pdf_directory = "/home/awun/Documents/UNDEFINED MAIN/StudyMaterials/CIVIL/CIVIL 300 LEVEL/300 LVL FIRST SEMESTER/CVE 301_ BASIC CIVIL ENGINEERING"
-        logging.info(f"Target PDF directory: {pdf_directory}")
-        walk_and_process(pdf_directory)
+        parser = argparse.ArgumentParser(description="Process PDFs for embeddings")
+        parser.add_argument("--pdf-directory", default=config.pdf_directory, help="Directory containing PDFs")
+        args = parser.parse_args()
+
+        pdf_directory = args.pdf_directory
+        if not pdf_directory:
+            logging.error("PDF directory not specified.")
+        else:
+            logging.info(f"Target PDF directory: {pdf_directory}")
+            walk_and_process(pdf_directory)
 
         # Example usage of the new function:
         # if os.path.exists(COLLECTIONS_JSON_PATH):
