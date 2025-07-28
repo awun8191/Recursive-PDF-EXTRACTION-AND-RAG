@@ -2,6 +2,7 @@ import os
 import fitz  # PyMuPDF
 from pathlib import Path
 import google.generativeai as genai
+from Services import GeminiService
 import chromadb
 from dotenv import load_dotenv
 import re
@@ -17,6 +18,8 @@ load_dotenv()
 logging.info("Attempting to load environment variables from .env file.")
 config = load_config()
 
+gemini_service: GeminiService | None = None
+
 GOOGLE_API_KEY = "AIzaSyB1qxAZA6G327lxiaI8pwkFKYRe1JDRz0o"
 if not GOOGLE_API_KEY:
     logging.error("CRITICAL: GOOGLE_API_KEY not found in environment variables. Script cannot proceed.")
@@ -24,9 +27,9 @@ else:
     logging.info("Successfully loaded GOOGLE_API_KEY.")
     genai.configure(api_key=GOOGLE_API_KEY)
     logging.info("Google Generative AI SDK configured.")
+    gemini_service = GeminiService()
 
 EMBED_MODEL = "models/embedding-001"
-OCR_MODEL = "models/gemini-1.5-flash-latest"
 CHROMA_PATH = "./chromadb_storage"
 COLLECTIONS_JSON_PATH = "./collections.json"
 
@@ -80,21 +83,22 @@ def extract_text_from_pdf(pdf_path: str) -> str:
         return ""
 
 def ocr_pdf_with_gemini(pdf_path: str) -> str:
-    """Performs OCR on a PDF using Gemini."""
-    logging.info(f"Performing OCR on '{pdf_path}' using model '{OCR_MODEL}'.")
+    """Performs OCR on a PDF using :class:`GeminiService`."""
+    if gemini_service is None:
+        logging.error("Gemini service not initialized.")
+        return ""
+    logging.info(f"Performing OCR on '{pdf_path}' using GeminiService.")
     try:
         doc = fitz.open(pdf_path)
-        model = genai.GenerativeModel(OCR_MODEL)
-        prompt = "Extract all text from this document image."
-        images = []
-        for i, page in enumerate(doc):
-            pix = page.get_pixmap()
-            images.append({"mime_type": "image/png", "data": pix.tobytes("png")})
-
-        logging.info(f"Sending {len(images)} pages to Gemini for OCR...")
-        response = model.generate_content([prompt] + images, generation_config={"temperature": 0.3})
-        logging.info(f"Successfully received OCR text of length {len(response.text)} from Gemini.")
-        return response.text
+        images = [
+            {"mime_type": "image/png", "data": page.get_pixmap().tobytes("png")}
+            for page in doc
+        ]
+        prompt = (
+            "Extract all text from this document image and return JSON as {\"text\": \"<content>\"}."
+        )
+        result = gemini_service.ocr(images, prompt=prompt)
+        return result.get("text", "") if isinstance(result, dict) else ""
     except Exception as e:
         logging.error(f"Failed during OCR for PDF '{pdf_path}': {e}")
         return ""

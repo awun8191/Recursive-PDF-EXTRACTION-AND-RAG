@@ -32,3 +32,7 @@ example:
 
 All scripts will fall back to these settings when command-line arguments are not
 provided.
+
+## Gemini Service
+
+The project includes a `GeminiService` class in `Services/Gemini` which wraps the Google Generative AI client. It defaults to `gemini-2.5-flash` for generation and `gemini-2.5-flash-lite` for OCR. A custom Pydantic `GeminiConfig` model provides type-checked generation settings.
