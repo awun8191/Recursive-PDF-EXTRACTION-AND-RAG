@@ -45,10 +45,11 @@ if GOOGLE_API_KEY:
 
 # --- Core Functions ---
 
-def pdf_needs_ocr(pdf_path: str, text_threshold: int = 50, page_threshold: float = 0.9) -> bool:
-    """Determines if a PDF likely requires OCR."""
-# The reason for the text threshold of 50 is to account for documents that are short like presentations
-    logging.info(f"Analyzing text content of '{pdf_path}' to determine if OCR is needed.")
+def pdf_needs_ocr(pdf_path: str, image_ratio_threshold: float = 0.85) -> bool:
+    """Determine if a PDF requires OCR by checking how many pages are images."""
+    logging.info(
+        f"Analyzing pages of '{pdf_path}' to determine if OCR is needed based on image ratio."
+    )
     try:
         doc = fitz.open(pdf_path)
         total_pages = len(doc)
@@ -56,18 +57,21 @@ def pdf_needs_ocr(pdf_path: str, text_threshold: int = 50, page_threshold: float
             logging.warning(f"PDF '{pdf_path}' has no pages.")
             return False
 
-        low_text_pages = 0
-        for page_num, page in enumerate(doc):
-            text = page.get_text().strip()
-            if len(text) < text_threshold:
-                low_text_pages += 1
+        image_pages = 0
+        for page in doc:
+            has_images = len(page.get_images()) > 0
+            has_text = bool(page.get_text().strip())
+            if has_images and not has_text:
+                image_pages += 1
 
-        ratio = low_text_pages / total_pages
-        logging.info(f"PDF '{pdf_path}' has {low_text_pages}/{total_pages} pages with less than {text_threshold} characters of text (Ratio: {ratio:.2f}). Page threshold is {page_threshold}.")
+        ratio = image_pages / total_pages
+        logging.info(
+            f"PDF '{pdf_path}' has {image_pages}/{total_pages} pages that appear to be images (Ratio: {ratio:.2f}). Threshold: {image_ratio_threshold}."
+        )
 
-        return ratio >= page_threshold
+        return ratio >= image_ratio_threshold
     except Exception as e:
-        logging.error(f"Could not analyze PDF '{pdf_path}' for text content: {e}")
+        logging.error(f"Could not analyze PDF '{pdf_path}' for image content: {e}")
         return False
 
 def extract_text_from_pdf(pdf_path: str) -> str:
