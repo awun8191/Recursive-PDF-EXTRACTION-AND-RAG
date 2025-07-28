@@ -42,8 +42,9 @@ if GOOGLE_API_KEY:
 
 # --- Core Functions ---
 
-def pdf_needs_ocr(pdf_path: str, text_threshold: int = 100, page_threshold: float = 0.9) -> bool:
+def pdf_needs_ocr(pdf_path: str, text_threshold: int = 50, page_threshold: float = 0.9) -> bool:
     """Determines if a PDF likely requires OCR."""
+# The reason for the text threshold of 50 is to account for documents that are short like presentations
     logging.info(f"Analyzing text content of '{pdf_path}' to determine if OCR is needed.")
     try:
         doc = fitz.open(pdf_path)
