@@ -6,7 +6,7 @@ import json
 import time
 
 from sampleData import DataFormatting
-from open_router import generate_multiple_topics
+from ais.open_router import generate_multiple_topics
 from config import load_config
 
 config = load_config()
