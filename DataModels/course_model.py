@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 from typing import List, Dict
 
-from PdfQuestionGeneration.DataModels.course_outline import CourseOutline
+from .course_outline import CourseOutline
 
 
 class CourseModel(BaseModel):

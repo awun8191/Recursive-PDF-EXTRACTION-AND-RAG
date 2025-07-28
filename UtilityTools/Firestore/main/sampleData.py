@@ -36,7 +36,9 @@ class DataFormatting:
 
 
     def _read_json(self):
-        with open("/home/awun/Documents/UNDEFINED MAIN/Scripts/SampleData/firebase/Firestore/data/courses.json") as courses_file:
+        from config import load_config
+        config = load_config()
+        with open(config.courses_json_path) as courses_file:
             data = json.load(courses_file)
 
         return data

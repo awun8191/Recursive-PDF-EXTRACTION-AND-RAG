@@ -7,9 +7,10 @@ import time
 
 from sampleData import DataFormatting
 from open_router import generate_multiple_topics
+from config import load_config
 
-# Path for the cache file
-PROCESSED_COURSES_CACHE = "/home/awun/Documents/UNDEFINED MAIN/Scripts/SampleData/firebase/Firestore/processed_courses.json"
+config = load_config()
+PROCESSED_COURSES_CACHE = config.processed_courses_cache
 
 class FirestoreManager:
     def __init__(self, service_account_path):
@@ -102,6 +103,5 @@ class FirestoreManager:
 
 
 if __name__ == "__main__":
-    manager = FirestoreManager(
-        service_account_path="/home/awun/Firebase/undefined/do_not_delete_undefined_325e.json")
+    manager = FirestoreManager(service_account_path=config.firestore_service_account)
     manager.create_course_data()

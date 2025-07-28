@@ -48,8 +48,12 @@ class TransferDB:
 
 
 
-transfer_service_account_path = "/home/awun/Firebase/undefined/do_not_delete_undefined_325e.json"
-reciving_service_account_path = "/home/awun/Downloads/engineering-hub-7e5e1-firebase-adminsdk-fbsvc-deccf768c7.json"
+from config import load_config
+
+config = load_config()
+
+transfer_service_account_path = config.transfer_service_account_path
+reciving_service_account_path = config.reciving_service_account_path
 
 transferDB = TransferDB(transfer_db_service_account_path=transfer_service_account_path, recieving_db_service_account_path=reciving_service_account_path)
 data = transferDB.get_collection_data("course_data")

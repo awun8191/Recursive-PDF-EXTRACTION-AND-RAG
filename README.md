@@ -1,1 +1,34 @@
 # Recursive-PDF-EXTRACTION-AND-RAG
+
+## Configuration
+
+Paths used by the scripts are now configurable via environment variables or a
+`config.json` file in the repository root. Environment variables override values
+from the JSON file.
+
+Supported options:
+
+| Variable | Description |
+| -------- | ----------- |
+| `FIRESTORE_SERVICE_ACCOUNT` | Path to the Firestore service account JSON file |
+| `PDF_DIRECTORY` | Default directory containing PDFs for `main.py` |
+| `PROCESSED_COURSES_CACHE` | Location of the processed courses cache |
+| `COURSES_JSON_PATH` | Path to the courses JSON used by sample data loader |
+| `TRANSFER_SERVICE_ACCOUNT` | Service account for the transfer utility |
+| `RECEIVING_SERVICE_ACCOUNT` | Receiving database service account |
+| `SAMPLE_PDF_PATH` | Sample PDF path for tests |
+| `DOCUMENT_SOURCE` | Document source path for course outline generator |
+| `TEST_DIRECTORY` | Directory used by the RAG test script |
+
+Create a `config.json` with any of these keys to supply default values. For
+example:
+
+```json
+{
+  "PDF_DIRECTORY": "/data/pdfs",
+  "FIRESTORE_SERVICE_ACCOUNT": "/path/to/service.json"
+}
+```
+
+All scripts will fall back to these settings when command-line arguments are not
+provided.
