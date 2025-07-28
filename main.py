@@ -10,6 +10,8 @@ import logging
 import json
 import argparse
 from config import load_config
+from Services.UtilityTools.Caching.cache import Cache
+from Services.RAG.helpers import is_image_focused, ocr_text_extraction
 
 # --- Configuration ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -46,30 +48,15 @@ if GOOGLE_API_KEY:
 # --- Core Functions ---
 
 def pdf_needs_ocr(pdf_path: str, image_ratio_threshold: float = 0.85) -> bool:
-    """Determine if a PDF requires OCR by checking how many pages are images."""
-    logging.info(
-        f"Analyzing pages of '{pdf_path}' to determine if OCR is needed based on image ratio."
-    )
+    """Determine if a PDF requires OCR using cached analysis when possible."""
+    cache = Cache("pdf_cache.json")
     try:
-        doc = fitz.open(pdf_path)
-        total_pages = len(doc)
-        if total_pages == 0:
-            logging.warning(f"PDF '{pdf_path}' has no pages.")
-            return False
-
-        image_pages = 0
-        for page in doc:
-            has_images = len(page.get_images()) > 0
-            has_text = bool(page.get_text().strip())
-            if has_images and not has_text:
-                image_pages += 1
-
-        ratio = image_pages / total_pages
-        logging.info(
-            f"PDF '{pdf_path}' has {image_pages}/{total_pages} pages that appear to be images (Ratio: {ratio:.2f}). Threshold: {image_ratio_threshold}."
-        )
-
-        return ratio >= image_ratio_threshold
+        result = is_image_focused(pdf_path, text_threshold=100, cache=cache)
+        if result:
+            logging.info(f"'{pdf_path}' likely requires OCR.")
+        else:
+            logging.info(f"'{pdf_path}' can be processed with direct text extraction.")
+        return result
     except Exception as e:
         logging.error(f"Could not analyze PDF '{pdf_path}' for image content: {e}")
         return False
@@ -87,22 +74,13 @@ def extract_text_from_pdf(pdf_path: str) -> str:
         return ""
 
 def ocr_pdf_with_gemini(pdf_path: str) -> str:
-    """Performs OCR on a PDF using :class:`GeminiService`."""
+    """Performs OCR on a PDF using :class:`GeminiService` with caching."""
     if gemini_service is None:
         logging.error("Gemini service not initialized.")
         return ""
-    logging.info(f"Performing OCR on '{pdf_path}' using GeminiService.")
+    cache = Cache("pdf_cache.json")
     try:
-        doc = fitz.open(pdf_path)
-        images = [
-            {"mime_type": "image/png", "data": page.get_pixmap().tobytes("png")}
-            for page in doc
-        ]
-        prompt = (
-            "Extract all text from this document image and return JSON as {\"text\": \"<content>\"}."
-        )
-        result = gemini_service.ocr(images, prompt=prompt)
-        return result.get("text", "") if isinstance(result, dict) else ""
+        return ocr_text_extraction(pdf_path, gemini_service, cache)
     except Exception as e:
         logging.error(f"Failed during OCR for PDF '{pdf_path}': {e}")
         return ""
