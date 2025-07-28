@@ -8,8 +8,8 @@ import google.generativeai as genAI
 import chromadb
 import fitz
 
-from PdfQuestionGeneration.DataModels.file_data_model import FileDataModel
-from PdfQuestionGeneration.Services.UtilityTools.Caching.cache import Cache
+from ...DataModels.file_data_model import FileDataModel
+from ..UtilityTools.Caching.cache import Cache
 
 GOOGLE_API_KEY = "AIzaSyB1qxAZA6G327lxiaI8pwkFKYRe1JDRz0o"
 OCR_MODEL = "gemini-2.5-flash-lite"
