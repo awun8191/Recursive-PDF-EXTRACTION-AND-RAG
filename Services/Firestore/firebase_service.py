@@ -1,11 +1,10 @@
 import firebase_admin
 from firebase_admin import credentials, firestore
-from typing import List, Optional
-
-from PdfQuestionGeneration.DataModels.course_model import CourseModel, CourseData
-from PdfQuestionGeneration.DataModels.question_model import Question
-from PdfQuestionGeneration.DataModels.document_model import Document
+from ...DataModels.course_model import CourseModel, CourseData
+from ...DataModels.question_model import Question
+from ...DataModels.document_model import Documen 
 from config import load_config
+
 
 class FireStore:
     _instance = None
