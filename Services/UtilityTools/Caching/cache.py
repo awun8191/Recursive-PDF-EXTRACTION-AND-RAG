@@ -3,16 +3,26 @@ import logging
 import os
 
 class Cache:
-    """A class to handle JSON-based caching operations."""
+    """A simple JSON file based cache utility."""
 
     def __init__(self, cache_file: str = "Text-Cache.json"):
+        """Create a new cache manager.
+
+        Parameters
+        ----------
+        cache_file:
+            Path to the JSON file used for storing cached data.
+        """
+
         self.cache_file_name = cache_file
         self.logger = logging.getLogger(__name__)
 
     def __enter__(self):
+        """Enable usage as a context manager."""
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
+        """Handle context manager exit, logging any exception."""
         if exc_type is not None:
             self.logger.error(f"Error occurred: {exc_val}")
         return False
