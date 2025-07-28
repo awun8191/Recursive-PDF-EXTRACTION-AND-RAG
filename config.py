@@ -6,6 +6,8 @@ CONFIG_FILE = os.getenv('CONFIG_FILE', 'config.json')
 
 @dataclass
 class Config:
+    """Holds configurable paths and credentials for the project."""
+
     firestore_service_account: str = os.getenv('FIRESTORE_SERVICE_ACCOUNT', '')
     pdf_directory: str = os.getenv('PDF_DIRECTORY', '')
     processed_courses_cache: str = os.getenv('PROCESSED_COURSES_CACHE', '')
@@ -18,6 +20,8 @@ class Config:
 
 
 def load_config() -> Config:
+    """Load configuration from environment variables and ``config.json``."""
+
     config = Config()
     if os.path.exists(CONFIG_FILE):
         try:

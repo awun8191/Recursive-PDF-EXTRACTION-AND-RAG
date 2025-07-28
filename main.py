@@ -1,3 +1,5 @@
+"""Utility for ingesting PDFs into ChromaDB with optional OCR."""
+
 import os
 import fitz  # PyMuPDF
 from pathlib import Path
@@ -20,6 +22,7 @@ load_dotenv()
 logging.info("Attempting to load environment variables from .env file.")
 config = load_config()
 
+# Will be initialised once the API key is confirmed available
 gemini_service: GeminiService | None = None
 
 GOOGLE_API_KEY = "AIzaSyB1qxAZA6G327lxiaI8pwkFKYRe1JDRz0o"
@@ -31,8 +34,11 @@ else:
     logging.info("Google Generative AI SDK configured.")
     gemini_service = GeminiService()
 
+# Model used when creating text embeddings for the ChromaDB documents
 EMBED_MODEL = "models/embedding-001"
+# Directory where ChromaDB will persist its data
 CHROMA_PATH = "./chromadb_storage"
+# Metadata about processed PDF collections is stored here
 COLLECTIONS_JSON_PATH = "./collections.json"
 
 # --- ChromaDB Client ---
@@ -48,7 +54,15 @@ if GOOGLE_API_KEY:
 # --- Core Functions ---
 
 def pdf_needs_ocr(pdf_path: str, image_ratio_threshold: float = 0.85) -> bool:
-    """Determine if a PDF requires OCR using cached analysis when possible."""
+    """Determine if a PDF requires OCR.
+
+    Parameters
+    ----------
+    pdf_path:
+        Path to the PDF file that will be analysed.
+    image_ratio_threshold:
+        Minimum ratio of image-only pages before OCR is triggered.
+    """
     cache = Cache("pdf_cache.json")
     try:
         result = is_image_focused(pdf_path, text_threshold=100, cache=cache)
@@ -62,7 +76,7 @@ def pdf_needs_ocr(pdf_path: str, image_ratio_threshold: float = 0.85) -> bool:
         return False
 
 def extract_text_from_pdf(pdf_path: str) -> str:
-    """Extracts text from a standard PDF."""
+    """Extract text from a standard, text-based PDF file."""
     logging.info(f"Extracting text directly from '{pdf_path}'.")
     try:
         doc = fitz.open(pdf_path)
