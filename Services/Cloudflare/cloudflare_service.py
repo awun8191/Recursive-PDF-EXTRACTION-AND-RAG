@@ -1,7 +1,10 @@
 import boto3
 import os
+from typing import Optional
 from botocore.client import Config
 from botocore.exceptions import NoCredentialsError, PartialCredentialsError
+from DataModels.document_model import Document
+from DataModels.file_data_model import FileDataModel
 
 class CloudflareR2:
     def __init__(self):
@@ -21,13 +24,24 @@ class CloudflareR2:
             config=Config(signature_version='s3v4')
         )
 
-    def upload_file(self, file_path: str, file_name: str) -> str:
-        """Uploads a file to Cloudflare R2 and returns its public URL."""
+    def upload_file(
+        self,
+        file_path: str,
+        file_name: str,
+        metadata: Optional[FileDataModel] = None,
+    ) -> Document:
+        """Uploads a file to Cloudflare R2 and returns a Document with metadata."""
         try:
-            self.s3_client.upload_file(file_path, self.bucket_name, file_name)
+            metadata_dict = metadata.dict() if metadata else {}
+            metadata_dict.setdefault("file_path", file_path)
+            extra_args = {"Metadata": metadata_dict} if metadata_dict else None
+            self.s3_client.upload_file(
+                file_path, self.bucket_name, file_name, ExtraArgs=extra_args
+            )
             # Updated to use the free Cloudflare domain pattern
             public_url = f"https://{self.bucket_name}.{self.account_id}.r2.dev/{file_name}"
-            return public_url
+            document_data = {**metadata_dict, "file_name": file_name, "cloudflare_url": public_url}
+            return Document(**document_data)
         except (NoCredentialsError, PartialCredentialsError):
             print("Error: AWS credentials not found.")
             raise
@@ -45,8 +59,16 @@ if __name__ == "__main__":
             f.write("This is a test file.")
         
         try:
-            url = r2_service.upload_file("test.txt", "test.txt")
-            print(f"File uploaded successfully. URL: {url}")
+            metadata = FileDataModel(
+                file_path="test.txt",
+                course_code="TEST101",
+                department="TEST",
+                level="100",
+                semester="1",
+                type="lecture",
+            )
+            doc = r2_service.upload_file("test.txt", "test.txt", metadata=metadata)
+            print(f"File uploaded successfully. URL: {doc.cloudflare_url}")
         except Exception as e:
             print(f"Upload failed: {e}")
         finally:
