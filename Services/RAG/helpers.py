@@ -18,17 +18,25 @@ def open_pdf(file_path: str) -> fitz.Document:
 
 def is_image_focused(file_path: str, text_threshold: int = 100,
                      cache: Cache | None = None) -> bool:
-    """Determine if a PDF likely requires OCR."""
+    """Determine if a PDF is primarily composed of image-only pages.
+
+    The ``text_threshold`` parameter is retained for backwards compatibility but
+    is ignored. A page is considered "image only" when it contains at least one
+    image and no text. If more than ``ACCEPTABLE_TEXT_PERCENTAGE`` (85% by
+    default) of pages are image-only, the PDF is treated as requiring OCR.
+    """
     cache_key = f"analysis_{Path(file_path).stem}"
     doc = open_pdf(file_path)
     total_pages = len(doc)
 
-    low_text_pages = 0
+    image_only_pages = 0
     for page in doc:
-        if len(page.get_text().strip()) < text_threshold:
-            low_text_pages += 1
+        has_text = bool(page.get_text().strip())
+        has_image = bool(page.get_images(full=True))
+        if not has_text and has_image:
+            image_only_pages += 1
 
-    ratio = low_text_pages / total_pages if total_pages else 0
+    ratio = image_only_pages / total_pages if total_pages else 0
     result = ratio >= ACCEPTABLE_TEXT_PERCENTAGE
 
     if cache:
@@ -37,7 +45,7 @@ def is_image_focused(file_path: str, text_threshold: int = 100,
                 "file_path": str(file_path),
                 "requires_ocr": result,
                 "total_pages": total_pages,
-                "low_text_pages": low_text_pages,
+                "image_only_pages": image_only_pages,
                 "ratio": ratio,
                 "timestamp": str(Path(file_path).stat().st_mtime),
             }
