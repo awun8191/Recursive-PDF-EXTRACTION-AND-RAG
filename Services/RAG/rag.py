@@ -21,22 +21,30 @@ class RAG:
     
     def __init__(self):
         self.cache = Cache(cache_file="pdf_cache.json")
-        self.gemini = genAI.configure(
-            api_key=GOOGLE_API_KEY
-        )
-        # Add geniAI config
+        # Configure the Google Generative AI client
         genAI.configure(api_key=GOOGLE_API_KEY)
-        self.geniAi_config = {
-            "temperature": 0.1,
-            "max_output_tokens": 4000,
-            "top_p": 0.8,
-            "safety_settings": [
-                {
-                    "category": "HARM_CATEGORY_DEROGATORY",
-                    "threshold": "BLOCK_LOW_AND_ABOVE"
-                }
-            ]
-        }
+
+        # Default generation configuration used for all model calls
+        self.generation_config = genAI.types.GenerationConfig(
+            temperature=0.1,
+            max_output_tokens=4000,
+            top_p=0.8,
+        )
+
+        # Safety settings recommended by the SDK documentation
+        self.safety_settings = [
+            {
+                "category": genAI.types.HarmCategory.HARM_CATEGORY_DEROGATORY,
+                "threshold": genAI.types.HarmBlockThreshold.BLOCK_LOW_AND_ABOVE,
+            }
+        ]
+
+        # Pre-instantiate the OCR model with the above configuration
+        self.gemini_model = genAI.GenerativeModel(
+            OCR_MODEL,
+            generation_config=self.generation_config,
+            safety_settings=self.safety_settings,
+        )
         self.current_docs = None
         self.file_data: FileDataModel = None
 
@@ -237,7 +245,7 @@ class RAG:
             logging.warning(f"Cache check failed for OCR: {e}")
 
         try:
-            gemini_ocr = genAI.GenerativeModel(OCR_MODEL)
+            gemini_ocr = self.gemini_model
             prompt = """
             You are an expert engineering document OCR system. Extract all content from this engineering PDF page with high precision.
 
@@ -273,11 +281,8 @@ class RAG:
                     try:
                         response = gemini_ocr.generate_content(
                             contents=[prompt, img],
-                            generation_config=genAI.types.GenerationConfig(
-                                temperature=0.1,
-                                max_output_tokens=4000,
-                                top_p=0.8
-                            ),
+                            generation_config=self.generation_config,
+                            safety_settings=self.safety_settings,
                         )
                         # print(response.text)
                         if not response.candidates:
