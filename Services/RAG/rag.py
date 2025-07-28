@@ -620,10 +620,12 @@ class RAG:
 
 
 if __name__ == '__main__':
+    from config import load_config
+    config = load_config()
     rag = RAG()
-    
+
     # Test the enhanced OCR system
-    test_directory = "/home/awun/Documents/UNDEFINED MAIN/StudyMaterials/textbooks/200"
+    test_directory = config.test_directory
     processed_files = rag.get_files_from_directory(test_directory)
 
     if processed_files:
@@ -636,5 +638,6 @@ if __name__ == '__main__':
     else:
         print("No files processed successfully.")
 
-    # ocr = rag.ocr_text_extraction("/home/awun/Documents/UNDEFINED MAIN/StudyMaterials/textbooks/400/CHE/1/CHE 417/plant design note.pdf")
+    # Example OCR call
+    # ocr = rag.ocr_text_extraction(config.sample_pdf_path)
     # print(ocr)

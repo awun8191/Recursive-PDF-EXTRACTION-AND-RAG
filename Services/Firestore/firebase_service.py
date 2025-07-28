@@ -1,10 +1,10 @@
 import firebase_admin
 from firebase_admin import credentials, firestore
-from typing import List, Optional
-
 from ...DataModels.course_model import CourseModel, CourseData
 from ...DataModels.question_model import Question
-from ...DataModels.document_model import Document
+from ...DataModels.document_model import Documen 
+from config import load_config
+
 
 class FireStore:
     _instance = None
@@ -16,8 +16,10 @@ class FireStore:
 
     def __init__(self):
         if not firebase_admin._apps:
+            config = load_config()
             try:
-                cred = credentials.Certificate("/home/awun/Documents/UNDEFINED MAIN/Scripts/PdfQuestionGeneration/Services/Firestore/service_token.json")
+                cred_path = config.firestore_service_account
+                cred = credentials.Certificate(cred_path)
                 firebase_admin.initialize_app(cred)
                 self.db = firestore.client()
                 print("Firebase initialized successfully.")
