@@ -1,0 +1,15 @@
+boto3==1.39.14
+botocore==1.39.14
+chromadb==1.0.15
+firebase_admin==7.0.0
+fitz==0.0.1.dev2
+openai==1.97.1
+pdf2image==1.17.0
+Pillow==11.3.0
+pillow_heif==1.0.0
+protobuf==6.31.1
+pydantic==2.11.7
+pypdf==5.9.0
+pytesseract==0.3.13
+python-dotenv==1.1.1
+Requests==2.32.4
