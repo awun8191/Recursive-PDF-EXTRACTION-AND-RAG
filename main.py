@@ -220,7 +220,10 @@ def walk_and_process(root_dir_str: str):
         return
 
     logging.info(f"Starting PDF processing in directory: {root_dir}")
-    pdf_files = list(root_dir.rglob("*.pdf"))
+    pdf_files = [
+        p for p in root_dir.rglob("*")
+        if p.is_file() and p.suffix.lower() == ".pdf"
+    ]
     logging.info(f"Found {len(pdf_files)} PDF files to process.")
     for path in pdf_files:
         process_pdf(path, root_dir)
