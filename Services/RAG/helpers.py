@@ -20,10 +20,12 @@ def is_image_focused(file_path: str, text_threshold: int = 100,
                      cache: Cache | None = None) -> bool:
     """Determine if a PDF is primarily composed of image-only pages.
 
-    The ``text_threshold`` parameter is retained for backwards compatibility but
-    is ignored. A page is considered "image only" when it contains at least one
-    image and no text. If more than ``ACCEPTABLE_TEXT_PERCENTAGE`` (85% by
-    default) of pages are image-only, the PDF is treated as requiring OCR.
+    ``text_threshold`` defines the minimum length of text for a page to be
+    considered text-based. A page is considered "image only" when the length of
+    its extracted text (``len(page.get_text().strip())``) is below this
+    threshold and the page contains at least one image. If more than
+    ``ACCEPTABLE_TEXT_PERCENTAGE`` (85% by default) of pages are image-only, the
+    PDF is treated as requiring OCR.
     """
     cache_key = f"analysis_{Path(file_path).stem}"
     doc = open_pdf(file_path)
@@ -31,9 +33,9 @@ def is_image_focused(file_path: str, text_threshold: int = 100,
 
     image_only_pages = 0
     for page in doc:
-        has_text = bool(page.get_text().strip())
+        text_length = len(page.get_text().strip())
         has_image = bool(page.get_images(full=True))
-        if not has_text and has_image:
+        if text_length < text_threshold and has_image:
             image_only_pages += 1
 
     ratio = image_only_pages / total_pages if total_pages else 0
