@@ -61,10 +61,12 @@ class GeminiService:
                   response_model: Optional[Type[T]] = None) -> T | Dict[str, Any]:
         """Internal helper to perform a generation request."""
 
+        print(type(response_model))
         gen_config = self._to_generation_config(generation_config)
         gen_model = genai.GenerativeModel(model, generation_config=gen_config)
         response = gen_model.generate_content(list(parts))
         data = json.loads(response.text)
+        print(data)
         if response_model:
             return response_model.model_validate(data)
         return data
@@ -90,11 +92,25 @@ class GeminiService:
         :class:`~DataModels.ocr_data_model.OCRData` which simply contains a
         ``text`` field with the extracted content.
         """
-
+        print("Began OCR")
         parts = [prompt] + images
+        print(f"Parts: {parts[0]}")
+        print(type(response_model))
+        generation_config = GeminiConfig(
+            temperature=0.9,
+            response_schema = OCRData,
+            top_p=0,
+            max_output_tokens=8000,
+        top_k=None, )
         return self._generate(
             parts,
             model or self.ocr_model,
             generation_config,
             response_model or OCRData,
         )
+
+
+
+if __name__ == "main":
+    gem = GeminiService()
+    i = gem.ocr()

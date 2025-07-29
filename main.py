@@ -95,6 +95,7 @@ def ocr_pdf_with_gemini(pdf_path: str) -> str:
     :class:`~DataModels.ocr_data_model.OCRData`. Extracted text from all pages is
     returned as a single string separated by ``--- PAGE BREAK ---`` markers.
     """
+    print("Starting OCR")
     if gemini_service is None:
         logging.error("Gemini service not initialized.")
         return ""
@@ -106,7 +107,9 @@ def ocr_pdf_with_gemini(pdf_path: str) -> str:
                 "mime_type": "image/png",
                 "data": page.get_pixmap(dpi=400).tobytes("png"),
             }
+            # print(img)
             ocr_result: OCRData = gemini_service.ocr([img])
+            print(ocr_result)
             pages_text.append(ocr_result.text)
         return "\n\n--- PAGE BREAK ---\n\n".join(pages_text)
     except Exception as e:
