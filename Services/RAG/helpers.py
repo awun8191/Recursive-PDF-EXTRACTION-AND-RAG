@@ -1,7 +1,7 @@
 import logging
 import re
 from pathlib import Path
-from typing import Dict
+
 
 import fitz
 
@@ -9,6 +9,10 @@ from ..UtilityTools.Caching.cache import Cache
 
 ACCEPTABLE_TEXT_PERCENTAGE = 0.85
 CACHE_FILE = "pdf_cache.json"
+OCR_PROMPT = (
+    "Extract all text from this document image. "
+    "Use step-by-step reasoning for higher accuracy and return only the text."
+)
 
 
 def open_pdf(file_path: str) -> fitz.Document:
@@ -58,46 +62,6 @@ def is_image_focused(file_path: str, text_threshold: int = 100,
     return result
 
 
-def validate_latex_expressions(text: str) -> str:
-    corrections = {
-        r"\(\s*([^\)]+)\s*\)": r"$\1$",
-        r"\[\s*([^\]]+)\s*\]": r"$$\1$$",
-        r"\\frac\{([^{}]+)\}\{([^{}]+)\}": r"\\frac{\1}{\2}",
-        r"\\sum_\{([^{}]+)\}": r"\\sum_{\1}",
-        r"\\int_\{([^{}]+)\}": r"\\int_{\1}",
-    }
-    for pattern, replacement in corrections.items():
-        text = re.sub(pattern, replacement, text)
-    return text
-
-
-def extract_engineering_content(content_type: str, text: str) -> Dict:
-    structured_content = {
-        "type": content_type,
-        "raw_text": text,
-        "equations": [],
-        "tables": [],
-        "diagrams": [],
-        "code_snippets": [],
-    }
-    equation_pattern = r"\$([^$]+)\$|\$\$([^$]+)\$\$"
-    equations = re.findall(equation_pattern, text)
-    structured_content["equations"] = [eq[0] if eq[0] else eq[1] for eq in equations]
-
-    table_pattern = r"\|(.+)\|[\r\n]+\|[-:\| ]+\|[\r\n]+((?:\|.+\|[\r\n]*)+)"
-    tables = re.findall(table_pattern, text)
-    structured_content["tables"] = [
-        {"headers": t[0], "rows": t[1]} for t in tables
-    ]
-
-    code_pattern = r"```(\w+)?\n(.*?)```"
-    code_snippets = re.findall(code_pattern, text, re.DOTALL)
-    structured_content["code_snippets"] = [
-        {"language": lang or "text", "code": code} for lang, code in code_snippets
-    ]
-    return structured_content
-
-
 def ocr_text_extraction(
     file_path: str,
     gemini_service,
@@ -135,15 +99,13 @@ def ocr_text_extraction(
         page_num = str(idx + 1)
         text = ""
         try:
-            response = gemini_service.ocr([img])
+            response = gemini_service.ocr([img], prompt=OCR_PROMPT)
             text = response.get("text", "") if isinstance(response, dict) else ""
-            text = validate_latex_expressions(text)
         except Exception as e:
             logging.error(f"OCR failed for page {page_num}: {e}")
         pages_data[page_num] = {
             "text": text,
             "text_length": len(text),
-            "structured_content": extract_engineering_content("ocr", text),
         }
 
     if cache:
