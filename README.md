@@ -38,10 +38,11 @@ provided.
 The project includes a `GeminiService` class in `Services/Gemini` which wraps the Google Generative AI client. It defaults to `gemini-2.5-flash` for generation and `gemini-2.5-flash-lite` for OCR. A custom Pydantic `GeminiConfig` model provides type-checked generation settings.
 
 The OCR helper now uses a prompt that encourages step-by-step reasoning for improved
-accuracy. Responses are validated against a simple `OCRData` Pydantic model which
-contains a single `text` field representing the extracted content. The
-`GeminiService.ocr` method defaults to returning this model when no custom
-`response_model` is supplied.
+accuracy and instructs Gemini to respond using JSON. Responses must be in the form
+`{"text": "<extracted text>"}`. They are validated against a simple `OCRData`
+Pydantic model which contains a single `text` field representing the extracted
+content. The `GeminiService.ocr` method defaults to returning this model when no
+custom `response_model` is supplied.
 
 ## Paragraph-based Chunking
 
