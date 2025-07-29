@@ -5,6 +5,7 @@ import google.generativeai as genai
 from pydantic import BaseModel
 
 from DataModels.gemini_config import GeminiConfig
+from DataModels.ocr_data_model import OCRData
 
 T = TypeVar("T", bound=BaseModel)
 
@@ -20,6 +21,8 @@ class GeminiService:
         The default model used for text generation requests.
     ocr_model:
         The model specifically used when performing OCR operations.
+        OCR responses are parsed into :class:`~DataModels.ocr_data_model.OCRData`
+        objects unless a different Pydantic model is supplied.
     generation_config:
         Optional :class:`GeminiConfig` providing defaults for generation
         settings. If omitted a new ``GeminiConfig`` instance with all default
@@ -72,10 +75,26 @@ class GeminiService:
         """Generate text from a prompt using the specified model."""
         return self._generate([prompt], model or self.model, generation_config, response_model)
 
-    def ocr(self, images: List[Dict[str, Any]], prompt: str = "Extract text from this document image.", *,
-            model: Optional[str] = None,
-            generation_config: Optional[GeminiConfig | Dict[str, Any]] = None,
-            response_model: Optional[Type[T]] = None) -> T | Dict[str, Any]:
-        """Perform OCR on provided images using Gemini flash-lite by default."""
+    def ocr(
+        self,
+        images: List[Dict[str, Any]],
+        prompt: str = "Extract text from this document image.",
+        *,
+        model: Optional[str] = None,
+        generation_config: Optional[GeminiConfig | Dict[str, Any]] = None,
+        response_model: Optional[Type[T]] = None,
+    ) -> T | Dict[str, Any]:
+        """Perform OCR on provided images using Gemini flash-lite by default.
+
+        Unless a ``response_model`` is supplied, responses are validated against
+        :class:`~DataModels.ocr_data_model.OCRData` which simply contains a
+        ``text`` field with the extracted content.
+        """
+
         parts = [prompt] + images
-        return self._generate(parts, model or self.ocr_model, generation_config, response_model)
+        return self._generate(
+            parts,
+            model or self.ocr_model,
+            generation_config,
+            response_model or OCRData,
+        )
