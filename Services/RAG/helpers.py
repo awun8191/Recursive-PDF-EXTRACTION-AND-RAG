@@ -13,8 +13,9 @@ ACCEPTABLE_TEXT_PERCENTAGE = 0.85
 CACHE_FILE = "pdf_cache.json"
 OCR_PROMPT = (
     "Extract all text from this document image. "
-    "Pay special attention to latex and other engineering notation"
-    "Use step-by-step reasoning for higher accuracy and return only the text."
+    "Pay special attention to LaTeX and engineering notation. "
+    "Use step-by-step reasoning for accuracy. "
+    "Respond as JSON in the form {\"text\": \"<extracted text>\"}."
 )
 
 
