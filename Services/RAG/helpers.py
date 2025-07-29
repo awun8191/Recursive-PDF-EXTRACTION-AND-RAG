@@ -5,12 +5,14 @@ from pathlib import Path
 
 import fitz
 
+from .. import GeminiService
 from ..UtilityTools.Caching.cache import Cache
 
 ACCEPTABLE_TEXT_PERCENTAGE = 0.85
 CACHE_FILE = "pdf_cache.json"
 OCR_PROMPT = (
     "Extract all text from this document image. "
+    "Pay special attention to latex and other engineering notation"
     "Use step-by-step reasoning for higher accuracy and return only the text."
 )
 
@@ -64,7 +66,7 @@ def is_image_focused(file_path: str, text_threshold: int = 100,
 
 def ocr_text_extraction(
     file_path: str,
-    gemini_service,
+    gemini_service: GeminiService,
     cache: Cache | None = None,
     *,
     combine_pages: bool = False,
@@ -81,6 +83,7 @@ def ocr_text_extraction(
             cached = cache.read_cache()
             if cache_key in cached and "pages" in cached[cache_key]:
                 pages = cached[cache_key]["pages"]
+                print(f"Pages: {pages}")
                 if pages and all(str(i + 1) in pages for i in range(len(pages))):
                     return "\n\n--- PAGE BREAK ---\n\n".join(
                         pages[str(i + 1)]["text"] for i in range(len(pages))
@@ -97,10 +100,16 @@ def ocr_text_extraction(
     pages_data = {}
     for idx, img in enumerate(images):
         page_num = str(idx + 1)
+        print(f"Page number: {page_num}")
         text = ""
         try:
             response = gemini_service.ocr([img], prompt=OCR_PROMPT)
-            text = response.get("text", "") if isinstance(response, dict) else ""
+            print("#" * 50)
+            print(response for i in response)
+            print("-" * 50)
+            print(response.get("text_content", ""))
+            print("#" * 50)
+            text = response.get("text_content", "") if isinstance(response, dict) else ""
         except Exception as e:
             logging.error(f"OCR failed for page {page_num}: {e}")
         pages_data[page_num] = {
