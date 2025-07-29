@@ -76,7 +76,11 @@ class GeminiService:
         response = gen_model.generate_content(list(parts))
         print(f"Response: {response.text}")
         
-        # Clean the response text by removing markdown code blocks
+        # For plain text responses (OCR), return the text directly
+        if generation_config and generation_config.response_schema is None:
+            return {"result": response.text.strip()}
+        
+        # For structured responses, handle JSON parsing
         cleaned_text = response.text.strip()
         if cleaned_text.startswith('```json'):
             cleaned_text = cleaned_text[7:]
@@ -117,7 +121,7 @@ class GeminiService:
     def ocr(
         self,
         images: List[Dict[str, Any]],
-        prompt: str = "Extract text from this document image.",
+        prompt: str = "Extract all text from this document image. Return only the extracted text with proper formatting and line breaks where need add additional commentary.",
         *,
         model: Optional[str] = None,
         generation_config: Optional[GeminiConfig | Dict[str, Any]] = None,
@@ -127,17 +131,16 @@ class GeminiService:
         parts = [prompt] + images
         if generation_config is None:
             generation_config = GeminiConfig(
-                temperature=0.9,
+                temperature=0.1,  # Lower temperature for more consistent OCR
                 top_p=0,
                 top_k=None,
                 max_output_tokens=8000,
-                response_schema=OCRResponse,
+                response_schema=None,  # Use plain text instead of structured output
             )
         else:
             if isinstance(generation_config, dict):
                 generation_config = GeminiConfig(**generation_config)
-            if generation_config.response_schema is None:
-                generation_config.response_schema = OCRResponse
+            generation_config.response_schema = None  # Force plain text
 
         print(generation_config)
 
@@ -145,20 +148,14 @@ class GeminiService:
             parts,
             model or self.ocr_model,
             generation_config,
-            response_model or OCRResponse,
+            response_model=None,  # Use plain text
         )
 
-
-        # Extract text from OCRResponse
-        if isinstance(result, OCRResponse):
-            ocr_items = result.root
+        # Handle plain text response
+        if isinstance(result, dict):
+            text = result.get("result", "")
         else:
-            # Handle case where result is a dict (fallback)
-            ocr_items = [OCRItem(**item) for item in result["result"]]
+            text = str(result)
         
-        page_text = ""
-        for item in ocr_items:
-            page_text += f" {item.text_content}"
-        print(page_text)
-
-        return OCRData(text=page_text.strip())
+        print(text)
+        return OCRData(text=text.strip())
