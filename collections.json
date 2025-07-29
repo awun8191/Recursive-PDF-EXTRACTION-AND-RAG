@@ -1,0 +1,14 @@
+{
+    "400_1_CVE_407_STEEL_DESIGN": {
+        "absolute_path": "/home/awun/Documents/UNDEFINED MAIN/Scripts/PdfQuestionGeneration/TEXTBOOKS/COMPILATION/CVL/400/1/CVE 407/STEEL DESIGN.pdf",
+        "parent_folder": "CVE 407"
+    },
+    "400_1_PQ_400LVL_FIRST_SEMESTER_2023_24_TEST_QUESTIONS": {
+        "absolute_path": "/home/awun/Documents/UNDEFINED MAIN/Scripts/PdfQuestionGeneration/TEXTBOOKS/COMPILATION/CVL/400/1/PQ/400LVL FIRST SEMESTER  2023_24 TEST QUESTIONS.pdf",
+        "parent_folder": "PQ"
+    },
+    "400_1_PQ_400LVL_FIRST_SEMESTER_2023_24_EXAM_QUESTIONS": {
+        "absolute_path": "/home/awun/Documents/UNDEFINED MAIN/Scripts/PdfQuestionGeneration/TEXTBOOKS/COMPILATION/CVL/400/1/PQ/400LVL FIRST SEMESTER 2023_24 EXAM QUESTIONS.pdf",
+        "parent_folder": "PQ"
+    }
+}

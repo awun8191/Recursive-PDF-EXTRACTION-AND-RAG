@@ -10,6 +10,7 @@ from pydantic import BaseModel
 
 from DataModels.gemini_config import GeminiConfig
 from DataModels.ocr_data_model import OCRData
+from DataModels.ocr_response_model import OCRItem, OCRResponse
 
 T = TypeVar("T", bound=BaseModel)
 
@@ -67,13 +68,40 @@ class GeminiService:
         response_model: Optional[Type[T]] = None,
     ) -> T | Dict[str, Any]:
         """Internal helper to perform a generation request."""
+        print("Generation Started")
         gen_config, tools = self._to_generation_config(generation_config)
-        gen_model = genai.GenerativeModel(model, generation_config=gen_config, tools=tools)
+        print("Step 1")
+        gen_model = genai.GenerativeModel(model, generation_config=gen_config)
+        print("Step 2")
         response = gen_model.generate_content(list(parts))
-        data = json.loads(response.text)
+        print(f"Response: {response.text}")
+        
+        # Clean the response text by removing markdown code blocks
+        cleaned_text = response.text.strip()
+        if cleaned_text.startswith('```json'):
+            cleaned_text = cleaned_text[7:]
+        if cleaned_text.endswith('```'):
+            cleaned_text = cleaned_text[:-3]
+        cleaned_text = cleaned_text.strip()
+        
+        try:
+            data: List[Dict[str, Any]] = json.loads(cleaned_text)
+        except json.JSONDecodeError as e:
+            print(f"JSON parsing error: {e}")
+            # Fallback: try to extract JSON from the response
+            import re
+            json_match = re.search(r'\[.*\]', cleaned_text, re.DOTALL)
+            if json_match:
+                data = json.loads(json_match.group())
+            else:
+                raise
+        
+        print(data)
         if response_model:
             return response_model.model_validate(data)
-        return data
+        return {
+            "result": data
+        }
 
     def generate(
         self,
@@ -103,16 +131,34 @@ class GeminiService:
                 top_p=0,
                 top_k=None,
                 max_output_tokens=8000,
-                response_schema=OCRData,
+                response_schema=OCRResponse,
             )
         else:
             if isinstance(generation_config, dict):
                 generation_config = GeminiConfig(**generation_config)
             if generation_config.response_schema is None:
-                generation_config.response_schema = OCRData
-        return self._generate(
+                generation_config.response_schema = OCRResponse
+
+        print(generation_config)
+
+        result = self._generate(
             parts,
             model or self.ocr_model,
             generation_config,
-            response_model or OCRData,
+            response_model or OCRResponse,
         )
+
+
+        # Extract text from OCRResponse
+        if isinstance(result, OCRResponse):
+            ocr_items = result.root
+        else:
+            # Handle case where result is a dict (fallback)
+            ocr_items = [OCRItem(**item) for item in result["result"]]
+        
+        page_text = ""
+        for item in ocr_items:
+            page_text += f" {item.text_content}"
+        print(page_text)
+
+        return OCRData(text=page_text.strip())

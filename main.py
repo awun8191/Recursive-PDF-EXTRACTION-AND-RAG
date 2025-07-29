@@ -113,7 +113,9 @@ def ocr_pdf_with_gemini(pdf_path: str) -> str:
             pages_text.append(ocr_result.text)
         return "\n\n--- PAGE BREAK ---\n\n".join(pages_text)
     except Exception as e:
+        print("*" * 60)
         logging.error(f"Failed during OCR for PDF '{pdf_path}': {e}")
+        print("*" * 60)
         return ""
 
 def chunk_text(text: str, max_chars: int = 1000, by_paragraph: bool = False) -> list[str]:
@@ -288,3 +290,4 @@ if __name__ == "__main__":
     else:
         logging.error("Script cannot run due to missing API key or ChromaDB client initialization failure.")
     logging.info("========== Script Execution Finished ==========")
+    
