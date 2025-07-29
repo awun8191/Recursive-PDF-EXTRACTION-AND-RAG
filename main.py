@@ -5,6 +5,7 @@ import fitz  # PyMuPDF
 from pathlib import Path
 import google.generativeai as genai
 from Services import GeminiService
+from DataModels.ocr_data_model import OCRData
 import chromadb
 from dotenv import load_dotenv
 import re
@@ -13,7 +14,7 @@ import json
 import argparse
 from config import load_config
 from Services.UtilityTools.Caching.cache import Cache
-from Services.RAG.helpers import is_image_focused, ocr_text_extraction
+from Services.RAG.helpers import is_image_focused
 
 # --- Configuration ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -88,14 +89,26 @@ def extract_text_from_pdf(pdf_path: str) -> str:
         return ""
 
 def ocr_pdf_with_gemini(pdf_path: str) -> str:
-    """Performs OCR on a PDF using :class:`GeminiService` with caching."""
+    """Performs OCR on a PDF using :class:`GeminiService`.
+
+    The Gemini response for each page is validated against
+    :class:`~DataModels.ocr_data_model.OCRData`. Extracted text from all pages is
+    returned as a single string separated by ``--- PAGE BREAK ---`` markers.
+    """
     if gemini_service is None:
         logging.error("Gemini service not initialized.")
         return ""
-    cache = Cache("pdf_cache.json")
     try:
-        # Combine page text so paragraphs can span across page boundaries
-        return ocr_text_extraction(pdf_path, gemini_service, cache, combine_pages=True)
+        doc = fitz.open(pdf_path)
+        pages_text: list[str] = []
+        for page in doc:
+            img = {
+                "mime_type": "image/png",
+                "data": page.get_pixmap(dpi=400).tobytes("png"),
+            }
+            ocr_result: OCRData = gemini_service.ocr([img])
+            pages_text.append(ocr_result.text)
+        return "\n\n--- PAGE BREAK ---\n\n".join(pages_text)
     except Exception as e:
         logging.error(f"Failed during OCR for PDF '{pdf_path}': {e}")
         return ""

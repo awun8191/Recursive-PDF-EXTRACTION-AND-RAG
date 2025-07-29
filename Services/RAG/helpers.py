@@ -6,6 +6,7 @@ from pathlib import Path
 import fitz
 
 from .. import GeminiService
+from DataModels.ocr_data_model import OCRData
 from ..UtilityTools.Caching.cache import Cache
 
 ACCEPTABLE_TEXT_PERCENTAGE = 0.85
@@ -103,13 +104,10 @@ def ocr_text_extraction(
         print(f"Page number: {page_num}")
         text = ""
         try:
-            response = gemini_service.ocr([img], prompt=OCR_PROMPT)
-            print("#" * 50)
-            print(response for i in response)
-            print("-" * 50)
-            print(response.get("text_content", ""))
-            print("#" * 50)
-            text = response.get("text_content", "") if isinstance(response, dict) else ""
+            response = gemini_service.ocr(
+                [img], prompt=OCR_PROMPT, response_model=OCRData
+            )
+            text = response.text
         except Exception as e:
             logging.error(f"OCR failed for page {page_num}: {e}")
         pages_data[page_num] = {
