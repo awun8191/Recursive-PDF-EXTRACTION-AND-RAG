@@ -289,14 +289,29 @@ def walk_and_process(root_dir_str: str):
         logging.error(f"Directory not found: '{root_dir_str}'")
         return
 
+    progress_cache = Cache("progress_cache.json")
+    last_processed = progress_cache.read_cache().get("last_processed_pdf")
+
     logging.info(f"Starting PDF processing in directory: {root_dir}")
-    pdf_files = [
+    pdf_files = sorted([
         p for p in root_dir.rglob("*")
         if p.is_file() and p.suffix.lower() == ".pdf"
-    ]
+    ])
+
+    start_index = 0
+    if last_processed:
+        try:
+            start_index = pdf_files.index(Path(last_processed)) + 1
+            logging.info(f"Resuming after '{last_processed}'.")
+        except ValueError:
+            logging.info("Last processed file not found, starting from the beginning.")
+
     logging.info(f"Found {len(pdf_files)} PDF files to process.")
-    for path in pdf_files:
+    for i in range(start_index, len(pdf_files)):
+        path = pdf_files[i]
         process_pdf(path, root_dir)
+        progress_cache.update_cache("last_processed_pdf", str(path))
+
     logging.info("All PDF processing complete.")
 
 def get_embeddings_by_collection(collection_name: str):
