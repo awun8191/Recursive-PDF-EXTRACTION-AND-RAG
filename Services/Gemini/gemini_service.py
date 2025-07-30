@@ -24,11 +24,11 @@ class GeminiService:
     """Simple wrapper around ``google.generativeai`` with typed configuration."""
 
     def __init__(self, api_keys: List[str], model: str = DEFAULT_MODEL, ocr_model: str = OCR_MODEL,
-                 generation_config: Optional[GeminiConfig] = None) -> None:
+                 generation_config: Optional[GeminiConfig] = None, api_key_manager: Optional[ApiKeyManager] = None) -> None:
         self.model = model
         self.ocr_model = ocr_model
         self.default_config = generation_config or GeminiConfig()
-        self.api_key_manager = ApiKeyManager(api_keys)
+        self.api_key_manager = api_key_manager or ApiKeyManager(api_keys)
         self._configure_genai()
 
     def _configure_genai(self):

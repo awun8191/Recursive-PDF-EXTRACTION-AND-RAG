@@ -15,6 +15,8 @@ import argparse
 from config import load_config
 from Services.UtilityTools.Caching.cache import Cache
 from Services.RAG.helpers import is_image_focused
+from Services.Gemini.gemini_api_keys import GeminiApiKeys
+from Services.Gemini.api_key_manager import ApiKeyManager
 
 # --- Configuration ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -26,14 +28,13 @@ config = load_config()
 # Will be initialised once the API key is confirmed available
 gemini_service: GeminiService | None = None
 
-GOOGLE_API_KEY = "AIzaSyB1qxAZA6G327lxiaI8pwkFKYRe1JDRz0o"
-if not GOOGLE_API_KEY:
-    logging.error("CRITICAL: GOOGLE_API_KEY not found in environment variables. Script cannot proceed.")
+api_keys = GeminiApiKeys().get_keys()
+if not api_keys:
+    logging.error("CRITICAL: No Gemini API keys found. Script cannot proceed.")
 else:
-    logging.info("Successfully loaded GOOGLE_API_KEY.")
-    genai.configure(api_key=GOOGLE_API_KEY)
-    logging.info("Google Generative AI SDK configured.")
-    gemini_service = GeminiService()
+    logging.info(f"Successfully loaded {len(api_keys)} Gemini API keys.")
+    api_key_manager = ApiKeyManager(api_keys)
+    gemini_service = GeminiService(api_keys, api_key_manager=api_key_manager)
 
 # Model used when creating text embeddings for the ChromaDB documents
 EMBED_MODEL = "models/embedding-001"
@@ -44,7 +45,7 @@ COLLECTIONS_JSON_PATH = "./collections.json"
 
 # --- ChromaDB Client ---
 chroma_client = None
-if GOOGLE_API_KEY:
+if api_keys:
     try:
         logging.info(f"Initializing ChromaDB client at path: {CHROMA_PATH}")
         chroma_client = chromadb.PersistentClient(path=CHROMA_PATH)
@@ -265,7 +266,7 @@ def get_embeddings_by_collection(collection_name: str):
 # --- Main Execution ---
 if __name__ == "__main__":
     logging.info("========== Script Execution Started ==========")
-    if GOOGLE_API_KEY and chroma_client:
+    if api_keys and chroma_client:
         parser = argparse.ArgumentParser(description="Process PDFs for embeddings")
         parser.add_argument("--pdf-directory", default=config.pdf_directory, help="Directory containing PDFs")
         args = parser.parse_args()
