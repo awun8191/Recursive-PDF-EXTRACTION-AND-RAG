@@ -6,8 +6,8 @@ class GeminiApiKeys:
     def __init__(self, api_keys: list[str] = None):
         if api_keys is None:
             # Load keys from environment variables or a config file
-            keys_str = os.getenv("GEMINI_API_KEYS", "")
-            self.api_keys = [key.strip() for key in keys_str.split(",") if key.strip()]
+
+            self.api_keys = ["AIzaSyCP6igfyX0FTLiWxN0os50nvN748gn6YiA", "AIzaSyDzTpwiUeMqWVXG9tEpNHnhpvLU2Zf3RE0"]
         else:
             self.api_keys = api_keys
 
