@@ -55,51 +55,85 @@ if api_keys:
 
 # --- Core Functions ---
 
-def pdf_needs_ocr(pdf_path: str, image_ratio_threshold: float = 0.85) -> bool:
-    """Determine if a PDF requires OCR.
+def get_cache_key(pdf_path: str) -> str:
+    """Generate a cache key based on file path and modification time."""
+    mod_time = os.path.getmtime(pdf_path)
+    return f"{pdf_path}:{mod_time}"
 
-    Parameters
-    ----------
-    pdf_path:
-        Path to the PDF file that will be analysed.
-    image_ratio_threshold:
-        Minimum ratio of image-only pages before OCR is triggered.
-    """
+def pdf_needs_ocr(pdf_path: str, image_ratio_threshold: float = 0.85) -> bool:
+    """Determine if a PDF requires OCR."""
     cache = Cache("pdf_cache.json")
+    cache_key = get_cache_key(pdf_path)
+    cached_data = cache.read_cache()
+
+    if cache_key in cached_data and "needs_ocr" in cached_data[cache_key]:
+        logging.info(f"Found cached OCR requirement for '{pdf_path}'.")
+        return cached_data[cache_key]["needs_ocr"]
+
     try:
         result = is_image_focused(pdf_path, text_threshold=100, cache=cache)
         if result:
             logging.info(f"'{pdf_path}' likely requires OCR.")
         else:
             logging.info(f"'{pdf_path}' can be processed with direct text extraction.")
+
+        # Update cache
+        if cache_key not in cached_data:
+            cached_data[cache_key] = {}
+        cached_data[cache_key]["needs_ocr"] = result
+        cache.write_cache(cached_data)
+
         return result
     except Exception as e:
         logging.error(f"Could not analyze PDF '{pdf_path}' for image content: {e}")
         return False
 
-def extract_text_from_pdf(pdf_path: str) -> str:
+def extract_text_from_pdf(pdf_path: str) -> list[str]:
     """Extract text from a standard, text-based PDF file."""
+    cache = Cache("pdf_cache.json")
+    cache_key = get_cache_key(pdf_path)
+    cached_data = cache.read_cache()
+
+    if cache_key in cached_data and "pages" in cached_data[cache_key]:
+        logging.info(f"Found cached text for '{pdf_path}'.")
+        return cached_data[cache_key]["pages"]
+
     logging.info(f"Extracting text directly from '{pdf_path}'.")
     try:
         doc = fitz.open(pdf_path)
-        text = "\n".join([page.get_text() for page in doc])
-        logging.info(f"Successfully extracted {len(text)} characters from '{pdf_path}'.")
-        return text
+        pages = [page.get_text() for page in doc]
+        logging.info(f"Successfully extracted text from {len(pages)} pages in '{pdf_path}'.")
+
+        # Update cache
+        if cache_key not in cached_data:
+            cached_data[cache_key] = {}
+        cached_data[cache_key]["pages"] = pages
+        cache.write_cache(cached_data)
+
+        return pages
     except Exception as e:
         logging.error(f"Failed to extract text from '{pdf_path}': {e}")
-        return ""
+        return []
 
-def ocr_pdf_with_gemini(pdf_path: str) -> str:
+def ocr_pdf_with_gemini(pdf_path: str) -> list[str]:
     """Performs OCR on a PDF using :class:`GeminiService`.
 
     The Gemini response for each page is validated against
     :class:`~DataModels.ocr_data_model.OCRData`. Extracted text from all pages is
     returned as a single string separated by ``--- PAGE BREAK ---`` markers.
     """
+    cache = Cache("pdf_cache.json")
+    cache_key = get_cache_key(pdf_path)
+    cached_data = cache.read_cache()
+
+    if cache_key in cached_data and "pages" in cached_data[cache_key]:
+        logging.info(f"Found cached OCR text for '{pdf_path}'.")
+        return cached_data[cache_key]["pages"]
+
     print("Starting OCR")
     if gemini_service is None:
         logging.error("Gemini service not initialized.")
-        return ""
+        return []
     try:
         doc = fitz.open(pdf_path)
         pages_text: list[str] = []
@@ -108,19 +142,25 @@ def ocr_pdf_with_gemini(pdf_path: str) -> str:
                 "mime_type": "image/png",
                 "data": page.get_pixmap(dpi=400).tobytes("png"),
             }
-            # print(img)
             ocr_result: OCRData = gemini_service.ocr([img])
-            print(ocr_result)
             pages_text.append(ocr_result.text)
-        return "\n\n--- PAGE BREAK ---\n\n".join(pages_text)
+
+        # Update cache
+        if cache_key not in cached_data:
+            cached_data[cache_key] = {}
+        cached_data[cache_key]["pages"] = pages_text
+        cache.write_cache(cached_data)
+
+        return pages_text
     except Exception as e:
         print("*" * 60)
         logging.error(f"Failed during OCR for PDF '{pdf_path}': {e}")
         print("*" * 60)
-        return ""
+        return []
 
-def chunk_text(text: str, max_chars: int = 1000, by_paragraph: bool = False) -> list[str]:
+def chunk_text(pages: list[str], max_chars: int = 1000, by_paragraph: bool = False) -> list[str]:
     """Split text into chunks. If ``by_paragraph`` is True each paragraph is its own chunk."""
+    text = "\n\n--- PAGE BREAK ---\n\n".join(pages)
     logging.info(
         f"Chunking text of length {len(text)} using by_paragraph={by_paragraph} and max {max_chars} characters."
     )
@@ -195,13 +235,13 @@ def process_pdf(pdf_path: Path, root_dir: Path):
     relative_path = pdf_path.relative_to(root_dir).with_suffix("").as_posix()
     logging.info(f"--- Starting processing for: {relative_path} ---")
 
-    text = ocr_pdf_with_gemini(str(pdf_path)) if pdf_needs_ocr(str(pdf_path)) else extract_text_from_pdf(str(pdf_path))
-    if not text:
+    pages = ocr_pdf_with_gemini(str(pdf_path)) if pdf_needs_ocr(str(pdf_path)) else extract_text_from_pdf(str(pdf_path))
+    if not pages:
         logging.warning(f"Skipping '{relative_path}' due to text extraction failure.")
         return
 
     # Use paragraph-based chunking for better semantic separation
-    chunks = chunk_text(text, by_paragraph=True)
+    chunks = chunk_text(pages, by_paragraph=True)
     if not chunks:
         logging.warning(f"Skipping '{relative_path}' as no text chunks were generated.")
         return
