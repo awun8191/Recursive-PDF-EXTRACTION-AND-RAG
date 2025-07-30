@@ -6,11 +6,13 @@ import json
 from typing import Any, Dict, Iterable, List, Optional, Type, TypeVar
 
 import google.generativeai as genai
+from google.generativeai.types.generation_types import StopCandidateException
 from pydantic import BaseModel
 
 from DataModels.gemini_config import GeminiConfig
 from DataModels.ocr_data_model import OCRData
 from DataModels.ocr_response_model import OCRItem, OCRResponse
+from Services.Gemini.api_key_manager import ApiKeyManager
 
 T = TypeVar("T", bound=BaseModel)
 
@@ -21,11 +23,17 @@ OCR_MODEL = "gemini-2.5-flash-lite"
 class GeminiService:
     """Simple wrapper around ``google.generativeai`` with typed configuration."""
 
-    def __init__(self, model: str = DEFAULT_MODEL, ocr_model: str = OCR_MODEL,
+    def __init__(self, api_keys: List[str], model: str = DEFAULT_MODEL, ocr_model: str = OCR_MODEL,
                  generation_config: Optional[GeminiConfig] = None) -> None:
         self.model = model
         self.ocr_model = ocr_model
         self.default_config = generation_config or GeminiConfig()
+        self.api_key_manager = ApiKeyManager(api_keys)
+        self._configure_genai()
+
+    def _configure_genai(self):
+        """Configure the genai library with the current API key."""
+        genai.configure(api_key=self.api_key_manager.get_key())
 
     def _to_generation_config(
         self, config: Optional[GeminiConfig | Dict[str, Any]]
@@ -68,44 +76,51 @@ class GeminiService:
         response_model: Optional[Type[T]] = None,
     ) -> T | Dict[str, Any]:
         """Internal helper to perform a generation request."""
-        print("Generation Started")
-        gen_config, tools = self._to_generation_config(generation_config)
-        print("Step 1")
-        gen_model = genai.GenerativeModel(model, generation_config=gen_config)
-        print("Step 2")
-        response = gen_model.generate_content(list(parts))
-        print(f"Response: {response.text}")
-        
-        # For plain text responses (OCR), return the text directly
-        if generation_config and generation_config.response_schema is None:
-            return {"result": response.text.strip()}
-        
-        # For structured responses, handle JSON parsing
-        cleaned_text = response.text.strip()
-        if cleaned_text.startswith('```json'):
-            cleaned_text = cleaned_text[7:]
-        if cleaned_text.endswith('```'):
-            cleaned_text = cleaned_text[:-3]
-        cleaned_text = cleaned_text.strip()
-        
         try:
-            data: List[Dict[str, Any]] = json.loads(cleaned_text)
-        except json.JSONDecodeError as e:
-            print(f"JSON parsing error: {e}")
-            # Fallback: try to extract JSON from the response
-            import re
-            json_match = re.search(r'\[.*\]', cleaned_text, re.DOTALL)
-            if json_match:
-                data = json.loads(json_match.group())
-            else:
-                raise
-        
-        print(data)
-        if response_model:
-            return response_model.model_validate(data)
-        return {
-            "result": data
-        }
+            print("Generation Started")
+            gen_config, tools = self._to_generation_config(generation_config)
+            print("Step 1")
+            gen_model = genai.GenerativeModel(model, generation_config=gen_config)
+            print("Step 2")
+            response = gen_model.generate_content(list(parts))
+            print(f"Response: {response.text}")
+
+            # For plain text responses (OCR), return the text directly
+            if generation_config and generation_config.response_schema is None:
+                return {"result": response.text.strip()}
+
+            # For structured responses, handle JSON parsing
+            cleaned_text = response.text.strip()
+            if cleaned_text.startswith('```json'):
+                cleaned_text = cleaned_text[7:]
+            if cleaned_text.endswith('```'):
+                cleaned_text = cleaned_text[:-3]
+            cleaned_text = cleaned_text.strip()
+
+            try:
+                data: List[Dict[str, Any]] = json.loads(cleaned_text)
+            except json.JSONDecodeError as e:
+                print(f"JSON parsing error: {e}")
+                # Fallback: try to extract JSON from the response
+                import re
+                json_match = re.search(r'\[.*\]', cleaned_text, re.DOTALL)
+                if json_match:
+                    data = json.loads(json_match.group())
+                else:
+                    raise
+
+            print(data)
+            if response_model:
+                return response_model.model_validate(data)
+            return {
+                "result": data
+            }
+        except StopCandidateException as e:
+            # This exception is often thrown for quota-related issues.
+            print(f"API key failed: {e}")
+            self.api_key_manager.rotate_key()
+            self._configure_genai()
+            return self._generate(parts, model, generation_config, response_model)
 
     def generate(
         self,

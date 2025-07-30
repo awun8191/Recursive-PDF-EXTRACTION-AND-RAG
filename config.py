@@ -17,6 +17,7 @@ class Config:
     sample_pdf_path: str = os.getenv('SAMPLE_PDF_PATH', '')
     document_source: str = os.getenv('DOCUMENT_SOURCE', '')
     test_directory: str = os.getenv('TEST_DIRECTORY', '')
+    gemini_api_keys: list[str] = os.getenv('GEMINI_API_KEYS', [])
 
 
 def load_config() -> Config:

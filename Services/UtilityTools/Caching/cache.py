@@ -1,6 +1,7 @@
 import json
 import logging
 import os
+from datetime import datetime
 
 class Cache:
     """A simple JSON file based cache utility."""
@@ -65,6 +66,18 @@ class Cache:
         except Exception as e:
             self.logger.error(f"Error reading cache: {str(e)}")
             return {}
+
+    def refresh_daily_cache(self):
+        """Deletes the cache file if it's from a previous day."""
+        try:
+            if os.path.exists(self.cache_file_name):
+                file_date = datetime.fromtimestamp(os.path.getmtime(self.cache_file_name)).date()
+                if file_date < datetime.now().date():
+                    self.delete_cache()
+                    self.logger.info("Cache has been refreshed for the new day.")
+        except Exception as e:
+            self.logger.error(f"Error refreshing daily cache: {str(e)}")
+            raise
 
     def update_cache(self, key, value):
         """
