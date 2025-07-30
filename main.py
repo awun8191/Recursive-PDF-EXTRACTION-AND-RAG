@@ -214,8 +214,8 @@ def update_collections_json(collection_name: str, file_path: str, parent_folder:
     except (IOError, json.JSONDecodeError) as e:
         logging.warning(f"Could not read collections JSON file, a new one will be created: {e}")
 
-    collections_data[collection_name] = {
-        "absolute_path": file_path,
+    collections_data[file_path] = {
+        "collection_name": collection_name,
         "parent_folder": parent_folder
     }
 
@@ -263,6 +263,17 @@ def process_pdf(pdf_path: Path, root_dir: Path):
         collection.add(documents=chunks, ids=doc_ids, embeddings=embeddings, metadatas=metadatas)
         logging.info(f"Successfully added documents for '{relative_path}'.")
         update_collections_json(collection_name, str(pdf_path.resolve()), pdf_path.parent.name)
+
+        # Update cache with embedding info
+        cache = Cache("pdf_cache.json")
+        cache_key = get_cache_key(str(pdf_path))
+        cached_data = cache.read_cache()
+        if cache_key not in cached_data:
+            cached_data[cache_key] = {}
+        cached_data[cache_key]["collection_name"] = collection_name
+        cached_data[cache_key]["embedding_sneak_peek"] = embeddings[0][:5]
+        cache.write_cache(cached_data)
+
     except Exception as e:
         logging.error(f"Failed to add documents to collection for '{relative_path}': {e}")
     logging.info(f"--- Finished processing for: {relative_path} ---")
