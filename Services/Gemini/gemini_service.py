@@ -85,6 +85,13 @@ class GeminiService:
             response = gen_model.generate_content(list(parts))
             print(f"Response: {response.text}")
 
+            # Update usage
+            key = self.api_key_manager.get_key()
+            model_name = self._get_model_name(model)
+            # A simple way to estimate tokens, not perfect.
+            tokens = len(response.text) / 4
+            self.api_key_manager.update_usage(key, model_name, int(tokens))
+
             # For plain text responses (OCR), return the text directly
             if generation_config and generation_config.response_schema is None:
                 return {"result": response.text.strip()}
@@ -121,6 +128,15 @@ class GeminiService:
             self.api_key_manager.rotate_key()
             self._configure_genai()
             return self._generate(parts, model, generation_config, response_model)
+
+    def _get_model_name(self, model_str: str) -> str:
+        if "flash" in model_str:
+            return "flash"
+        if "lite" in model_str:
+            return "lite"
+        if "pro" in model_str:
+            return "pro"
+        return "flash"  # Default
 
     def generate(
         self,
