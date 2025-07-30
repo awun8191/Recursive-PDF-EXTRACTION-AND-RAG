@@ -130,10 +130,10 @@ class GeminiService:
             return self._generate(parts, model, generation_config, response_model)
 
     def _get_model_name(self, model_str: str) -> str:
-        if "flash" in model_str:
-            return "flash"
         if "lite" in model_str:
             return "lite"
+        if "flash" in model_str:
+            return "flash"
         if "pro" in model_str:
             return "pro"
         return "flash"  # Default
