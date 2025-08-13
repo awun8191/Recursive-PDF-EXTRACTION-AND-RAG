@@ -4,7 +4,7 @@ import os
 import time
 from typing import List, Optional
 
-from Services.UtilityTools.Caching.cache import Cache
+from UtilityTools.Caching.cache import Cache
 from Services.Gemini.rate_limit_data import RATE_LIMITS
 
 class ApiKeyManager:

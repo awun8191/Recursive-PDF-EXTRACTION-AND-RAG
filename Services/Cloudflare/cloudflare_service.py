@@ -8,17 +8,18 @@ from DataModels.file_data_model import FileDataModel
 
 class CloudflareR2:
     def __init__(self):
-        self.account_id = "c1719c3cf4696ae260e6a5f57b1f3100"
-        self.access_key_id = "6d6c54828aced5792f4a1ea6344691fd"
-        self.secret_access_key = "39a04416b64bf8df8d0e009346836ba4ff4382c1d423b35228a5d8717ff26ec4"
-        self.bucket_name = "study-materials"
+        # Use environment variables for credentials and configuration
+        self.account_id = os.getenv("CLOUDFLARE_ACCOUNT_ID", "")
+        self.access_key_id = os.getenv("CLOUDFLARE_ACCESS_KEY_ID", "")
+        self.secret_access_key = os.getenv("CLOUDFLARE_SECRET_ACCESS_KEY", "")
+        self.bucket_name = os.getenv("CLOUDFLARE_BUCKET", "")
         
         if not all([self.access_key_id, self.secret_access_key, self.bucket_name]):
             raise ValueError("Cloudflare R2 credentials are not set.")
 
         self.s3_client = boto3.client(
             's3',
-            endpoint_url=f'https://{self.account_id}.r2.cloudflarestorage.com',  # Updated endpoint
+            endpoint_url=f'https://{self.account_id}.r2.cloudflarestorage.com',
             aws_access_key_id=self.access_key_id,
             aws_secret_access_key=self.secret_access_key,
             config=Config(signature_version='s3v4')

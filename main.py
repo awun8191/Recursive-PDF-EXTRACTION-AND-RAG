@@ -13,7 +13,7 @@ import logging
 import json
 import argparse
 from config import load_config
-from Services.UtilityTools.Caching.cache import Cache
+from UtilityTools.Caching.cache import Cache
 from Services.RAG.helpers import is_image_focused
 from Services.Gemini.gemini_api_keys import GeminiApiKeys
 from Services.Gemini.api_key_manager import ApiKeyManager

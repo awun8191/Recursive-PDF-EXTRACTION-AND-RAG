@@ -37,14 +37,14 @@ class TestApiKeyManager(unittest.TestCase):
             }
         return cache
 
-    @patch("Services.UtilityTools.Caching.cache.Cache.read_cache")
+    @patch("UtilityTools.Caching.cache.Cache.read_cache")
     def test_get_key(self, mock_read_cache):
         mock_read_cache.return_value = self._get_mock_cache()
         manager = ApiKeyManager(self.api_keys, self.cache_file)
         self.assertEqual(manager.get_key(), "key1")
 
-    @patch("Services.UtilityTools.Caching.cache.Cache.read_cache")
-    @patch("Services.UtilityTools.Caching.cache.Cache.write_cache")
+    @patch("UtilityTools.Caching.cache.Cache.read_cache")
+    @patch("UtilityTools.Caching.cache.Cache.write_cache")
     def test_rotate_key(self, mock_write_cache, mock_read_cache):
         mock_read_cache.return_value = self._get_mock_cache()
         manager = ApiKeyManager(self.api_keys, self.cache_file)
@@ -61,8 +61,8 @@ class TestApiKeyManager(unittest.TestCase):
         self.assertEqual(new_key, "key3")
         self.assertEqual(manager.current_key_index, 2)
 
-    @patch("Services.UtilityTools.Caching.cache.Cache.read_cache")
-    @patch("Services.UtilityTools.Caching.cache.Cache.write_cache")
+    @patch("UtilityTools.Caching.cache.Cache.read_cache")
+    @patch("UtilityTools.Caching.cache.Cache.write_cache")
     def test_all_keys_used(self, mock_write_cache, mock_read_cache):
         mock_read_cache.return_value = self._get_mock_cache(
             used_keys_rpd={"key1": RATE_LIMITS["flash"].per_day, "key2": RATE_LIMITS["flash"].per_day, "key3": RATE_LIMITS["flash"].per_day}

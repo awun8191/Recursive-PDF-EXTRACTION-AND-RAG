@@ -2,7 +2,8 @@ boto3==1.39.14
 botocore==1.39.14
 chromadb==1.0.15
 firebase_admin==7.0.0
-fitz==0.0.1.dev2
+google-generativeai==0.8.3
+PyMuPDF==1.24.9
 openai==1.97.1
 pdf2image==1.17.0
 Pillow==11.3.0

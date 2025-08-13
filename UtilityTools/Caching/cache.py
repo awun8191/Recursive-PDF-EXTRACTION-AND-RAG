@@ -3,6 +3,7 @@ import logging
 import os
 from datetime import datetime
 
+
 class Cache:
     """A simple JSON file based cache utility."""
 
@@ -102,3 +103,5 @@ class Cache:
         except Exception as e:
             self.logger.error(f"Error updating cache: {str(e)}")
             raise
+
+

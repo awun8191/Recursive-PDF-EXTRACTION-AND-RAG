@@ -1,8 +1,9 @@
 import firebase_admin
 from firebase_admin import credentials, firestore
-from ...DataModels.course_model import CourseModel, CourseData
-from ...DataModels.question_model import Question
-from ...DataModels.document_model import Documen 
+from typing import Optional, List
+from DataModels.course_model import CourseModel, CourseData
+from DataModels.question_model import Question
+from DataModels.document_model import Document
 from config import load_config
 
 

@@ -7,7 +7,7 @@ import fitz
 
 from .. import GeminiService
 from DataModels.ocr_data_model import OCRData
-from ..UtilityTools.Caching.cache import Cache
+from UtilityTools.Caching.cache import Cache
 
 ACCEPTABLE_TEXT_PERCENTAGE = 0.85
 CACHE_FILE = "pdf_cache.json"
