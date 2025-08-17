@@ -1,8 +1,8 @@
 import os
 import unittest
 from unittest.mock import patch, mock_open
-from Services.Gemini.api_key_manager import ApiKeyManager
-from Services.Gemini.rate_limit_data import RATE_LIMITS
+from src.services.Gemini.api_key_manager import ApiKeyManager
+from src.services.Gemini.rate_limit_data import RATE_LIMITS
 import datetime
 
 class TestApiKeyManager(unittest.TestCase):

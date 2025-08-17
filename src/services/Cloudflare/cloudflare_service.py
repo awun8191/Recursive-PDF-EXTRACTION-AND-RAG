@@ -3,8 +3,8 @@ import os
 from typing import Optional
 from botocore.client import Config
 from botocore.exceptions import NoCredentialsError, PartialCredentialsError
-from DataModels.document_model import Document
-from DataModels.file_data_model import FileDataModel
+from src.data_models.document_model import Document
+from src.data_models.file_data_model import FileDataModel
 
 class CloudflareR2:
     def __init__(self):

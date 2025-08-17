@@ -4,8 +4,8 @@ import os
 import fitz  # PyMuPDF
 from pathlib import Path
 import google.generativeai as genai
-from Services import GeminiService
-from DataModels.ocr_data_model import OCRData
+from src.services import GeminiService
+from src.data_models.ocr_data_model import OCRData
 import chromadb
 from dotenv import load_dotenv
 import re
@@ -13,10 +13,10 @@ import logging
 import json
 import argparse
 from config import load_config
-from UtilityTools.Caching.cache import Cache
-from Services.RAG.helpers import is_image_focused
-from Services.Gemini.gemini_api_keys import GeminiApiKeys
-from Services.Gemini.api_key_manager import ApiKeyManager
+from src.utils.Caching.cache import Cache
+from src.services.RAG.helpers import is_image_focused
+from src.services.Gemini.gemini_api_keys import GeminiApiKeys
+from src.services.Gemini.api_key_manager import ApiKeyManager
 
 # --- Configuration ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
