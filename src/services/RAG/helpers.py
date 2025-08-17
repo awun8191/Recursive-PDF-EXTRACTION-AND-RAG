@@ -6,8 +6,8 @@ from pathlib import Path
 import fitz
 
 from .. import GeminiService
-from DataModels.ocr_data_model import OCRData
-from UtilityTools.Caching.cache import Cache
+from src.data_models.ocr_data_model import OCRData
+from src.utils.Caching.cache import Cache
 
 ACCEPTABLE_TEXT_PERCENTAGE = 0.85
 CACHE_FILE = "pdf_cache.json"

@@ -4,8 +4,8 @@ import os
 import time
 from typing import List, Optional
 
-from UtilityTools.Caching.cache import Cache
-from Services.Gemini.rate_limit_data import RATE_LIMITS
+from src.utils.Caching.cache import Cache
+from .rate_limit_data import RATE_LIMITS
 
 class ApiKeyManager:
     """Manages a pool of API keys, rotating them as needed."""

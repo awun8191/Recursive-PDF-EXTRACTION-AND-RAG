@@ -9,10 +9,10 @@ import google.generativeai as genai
 from google.generativeai.types.generation_types import StopCandidateException
 from pydantic import BaseModel
 
-from DataModels.gemini_config import GeminiConfig
-from DataModels.ocr_data_model import OCRData
-from DataModels.ocr_response_model import OCRItem, OCRResponse
-from Services.Gemini.api_key_manager import ApiKeyManager
+from src.data_models.gemini_config import GeminiConfig
+from src.data_models.ocr_data_model import OCRData
+from src.data_models.ocr_response_model import OCRItem, OCRResponse
+from .api_key_manager import ApiKeyManager
 
 T = TypeVar("T", bound=BaseModel)
 

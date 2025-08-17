@@ -5,8 +5,8 @@ import google.generativeai as genai
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 
-from Services.Gemini.gemini_service import GeminiService
-from DataModels.ocr_data_model import OCRData
+from src.services.Gemini.gemini_service import GeminiService
+from src.data_models.ocr_data_model import OCRData
 
 class DummyResponse:
     def __init__(self, text):
