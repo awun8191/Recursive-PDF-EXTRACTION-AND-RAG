@@ -3,31 +3,44 @@
 from __future__ import annotations
 
 import json
-from typing import Any, Dict, Iterable, List, Optional, Type, TypeVar
+from typing import (
+    Any,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    Sequence,
+    Type,
+    TypeVar,
+    Union,
+)
 
 import google.generativeai as genai
 from google.generativeai.types.generation_types import StopCandidateException
 from pydantic import BaseModel
 
 from src.data_models.gemini_config import GeminiConfig
-from src.data_models.ocr_data_model import OCRData
-from src.data_models.ocr_response_model import OCRItem, OCRResponse
 from .api_key_manager import ApiKeyManager
 
 T = TypeVar("T", bound=BaseModel)
 
 DEFAULT_MODEL = "gemini-2.5-flash"
-OCR_MODEL = "gemini-2.5-flash-lite"
 EMBEDDING_MODEL = "gemini-embedding-001"
 
 
 class GeminiService:
-    """Simple wrapper around ``google.generativeai`` with typed configuration."""
+    """Simple wrapper around ``google.generativeai``
+    with typed configuration.
+    """
 
-    def __init__(self, api_keys: List[str], model: str = DEFAULT_MODEL, ocr_model: str = OCR_MODEL,
-                 generation_config: Optional[GeminiConfig] = None, api_key_manager: Optional[ApiKeyManager] = None) -> None:
+    def __init__(
+        self,
+        api_keys: List[str],
+        model: str = DEFAULT_MODEL,
+        generation_config: Optional[GeminiConfig] = None,
+        api_key_manager: Optional[ApiKeyManager] = None,
+    ) -> None:
         self.model = model
-        self.ocr_model = ocr_model
         self.default_config = generation_config or GeminiConfig()
         self.api_key_manager = api_key_manager or ApiKeyManager(api_keys)
         self._configure_genai()
@@ -52,7 +65,9 @@ class GeminiService:
             max_output_tokens=config.max_output_tokens,
             top_p=config.top_p,
             top_k=config.top_k,
-            response_mime_type="application/json" if config.response_schema else None,
+            response_mime_type=(
+                "application/json" if config.response_schema else None
+            ),
         )
 
         tools = None
@@ -63,7 +78,9 @@ class GeminiService:
                     "function": {
                         "name": "response",
                         "description": "Response schema",
-                        "parameters": config.response_schema.model_json_schema(),
+                        "parameters": (
+                            config.response_schema.model_json_schema()
+                        ),
                     },
                 }
             ]
@@ -81,7 +98,9 @@ class GeminiService:
             print("Generation Started")
             gen_config, tools = self._to_generation_config(generation_config)
             print("Step 1")
-            gen_model = genai.GenerativeModel(model, generation_config=gen_config)
+            gen_model = genai.GenerativeModel(
+                model, generation_config=gen_config
+            )
             print("Step 2")
             response = gen_model.generate_content(list(parts))
             print(f"Response: {response.text}")
@@ -91,9 +110,11 @@ class GeminiService:
             model_name = self._get_model_name(model)
             # A simple way to estimate tokens, not perfect.
             tokens = len(response.text) / 4
-            self.api_key_manager.update_usage(key, model_name, int(tokens))
+            self.api_key_manager.update_usage(
+                key, model_name, int(tokens)
+            )
 
-            # For plain text responses (OCR), return the text directly
+            # For plain text responses, return the text directly
             if generation_config and generation_config.response_schema is None:
                 return {"result": response.text.strip()}
 
@@ -128,7 +149,9 @@ class GeminiService:
             print(f"API key failed: {e}")
             self.api_key_manager.rotate_key()
             self._configure_genai()
-            return self._generate(parts, model, generation_config, response_model)
+            return self._generate(
+                parts, model, generation_config, response_model
+            )
 
     def _get_model_name(self, model_str: str) -> str:
         if "lite" in model_str:
@@ -137,6 +160,8 @@ class GeminiService:
             return "flash"
         if "pro" in model_str:
             return "pro"
+        if "embedding" in model_str:
+            return "embedding"
         return "flash"  # Default
 
     def generate(
@@ -148,46 +173,20 @@ class GeminiService:
         response_model: Optional[Type[T]] = None,
     ) -> T | Dict[str, Any]:
         """Generate text from a prompt using the specified model."""
-        return self._generate([prompt], model or self.model, generation_config, response_model)
-
-    def ocr(
-        self,
-        images: List[Dict[str, Any]],
-        prompt: str = "Extract all text from this document image. Return only the extracted text with proper formatting and line breaks where need add additional commentary.",
-        *,
-        model: Optional[str] = None,
-        generation_config: Optional[GeminiConfig | Dict[str, Any]] = None,
-        response_model: Optional[Type[T]] = None,
-    ) -> T | Dict[str, Any]:
-        """Perform OCR on images using the lite model by default."""
-        parts = [prompt] + images
-        if generation_config is None:
-            generation_config = GeminiConfig(
-                temperature=0.1,  # Lower temperature for more consistent OCR
-                top_p=0,
-                top_k=None,
-                max_output_tokens=8000,
-                response_schema=None,  # Use plain text instead of structured output
-            )
-        else:
-            if isinstance(generation_config, dict):
-                generation_config = GeminiConfig(**generation_config)
-            generation_config.response_schema = None  # Force plain text
-
-        print(generation_config)
-
-        result = self._generate(
-            parts,
-            model or self.ocr_model,
-            generation_config,
-            response_model=None,  # Use plain text
+        return self._generate(
+            [prompt], model or self.model, generation_config, response_model
         )
 
-        # Handle plain text response
-        if isinstance(result, dict):
-            text = result.get("result", "")
-        else:
-            text = str(result)
-        
-        print(text)
-        return OCRData(text=text.strip())
+    def embed(
+        self, texts: Union[str, Sequence[str]], model: str = EMBEDDING_MODEL
+    ) -> Union[List[float], List[List[float]]]:
+        """Generate embeddings for provided text or texts."""
+        key = self.api_key_manager.get_key("embedding")
+        response = genai.embed_content(model=model, content=texts)
+        if isinstance(texts, str):
+            tokens = len(texts) // 4
+            self.api_key_manager.update_usage(key, "embedding", tokens)
+            return response["embedding"]["values"]
+        tokens = sum(len(t) // 4 for t in texts)
+        self.api_key_manager.update_usage(key, "embedding", tokens)
+        return [item["values"] for item in response["embedding"]]
