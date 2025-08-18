@@ -1,16 +1,17 @@
 import datetime
-import json
-import os
 import time
-from typing import List, Optional
+from typing import List
 
 from src.utils.Caching.cache import Cache
 from .rate_limit_data import RATE_LIMITS
 
+
 class ApiKeyManager:
     """Manages a pool of API keys, rotating them as needed."""
 
-    def __init__(self, api_keys: List[str], cache_file: str = "api_key_cache.json"):
+    def __init__(
+        self, api_keys: List[str], cache_file: str = "api_key_cache.json"
+    ):
         self.api_keys = api_keys
         self.cache = Cache(cache_file)
         self.cache_data = self._load_cache()
@@ -34,7 +35,7 @@ class ApiKeyManager:
                             "flash": {"rpd": 0, "total_tokens": 0},
                             "lite": {"rpd": 0, "total_tokens": 0},
                             "pro": {"rpd": 0, "total_tokens": 0},
-                            "embeddings": {"rpd": 0, "total_tokens": 0}
+                            "embedding": {"rpd": 0, "total_tokens": 0}
                         },
                     }
                     for key in self.api_keys
@@ -44,7 +45,7 @@ class ApiKeyManager:
 
         return cache_data
 
-    def get_key(self) -> str:
+    def get_key(self, model: str = "flash") -> str:
         """Get the current API key."""
         if not self.api_keys:
             raise ValueError("No API keys configured.")
@@ -53,8 +54,8 @@ class ApiKeyManager:
             raise ValueError("All API keys have been used.")
 
         key = self.api_keys[self.current_key_index]
-        if not self.is_key_available(key):
-            return self.rotate_key()
+        if not self.is_key_available(key, model):
+            return self.rotate_key(model)
 
         return key
 
@@ -65,19 +66,30 @@ class ApiKeyManager:
         rate_limit = RATE_LIMITS[model]
 
         # Check RPD
-        if key_data["rpd"] >= rate_limit.per_day or model_data["rpd"] >= rate_limit.per_day:
+        if (
+            key_data["rpd"] >= rate_limit.per_day
+            or model_data["rpd"] >= rate_limit.per_day
+        ):
             return False
 
         # Check RPM
         now = time.time()
         self.rpm_timestamps[self.current_key_index] = [
-            t for t in self.rpm_timestamps[self.current_key_index] if now - t < 60
+            t
+            for t in self.rpm_timestamps[self.current_key_index]
+            if now - t < 60
         ]
-        if len(self.rpm_timestamps[self.current_key_index]) >= rate_limit.per_minute:
+        if (
+            len(self.rpm_timestamps[self.current_key_index])
+            >= rate_limit.per_minute
+        ):
             return False
 
         # Check token usage (TPM) - This is a simple approximation
-        if key_data["total_tokens"] >= 2_000_000 or model_data["total_tokens"] >= 2_000_000:
+        if (
+            key_data["total_tokens"] >= 2_000_000
+            or model_data["total_tokens"] >= 2_000_000
+        ):
             return False
 
         return True
@@ -95,16 +107,18 @@ class ApiKeyManager:
         self.rpm_timestamps[self.current_key_index].append(time.time())
         self.cache.write_cache(self.cache_data)
 
-    def rotate_key(self) -> str:
+    def rotate_key(self, model: str = "flash") -> str:
         """Rotate to the next available API key."""
         start_index = self.current_key_index
         while True:
-            self.current_key_index = (self.current_key_index + 1) % len(self.api_keys)
+            self.current_key_index = (
+                (self.current_key_index + 1) % len(self.api_keys)
+            )
             if self.current_key_index == start_index:
                 raise ValueError("All API keys are over their limits.")
 
             key = self.api_keys[self.current_key_index]
-            if self.is_key_available(key):
+            if self.is_key_available(key, model):
                 self.cache_data["current_key_index"] = self.current_key_index
                 self.cache.write_cache(self.cache_data)
                 return key
