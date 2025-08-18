@@ -18,6 +18,7 @@ T = TypeVar("T", bound=BaseModel)
 
 DEFAULT_MODEL = "gemini-2.5-flash"
 OCR_MODEL = "gemini-2.5-flash-lite"
+EMBEDDING_MODEL = "gemini-embedding-001"
 
 
 class GeminiService:

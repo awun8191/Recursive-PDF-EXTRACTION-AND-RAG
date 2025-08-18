@@ -34,6 +34,7 @@ class ApiKeyManager:
                             "flash": {"rpd": 0, "total_tokens": 0},
                             "lite": {"rpd": 0, "total_tokens": 0},
                             "pro": {"rpd": 0, "total_tokens": 0},
+                            "embeddings": {"rpd": 0, "total_tokens": 0}
                         },
                     }
                     for key in self.api_keys
