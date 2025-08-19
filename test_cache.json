@@ -1,0 +1,24 @@
+{
+    "test_key": {
+        "key": "test_key",
+        "value": "test_value",
+        "created_at": 1755521087.7132874,
+        "accessed_at": 1755521087.7132874,
+        "access_count": 1,
+        "ttl": 60,
+        "tags": [
+            "test"
+        ]
+    },
+    "cfcea8b7415c3a84": {
+        "key": "cfcea8b7415c3a84",
+        "value": 92,
+        "created_at": 1755521087.7132874,
+        "accessed_at": 1755521087.7132874,
+        "access_count": 1,
+        "ttl": 30,
+        "tags": [
+            "function_test"
+        ]
+    }
+}

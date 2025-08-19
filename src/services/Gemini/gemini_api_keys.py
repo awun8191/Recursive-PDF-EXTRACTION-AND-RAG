@@ -7,7 +7,13 @@ class GeminiApiKeys:
         if api_keys is None:
             # Load keys from environment variables or a config file
 
-            self.api_keys = ["AIzaSyCP6igfyX0FTLiWxN0os50nvN748gn6YiA", "AIzaSyDzTpwiUeMqWVXG9tEpNHnhpvLU2Zf3RE0"]
+            self.api_keys = [
+                "AIzaSyCP6igfyX0FTLiWxN0os50nvN748gn6YiA",
+                 "AIzaSyCdgFdcdHjFNrII6HSwZ3jaI_TqB12K-UM", 
+                 "AIzaSyCvSKg6UP3sdnSkjcVSE6EuzjPgKQVijbE", 
+                 "AIzaSyCvSKg6UP3sdnSkjcVSE6EuzjPgKQVijbE", 
+                 "AIzaSyDYi5YiD1jU2r5wdPHJZBaU81m0l1XZumE",
+                 ]
         else:
             self.api_keys = api_keys
 

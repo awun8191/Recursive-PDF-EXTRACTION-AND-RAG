@@ -1,17 +1,30 @@
 import datetime
 import time
 from typing import List
+from pathlib import Path
 
 from src.utils.Caching.cache import Cache
 from .rate_limit_data import RATE_LIMITS
+from .gemini_api_keys import GeminiApiKeys
 
 
 class ApiKeyManager:
     """Manages a pool of API keys, rotating them as needed."""
 
     def __init__(
-        self, api_keys: List[str], cache_file: str = "api_key_cache.json"
+        self, api_keys: List[str] = None, cache_file: str = None
     ):
+        # Use gemini_api_keys.py if no keys provided
+        if api_keys is None:
+            gemini_keys = GeminiApiKeys()
+            api_keys = gemini_keys.get_keys()
+        
+        # Set cache file to data/gemini_cache directory
+        if cache_file is None:
+            cache_dir = Path(__file__).parent.parent.parent.parent / "data" / "gemini_cache"
+            cache_dir.mkdir(parents=True, exist_ok=True)
+            cache_file = str(cache_dir / "api_key_cache.json")
+            
         self.api_keys = api_keys
         self.cache = Cache(cache_file)
         self.cache_data = self._load_cache()

@@ -27,6 +27,16 @@ T = TypeVar("T", bound=BaseModel)
 DEFAULT_MODEL = "gemini-2.5-flash"
 EMBEDDING_MODEL = "gemini-embedding-001"
 
+class CourseOutline(BaseModel):
+    course: str
+    topics: List[str]
+    description: str
+
+
+class CoursesResponse(BaseModel):
+    courses: List[CourseOutline]
+
+
 
 class GeminiService:
     """Simple wrapper around ``google.generativeai``
@@ -35,13 +45,20 @@ class GeminiService:
 
     def __init__(
         self,
-        api_keys: List[str],
+        api_keys: List[str] = None,
         model: str = DEFAULT_MODEL,
         generation_config: Optional[GeminiConfig] = None,
         api_key_manager: Optional[ApiKeyManager] = None,
     ) -> None:
         self.model = model
         self.default_config = generation_config or GeminiConfig()
+        
+        # Use default API keys if none provided
+        if api_keys is None and api_key_manager is None:
+            from .gemini_api_keys import GeminiApiKeys
+            gemini_keys = GeminiApiKeys()
+            api_keys = gemini_keys.get_keys()
+        
         self.api_key_manager = api_key_manager or ApiKeyManager(api_keys)
         self._configure_genai()
 
@@ -177,16 +194,50 @@ class GeminiService:
             [prompt], model or self.model, generation_config, response_model
         )
 
-    def embed(
-        self, texts: Union[str, Sequence[str]], model: str = EMBEDDING_MODEL
-    ) -> Union[List[float], List[List[float]]]:
-        """Generate embeddings for provided text or texts."""
-        key = self.api_key_manager.get_key("embedding")
-        response = genai.embed_content(model=model, content=texts)
-        if isinstance(texts, str):
-            tokens = len(texts) // 4
-            self.api_key_manager.update_usage(key, "embedding", tokens)
-            return response["embedding"]["values"]
-        tokens = sum(len(t) // 4 for t in texts)
-        self.api_key_manager.update_usage(key, "embedding", tokens)
-        return [item["values"] for item in response["embedding"]]
+    def embed(self, texts: List[str], model: Optional[str] = None, target_dim: Optional[int] = None) -> List[List[float]]:
+        """Generate embeddings for a list of texts using Gemini embedding model."""
+        if not texts:
+            return []
+        
+        embedding_model = model or EMBEDDING_MODEL
+        
+        try:
+            print(f"🔮 Generating embeddings for {len(texts)} texts using {embedding_model}")
+            
+            # Configure genai with current API key
+            self._configure_genai()
+            
+            # Generate embeddings
+            result = genai.embed_content(
+                model=embedding_model,
+                content=texts,
+                task_type="retrieval_document"
+            )
+            
+            embeddings = result['embedding'] if isinstance(result['embedding'][0], list) else [result['embedding']]
+            
+            # Optionally reduce dimensions if target_dim is specified
+            if target_dim and embeddings and len(embeddings[0]) > target_dim:
+                print(f"🔧 Reducing embedding dimensions from {len(embeddings[0])} to {target_dim}")
+                # Use PCA-like reduction by taking the first N dimensions
+                embeddings = [emb[:target_dim] for emb in embeddings]
+            
+            # Update usage tracking
+            key = self.api_key_manager.get_key()
+            model_name = self._get_model_name(embedding_model)
+            # Estimate tokens for embeddings (rough approximation)
+            total_tokens = sum(len(text.split()) for text in texts)
+            self.api_key_manager.update_usage(key, model_name, total_tokens)
+            
+            print(f"✨ Successfully generated {len(embeddings)} embeddings with dimension {len(embeddings[0]) if embeddings else 0}")
+            return embeddings
+            
+        except StopCandidateException as e:
+            print(f"🔄 API key failed during embedding: {e}")
+            self.api_key_manager.rotate_key()
+            self._configure_genai()
+            return self.embed(texts, model, target_dim)
+        except Exception as e:
+            print(f"❌ Error generating embeddings: {e}")
+            raise
+

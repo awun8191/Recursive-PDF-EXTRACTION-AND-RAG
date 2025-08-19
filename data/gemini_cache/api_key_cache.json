@@ -1,0 +1,94 @@
+{
+    "date": "2025-08-19",
+    "current_key_index": 0,
+    "keys": {
+        "AIzaSyCP6igfyX0FTLiWxN0os50nvN748gn6YiA": {
+            "rpd": 23,
+            "total_tokens": 38863,
+            "models": {
+                "flash": {
+                    "rpd": 0,
+                    "total_tokens": 0
+                },
+                "lite": {
+                    "rpd": 0,
+                    "total_tokens": 0
+                },
+                "pro": {
+                    "rpd": 0,
+                    "total_tokens": 0
+                },
+                "embedding": {
+                    "rpd": 23,
+                    "total_tokens": 38863
+                }
+            }
+        },
+        "AIzaSyCdgFdcdHjFNrII6HSwZ3jaI_TqB12K-UM": {
+            "rpd": 0,
+            "total_tokens": 0,
+            "models": {
+                "flash": {
+                    "rpd": 0,
+                    "total_tokens": 0
+                },
+                "lite": {
+                    "rpd": 0,
+                    "total_tokens": 0
+                },
+                "pro": {
+                    "rpd": 0,
+                    "total_tokens": 0
+                },
+                "embedding": {
+                    "rpd": 0,
+                    "total_tokens": 0
+                }
+            }
+        },
+        "AIzaSyCvSKg6UP3sdnSkjcVSE6EuzjPgKQVijbE": {
+            "rpd": 0,
+            "total_tokens": 0,
+            "models": {
+                "flash": {
+                    "rpd": 0,
+                    "total_tokens": 0
+                },
+                "lite": {
+                    "rpd": 0,
+                    "total_tokens": 0
+                },
+                "pro": {
+                    "rpd": 0,
+                    "total_tokens": 0
+                },
+                "embedding": {
+                    "rpd": 0,
+                    "total_tokens": 0
+                }
+            }
+        },
+        "AIzaSyDYi5YiD1jU2r5wdPHJZBaU81m0l1XZumE": {
+            "rpd": 0,
+            "total_tokens": 0,
+            "models": {
+                "flash": {
+                    "rpd": 0,
+                    "total_tokens": 0
+                },
+                "lite": {
+                    "rpd": 0,
+                    "total_tokens": 0
+                },
+                "pro": {
+                    "rpd": 0,
+                    "total_tokens": 0
+                },
+                "embedding": {
+                    "rpd": 0,
+                    "total_tokens": 0
+                }
+            }
+        }
+    }
+}
