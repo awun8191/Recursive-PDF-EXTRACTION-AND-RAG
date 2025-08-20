@@ -1,0 +1,1778 @@
+CHAPTER 1 |
+
+Crystallization Operations
+
+CHARLES G. MOYERS, JR.
+Union Carbide Corporation
+South Charleston, West Virginia
+
+RONALD W. ROUSSEAU
+School of Chemical Engineering
+Georgia Institute of Technology
+Atlanta, Georgia
+
+11.1 INTRODUCTORY COMMENTS
+
+Crystallization is employed heavily as a separation process in the inorganic chemical industry, particularly
+where salts are recovered from aqueous media. In production of organic chemicals, crystallization is also
+used to recover product, to refine intermediate chemicals and to remove undesired salts. The feed to a
+crystallization system consists of a solution from which solute is crystallized (or precipitated) via one or
+more of a variety of processes. The solids are normally separated from the crystallizer liquid, washed, and
+discharged to downstream equipment for additional treatment. High recovery of refined solute is generally
+the desired design objective, although sometimes the crystalline product is a residue.
+
+The process of forming a solid phase from solution is termed crystallization, and the operation occurs
+in a vessel called a crystallizer. A crystallizer provides residence time for the process streams to approach
+equilibrium, possibly a capability of selectively removing fines or coarse product, a mixing or contacting
+regime to give uniform crystal growth, and may include provision for addition or removal of heat.
+
+Crystallization is distinguished from other unit operations in that a solid phase is generated. The solid
+phase is characterized in part by its inherent shape (habit) and size distribution. The natural habit of the
+solid phase is important since it influences product purity, yield, and capacity of the crystallizer system.
+
+11.1-1 Advantages and Disadvantages
+Crystallization offers the following advantages:
+
+1, Pure product (solute) can be recovered in one separation stage. With care in design, product purity
+greater than 99.0% can be attained in a single stage of crystallization, separation, and washing.
+
+2. A solid phase is formed that is subdivided into discrete particles. Generally, conditions are controlled
+so that the crystals have the desired physical form for direct packaging and sale.
+
+The major disadvantages of crystallization are:
+
+1. Purification of more than one component is not normally attainable in one stage.
+
+578
+
+Crystallization Operations 579
+
+2. The phase behavior of crystallizing systems prohibits full solute recovery in one stage; thus, the
+use of additional equipment to remove solute completely from the remaining crystallizer solution
+
+is necessary.
+
+Since crystallization involves processing and handling of a solid phase, the operation is normally applied
+when no alternative separation technique is discernible. The choice of crystallization over, say, distillation
+as the preferred separation technique may hinge on one or more of the following considerations:
+
+1. Solute is heat sensitive and/or a high boiler and decomposes at temperatures required to conduct
+distillation.
+
+2. Low or nil relative volatility exists between solute and contaminants and/or azeotropes formed
+between solute and contaminants.
+
+3. Solute (product) is desired in particulate form. For example, if solute can be purified via distillation
+then it must be solidified subsequently by flaking or prilling and crystallization may be a more
+convenient scheme to employ in such cases.
+
+4. Comparative economics favor crystallization. If distillation requires high temperatures and energy
+usage, crystallization may offer economic incentives.
+
+Crystallization is frequently the initial step in a solids processing sequence, similar to that shown in
+Fig. 11.1-1, that subsequently includes solid-liquid separation and drying equipment. Since product size
+
+Vacuum
+
+CRYSTALLIZER
+Solvent
+Solute
+Impurities
+Solid solute
+Solvent
+Dissolved solute. SOLID-LIQUID
+Impurities SEPARATOR
+Product Solid-liquid
+separation
+Solvent
+Dissolved solute
+Impurities
+DRYER
+
+Dry Solvent
+product
+
+FIGURE 11.1-1 Solids processing sequence.
+
+580 Charles G. Moyers, jr. and Ronald W. Rousseau
+
+and suspended solids concentration are controlled, to a large extent, in the crystallizer, predictable and
+reliable crystallizer performance is essential for smooth operation of the downstream system.
+
+11.1-2 Crystallization Terminology
+
+Binary eutectic. The location on the phase diagram at which simultaneous crystallization of solvent and
+solute occurs.
+
+Brodie purifier. A specific type of continuous melt crystallizer.
+
+Crystal habit. The external crystal shape that results from different rates of growth of the various crystal
+faces.
+
+Crystallization kinetics. Expressions that describe crystal growth and nucleation rates from solution.
+
+CSD. Crystal size distribution.
+
+Desupersaturation time. The average time that solution in a crystallizer vessel has to deposit solute
+before entering the zone where supersaturation is created.
+
+Draft tube. A device inserted in a crystallizer to induce a uniform axial flow pattern inside a crystallizer.
+
+Drawdown time. The time to empty the contents of a crystallizer if the feed is stopped and product is
+removed at the normal rate.
+
+DTB. Draft tube baffle—a crystallizer that contains a draft tube and an internal baffle to provide a crystal
+settling zone.
+
+Elutriation leg. A settling leg in a crystallizer that classifies and washes the crystals leaving the vessel
+by addition of upflow liquid (usually the feed).
+
+Fines removal system. System designed to increase particle size by preferential removal and subsequent
+destruction of smaller-size crystals.
+
+Forced circulation crystallization. Continuous crystallizer in which agitation inside the vessel is created
+by external circulation of large quantities of liquid through a heater or cooler.
+
+Heterogeneous nucleation. Nucleation induced by foreign matter in a supersaturated liquid.
+
+Homogeneous nucleation. Spontaneous nucleation caused by supersaturation only.
+
+ICT. Initial crystallization temperature.
+
+Labile zone. Zone on concentration~temperature diagram in which spontaneous homogeneous or heter-
+ogeneous nucleation of the solid phase will occur.
+
+Metastable zone. Zone on concentration-temperature diagram in which homogeneous or heterogeneous
+nucleation will not immediately occur but in which crystal growth will occur.
+
+MSMPR. Mixed-suspension mixed-product removal crystallizer.
+
+Population density. A number density function frequently described as number of crystals per unit volume
+of clear liquor (or slurry) per size increment (number/cm?- pm).
+
+Product classification. Classification device that removes large product crystals and returns smaller crys-
+tals to the crystallizer.
+
+Secondary nucleation. Nucleation of a supersaturated liquid caused directly or indirectly by the presence
+of crystals of the same species as the solute.
+
+Solid solution. Mixed crystals formed when isomorphous substances crystallize together out of a solution.
+
+Supersaturation. The departure from solution saturation usually caused by cooling of the mixture and/
+or by evaporating solvent.
+
+Understanding the concept of supersaturation is necessary when discussing crystallization rate processes.
+Most liquids sustain a certain level of subcooling depending on the rate of cooling, temperature, and degree
+of agitation. Often a clear solution can be slowly subcooled several degrees below its equilibrium temper-
+ature before a profusion of nuclei appear. A diagram describing this phenomena is shown in Fig. 11.1-2.
+Feed A is cooled to temperature Tp. Thus, feed is subcooled by (Tg — Tp) degrees or has (Tz — Tp)
+degrees of supersaturation. The temperature where nuclei first appear (7), defines the metastable limit.
+Inside the temperature range from T;- to Tg crystals grow, but spontaneous nucleation will not occur
+immediately. In the labile zone (temperatures less than T,) crystal growth and secondary nuclei formation
+occur simultaneously, and both rate processes are competing for available solute. Crystallizers are designed
+most commonly to control supersaturation at low levels to minimize nucleation, especially by homogeneous
+or heterogeneous mechanisms.
+
+11.2. FUNDAMENTALS
+
+Final design of a crystallizer is the culmination of the design strategy depicted in Fig. 11.2-1. In the
+conceptual design stage, equilibrium data and operating mode (the method by which supersaturation is
+
+Supersaturated
+region /
+
+(Metastable /
+zone) /
+
+D
+
+Unsaturated
+
+Supersaturated / FS
+region 1s zone
+(Labile zone) >
+
+Concentration ————j-
+
+Temperature ————pe
+
+FIGURE 11.1-2 Depiction of supersaturation. The metastable limit is a function of the rate of cooling,
+temperature, impurities, degree of agitation, and presence of seeds.
+
+Solvent selection:
+PHASE EQUILIBRIUM Physical and thermal moreries }
+
+OPERATIONAL MODE { Pressure, temperature, composition }
+
+Vapor rate, operating pressure,
+STYLE OF CRYSTALLIZER { were treatment, product size }
+
+Kinetics —|
+Diameter, holding time, materials,
+FUNCTIONAL DESIGN auxiliary equipment, circulation
+rate
+
+FIGURE 11.2-1 Process design strategy.
+581
+
+582 Charles G. Moyers, Jr. and Ronald W. Rousseau
+
+generated) are surveyed. Solvent choice and processing conditions are determined in this step. The type of
+crystallizer and finally the crystallizer functional design, that is, external and internal construction details,
+are then established. The discussion in this section is concemed primarily with generation, interpretation,
+and use of solid-liquid equilibrium data and the selection of operating mode.
+
+11.2-1 Equilibria
+
+Accurate solid-liquid equilibrium data must be obtained to evaluate the process design options for crys-
+tallization processes. These data are required in the earliest stages of the conceptual design phase and are
+necessary for the following reasons:
+
+1. Screening the feasibility of the potential process; that is, determining if pure solute can in fact be
+crystallized from the feed solution.
+
+2. Determining the best solvent to use in the process if solution crystallization is employed.
+
+3. Establishing the temperature and/or pressure ranges of the crystallizer operation and the composition
+of the residue liquor exiting the crystallizer.
+
+4. Determining the maximum recovery of solute possible. The feed composition and position of the
+eutectic fix the maximum attainable solute recovery. Practical limitations such as temperature of
+cooling medium, slurry concentration that can be pumped, or impurity level that can be tolerated
+may restrict solute recovery.
+
+Phase diagrams occur in many forms. A common type of diagram is the binary eutectic in which a
+pure solid component is formed by cooling an unsaturated solution until solids appear. Continued cooling
+will increase the yield of pure component. At the eutectic temperature both components solidify and
+additional purification is not normally possible. A typical eutectic-forming system (naphthalene-benzene)
+is shown in Fig. 11.2-2:
+
+If mixture X is cooled, crystals of benzene will form.
+If mixture Y is cooled, naphthalene crystals will! result.
+
+Point Z indicates the position of the binary eutectic. Solid mixtures are formed at temperatures below
+this point.
+
+A few binary systems when cooled do not deposit one of the components in a totally pure state. Instead,
+behavior resembles that of many vapor-liquid systems and the solid is a true solution. Figure 11.2-3 depicts
+
+100
+
+80
+
+Temperature (°C)
+rs a
+ro) o
+
+nN
+foo)
+
+Naphthalene (wt. %)
+FIGURE 11.2-2 Phase diagram for naphthalene-benzene.
+
+Crystallization Operations 583
+
+130
+
+120
+
+110
+
+100
+
+Temperature (°C)
+
+wo
+oO
+
+70 2 4 6 8 1.0
+
+2-Naphthol (mass fraction)
+FIGURE 11.2-3 Phase diagram for naphthalene-2-naphthol.
+
+a phase diagram of naphthalene and 2-naphthol, which exhibit solid solution behavior. If the liquid mixture
+of naphthalene and 2-naphthol of composition X is cooled, a mixed crystal of composition Y is formed
+rather than a solid containing pure 2-naphthol. This type of behavior is found in only a small fraction of
+crystallizing systems.
+
+Figure 11.2-4 shows typical solubility diagrams for solutions of various salts in water. The curve for
+salt (NaCl) is nearly vertical, which indicates little effect of temperature on solubility. The sodium sulfate
+curve shows reverse solubility as temperature increases; thus, sodium sulfate has a tendency to coat heat-
+exchanger surfaces where heat is added to saturated solutions of this system.
+
+Often solid-liquid equilibrium data are not available for the system of interest, and experimental de-
+termination of the solidus-liquidus curves is required. If the system of interest is simple (i-e., two to three
+components) and well behaved (ideal), then reliable predictive methods are available. Techniques for
+predicting nonideal solid-liquid phase behavior and multicomponent equilibria are emerging.
+
+PREDICTING SOLID—LIQUID EQuiLiBRiA
+
+The extent to which solids can dissolve in liquids varies enormously; in some cases a solid solute may
+form a highly concentrated solution and in others the solubility is barely detectable. Some of the principles
+
+100 100
+
+80
+
+Ba ACETATE-1H20
+
+40
+
+TEMPERATURE (°C)
+"Ga ACETATE -2H,0 1420
+
+20
+
+20 40 60 80 100 20 40 60 80 100
+(1b,,/ 100 tb, WATER) (Ibm / 100 tb, WATER)
+
+FIGURE 11.2-4 Solubility data for salt systems.
+
+584 Charles G. Moyers, Jr. and Ronald W. Rousseau
+
+that govern equilibrium between a solid phase and a liquid phase are discussed in this section. In many
+situations reliable predictive techniques are available to estimate binary and multicomponent solubility
+behavior, and several of these approaches also are discussed.
+
+FRAMEWORK
+The fundamental relationship for equilibrium to exist between two phases (where the solute is designated
+by subscript 2) is
+
+S(pure solid) = f,(solute in solution) (11.2-1)
+
+or
+
+S,(pure solid) = y2%2 fz (11.2-2)
+
+where f, is the fugacity, x. is the solubility (mole fraction) of the solute in the solvent, +2 is the liquid
+phase activity coefficient, and f} is the reference-state fugacity to which y, refers. The solubility can then
+be defined as
+
+=
+Vf?
+
+Thus, the solubility depends on the activity coefficient and the ratio of two fugacities. It is convenient
+to define the reference-state fugacity (of solute) as the fugacity of pure, subcooled liquid at the temperature
+of the solution. As derived elsewhere! the pure fugacity ratio can be calculated from
+
+pele ig) « th (E - 1)
+. Got subcooled aaa) = ‘er \7, 7! (11.2-4)
+
+(11.2-3)
+
+X2
+
+where Ah, is the enthalpy of fusion, 7), is the melting temperature of pure substance 2, and 7 is the system
+temperature. Correction terms associated with differences between the heat capacities of the liquid and solid
+are neglected.
+
+If Eq. (11.2-4) is substituted into (11.2-3) the solubility relationship becomes
+
+Ah, (T
+In (72%) = Rr (7 - t) (11.2-5)
+
+If the solution is assumed to be ideal, then y, = 1.0 and Eq. (11.2-5) becomes
+
+Ah, [ T
+Inx, = we - t) (11.2-6)
+M
+
+Equation (11.2-6) is often referred to as the van’t Hoff relationship. To use this equation to compute
+solute solubility for an ideal solution only the heat of fusion Ah,, and the pure-component melting tem-
+perature 7y, are required. The interesting feature of this equation is that the solubility depends only on the
+properties of the solute and is independent of the nature of the solvent.
+
+Another equation that is employed frequently for ideal systems uses cryoscopic constants that have been
+obtained empirically for a wide variety of materials in the American Petroleum Institute Research Project
+No. 44:
+
+n= = AT, ~ TH + Bly - T)+**] (11.2-7)
+2
+
+where the cryoscopic constants A and B are defined by
+
+Ah, I AC,
+= rt and B= oy (11.2-8)
+m am f
+
+Freezing point curves were computed for para- and ortho-xylene using Eq. (11.2-6) (the van’t Hoff
+equation) and Eq. (11.2-7) which used cryoscopic constants. Data from Table 11.2-1 were used in the
+equations and calculated equilibrium compositions are shown as a function of temperature in Table 11.2-
+2. The computed liquid compositions are nearly identical in the high concentration range and diverge
+
+Crystallization Operations
+
+585
+
+TABLE 11.2-1 Data Used for Freezing-Point Curve
+
+Calculations
+
+Data p-Xylene o-Xylene
+
+Ty 286.41 K 247.97 K
+
+Shy 4090 cal/moi 3250 cal/mol
+
+A 0.02599 mol frac/K 0.02659 mol frac/K
+B 0.0028 mol frac/K 0.0030 mot frac/K
+
+TABLE 11.2-2 Computed Freezing-Point Curves for o- and p-Xylene
+
+Temperature
+(K)
+
+286.41
+285.0
+280.0
+270.0
+260.0
+250.0
+240.0
+230.0
+
+p-Xylene
+Mole Fraction in Solution
+
+Eq. (11.2-8)
+
+1.00
+
+0.965
+0.848
+0.646
+0.482
+0.351
+0.249
+0.172
+
+o-Xylene
+Mole Fraction in Solution
+Temperature _—_—_—_—_——
+Eq. (11.2-9) (K) Eq. (11.2-8) Eg. (11.2-9)
+1.00 249.97 1.00 1.00
+0.964 245.0 0.923 0.923
+0.844 240.0 0.803 0.805
+0.640 235.0 0.695 0.699
+0.478
+0.352
+0.256
+0.183
+
+slightly in the dilute regime. Figure 11.2-5 is a plot of freezing-point depression curves for mixtures of
+xylene isomers. The binary eutectic temperature for para and ortho isomers is about 236.3K. This is the
+temperature at which both components solidify together. Thus, the mole fraction of ortho-xylene in solution
+plus the mole fraction of para-xylene must equal 1 at the eutectic (x, + x, = 1.0). This condition also
+fixes the eutectic temperature for multicomponent systems. The ternary eutectic temperature for a mixture
+of xylene isomers is determined by finding the common freezing point at which the sum of the mole
+fractions of mixed isomers in solution equals | (x, + x, + x, = 1.0). The eutectic conditions for the three
+xylene isomer binaries are indicated in Fig. 11.2-5. The ternary eutectic is also indicated.
+
+100
+80
+
+60
+40
+
+Component purity (mol %)
+_
+°
+
+1
+—220
+
+—180
+
+—140
+
+—— M-0-P Ternary eutectic
+-~--- M-O Binary eutectic
+—---— P-M Binary eutectic
+~—-— P-O Binary eutectic
+
+—100 -60 —20 20 60
+Temperature (°F)
+
+FIGURE 11.2-5 Freezing-point depression curves for xylenes.
+
+586 Charles G. Moyers, Jr. and Ronald W. Rousseau
+
+°o Experimental (Pickering, 1893)
+=-—— Predicted
+
+Freezing temperature (°C)
+
+0.0 0.2 0.4 0.6 0.8 1.0
+
+Acetic acid (mole fraction)
+FIGURE 11.2-6 Comparison of predicted and experimental equilibrium curves for acetic acid~water.
+
+Excerpted by special permission from Chemical Engineering, Feb. 22, copyright © 1982 by McGraw-
+Hill, Inc., New York, NY.
+
+Determination of eutectic points is important since yield of a desired component is limited by the
+position of the eutectic. The above procedures give accurate predictions of eutectic points in ideal binary
+and multicomponent systems and are frequently sufficient for preliminary evaluation of a crystallization
+system. For the final design of a commercial system, experimental verification of the eutectic is advisable.
+
+For nonideal systems a number of approaches are available. The method to use in a specific case may
+depend on the availability of thermodynamic parameters necessary to perform the specific calculation. Some
+of the methods are direct and others require iterative techniques best relegated to computers. Activity
+coefficients for solid-solubility calculations can often be estimated directly from vapor-liquid equilibrium
+data obtained at higher temperatures. Experimental vapor-liquid equilibrium data frequently are easier to
+find than solid-liquid equilibrium data; thus, this approach provides a convenient technique for conducting
+preliminary design calculations to determine the feasibility of a given process. Data are correlated using a
+semiempirical equation, such as the Wilson equation, whose characteristic binary parameters are extrapo-
+lated with respect to temperature. Muir and Howat’ have reported the results of using this technique for
+several ideal and nonideal systems and found good agreement with experimental data. Figures 11.2-6 and
+11.2-7 compare predicted and experimental equilibrium data for acetic acid-water and caprolactam-water
+binaries. Agreement between predicted and experimental freezing points is good.
+
+For nonpolar systems the activity coefficient can be estimated using the Hildebrand-Scatchard* theory
+of regular solutions. To calculate the activity coefficient of a dissolved solute using regular solution theory,
+solubility parameters must be available for the components. For many materials these parameters can be
+calculated and/or are available in standard engineering references.
+
+© Experimental (Puffer, 1969)
+-—< Predicted
+
+Freezing temperature (°C)
+
+0.0 0.2 0.4 0.6 0.8 10
+Caprolactam (mole fraction)
+
+FIGURE 11.2-7 Comparison of predicted and experimental equilibrium curves for caprolactam-water.
+
+Excerpted by special permission from Chemical Engineering, Feb. 22, copyright © 1982 by McGraw-
+Hill, Inc., New York, NY.
+
+Crystallization Operations 587
+
+A group-contribution method, called UNIFAC,> has been developed for estimating activity coefficients
+in nonelectrolyte solutions. By using this approach solubilities for several solutes in a variety of solvents
+may be calculated. In many cases good agreement is obtained. The activity coefficient consists of two
+parts, the combinatorial contribution, arising from differences in molecular size and shape, and the residual
+contribution, arising from differences in intermolecular forces of attraction. Group interaction parameters
+must be available to use this approach. Parameters are listed by Fredenslund et al.° for many systems of
+interest.
+
+Other approaches to the computation of solid-liquid equilibria are shown in Table 11.2-3. The Soave-
+Redlich~-Kwong equation of state evaluates fugacities to calculate solid-liquid equilibria,’ while Wenzel
+and Schmidt® developed a modified van der Waals equation of state for the representation of phase equilibria.
+The Wenzel~Schmidt approach generates fugacities, from which the authors developed a trial-and-error
+approach to compute solid-liquid equilibrium. Unno et al.° recently presented a simplification of the solution
+of groups model (ASOG) that allows prediction of solution equilibrium from limited vapor-liquid equilib-
+rium data.
+
+Often complex liquid-solid equilibria cannot be predicted reliably, nor are data available in the literature.
+In this case, experimental determination of equilibrium behavior becomes necessary. Experimental data
+should be obtained at conditions that allow fitting by a model so that interpolation and extrapolation are
+possible.
+
+The ASTM apparatus'® for determining freezing point is shown in Fig. 11.2-8. Freezing point is
+obtained from freezing or melting temperature versus time curves. Figure 11.2-9 shows a typical temper-
+ature-time trace from an ASTM apparatus. The freezing point can be determined from the peak of the
+temperature rise during slow cooldown or from the break in the temperature-time curve during heating. A
+DSC (differential scanning calorimeter) can be used for freezing-point determination (as well as heat of
+fusion) if subcooling is low. Inorganic systems usually are handled well in a DSC apparatus. If many
+components are present, an experimental freezing-point curve can be determined by fixing the temperature
+of a well-mixed slurry containing an excess of solids, allowing the system to equilibrate, and analyzing
+the composition of the liquid phase. By repeating this process at successively lower temperatures a freezing-
+point curve can be developed.
+
+11.2-2 Choice of Operational Mode
+
+The technique employed to generate supersaturation in a solution is referred to as the mode of operation.
+The mode chosen by the designer is strongly influenced by the phase-equilibrium characteristics of the
+system, and it dictates the material and energy balance requirements of the system. The common techniques
+for producing solids (or generating supersaturation) from a solution include:
+
+1. Lowering the temperature of the feed solution by direct or indirect cooling. If solute solubility is
+strongly temperature dependent, this is the preferred approach.
+
+2. Adding heat to the system to remove solvent and thus ‘‘salt out’’ the solute. This technique is
+effective if solubility is insensitive to temperature.
+
+3. Vacuum cooling the feed solution without external heating. If solubility is strongly dependent on
+temperature, this method is attractive.
+
+4. Combining techniques. Especially common is vacuum cooling supplemented by extemal heating
+for systems whose solubility has an intermediate dependence on temperature.
+
+5. Adding nonsolvent. This is a common technique for precipitating solute from solution and is useful
+as both a laboratory technique and as an industrial process for product recovery.
+
+The methods described above can be employed in single- or multistage crystallization or in batch
+operations. Multistage operations are employed where evaporative requirements exceed the capabilities of
+a single vessel and/or energy costs dictate staging of the operation. Sometimes, staging is useful to produce
+uniform and/or larger crystals. Operation of crystallizers in series generates crystal size distributions having
+a narrower size spread than the same volume of crystallizers in parallel. Crystal growth kinetics usually
+are favored at higher temperatures, so if the first stage of a two-stage crystallization system is operated at
+a higher temperature, the overall CSD is enhanced. Batch crystallizers produce a narrower CSD than
+continuous well-mixed units. For capacity requirements less than 500 kg/h, batch crystallization is often
+more economical. If highly uniform crystals are required, which is the case for sugar, then batch operation
+offers advantages. Table 11.2-4 compares the operational characteristics of several common modes of
+crystallization. Both advantages and disadvantages are indicated.
+
+11.2-3 Crystallization Kinetics
+
+The kinetic phenomena that influence crystal size distributions are nucleation and growth. The driving force
+for both these phenomena is supersaturation, and at some levels of supersaturation, both nucleation and
+growth occur and compete for available solute. The purpose of the present discussion is to summarize key
+
+ees
+
+TABLE 11,.2-3 Predictive Methods for Solid—Liquid Equilibria
+
+System Approach Parameters Required References
+1. Ideal van’t Hoff equation Aly, Tu Prausnitz!
+2. Ideal Cryoscopic constants A, B, Ty API Project No. 44?
+3. Nonideal Compute -Wilson equation Vapor-liquid equilibrium data Muir and Howat?
+4. Nonideal Compute -y-regular solution theory Solubility parameters Hildebrand and Scott*
+5. Nonideat Compute y-UNIFAC Group interaction parameters Gmehling et al.*
+6. Nonideal Compute y-groups model Vapor-liquid equilibrium data Unno et al.°
+7. Nonideal Compute fugacity: modified van der Equation of state parameters Wenzel and Schmide®
+Waals equation of state
+8. Nonideal Compute fugacity: Soave-Redlich-Kwong Vapor pressure, critical Soave’
+
+equation of state constants, acentric factors
+
+
+Crystallization Operations 589
+
+DRIVING ARM
+
+DRIVING ROD
+
+VILL {LLL LLL
+
+TEMPERATURE - MEASURING DEVICE
+STOPPERED HOLE FOR “SEEDING”
+
+FREEZING TUBE, 200 mL CAPACITY
+
+FIGURE 11.2-8 Apparatus for freezing-point determination.
+
+aspects regarding the kinetics of crystal nucleation and growth and to indicate the process variables that
+are likely to affect each.
+
+It is obvious that supersaturation is a key variable in setting nucleation and growth rates and, as will
+be shown in the following discussion, the dependence of these rates on supersaturation is affected by the
+mechanism through which the process is occurring. This is made plain in Fig. 11.2-10, which shows the
+influence of supersaturation on nucleation and growth. The key aspects in this figure are the qualitative
+relationships of the two forms of nucleation to growth and to each other: growth rate and secondary
+nucleation kinetics are low-order (shown as linear) functions of supersaturation, while primary nucleation
+
+Temperature
+
+Time
+FIGURE 11.2-9 Typical temperature-time trace from freezing-point apparatus.
+
+TABLE 11.2-4 Features of Crystallization Mode
+
+Mode 1. Indirect Cooling Crystallization
+ae
+Feed
+Coolant | | 3
+Cd
+
+Operational Characteristics: Feed enters at higher saturation temperature than is maintained in the crys-
+tallizer and is cooled in shell-and-tube or scraped-surface exchangers to remove sensible heat and heat of
+crystallization. Solids encrustation problems are generally confined to the cooling surfaces.
+
+Product
+
+Advantages: Operation and control is simple. No vacuum equipment is necessary. Slurry density and
+product recovery are fixed by the feed composition and by the temperature maintained in the crystallizer
+body.
+
+Disadvantages: Care must be taken to prevent fouling of the cooling surfaces by maintaining low process-
+to-coolant temperature differences across cooling surfaces. If severe fouling is anticipated, scraped-surface
+heat exchangers may be necessary to assure reliable operation.
+
+Mode 2. Evaporative Cooling Crystallization
+
+Feed
+
+Product
+
+Operational Characteristics: Feed enters at higher saturation temperature than is maintained in the crys-
+tallizer body. Crystallizer temperature, product recovery, and slurry density are regulated by vacuum
+control. Heat of crystallization and the sensible heat of the feed are removed by evaporation and conden-
+sation of solvent. The condensate may either be removed or a portion or all returned.
+
+Advantages: No heater is required in this mode of operation, and condensate can be returned to wash
+down walls to control the formation of encrustations.
+
+590
+
+TABLE 11.2-4 (Continued)
+
+Disadvantages: Slurry concentration and product yield are fixed by material and energy balance con-
+straints.
+
+Mode 3. Cooling and Salting Out Crystallization
+
+Feed
+
+Operational Characteristics: The feed stream saturation temperature is higher than that maintained in
+the crystallizer body; thus, adiabatic cooling occurs. Also, external heat is added to evaporate solvent and
+precipitate additional solute.
+
+Advantages: Slurry density and yield can be controlled to some degree by adjustment of external heat
+input.
+
+Disadvantages: An external (or internal) heat exchanger and a vacuum system are required. Fouling at
+vapor release surfaces is common.
+
+Mode 4. Salting Out Crystallization (Addition of Nonsolvent)
+
+Feed
+
+Nonsolvent
+feed
+
+Product
+
+Operational Characteristics: Crystallizer temperature is controlled by vacuum level and ratio of nonsol-
+vent to feed. A reflux condenser normally is used to remove heat by condensing the solvent.
+
+Advantages: System is reliable to operate. Encrustations are minimized since heating and cooling surfaces
+are eliminated and vaporization is minimal.
+
+Disadvantages: An additional component (nonsolvent) must be separated from all liquid streams and
+recycled. The technique is somewhat limited since the nonsolvent must be miscible in solvent.
+
+591
+
+592 Charles G. Moyers, Jr. and Ronald W. Rousseau
+
+Primary
+nucleation
+rate
+
+Secondary
+
+nucleation
+
+Metastable region
+
+Crystal growth rate (Ib,,/h)
+Nucleation rate (no. /h)
+
+Supersaturation ——>
+FIGURE 11.2-10 Influence of supersaturation on growth and nucleation rates.
+
+is shown to follow a high-order dependence on supersaturation. Design of a crystallizer to produce a desired
+crystal size distribution requires kinetic data that quantify the relationships of nucleation and growth to
+extemally controlled variables and to supersaturation. The following discussion necessarily is brief and
+simply outlines some of the major factors that influence nucleation and growth kinetics. More complete
+discussions of each phenomenon can be found in the references cited.
+
+As with all kinetic phenomena, the first concept to understand is the driving force for the rate processes.
+While supersaturation was represented above as the driving force for nucleation and growth, no clear
+definition of this quantity was given. In fact, there are various ways in which the driving force or super-
+saturation can be defined:
+
+The difference between the solute concentration and the concentration at equilibrium, C — C*.
+The difference between the system temperature and the temperature at equilibrium, T — T*.
+The ratio of the solute concentration and the equilibrium concentration, C/C*.
+
+The ratio of the difference between the solute concentration and the equilibrium concentration to
+the equilibrium concentration, s = (C ~ C*)/C*.
+
+een
+
+Garside'! cites the analyses and restrictions which have led to the conclusion that the most appropriate
+driving force for crystal growth is that given by the fourth of the possibilities listed above, s = (C — C*)/
+C*. This definition of supersaturation will be used throughout the ensuing discussion. Garside also notes
+that when dealing with hydrated salts, concentration should not be based on the anhydrous solute.
+
+NUCLEATION
+
+In crystallization, nucleation is the formation of a solid phase from a liquid phase. The process differs from
+growth in that a new crystal results from the transfer of solute from the liquid to the solid; in growth, solid
+is deposited on an existing crystal. Because it is the phenomenon of crystal formation, nucleation sets the
+character of the crystallization process, and it is therefore the most critical component in relating crystallizer
+design and operation to crystal size distributions.
+
+Mechanisms. Classical nucleation theory is based on homogeneous and heterogeneous mechanisms,
+both of which call for the formation of crystals through a process of sequentially combining the constituent
+units that form a crystal. These mechanisms are referred to as primary nucleation because existing crystals
+play no role in the nucleation. Both homogeneous and heterogeneous mechanisms require relatively high
+
+Crystallization Operations 593
+
+supersaturations in order for them to occur and they exhibit a high-order dependence on supersaturation.
+These factors often lead to production of excessive fines in systems where primary nucleation mechanisms
+are important.
+
+Mullin’? outlines the classical theoretical treatment of primary nucleation, which results in the expression
+
+16x0°v* )
+
+“30 Tfin + DE (11.2-9)
+
+Br = Acxp(
+
+where & is the Boltzmann constant, ¢ is surface energy per unit area, v is molar volume, and A is a constant.
+Note that this equation can be simplified by recognizing that s is often much less than 1, so that In (s +
+1) approaches s:
+
+16x0°U"
+Oo — -'
+B° = Aexp ( ae) (11.2-9a)
+
+The most important variables affecting primary nucleation rates are shown by Eq. (11.2-9) to be interfacial
+energy 0, temperature 7, and supersaturation s. The high-order dependence of nucleation rate on super-
+saturation is especially important as a small variation in supersaturation may produce an enormous change
+in nucleation rate. This gives rise to the often observed phenomenon of having a clear liquor transformed
+into a slurry of very fine crystals with only a slight increase in supersaturation, for example, by decreasing
+the solution temperature. The catalytic effect of solid particles (as in heterogeneous nucleation) is to reduce
+the energy barrier to formation of a new phase. This, in effect, can reduce the interfacial energy o by
+orders of magnitude.
+
+An empirical approach to modeling primary nucleation requires a knowledge of the metastable limit
+that a given solution can withstand before spontaneous nucleation occurs. This limit, which was first
+observed in experiments by Miers and Issac,'? must be determined through experimentation, and nucleation
+tate is then correlated with the equation
+
+Bo =kC-C,) C*<C, (11.2-10)
+
+where C is solute concentration, C,, is the solute concentration at which spontaneous nucleation occurs,
+and C* is the solute concentration at saturation. Randolph and Larson'* indicate that C,, is very close to
+C* for many inorganic systems, and they report satisfactory correlations with C* substituted for C,, in Eq.
+(11.2-10).
+
+Secondary nucleation is the formation of new crystals as a result of the presence of solute crystals; in
+other words, crystals of the solute must be present for secondary nucleation to occur. Garside and Davey'®
+and Larson'® give excellent reviews of the subject, so only a brief synopsis is provided here.
+
+Several features of secondary nucleation make it more important than primary nucleation in industrial
+crystallizers. First, continuous crystallizers and seeded batch crystallizers have crystals in the magma that
+can participate in secondary nucleation mechanisms. Second, the requirements for the mechanisms of
+secondary nucleation to be operative are fulfilled easily in most industrial crystallizers. Finally, most
+crystallizers are operated in a low supersaturation regime so that crystal growth is regular and the resulting
+product is pure and of good habit; low supersaturation can support secondary nucleation but not primary
+nucleation.
+
+Secondary nucleation can occur as the result of several mechanisms which have been identified and
+observed in selected systems. These include initial breeding, contact nucleation (also known as collision
+breeding), and shear breeding. Initial breeding results from immersion of seed crystals in a supersaturated
+solution, and it is thought to be caused by dislodging extremely small crystals that were formed on the
+surface of the crystals during drying. Although this mechanism is unimportant in continuous and unseeded
+batch crystallization, it can have a significant impact on the operation of seeded batch crystallizers. Girolami
+and Rousseau'’ demonstrate the effects of several process variables on nucleation rates caused by initial
+breeding. Contact nucleation results from collisions of crystals with one another, crystallizer internals, or
+with an impeller of an agitator or circulation pump. It should be recognized that the collision energy for
+contact nucleation is small and does not necessarily result in the macroscopic degradation of the contacted
+crystal. Because of the importance of this mechanism it will be discussed in more detail below. Shear
+breeding results when supersaturated solution flows by a crystal surface and carries with it crystal precursors
+believed formed in the region of the growing crystal surface. Sung et al.'* observed nucleation of
+MgsO,°7H,0 by this mechanism and found that very high levels of supersaturation were required for it
+to produce significant numbers of nuclei.
+
+Process Variables Affecting Contact Nucleation. As stated above, contact nucleation results from a
+collision of a crystal with an object, such as an impeller or other crystallizer internals, in a supersaturated
+medium. The pioneering studies that elucidated many factors affecting this nucleation mechanism were
+
+594 Charles G. Moyers, Jr. and Ronald W. Rousseau
+
+carried out by Strickland-Constable and coworkers'?-? and Clontz and McCabe.”! These and subsequent
+works demonstrate that the number of crystals produced by a controlled impact of an object with a seed crystal
+depends on the energy of impact, supersaturation at impact, supersaturation at which crystals mature,
+material of the impacting object, area of impact, angle of impact, and system temperature. Although it is
+impossible to account quantitatively for each of these variables, certain generalizations can be drawn from
+the research on this nucleation mechanism.
+
+Tai et al.?? demonstrate that the number of crystals produced under controlled conditions is an expo-
+nential function of impact energy E. Furthermore, a threshold or minimum collision energy E, is required
+for some crystalline systems. Also, Shah et al.?* and Evans et al.?* found that the material of construction
+of the impacting object greatly affects the number of crystals resulting from the collision. In particular,
+coating the crystallizer internals or manufacturing them from soft materials reduces contact nucleation rates.
+This is attributed to a reduction in the energy transmitted from the coated object to the impacted crystal.
+Based on these two experimental observations, the following expression was proposed for systems at
+constant supersaturation:”*
+
+Bo =kyexp(E-E) E>E, (11.2-11)
+
+In a crystallizer with a circulation pump or agitator, it has been shown that collisions between such a device
+and crystals in the circulating magma dominate nucleation resulting from other collisions.”° Consequently,
+it might be expected that a relationship of impact energy E to crystallizer variables must include the mass
+of the impact crystal M,, and the rotational velocity of the impeller w. Moreover, the fraction of the
+available energy actually transmitted to the crystal, €, should also be included in the model:
+
+E = f(e, w, M.) (11.2-12)
+
+The variables shown in Eq. (11.2-12) can be manipulated to some extent, thereby modifying nucleation
+rates and the concomitant crystal size distribution. For example, internal classification can be used to keep
+larger crystals away from energetic collisions with an impeller, but doing so may create other problems
+with stability of the crystal size distribution. The rotational velocity of an impeller can be changed if there
+are appropriate controls on the pump or agitator. Caution must be exercised, however, for a reduction in
+circulation velocity can reduce heat transfer coefficients and increase fouling or encrustation on heat transfer
+surfaces. Moreover, the crystals in the magma must be kept suspended or else crystal habit and growth
+rates could be affected adversely. It is suspected that impact energy may have a high-order dependence on
+rotational velocity, and if that is the case, modest changes in this quantity could alter nucleation rates
+substantially. As already indicated, the fraction of the impact energy transmitted from an impeller to the
+crystal can be manipulated by changing the material of construction of the impeller. Tai?’ also showed the
+hardness of the crystal surface to be important in comparing nucleation characteristics of different crystalline
+materials. Therefore, the importance of ¢ may vary from one crystalline system to another: those systems
+in which the crystal face is soft may be more susceptible to nucleation rate changes due to the variables in
+Eq. (11.2-12) than those crystalline systems where the face is hard.
+
+Correlations of nucleation rate with crystallizer variables have been developed for several systems. For
+example, Bennett et al.2* examined the effect of slurry circulation rate on nucleation and developed a
+correlation based on the tip speed of the impeller. Grootscholten et al.?” considered the scale-up of nucleation
+kinetics for sodium chloride crystallization, and they provide an analysis of the role of mixing and mixer
+characteristics in contact nucleation. Garside and Shah“ reviewed published kinetic correlations though
+about 1979.
+
+Supersaturation has been observed to affect contact nucleation, but the mechanism by which this occurs
+is not clear. There are data” that infer a direct relationship between contact nucleation and crystal growth.
+These data show that the number of nuclei produced by an impact is proportional to the linear growth rate
+of the impacted face. This is true even for citric acid which exhibits an unusual relationship between growth
+rate and supersaturation. It has been proposed that the known effect of growth rates, which are determined
+primarily by supersaturation, on the surface of the growing crystal provides the link between crystal growth
+and contact nucleation.
+
+A second perspective is that supersaturation influences the fraction of entities formed by a collision that
+survive to form large crystals. This concept largely has been rejected based on the observation that such
+entities are much larger than the size of a critical nucleus. Recent research" ** used photographic and
+electronic zone-sensing techniques to examine the size distributions of particles formed by impacts with
+seed crystals in a supersaturated solution. These experiments on potassium alum show that the particles
+produced cover a size range from 50 zm down to the smallest size capable of being observed by the
+instrument. Furthermore, the influence of supersaturation on the number of particles produced in the 20-
+50 wm range was much greater than it was on the number produced in the smaller size range. Data that
+will be discussed in the section on crystal growth have shown that dissolution of crystals formed by contact
+nucleation does not occur, but that a fraction of the crystals grow very slowly and some may not grow at
+all.
+
+Still another possible role of supersaturation is that it affects the solution structure and perhaps causes
+
+Crystallization Operations 595
+
+the formation of clusters of solute molecules. These clusters may participate in nucleation, although the
+mechanism by which this would occur is not clear. Mullin and Leci™ present evidence for the formation
+of citric acid clusters in aqueous supersaturated solutions, and McMahon et al.*> have examined cluster
+formation in solutions of KNO,; using Raman spectroscopy.
+
+The ease with which nuclei can be produced by contact nucleation is a clear indication that this
+mechanism is dominant in many industrial crystallization operations. Research on this nucleation mechanism
+is continuing with the objective of building an understanding of the phenomenon that will allow its successful
+inclusion in models describing commercial systems.
+
+Crystat GROWTH
+
+Crystal growth rates may be expressed in a variety of ways: as the linear advance rate of an individual
+crystal face, as the change in a characteristic dimension of a crystal, or as the rate of change in mass of a
+crystal. These different expressions can be related through an understanding of crystal geometry. However,
+it is often convenient to use the method of measurement as the basis of the growth rate expression. In
+certain instances an analysis of the crystallization process will require growth rate to be defined in a specific
+way; for example, the use of a population balance to describe crystal size distribution requires that growth
+rate be defined as the rate of change of a characteristic dimension.
+
+Single-crystal studies of growth kinetics often involve the rate of advance of an individual crystal face
+or the rate of change in crystal size associated with exposure to a supersaturated solution. The latter type
+of study will be dealt with in discussions of multicrystal magmas. The rate of advance of a single crystal
+face can be quantified by observation of the face through a calibrated eyepiece of an optical microscope.
+Using this procedure, it is possible to examine the structure of the advancing crystal face and perhaps to
+isolate surface reaction kinetics from mass transfer kinetics. These phenomena will be discussed later. An
+additional advantage of this system is that it is possible to examine crystal growth kinetics without inter-
+ference from competing processes such as nucleation.
+
+Multicrystal magma studies usually involve examination of the rate of change of a characteristic crystal
+dimension or the rate of increase in the mass of crystals in a magma. The characteristic dimension in such
+analyses depends on the method used in the determination of crystal size; for example, the second largest
+dimension is measured by sieve analyses, while an equivalent spherical diameter is determined by both
+electronic zone-sensing and laser light-scattering instruments. A relationship between these two measured
+dimensions and between the measured quantity and the actual crystal dimensions can be derived from
+appropriate shape factors. Recall that volume and area shape factors are defined by the equations
+
+V. = kU? (11.2-13)
+
+and
+A. = k,l? (11.2-14)
+
+where V. and A, are volume and area of a crystal, k, and k, are volume and area shape factors, and L is
+the characteristic dimension of the crystal. Suppose an equivalent spherical diameter L, is obtained from
+an electronic zone-sensing instrument and the actual dimensions of the crystal, which is known to have a
+cubic habit, are to be calculated. Let L, be the edge length of the crystal, and k,, and k,, be the volume
+shape factors for a sphere and a cube, respectively. Since the volume of the crystal is the same, regardless
+of the characteristic dimension,
+
+V.= k,l? = k,l} (11.2-15)
+which means that
+k “3
+L.= (=) L, (11.2-16)
+koe
+
+Since k,, is 7/6 and k,, is 1.0, the numerical relationship between these two dimensions can be determined
+from Eq. (11.2-16).
+
+If the rate of change of a crystal mass, dM,/dt, is measured, the quantity can be related to the rate of
+change in the crystal characteristic dimension by the equation
+
+dL
+
+dM, _ dp.keL) dL
+- dt
+
+— 2
+dt dt 3Pckok
+
+(11.2-17)
+
+where 9, is crystal density. Since k, = A,/L’ and G is defined as dL/dt
+
+dM, _ (ke
+7 2»-(f) A.G (11.2-18)
+
+596 Charles G. Moyers, Jr. and Ronald W. Rousseau
+
+In multicrystal magma systems, growth kinetics become difficult to isolate from other phenomena,
+although a combined analysis, such as that described in Section 11.2-4 for the perfectly mixed crystallizer,
+gives a realistic view of the actual process that occurs in a crystallizer, that is, nucleation and growth
+kinetics are measured simultaneously and therefore at the same process conditions.
+
+Growth Models. At least two resistances contribute to a determination of growth kinetics. The rate
+processes to which these resistances apply are (1) integration or incorporation of the crystalline unit (e.g.,
+solute molecules) into the crystal surface (lattice) and (2) molecular or bulk transport of the unit from the
+surrounding solution to the crystal face. Since bulk transport is addressed elsewhere (see Chapter 2), this
+discussion will focus only on surface incorporation. Detailed reviews of this topic can be found else-
+where''?*-° so this discussion will be brief.
+
+Numerous models have been proposed to describe surface reaction kinetics. Among these are models
+that assume crystals grow by layers and other models that consider growth to occur by the movement of a
+continuous step. Each model results in a specific relationship between growth rate and supersaturation, but
+none can be used for a priori predictions of growth kinetics. Such models do provide insights as to the
+effects of certain process variables on growth and, with additional research, may lead to predictive capa-
+bilities. For these reasons and because of the extensive literature on the subject, all that will be pointed
+out here are the key aspects of the ‘physical models and the resulting relationship between growth and
+supersaturation predicted by each theory.
+
+The model used to describe the growth of crystals by layers calls for a two-step process: (1) formation
+of a two-dimensional nucleus on the surface and (2) spreading of the solute from the two-dimensional
+nucleus across the surface. The relative rates at which these two steps occur give rise to the mononuclear
+two-dimensional nucleation theory and the polynuclear two-dimensional nucleation theory. In the mono-
+nuclear two-dimensional nucleation theory, the surface nucleation step occurs at a finite rate while the
+spreading across the surface occurs at an infinite rate. The reverse is true for the polynuclear two-dimen-
+sional nucleation theory. From the mononuclear two-dimensional nucleation theory, growth is related to
+supersaturation by the equation
+
+G = C\hAfin (1 + 5)}'? exp l-aeS| (11.2-19)
+
+where C, and C, are system-dependent constants, # is the height of the nucleus, A is surface area, and s
+and T are as defined earlier. The polynuclear two-dimensional theory produces the equation
+
+= Gs _ CG, .
+G= Gr a+ rr) mad ( Tin (+ 5) (11.220)
+
+where C; is a system-dependent constant. Finally, if both formation of the two-dimensional nucleus and
+spreading of the surface layer are important in determining growth rate, the following equation can be
+derived:
+
+G = C,s*"fln (1 + 5)" exp (-s_2—5) (11.2-21)
+
+where C, is a system-dependent constant.
+
+Equations (11.2-19), (11.2-20), and (11.2-21) can be simplified considerably by recognizing that in
+many systems the quantity s is much less than 1. In that case, In (1 + s) is approximately s. Making this
+substitution, the growth rate from the mononuclear two-dimensional theory becomes
+
+G = C,hAs'? exp (-2) (11.2-22)
+For the polynuclear two-dimensional nucleation theory
+Cy C2
+C= (2x) exp (- ) (11.2-23)
+For both steps occurring at similar rates
+
+G = G,s*" exp (-2) (11.2-24)
+
+The screw dislocation theory, which was formulated by Burton, Cabrera, and Frank“ and is often
+referred to as the BCF theory, shows that the dependence of growth rate on supersaturation can vary from
+a parabolic relationship at low supersaturations to a linear relationship at high supersaturations. In the BCF
+
+Crystallization Operations 597
+
+theory, growth rate is given by
+‘es? oi
+G= c(=) tanh <!) (11.2-25)
+a} €s
+
+where € is screw dislocation activity and o| is a system-dependent quantity that is inversely proportional
+to temperature. The dependence of growth rate on supersaturation is linear if the ratio o{/es is small, but
+this dependence becomes parabolic as the ratio becomes large. This is because tanh x approaches x as x
+becomes small (supersaturation becomes large), and tanh x approaches 1.0 as x becomes large (supersa-
+turation becomes small). It is possible then to observe variations in the dependence of growth rate on
+supersaturation for a given crystal-solvent system.
+
+An empirical approach can also be used to relate growth kinetics to supersaturation. This approach
+simply fits the data with a power-law function of the form
+
+G = kgs* (11.2-26)
+
+where kg and g are constants determined by fitting the equation to growth rate data. Such an approach
+should be valid over small ranges of supersaturation. In fact, careful analysis of the theories discussed
+above will show that the more fundamental equations can be fit by Eq. (11.2-26) over limited ranges of
+supersaturation.
+
+Effects of Impurities and Solvent. The presence of impurities can alter substantially the growth rates
+of crystalline materials. The alteration that is most common is for the growth rates to be decreased. It is
+often thought that impurities must be molecularly similar to the solute to have an impact on crystal growth.
+However, impurities with few similarities to the crystallizing species have been observed to reduce growth
+rates. This may be because structurally similar complexes have been formed between the impurity and
+solvent or another species in the solution, but such events are difficult to identify. Because additions of
+impuritiés to a crystallizing system most often result in a reduced crystal growth rate, it is critical that feed
+solutions be as free from contamination as possible. This is one way in which the operation of process
+units upstream of a crystallizer can affect crystal size distribution. Therefore, it is suggested that a strict
+protocol be followed in operating units such as reactors or other separation equipment upstream of the
+crystallizer. Equally important is monitoring the composition of recycle streams so as to detect the accu-
+mulation of impurities. Moreover, crystallization kinetics obtained on small-scale equipment for use in
+design or analysis should be obtained using solutions as similar as possible to that expected in the full-
+scale process.
+
+Another important effect associated with the presence of impurities is that they may change the crystal
+habit. Habit alteration is considered to result from unequal changes in the growth rates of different crystal
+faces. Davey*' reviews the role of impurities in the general context of habit modification. Surfactants,
+especially, have been observed to modify growth rates of individual faces and thereby change the habit of
+a crystal.
+
+The mechanism by which an impurity affects crystal growth rate is considered to involve adsorption
+of the impurity onto the crystal surface. Once located on the surface, the impurity forms a barrier to solute
+transfer from the solution to the crystal. This model has been used to relate the growth rate of a crystal to
+the concentration of impurity in solution through an adsorption isotherm.**“ An alternative theory calls
+for the adsorbed impurity to occupy active growth sites, thereby preventing attachment of solute to the
+surface. Still another concept of the impact of an impurity on growth rate calls for integration of the
+impurity into the crystal structure, which leads to two deleterious effects: reduction of growth rate and
+production of impure product. Few generalities exist in describing the role of impurities in crystallization
+phenomena, and it is usual to rely on experimental data that are often correlated empirically. Mullin’? lists
+several systems in which habit modifiers have been used effectively. An interesting prospect raised by the
+work of McMahon et al.°> is that impurities may have a strong effect on the formation of solute clusters
+and ultimately crystal growth.
+
+The solvent from which a material is crystallized can influence the crystal habit and growth rate.
+Bourne*® ascribes the effects of a solvent to two sets of factors: one has to do with the effects of solvent
+on mass transfer of the solute through adjustments in viscosity, density, and diffusivity; the second is
+concerned with the structure of the interface between the crystal and solvent. The analysis provided by
+Bourne concludes that a solute-solvent system having a high solubility is likely to produce a rough interface
+and concomitantly large crystal growth rates.
+
+Crystal Growth in Mixed Crystallizers. As described earlier, crystal growth rates in muiticrystal
+magmas are defined in terms of the rate of change of a characteristic dimension
+
+dL
+= .2-27
+G at (11.2-27)
+
+598 Charles G. Moyers, Jr. and Ronald W. Rousseau
+
+It will be shown in a later section that the solution of a differential population balance requires a knowledge
+of the relationship between growth rate and size of the growing crystals. Moreover, this relationship can
+often be deduced from the form of population density data. A special condition, which simplifies such
+balances, results when all crystals in the magma grow at the same constant rate. Crystal-solvent systems
+that show this behavior are said to follow the AL Law proposed by McCabe,” while systems that do not
+are said to exhibit anomalous growth.
+
+Anomalous growth is a term used here to indicate that growth rates of crystals in a magma are not
+identical or that the growth rate of an individual crystal or mass of crystals is not constant. Two theories
+have been used to explain growth rate anomalies: size-dependent growth and growth rate dispersion. As
+with systems that follow the AL Law, anomalous growth results in characteristic forms of population density
+data. Unfortunately, such data cannot be used to distinguish between size-dependent growth and growth
+rate dispersion, because both have the same qualitative effects on population density.
+
+Size-Dependent Crystal Growth. A number of empirical expressions that correlate the apparent effect
+of crystal size on growth rate are summarized by White et al.*’ However, only a few of these meet the
+following requirements for use in population balances: (1) the expression must be continuous over the
+entire size range including L = 0; (2) the growth rate of zero-size crystals must not be zero; (3) the growth
+rate expression must allow convergence of moments of the crystal size distribution. The most often used
+correlation of size-dependent growth kinetic data is the Abegg-Stevens-Larson (ASL) growth rate expres-
+sion.** This equation uses three empirical parameters to correlate growth rate with crystal size:
+
+G=G°(1 ty? b<1 (11.2-28)
+
+where G°, y and b are determined from experimental data.
+
+There have been attempts to relate the kinetic parameter b to crystallizer variables; Garside and Jancic®
+showed a qualitative dependence on crystallizer volume, and Rousseau and Parks correlated b with G° and
+r. Several theories have been proposed to explain size-dependent growth kinetics, but none has been
+substantiated by direct observation or used to predict the onset of such behavior. One explanation seems
+particularly appealing: larger crystals impact impellers and other crystallizer internals with higher frequency
+and energy than smaller crystals; the larger crystals are therefore recipients of more surface breaks and
+irregularities that lead to higher growth rates.
+
+At the small end of the size range, crystals in mixed magmas have been observed**->'-* to give the
+appearance of growing at much reduced rates. Theories proposed to explain these observations are as
+follows: (1) it is assumed that smaller crystals have fewer surface defects to enhance crystal growth; (2)
+smaller crystals are assumed to have an increased solubility; (3) when small crystals are formed they are
+more spherical than more-developed crystals and a high surface energy is involved when the crystal shape
+goes from spherical to that characteristic of the crystal.
+
+Growth Rate Dispersion. The phenomenon of growth rate dispersion is the exhibition of different
+growth rates by crystals in a magma, even though they have the same size and are exposed to identical
+conditions. Both zero growth and abrupt changes in growth rates of individual crystals can be exhibited.
+This dispersion in growth rates can have significant effects on crystal population, leading in general to a
+broadening of the size distribution. As was discussed under size-dependent growth, growth rate dispersion
+may lead to population densities with characteristics that are different from those following the AL Law.
+These characteristics will become more apparent in Section 11.2-4. The phenomenological aspects of growth
+tate dispersion are discussed in the following paragraphs.
+
+White and Wright®® first characterized the effects of growth rate dispersion on a population of sucrose
+crystals by correlating the variance of the population about a mean size L. They correlated the variance
+with the extent of growth of the crystals in a seeded batch crystallizer. The original crystals were of uniform
+size and the mean of the crystal size distribution was used as a measure of the extent of growth. The
+relationship between the variance and extent of growth was linear and had slope p, which was proportional
+to the rate of spreading of the distribution. Growth rate dispersion for sucrose was found to be significant
+(p = 67 pm), but negligible dispersion (p = 1 um) was observed for aluminum trihydroxide. The slope
+p did not depend on the initial seed size (10-500 ym) or the stirring rate in the crystallizer; it decreased
+when growth rate or impurity concentration increased, or when brief intervals of dissolution occurred.
+Janse and de Jong™-*> found growth rate dispersion important in the growth of large potassium dichromate
+and potassium alum crystals and demonstrated that this phenomenon could account for anomalous char-
+acteristics in the population density of crystals obtained from continuous, steady-state crystallizers. They
+concluded that growth rate dispersion could provide an explanation of what had been considered to be size-
+dependent growth, but they also indicated that both phenomena could occur simultaneously and cause the
+aforementioned anomalous behavior; in other words, the occurrence of growth rate dispersion does not rule
+out the possibility that single-crystal growth may be size dependent.
+
+Recent microscopic studies of individual secondary nuclei have observed growth rate dispersion and
+size-dependent growth directly.*'-° Garside et al. report that two types of potassium alum secondary
+
+Crystallization Operations 599
+
+nuclei form after gentle contact of a seed crystal. Those less than 4 ym in size were created in larger
+numbers and were formed even if the solution was undersaturated. The number of such nuclei was relatively
+independent of supersaturation. These nuclei grew more slowly than larger ones and, in some cases, did
+hot grow at a measurable rate. The number and size of nuclei between 4 and 50 um in size increased as
+supersaturation was increased. Large crystals were not formed in saturated or undersaturated solution and
+in supersaturated solutions fended to grow more rapidly than small crystals.
+
+Girolami and Rousseau*’ analyzed batch data to show that apparent size-dependent growth of potassium
+alum crystals is in fact a manifestation of growth rate dispersion. Crystals of citric acid monohydrate
+generated by contact nucleation were found by Berglund and Larson*® to exhibit growth rate dispersion but
+not size-dependent growth. Very slow or zero growth rates for small secondary nuclei have been reported
+for aqueous solutions of pentaerythritol® and sodium chloride.” Several types of nuclei were distinguished
+by their size, shape, and individual growth behavior.
+
+Two distinctly different mechanisms that lead to growth rate dispersion have experimental support. The
+first, which was proposed by Randolph and White,°' assumes that all crystals have the same time-averaged
+growth rate but the growth rates of individual crystals fluctuate about some mean value. Direct evidence
+of random fluctuations i in growth rates has been reported for magnesium sulfate heptahydrate™ and potas-
+sium alum.“ The second proposed mechanism for growth rate dispersion assumes that crystals are born
+with a characteristic distribution of growth rates but individual crystals retain a constant growth rate
+throughout their residence in a crystallizer. This mechanism is supported by findings on citric acid,**
+potassium nitrate,“ and ammonium dihydrogen phosphate. Ail these studies found nuclei to have a
+distribution of growth rates and individual crystals to have constant growth rates.
+
+The surface integration step for crystal growth is thought to be the primary factor in both mechanisms
+of growth rate dispersion, and the BCF growth theory can be used to provide a qualitative explanation of
+the growth rate dispersion phenomenon. From the BCF theory, the growth rate of a crystal face is dependent
+on the number, sign, and location of screw dislocations on the surface of a growing crystal. Collisions of
+crystals with each other and crystallizer internals result in changes in the dislocation network of a crystal
+and lead to the random fluctuations of growth rates. Changes in the dislocation networks also occur simply
+due to the imperfect growth of crystal faces. A distribution of growth rates is a result of the varying
+dislocation networks and densities among nuclei and seed crystals.
+
+Although evidence for both mechanisms of growth rate dispersion exists, separate mathematical models
+have been developed for incorporating the two mechanisms into descriptions of crystal populations. Random
+growth rate fluctuations were characterized by Randolph and White®' with a growth rate diffusivity parameter
+Dg which is representative of the magnitude of the growth rate fluctuations. This model is similiar to that
+used to describe molecular diffusion and axial dispersion associated with velocity fluctuations. Mathematical
+models of growth rate dispersion due only to the growth rate distribution mechanism have been developed
+using different methods by Janse and de Jong®’ and Larson and coworkers.” These models characterize
+the growth rate distribution mechanism of growth rate dispersion by a distribution function having a mean
+growth rate G and a growth rate variance 07. Zumstein and Rousseau’! have extended such models by
+showing how both mechanisms of growth rate dispersion can be included and by illustrating the relative
+effects of the two mechanisms on CSD from batch and continuous crystallizers.
+
+Experimental efforts to determine the importance of the two mechanisms of growth rate dispersion have
+been involved mainly with the measurement of the spread in crystal size distribution during constant-
+supersaturation, isothermal batch crystallizations. The model for random growth rate fluctuations predicts
+the variance of the crystal size distribution will increase linearly with the extent of growth, while the model
+for a distribution of constant crystal growth rates predicts the variance to increase with the extent of growth
+squared. The original work by White and Wright on sucrose™ supports the growth rate fluctuation mech-
+anism, while the mechanism associated with a growth rate Aistribution is supported by data on contact
+nuclei of ammonium dihydrogen phosphate® and citric acid.”° Although there is experimental support for
+both mechanisms, it is still unclear how crystallizing conditions affect the relative importance of the two
+mechanisms.
+
+11.2-4 MODEL OF A WELL-MIXED CRYSTALLIZER
+
+In this section, the principles involved in using a population balance to describe the crystal size distribution
+in the product from a well-mixed continuous crystallizer are illustrated. The primary objective of this
+treatment is to show how nucleation and growth kinetics can be evaluated from data on the crystal size
+distribution produced in such crystallizers. Detailed development of the theory and extensions of these
+principles to crystallizers that employ selective removal of crystals from the crystallizer internals or to batch
+or transient continuous crystallizers is provided by Randolph and Larson. '*
+
+APPLICATION OF A POPULATION BALANCE
+The basis of a population balance is that the number of crystals in a system is a balanceable quantity. Such
+balances are coupled to the usual mass and energy balances describing any system, and the crystals are
+
+600 Charles G. Moyers, Jr. and Ronald W. Rousseau
+
+assumed to be sufficiently small and numerous so that the crystal size distribution may be considered to be
+a continuous function of a variable with which individual crystals are to be characterized. In this discussion,
+the variable is the characteristic dimension (size) of the crystal.
+
+A balance on the number of crystals in any size range—say L, to L,—must account for crystals that
+enter and leave that size range by convective fiow into and out of the control volume V; and for crystals
+that enter and leave the size range by growth. Crystal breakage and agglomeration are ignored in this
+discussion, and it is assumed that crystals are formed by nucleation at or near size zero. Now define a
+quantity called population density n so that the number of crystals dN(L) in the size range L to L + dL is
+given by
+
+dN(L) = Vrn(L) db (11.2-29)
+
+It is important to note that either clear liquor volume or slurry volume can be taken as a basis for the
+definition of n. For example, if clear liquor volume is taken as the basis, V; becomes the volume of clear
+liquor in the control volume. With this definition of the population density, it can be shown that the
+population balance on a well-mixed continuous crystallizer is given by
+
+268) -( an 2)
+
+V,—— + Qn -— Qin; = harve +n a (11.2-30)
+
+where Q; and Q, are volumetric flow rates of either clear liquor or slurry into and out of the crystallizer,
+respectively. Equation (11.2-30) can now be simplified as follows: assume that the feed liquor contains no
+crystals (n; = 0); restrict growth to follow the AL Law [8(nG)/@L = Gdn/dL}; specify that the magma
+volume is constant (8V;/dt = 0); and operate the crystallizer at steady state (dn/dt = 0).
+
+If all four of these restrictions apply, and if a mean residence time 7 (often called drawdown time) is
+defined as V;/Q,, the population balance can be written
+
+G—+-<0 (11.2-31)
+which may be integrated, using the boundary condition n(0) = n°, to give
+
+n= n° exp (-z) (11.2-32)
+
+If the assumptions that lead to Eq. (11.2-32) are valid, and they often are, a straight line will result if
+n is plotted versus L on semilog coordinates. Furthermore, the growth rate of crystals can be determined
+from the slope of the plot, which is —1/Gr. The nucleation rate is related to the intercept of the plot, 2°,
+by the expression
+
+B°=n°G (11.2-33)
+
+Equations (11.2-32) and (11.2-33) can be used to obtain nucleation and growth rates from population
+density measurements on a crystallizer that conforms to the assumptions stated above. This means that n
+must be determined as a function of L. There are various techniques for obtaining particle size distributions,
+and the procedures for determining n from these data varies according to the device used for the analysis.
+Although complete coverage of the advantages and disadvantages of available particle size analyzers is
+beyond the scope of this chapter, two common techniques are discussed briefly in the following paragraphs.
+
+Sieves. Dry and/or wet sieve analyses provide differential or cumulative weight distributions. Ob-
+viously, crystals must be in the size range appropriate for a given set of sieves in order for this procedure
+to be used. The processes of sampling, sample treatment, and sieving can modify the crystal size distribution
+if care is not taken to prevent agglomeration, crystal abrasion, and crystal breakage. In most sieving
+techniques, obtaining representative material for sieving requires that crystals be filtered carefully from the
+mother liquor and dried, and prior to drying it may be necessary to wash the crystals with a nonsolvent to
+prevent agglomeration. When working the first time with a crystalline material, some experimentation may
+be necessary to develop a good sieving practice and to find an appropriate wash liquor.
+
+Once satisfactory sieving has been accomplished, n(L) is determined from the following relationship
+derived from the definition of the cumulative weight distribution data:
+
+M,AW(L)
+
+n(L) = AL pk, L?
+
+(11.2-34)
+
+Crystallization Operations 601
+
+where M; is magma density or mass of crystals per unit volume of clear liquor or slurry, AW(L) is the
+fraction of the total mass of crystals retained on the sieve having an average size L, AL is the interval in
+size between the sieve and the next largest sieve in the nest, , is the density of the crystal, k, is the volume
+shape factor, and L is the average of the size of the sieve and the next largest sieve in the nest.
+
+Electronic Particle Size Analyzers. These devices typically measure changes in a property such as
+light diffraction, light scattering, light blockage, or electrical conductance to determine the size of a particle.
+Changes in these measured quantities depend on the volume of the particle being sized, and hence this is
+the property actually determined by the instrument. The characteristic dimension assigned to the particle
+is that of a sphere having a volume equivalent to the measured volume. The output from these instruments
+can be in two forms: a particle volume distribution or a number distribution. The volume distribution data
+can be converted to population densities using Eq. (11.2-34) and assigning the particles the shape factor
+of a sphere, «/6. Several devices give population density data directly, and conversions to other forms are
+unnecessary.
+
+There is considerable technique required in appropriately interpreting the data from electronic particle
+size analyzers. Vendors can be quite helpful in the development of a measurement procedure, but some
+experimentation should be expected with each new system.
+
+Kinetic MODELS
+
+Once nucleation and growth kinetics have been obtained using the procedures outlined above, correlations
+of them as functions of process variables are required to use the population balance model for predictive
+purposes. As discussed in Section 11.2-3, the important variables affecting nucleation and growth kinetics
+include temperature, supersaturation, magma density, and external stimuli that can cause nucleation, such
+as agitation or circulation rate of the magma. In Section 11.2-3 some of the important mechanisms by
+which nucleation and growth occur were described. These mechanisms should be the basis of models of
+crystallization kinetics, even though the actual correlations are empirical. Power-law functions are used
+most frequently in correlating nucleation and growth rates, but the choice of the independent variables can
+be justified from a mechanistic perspective. For example, systems that are believed to follow secondary
+nucleation mechanisms should include a variable reffecting the character of crystals in the crystallizer, such
+as magma density. The most commonly used power-law functions are
+
+B° = k,s°Mi, (11.2-35)
+and
+
+G =ks* (11.2-36)
+
+Several methods for expressing supersaturation were described in Section 11.2-3; it is often very difficult
+to measure this quantity, especially in systems that have high growth rates. In these systems, supersaturation
+is often so small that it is difficult to measure accurately, and it can be neglected in writing a solute mass
+balance. However, it is important in setting nucleation and growth rates. A useful technique in such
+instances is to substitute growth rate for supersaturation by combining Eqs. (11.2-35) and (11.2-36). This
+gives
+
+B° = k,G'M4, (11.2-37)
+
+The constant k,, depends on process variables other than supersaturation and magma density, such as
+temperature, rate of agitation or circulation, and presence of impurities. If sufficient data are available,
+these variables may be separated from the constant by adding more terms in a power-law correlation.
+However, k,, is essentially a constant specific to the operating equipment and not transferable from one
+scale of equipment to another. The solute-solvent-specific constants i and j are obtainable from experimental
+data and may be used in scale-up.
+
+PARAMETER EVALUATION
+
+As shown above, growth rate G can be obtained from the slope of a plot of the log of population density
+data against crystal size; nucleation rate B° can be obtained from the same data by using the relationship
+B° = n°G, where In n° is the intercept of the plot with the axis at L = 0, Nucleation rates obtained by
+these procedures should be checked by comparison with values obtained from a mass balance. It can be
+shown that the magma density of a slurry in a perfectly mixed crystallizer is given by
+
+M; = 6 p,k,n° (Gr)* (11.2-38)
+Rearranging this equation and substituting n° = B°/G, we obtain
+
+= — Mr _
+6 pk, G4
+
+(11.2-39)
+
+602 Charles G. Moyers, Jr. and Ronald W. Rousseau
+
+TABLE 11.2-5 Typical Kinetic Orders Reported’?
+
+Mode of Kinetic
+System Crystallization Order Comments
+Calcium sulfate- Precipitation 2.6-2.8 Indication that homogeneous
+phosphoric acid nucleation dominates
+Ammonium sulfate- Cooling 1.7 No enhancement in crystal
+water size with increased
+suspension density noted
+Ammonium alum- Cooling 2.1 Strong secondary nucleation
+water effects were noted
+Ammonium alum- Salting out 1.0 Increased residence time had
+water-ethanol no effect on crystal size
+distribution
+Ammonium sulfate- Salting out 4.0 Increased residence time had
+water-methanol moderate effect on CSD
+Sodium chloride- Salting out 9.0 Increasing residence time
+water-ethanol strongly affected CSD
+Ammonium alum- Salting out 2.0 Used MSMPR theory to
+water-ethanol analyze data. Secondary
+nucleation effects not
+accounted for
+Cyclonite-water- Precipitation 1.0 Used MSMPR theory to
+nitric acid obtain kinetic order
+
+Reproduced by permission of the American Institute of Chemical Engineers.
+
+After nucleation and growth rates have been obtained from population density data, the exponents i
+and j in Eq. (11.2-37) can be determined using graphical techniques or multivariable linear regression. For
+example, i can be obtained from data on several runs of varying residence times. Each run will yield values
+of B°, n°, and G. If slurry concentration (magma density) M; is the same for all runs, the slope of a
+fogarithmic plot of n° versus G will give i. If slurry concentration varies slightly from run to run, then a
+logarithmic plot of B°/M; versus G will smooth the data so that i can be obtained from the slope of the
+plot. Confidence in the parameters i and j requires that sufficient data be accumulated to make such
+correlations statistically reliable. Typical values of kinetic orders are given in Table 11.2-5, and a more
+complete list is given by Garside and Shah.”
+
+CHARACTERISTICS OF CRYSTAL SiZE DistRiBUTIONS FROM MSMPR CRrYSTALLIZERS
+
+The preceding discussion centered on the development of expressions for the population density function
+in terms of nucleation and growth kinetics. It is also possible to express the properties of a crystal size
+distribution in terms of a mass density function m. The two density functions can be shown to be related
+by the expression
+
+= p.kyLin (11.2-40)
+
+The perfectly mixed, continuous, steady-state mixed-suspension mixed-product removal (MSMPR) crys-
+tallizer is restrictive in the degree to which characteristics of a crystal size distribution can be varied.
+Indeed, examination of Eqs. (11.2-32) and (11.2-40) shows that once nucleation and growth kinetics are
+fixed in these systems the crystal size distribution is determined in its entirety. In addition, such distributions
+have the following characteristics:
+
+1. The mode or maximum of the mass density function occurs at the dominant crystal size Lp, which
+is given by
+
+Lp = 3Gr (11.2-41)
+
+2. Moments of the population density are given by the expression
+m,; = iin®(Gr)i*! (11.2-42)
+3. The coefficient of variation of the mass density function, which is a measure of the spread of the
+
+distribution about the dominant crystal size, is 50%. Such a distribution may be too broad to be acceptable
+for certain crystalline products, such as sugar.
+
+Crystallization Operations 603
+
+4. The magma density M; (mass of crystals per unit volume of slurry or liquor) may be obtained from
+the third moment of the population density function. As shown above, this quantity is related to nucleation
+and growth rates by Eq. (11.2-38). Although magma density is a function of the kinetic parameters n° and
+G, it can be measured independently of crystal size distribution and, where possible, it should be used, as
+indicated above, as a constraint in evaluating nucleation and growth rates from measured crystal size
+distributions.
+
+5. A pair of kinetic parameters, one for nucleation rate and another for growth rate, describe the
+crystal size distribution for a given set of crystallizer operating conditions. Furthermore, variation in one
+of the kinetic parameters without changing the other is not possible.
+
+6. Properties of the distribution may be evaluated explicitly from the moment equations:
+
+N = total number of crystals per unit volume
+= { ndL = my = n°Gr (11.2-43a)
+0
+L; = total length of crystals per unit volume
+
+= \ nL dL = m, = n°(Gr? (11.2-43b)
+
+Ar = total area of crystals per unit volume
+=k, { nl? dL = k,m, = 2k,n°(GryP (11.2-43c)
+iu
+V_ = total volume of crystals per unit volume
+
+=k, | nL} dL = kyms = 6k,n°(Gr)* (11.2-43d)
+oO
+
+PARAMETERS FROM SYSTEMS EXHIBITING ANOMALOUS GROWTH
+Two types of anomalous growth behavior were described in Section 11.2-3: growth rate dispersion and
+size-dependent growth. As pointed out, the effects of these mechanistically different phenomena on crystal
+size distributions are the same; both cause curvature in semilog plots of population density against size.
+Moreover, when size-dependent growth rates increase with crystal size, both cause a broadening of the
+distribution. In this discussion, methods will be presented that illustrate evaluation of the parameters in
+systems following size-dependent growth kinetics. Research is in progress on development of similar
+procedures for systems deemed to follow growth rate dispersion anomalies, and the current literature should
+be followed for such cases.
+
+A number of empirical size-dependent growth expressions have been developed. Of these, the ASL
+model given in Eq. (11.2-28) is the most commonly used. Substituting this equation into the differential
+population balance given by Eq. (11.2-31), the steady-state population density function can be derived as
+
+_ 1-5
+n= n%(1 + yL)~* exp Cove) @<1 (11.2-44)
+
+This equation is often simplified by restricting -+y to be equal to 1/G°7, which reduces the number of model
+parameters by one and often results in a fit to data that is nearly as good as the three-parameter model.
+The reduced ASL model (y = 1/G°z) leads to the following equation for population density:
+
+4 Ot - 5
+-(i+
+a -) exp Cee L i =f 2 ) (11.2-45)
+
+n= no(1 +
+
+Garside and Jancic*® noted the relationship of several magma properties to the parameter b in the ASL
+growth model. O’Dell and Rousseau” derived formulas for estimating the characteristics of crystal size
+distributions in terms of parameters in size-dependent growth kinetic models and for crystallizers with
+selective removal of fines and/or product. For systems whose growth follows the reduced ASL equation,
+it was shown that total length of crystals per unit volume of magma or liquor, surface area of crystals per
+unit volume, mass of crystals per unit volume (magma density), mass average size, coefficient of variation,
+and dominant size could be calculated from the equations
+
+Ly = C\n*(G°ry (11.2-46)
+Ar = k,C,n*(G°r)* (11.2-47)
+
+604 Charles G. Moyers, Jr. and Ronald W. Rousseau
+
+TABLE 11.2-6 Constants for Evaluating Magma Properties of Systems that Follow Reduced ASL
+Kinetics
+
+b C (on C; Cy cv Co
+0.9 3.6602 526.71 5.8409 E06 307680.0 333.40 1681.2
+0.8 2.5104 48.373 5205.4 606.09 154.28 $7.003
+0.7 2.0041 18.058 539.05 78.417 108.47 19.032
+0.6 1.7038 9.9331 140.86 28.428 86.786 10.748
+0.5 1.5000 6.5000 57.750 15.351 74.203 7.4314
+0.4 1.3502 4.6865 29.933 10.064 66.014 5.6882
+0.3 1.2344 3.5929 17.862 7.3600 60.256 4.6220
+0.2 1.1414 2.8732 11.696 5.7630 55.975 3.9044
+0.1 1.0646 2.3964 8.1769 4.7239 52.656 3.3887
+0.0 1.0000 2.0000 6.0000 4.0000 50.000 3.0000
+
+M;, = k,C,n°(G°r)y* (11.2-48)
+L= (2) G°r = C,G°r (11.2-49)
+C;
+U2
+cv = ( - 1) x 100% (11.2-50)
+or
+Lp = CpG°r (11.2-51)
+
+The constants in Eqs. (11.2-46)-(11.2-51) are functions of b only, and they are given in Table 11.2-6.
+The table can be used to estimate the desired property of a crystal size distribution from the model parameters
+and Egs. (11.2-46)-(11.2-51), or it can be used in evaluating the model parameters from experimental data
+as described below.
+
+It should be clear that the form of the population density function given by Eq. (11.2-32) (systems that
+follow the AL Law) is much simpler than those of Eqs. (11.2-44) and (11.2-45). This increase in complexity
+for systems that exhibit anomalous growth makes extraction of model parameters more difficult. Not only
+do anomalous growth models have more parameters, but the curvature in plots of the log of the population
+density against size means that parameters must be determined by using nonlinear least-squares regressions.
+For example, fitting the reduced form of the ASL equation requires evaluation of the parameters n°, G°,
+and b in Eq. (11.2-45), and the estimate of n° is extremely sensitive to the few data points frequently
+obtained at very small sizes. Moreover, nonlinearities in the semilogarithmic relationship between popu-
+lation density and size frequently are most severe at small sizes. Consequently, it is very difficult to
+determine n° with any real accuracy.
+
+Rousseau and Parks® simplified this problem by substituting Eq. (11.2-48) into Eg. (11.2-45) to
+eliminate n°
+
+_ M; L 1-(1+ aoe)
+= lew ican ( * a) “*P ( 1-5 (11-252)
+
+Experimentally determined population density, measured M; and the values of C, in Table 11.2-6 can then
+be used to evaluate the two remaining adjustable parameters b and G°. Interpolation of C; is assisted by
+a polynomial fit to 5
+
+In C3(b) = 1.8881 + 1.58296 + 5.5316b? + 7.618b°
+— 32.36b* + 34.22b° (11.2-53)
+
+The effects of the two growth rate dispersion mechanisms on the CSD in a mixed-suspension, mixed-
+product removal (MSMPR) continuous crystallizer are different. Random growth rate fluctuations do not
+affect the spread of the CSD from an MSMPR crystallizer and the resulting population density function is
+indistinguishable from that obtained assuming applicability of the AL Law. However, growth rate fluctua-
+tions do increase the mean crystal size from that which is expected from the AL Law. On the other hand.
+CSD from a continuous crystallizer is affected noticeably by assigning a distribution of constant crystal
+growth rates to the nuclei. This mechanism causes the type of curvature in population density plots that
+typically has been ascribed to size-dependent growth.
+
+Crystallization Operations 605
+
+A model that combines growth rate dispersion mechanisms has been derived by Zumstein and Rous-
+seau.”* The expression for population density derived from their model is
+
+n(L) = <—-> ——— \ £°(G) exp (-2) dG (11.2-54)
+( {Gf°(G)/S] dG
+
+0
+
+where f°(G) is the distribution of nuclei growth rates and S, which is between 0 and 1, is given by
+
+2 V2
+
+The other terms are as defined earlier. This equation was used to demonstrate that random growth rate
+fluctuations may damp out the effect of the growth rate distribution function, thereby causing the effects
+of growth rate dispersion to be unobservable in a continuous crystallizer.”' Moreover, it is shown that an
+understanding of growth rate dispersion may be a key factor in obtaining realistic models for scale-up.”>
+
+PREFERENTIAL REMOVAL OF CRYSTALS
+
+Crystal size distributions produced in a perfectly mixed crystallizer are highly constrained, and nucleation
+and growth kinetics are determined exclusively by the crystalline system and the variables that define the
+state of the crystallizer. Accordingly, specification of the feed variables (flow rate, temperature, pressure,
+and solute concentration), the crystallizer variables (temperature, pressure in an adiabatic cooling process,
+agitation or magma circulation rate, and solids fraction in an evaporative crystallizer), and crystallizer
+geometry determines magma density and other characteristics of the crystal size distribution.
+
+Crystallizers are made more flexible by the introduction of selective removal devices that alter the
+residence time distribution of materials flowing from the crystallizer. The functions of classified removal
+are best described in terms of idealized models of clear-liquor advance, classified-fines removal, and
+classified-product removal. Clear-liquor advance is the removal of mother liquor from the crystallizer
+without simultaneous removal of crystals. The effects of implementing this removal function are described
+in Section 11.5-2. The primary objective of fines removal is preferential withdrawal from the crystallizer
+of crystals whose size is below some specified value; with the withdrawal, dissolution, and retum of the
+solution to the crystallizer, the growth of larger crystals is enhanced. Classified-product removal is carried
+out to remove preferentially those crystals whose size is larger than some specified value.
+
+The effects of each of the selective removal functions on crystal size distributions can be described in
+terms of the population density function n. If it is assumed that perfect classification of fines and product
+crystals is implemented, then the following expression for population density results:
+
+ForL s l
+RL
+= n° -— 1.2-56
+n=n ox ( =) (11.2-56)
+Forlp < L < be
+= n° exp (-R2DE a
+
+n=n exp ( G ) exp ( =) (11.2-57)
+
+ForL 2 le
+
+= n° exp (-R DE (—s) (-2) .
+
+n=n exp ( Gr ) exp Gr exp G (11.2-58)
+
+where the fines are below size Le and have a removal rate R times what would exist for perfect mixing,
+the coarse product is greater than size L- and has a removal rate Z times that of the perfectly mixed
+crystallizer. If fines removal is implemented alone, Z = 1, and if classified product removal is implemented
+without fines removal, R = 1. Selection of a crystallizer that has both classified-fines and classified-product
+removal functions usually is done so as to combine the best features of each: increased dominant size and
+
+606 Next Page Charles G. Moyers, Jr. and Ronald W. Rousseau
+
+narrower distribution. The model of the crystallizer and selective removal devices that led to Eqs. (11.2-
+56)-(11.2-58) is referred to as the R-Z crystallizer. It is an obvious idealization of actual crystallizers
+because of the perfect cuts assumed at L- and Lp. However, it is a useful approximation to many systems
+and it allows qualitative analyses of complex operations.
+
+Although many commercial crystallizers operate with some form of selective crystal removal, devices
+that implement these functions add to the complexity of the operation. In addition, Randolph et al.’® have
+established that classified-product removal can lead to cycling of the crystal size distribution. A review of
+the simulation and control of crystal size distributions has been provided by Randolph.”” Properties of the
+crystal size distribution have been given in terms of R and Z and the moments of the crystal size distri-
+bution.
+
+BATCH CRYSTALLIZATION
+As with continuous crystallizers, the mode by which supersaturation is generated affects the yield and
+crystal size distribution, but batch crystallizers are strongly influenced by the rate at which supersaturation
+is generated. For example, in a cooling mode there are several avenues that can be followed in reducing
+the temperature of the batch system: natural cooling in which a batch is simply allowed to release heat to
+a constant-temperature heat sink, cooling in which the rate of heat transfer is constant, cooling in which
+the supersaturation is maintained constant, and size-optimal cooling whose objective is to vary the cooling
+rate so that the supersaturation in the crystallizer is adjusted to produce an optimal crystal size distribution.
+The effects of these and other modes of operation on crystal size distribution are discussed by Tavare et
+al.”* Other important features of batch crystallizers are reviewed by Wey” and Randolph and Larson.'*
+Perhaps the most troublesome aspect of batch crystallizers is the difficulty associated with reproducing
+crystal size distributions in going from one batch to the next. This may be overcome through seeding!
+and control of mixing conditions. In general, however, the development of methods for design and analysis
+of batch crystallizers lags those for continuous systems.
+
+11.3) SOLUTION CRYSTALLIZATION
+
+Crystallization is a commonly used industrial separation and purification technique. If the desired product
+is an evaporate (or filtrate) rather than a crystalline phase, then the process emphasis is primarily that of
+separation rather than purification. In either case there is a strong interaction and dependence between both
+degree of separation and purification and the particulate nature of the solid phase produced. Fundamental
+research on crystallization has focused mainly on understanding the variables that influence the structure
+and size of the crystalline phase, recognizing that better knowledge and control of this aspect would permit
+improvement of the unit operation of crystallization, both as a separation and purification technique.
+
+11.3-1 State-of-the-Art
+
+Use of mathematical models for designing industrial crystallizers has lagged other chemical processing
+operations because of the complexities of rationally describing and interrelating growth and nucleation
+kinetics with the process configuration and mechanical features of the crystallizer. Crystallizers have tra-
+ditionally been designed by scale-up of pilot- or bench-scale data, taking care to control supersaturation
+levels and to maintain similar crystal residence time, vessel configuration, and hydraulic regimes. System
+kinetics, even though controlling the ultimate crystal size distribution, were thought to be subjects better
+relegated to the laboratory and were rarely used for crystallizer design.
+
+The design and analysis of crystallization processes of the continuous well-mixed suspension type have
+developed into formal design algorithms which can now be applied in situations of industrial importance.
+Specific process configurations that can be modeled rigorously include fines destruction, clear-liquor ad-
+vance, Classified-product removal, vessel staging, and seeding. Such process configurations can be modeled
+rigorously with a population balance CSD algorithm or, in many cases, with an alternative mass-based
+formulation. Crystal size distribution transients and stability can also be evaluated as well as the effects of
+size-dependent growth rate and suspension concentration-dependent secondary nucleation. Simulation ca-
+pabilities have in fact outstripped the ability to monitor appropriate control variables and to manipulate and
+control liquid and solids residence-time distributions in a crystallizing environment.
+
+A considerable amount of skepticism naturally is expressed by crystallization practitioners concerning
+the unbridled use of parameters generated in well-controlled small-scale equipment to predict performance
+of industrial-scale crystallizers. Many factors contribute to the nonideal behavior of industrial crystallizers,
+and not all can be easily explained.
+
+The ability to predict crystal behavior in complex systems is ahead of our ability to manipulate crystal
+and liquid residence times. Generalizations of the MSMPR equations have been made to predict CSD with
+arbitrary process configurations and kinetics; however, there is no guarantee that an assumed process
+residence-time distribution can be physically implemented to produce a customized product CSD. Size
+distributions in cascaded crystallizers, for example, multiple-effect evaporators, can be computed if kinetic

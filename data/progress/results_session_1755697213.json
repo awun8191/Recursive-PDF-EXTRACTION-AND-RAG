@@ -1,0 +1,1618 @@
+{
+  "session_id": "session_1755675889",
+  "total_files": 1941,
+  "completed_files": 0,
+  "failed_files": 0,
+  "skipped_files": 0,
+  "pending_files": 1941,
+  "total_chunks": 0,
+  "total_embeddings": 0,
+  "completion_percentage": 0.0,
+  "start_time": "2025-08-20T08:44:49.883909",
+  "last_updated": "2025-08-20T14:21:39.927878",
+  "detailed_results": {
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\AFE  101\\SUICIDE.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\AFE  101\\SUICIDE.pdf",
+      "status": "completed",
+      "chunks_extracted": 78,
+      "embeddings_generated": 0,
+      "processing_time": 4.78849720954895,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:48:15.984099",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "8e64076bd6e21343",
+          "page_count": 53,
+          "word_count": 18825,
+          "department": "AFE",
+          "course_code": "AFE",
+          "course_number": "101",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [
+            "mathematics",
+            "engineering",
+            "chemistry"
+          ],
+          "keywords": [
+            "Explaining",
+            "Glaeser",
+            "Edward",
+            "Karen",
+            "Rise",
+            "analysis",
+            "algebra",
+            "probability",
+            "David",
+            "statistics",
+            "design",
+            "This",
+            "Suicide",
+            "Cutler",
+            "Youth Suicide",
+            "control",
+            "physical"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 91.30434782608695,
+          "tags": {
+            "filename": "SUICIDE.pdf",
+            "stem": "SUICIDE",
+            "course_folder": "AFE  101",
+            "group_key": "COMPILATION-AFE-101",
+            "processing_method": "ocr",
+            "chunks_generated": 78,
+            "embeddings_generated": 78,
+            "department": "AFE",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "long",
+            "domains": [
+              "mathematics",
+              "engineering",
+              "chemistry"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\BIO 101\\BIO 103 - All notes.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\BIO 101\\BIO 103 - All notes.pdf",
+      "status": "completed",
+      "chunks_extracted": 39,
+      "embeddings_generated": 0,
+      "processing_time": 4.787721872329712,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:48:16.003422",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "d23096a00a5e88e1",
+          "page_count": 27,
+          "word_count": 9219,
+          "department": "BIO",
+          "course_code": "BIO",
+          "course_number": "101",
+          "level": "100",
+          "document_type": "exam",
+          "topics": [
+            "engineering",
+            "computer_science",
+            "chemistry"
+          ],
+          "keywords": [
+            "system",
+            "These",
+            "Presence",
+            "Euglena",
+            "Sponges",
+            "Hydra",
+            "They",
+            "network",
+            "control",
+            "organic",
+            "Each",
+            "There",
+            "Asexual",
+            "This"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "filename": "BIO 103 - All notes.pdf",
+            "stem": "BIO 103 - All notes",
+            "course_folder": "BIO 101",
+            "group_key": "COMPILATION-BIO-101",
+            "processing_method": "ocr",
+            "chunks_generated": 39,
+            "embeddings_generated": 39,
+            "department": "BIO",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "exam",
+            "length": "long",
+            "domains": [
+              "engineering",
+              "computer_science",
+              "chemistry"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\BIO 101\\complexions.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\BIO 101\\complexions.pdf",
+      "status": "completed",
+      "chunks_extracted": 6,
+      "embeddings_generated": 0,
+      "processing_time": 2.8978922367095947,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:48:18.882473",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "f4c88dec0a2afac9",
+          "page_count": 30,
+          "word_count": 1778,
+          "department": "BIO",
+          "course_code": "BIO",
+          "course_number": "101",
+          "level": "100",
+          "document_type": "solution",
+          "topics": [],
+          "keywords": [
+            "Example",
+            "Write",
+            "Min Ag",
+            "Notice",
+            "This",
+            "Substitute",
+            "Recall",
+            "Calculate",
+            "Complex",
+            "Lewis"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 91.30434782608695,
+          "tags": {
+            "filename": "complexions.pdf",
+            "stem": "complexions",
+            "course_folder": "BIO 101",
+            "group_key": "COMPILATION-BIO-101",
+            "processing_method": "ocr",
+            "chunks_generated": 6,
+            "embeddings_generated": 6,
+            "department": "BIO",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "solution",
+            "length": "medium"
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 1.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 1.pdf",
+      "status": "completed",
+      "chunks_extracted": 3,
+      "embeddings_generated": 0,
+      "processing_time": 2.954332113265991,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:48:18.956432",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "fe94852c2688eb9d",
+          "page_count": 3,
+          "word_count": 685,
+          "department": "GST",
+          "course_code": "GST",
+          "course_number": "115",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [
+            "engineering"
+          ],
+          "keywords": [
+            "Functions",
+            "system",
+            "Education",
+            "Brief History",
+            "Library",
+            "Libraries",
+            "Sumerians",
+            "Babylonians",
+            "History",
+            "Egypt",
+            "Medieval Era"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "filename": "Lecture 1.pdf",
+            "stem": "Lecture 1",
+            "course_folder": "GST 115",
+            "group_key": "COMPILATION-GST-115",
+            "processing_method": "ocr",
+            "chunks_generated": 3,
+            "embeddings_generated": 3,
+            "department": "GST",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "short",
+            "domains": [
+              "engineering"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 2 & 3 GST 112.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 2 & 3 GST 112.pdf",
+      "status": "completed",
+      "chunks_extracted": 8,
+      "embeddings_generated": 0,
+      "processing_time": 2.818704843521118,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:48:21.703257",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "11b695bd8f2fed44",
+          "page_count": 7,
+          "word_count": 1870,
+          "department": "GST",
+          "course_code": "GST",
+          "course_number": "115",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [
+            "engineering",
+            "computer_science"
+          ],
+          "keywords": [
+            "system",
+            "Reference",
+            "Examples",
+            "Librarian",
+            "Library",
+            "Audio",
+            "College",
+            "This",
+            "Types",
+            "They",
+            "control",
+            "database",
+            "These"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "filename": "Lecture 2 & 3 GST 112.pdf",
+            "stem": "Lecture 2 & 3 GST 112",
+            "course_folder": "GST 115",
+            "group_key": "COMPILATION-GST-115",
+            "processing_method": "ocr",
+            "chunks_generated": 8,
+            "embeddings_generated": 8,
+            "department": "GST",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "medium",
+            "domains": [
+              "engineering",
+              "computer_science"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 2.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 2.pdf",
+      "status": "completed",
+      "chunks_extracted": 3,
+      "embeddings_generated": 0,
+      "processing_time": 2.9658970832824707,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:48:21.923260",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "eda8d48a1968e28b",
+          "page_count": 3,
+          "word_count": 568,
+          "department": "GST",
+          "course_code": "GST",
+          "course_number": "115",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [],
+          "keywords": [
+            "Academic",
+            "However",
+            "Other",
+            "Librarian",
+            "Library",
+            "Nigeria",
+            "National Library"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "filename": "Lecture 2.pdf",
+            "stem": "Lecture 2",
+            "course_folder": "GST 115",
+            "group_key": "COMPILATION-GST-115",
+            "processing_method": "ocr",
+            "chunks_generated": 3,
+            "embeddings_generated": 3,
+            "department": "GST",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "short"
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 3.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 3.pdf",
+      "status": "completed",
+      "chunks_extracted": 4,
+      "embeddings_generated": 0,
+      "processing_time": 6.951062202453613,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:48:28.653875",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "3a41aee8e38871ef",
+          "page_count": 3,
+          "word_count": 813,
+          "department": "GST",
+          "course_code": "GST",
+          "course_number": "115",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [
+            "engineering",
+            "computer_science"
+          ],
+          "keywords": [
+            "system",
+            "Examples",
+            "Reference",
+            "Print",
+            "Audio",
+            "This",
+            "Types",
+            "They",
+            "Books",
+            "Library Materials\n\nLibrary",
+            "database",
+            "These"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "filename": "Lecture 3.pdf",
+            "stem": "Lecture 3",
+            "course_folder": "GST 115",
+            "group_key": "COMPILATION-GST-115",
+            "processing_method": "ocr",
+            "chunks_generated": 4,
+            "embeddings_generated": 4,
+            "department": "GST",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "short",
+            "domains": [
+              "engineering",
+              "computer_science"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 4.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 4.pdf",
+      "status": "completed",
+      "chunks_extracted": 3,
+      "embeddings_generated": 0,
+      "processing_time": 2.8190159797668457,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:48:24.742349",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "72e907e4647bd143",
+          "page_count": 3,
+          "word_count": 732,
+          "department": "GST",
+          "course_code": "GST",
+          "course_number": "115",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [
+            "engineering"
+          ],
+          "keywords": [
+            "system",
+            "Catalogue",
+            "Arabic",
+            "Classification Scheme",
+            "Forms",
+            "Dewey Decimal Classification",
+            "Library",
+            "Book Catalogue",
+            "Card Catalogue",
+            "This",
+            "Automated"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "filename": "Lecture 4.pdf",
+            "stem": "Lecture 4",
+            "course_folder": "GST 115",
+            "group_key": "COMPILATION-GST-115",
+            "processing_method": "ocr",
+            "chunks_generated": 3,
+            "embeddings_generated": 3,
+            "department": "GST",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "short",
+            "domains": [
+              "engineering"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 5.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 5.pdf",
+      "status": "completed",
+      "chunks_extracted": 2,
+      "embeddings_generated": 0,
+      "processing_time": 6.4093945026397705,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:48:31.152355",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "006fc3fb54e7cbb7",
+          "page_count": 2,
+          "word_count": 404,
+          "department": "GST",
+          "course_code": "GST",
+          "course_number": "115",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [],
+          "keywords": [
+            "Nigeria",
+            "Copyright"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "filename": "Lecture 5.pdf",
+            "stem": "Lecture 5",
+            "course_folder": "GST 115",
+            "group_key": "COMPILATION-GST-115",
+            "processing_method": "ocr",
+            "chunks_generated": 2,
+            "embeddings_generated": 2,
+            "department": "GST",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "short"
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 6.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 6.pdf",
+      "status": "completed",
+      "chunks_extracted": 5,
+      "embeddings_generated": 0,
+      "processing_time": 8.690550565719604,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:48:37.341774",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "ff795194efd25b28",
+          "page_count": 4,
+          "word_count": 927,
+          "department": "GST",
+          "course_code": "GST",
+          "course_number": "115",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [
+            "engineering"
+          ],
+          "keywords": [
+            "Title",
+            "Edition",
+            "Author",
+            "Bibliographic",
+            "Style",
+            "Ibadan",
+            "Italicised",
+            "Publisher",
+            "control",
+            "Place",
+            "Year"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "filename": "Lecture 6.pdf",
+            "stem": "Lecture 6",
+            "course_folder": "GST 115",
+            "group_key": "COMPILATION-GST-115",
+            "processing_method": "ocr",
+            "chunks_generated": 5,
+            "embeddings_generated": 5,
+            "department": "GST",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "short",
+            "domains": [
+              "engineering"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 7 - ICT 1.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 7 - ICT 1.pdf",
+      "status": "completed",
+      "chunks_extracted": 3,
+      "embeddings_generated": 0,
+      "processing_time": 10.98987364768982,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:48:42.142170",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "713a2a824108b0fb",
+          "page_count": 3,
+          "word_count": 571,
+          "department": "GST",
+          "course_code": "GST",
+          "course_number": "115",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [
+            "engineering",
+            "computer_science",
+            "chemistry"
+          ],
+          "keywords": [
+            "system",
+            "Components",
+            "Examples",
+            "Computer",
+            "Communication Technology",
+            "network",
+            "software",
+            "control",
+            "Information",
+            "physical"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "filename": "Lecture 7 - ICT 1.pdf",
+            "stem": "Lecture 7 - ICT 1",
+            "course_folder": "GST 115",
+            "group_key": "COMPILATION-GST-115",
+            "processing_method": "ocr",
+            "chunks_generated": 3,
+            "embeddings_generated": 3,
+            "department": "GST",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "short",
+            "domains": [
+              "engineering",
+              "computer_science",
+              "chemistry"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 8 - ICT 2.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 8 - ICT 2.pdf",
+      "status": "completed",
+      "chunks_extracted": 5,
+      "embeddings_generated": 0,
+      "processing_time": 21.788609743118286,
+      "error_message": null,
+      "last_updated": "2025-08-20T13:21:16.452072",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "16c5154fe91174fb",
+          "page_count": 5,
+          "word_count": 1205,
+          "department": "GST",
+          "course_code": "GST",
+          "course_number": "115",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [
+            "electrical_engineering",
+            "mechanical_engineering",
+            "computer_science"
+          ],
+          "keywords": [
+            "They",
+            "Directory",
+            "network",
+            "These",
+            "The Internet",
+            "signals",
+            "cad",
+            "Library",
+            "Google",
+            "Communication",
+            "database",
+            "Search",
+            "Meta",
+            "computer networks",
+            "Internet",
+            "telecommunications"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "filename": "Lecture 8 - ICT 2.pdf",
+            "stem": "Lecture 8 - ICT 2",
+            "course_folder": "GST 115",
+            "group_key": "COMPILATION-GST-115",
+            "processing_method": "ocr",
+            "chunks_generated": 5,
+            "embeddings_generated": 5,
+            "department": "GST",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "medium",
+            "domains": [
+              "electrical_engineering",
+              "mechanical_engineering",
+              "computer_science"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 9 - study skills.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 9 - study skills.pdf",
+      "status": "completed",
+      "chunks_extracted": 4,
+      "embeddings_generated": 0,
+      "processing_time": 18.645628213882446,
+      "error_message": null,
+      "last_updated": "2025-08-20T13:21:13.309130",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "b15c70f48a03dd89",
+          "page_count": 4,
+          "word_count": 1057,
+          "department": "GST",
+          "course_code": "GST",
+          "course_number": "115",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [
+            "electrical_engineering"
+          ],
+          "keywords": [
+            "Some",
+            "Practice",
+            "Study Skill",
+            "This",
+            "Methods",
+            "When",
+            "These",
+            "signals",
+            "Often",
+            "Study Skills"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "filename": "Lecture 9 - study skills.pdf",
+            "stem": "Lecture 9 - study skills",
+            "course_folder": "GST 115",
+            "group_key": "COMPILATION-GST-115",
+            "processing_method": "ocr",
+            "chunks_generated": 4,
+            "embeddings_generated": 4,
+            "department": "GST",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "medium",
+            "domains": [
+              "electrical_engineering"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\PQ\\._100 Level Past Questions (TRJ - AMSA).pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\PQ\\._100 Level Past Questions (TRJ - AMSA).pdf",
+      "status": "failed",
+      "chunks_extracted": 0,
+      "embeddings_generated": 0,
+      "processing_time": 0.5366103649139404,
+      "error_message": "extract_failed: Failed to open file 'C:\\\\Users\\\\awun8\\\\Documents\\\\SCHOOL\\\\COMPILATION\\\\100\\\\1\\\\PQ\\\\._100 Level Past Questions (TRJ - AMSA).pdf'.",
+      "last_updated": "2025-08-20T14:40:59.504766",
+      "metadata": {}
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\PQ\\AESA'S 100 level PQ.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\PQ\\AESA'S 100 level PQ.pdf",
+      "status": "completed",
+      "chunks_extracted": 85,
+      "embeddings_generated": 0,
+      "processing_time": 380.33462858200073,
+      "error_message": null,
+      "last_updated": "2025-08-20T13:27:33.646492",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "51775aaf642d3b0f",
+          "page_count": 64,
+          "word_count": 24148,
+          "department": "EXAMINATION",
+          "course_code": "EXAMINATION",
+          "course_number": "202",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [
+            "mathematics",
+            "electrical_engineering",
+            "mechanical_engineering",
+            "chemical_engineering",
+            "computer_science",
+            "physics",
+            "chemistry"
+          ],
+          "keywords": [
+            "industrial chemistry",
+            "topology",
+            "Give",
+            "Write",
+            "programming",
+            "iot",
+            "heat transfer",
+            "Which",
+            "cam",
+            "Find",
+            "algorithm",
+            "Mention",
+            "casting",
+            "kinematics",
+            "digital electronics",
+            "distillation",
+            "What",
+            "cad",
+            "State",
+            "Calculate",
+            "statics",
+            "Identify",
+            "Question",
+            "signals",
+            "probability",
+            "set theory",
+            "mechanics",
+            "network"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 73.91304347826086,
+          "tags": {
+            "category": "PQ",
+            "filename": "AESA'S 100 level PQ.pdf",
+            "stem": "AESA'S 100 level PQ",
+            "course_folder": "PQ",
+            "group_key": "COMPILATION",
+            "processing_method": "ocr",
+            "chunks_generated": 85,
+            "embeddings_generated": 85,
+            "department": "EXAMINATION",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "long",
+            "domains": [
+              "mathematics",
+              "electrical_engineering",
+              "mechanical_engineering",
+              "chemical_engineering",
+              "computer_science",
+              "physics",
+              "chemistry"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\PQ\\AESA_S 100 level PQ.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\PQ\\AESA_S 100 level PQ.pdf",
+      "status": "completed",
+      "chunks_extracted": 85,
+      "embeddings_generated": 0,
+      "processing_time": 388.07817125320435,
+      "error_message": null,
+      "last_updated": "2025-08-20T13:27:44.525390",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "025242733532e689",
+          "page_count": 64,
+          "word_count": 24296,
+          "department": "EXAMINATION",
+          "course_code": "EXAMINATION",
+          "course_number": "202",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [
+            "mathematics",
+            "electrical_engineering",
+            "mechanical_engineering",
+            "chemical_engineering",
+            "computer_science",
+            "physics",
+            "chemistry"
+          ],
+          "keywords": [
+            "signals",
+            "Identify",
+            "network",
+            "distillation",
+            "cad",
+            "probability",
+            "Question",
+            "casting",
+            "industrial chemistry",
+            "algorithm",
+            "Mention",
+            "mechanics",
+            "What",
+            "Calculate",
+            "Write",
+            "State",
+            "cam",
+            "Answer",
+            "topology",
+            "kinematics",
+            "iot",
+            "Which",
+            "Find"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 73.91304347826086,
+          "tags": {
+            "category": "PQ",
+            "filename": "AESA_S 100 level PQ.pdf",
+            "stem": "AESA_S 100 level PQ",
+            "course_folder": "PQ",
+            "group_key": "COMPILATION",
+            "processing_method": "ocr",
+            "chunks_generated": 85,
+            "embeddings_generated": 85,
+            "department": "EXAMINATION",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "long",
+            "domains": [
+              "mathematics",
+              "electrical_engineering",
+              "mechanical_engineering",
+              "chemical_engineering",
+              "computer_science",
+              "physics",
+              "chemistry"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\PQ\\GST115PQ2.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\PQ\\GST115PQ2.pdf",
+      "status": "skipped",
+      "chunks_extracted": 0,
+      "embeddings_generated": 0,
+      "processing_time": 2.9761271476745605,
+      "error_message": null,
+      "last_updated": "2025-08-20T13:27:36.622021",
+      "metadata": {}
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\PQ\\StudySmart x IEEE 100L past questions pack.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\PQ\\StudySmart x IEEE 100L past questions pack.pdf",
+      "status": "completed",
+      "chunks_extracted": 71,
+      "embeddings_generated": 0,
+      "processing_time": 297.70099353790283,
+      "error_message": null,
+      "last_updated": "2025-08-20T13:32:34.323014",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "9847e885bb439143",
+          "page_count": 61,
+          "word_count": 22080,
+          "department": "FOR",
+          "course_code": "FOR",
+          "course_number": "201",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [
+            "electrical_engineering",
+            "mechanical_engineering",
+            "chemical_engineering",
+            "computer_science",
+            "physics"
+          ],
+          "keywords": [
+            "State",
+            "Hausa",
+            "cam",
+            "When",
+            "signals",
+            "What",
+            "Find",
+            "Mention",
+            "casting",
+            "Given",
+            "iot",
+            "heat transfer",
+            "According",
+            "mechanics",
+            "Answer",
+            "network",
+            "cad",
+            "Which"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "category": "PQ",
+            "filename": "StudySmart x IEEE 100L past questions pack.pdf",
+            "stem": "StudySmart x IEEE 100L past questions pack",
+            "course_folder": "PQ",
+            "group_key": "COMPILATION-IEEE-100",
+            "processing_method": "ocr",
+            "chunks_generated": 71,
+            "embeddings_generated": 71,
+            "department": "FOR",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "long",
+            "domains": [
+              "electrical_engineering",
+              "mechanical_engineering",
+              "chemical_engineering",
+              "computer_science",
+              "physics"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\TCH 101\\Crystallization Operations.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\TCH 101\\Crystallization Operations.pdf",
+      "status": "completed",
+      "chunks_extracted": 66,
+      "embeddings_generated": 0,
+      "processing_time": 285.3651900291443,
+      "error_message": null,
+      "last_updated": "2025-08-20T13:32:29.887647",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "3f5afc86ba8ec1ba",
+          "page_count": 29,
+          "word_count": 14859,
+          "department": "TCH",
+          "course_code": "TCH",
+          "course_number": "101",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [
+            "mathematics",
+            "mechanical_engineering",
+            "chemical_engineering",
+            "computer_science",
+            "chemistry"
+          ],
+          "keywords": [
+            "mass transfer",
+            "unit operations",
+            "These",
+            "Crystallization Operations",
+            "integration",
+            "Ronald",
+            "This",
+            "heat transfer",
+            "Crystal",
+            "manufacturing",
+            "network",
+            "distillation",
+            "process design",
+            "cad",
+            "Moyers",
+            "Charles",
+            "algorithm",
+            "Garside",
+            "simulation",
+            "spectroscopy",
+            "extraction",
+            "Table",
+            "adsorption",
+            "Rousseau"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 73.91304347826086,
+          "tags": {
+            "filename": "Crystallization Operations.pdf",
+            "stem": "Crystallization Operations",
+            "course_folder": "TCH 101",
+            "group_key": "COMPILATION-TCH-101",
+            "processing_method": "ocr",
+            "chunks_generated": 66,
+            "embeddings_generated": 66,
+            "department": "TCH",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "long",
+            "domains": [
+              "mathematics",
+              "mechanical_engineering",
+              "chemical_engineering",
+              "computer_science",
+              "chemistry"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\2\\PQ\\chm 102 exam objectives.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\2\\PQ\\chm 102 exam objectives.pdf",
+      "status": "completed",
+      "chunks_extracted": 3,
+      "embeddings_generated": 0,
+      "processing_time": 10.436374425888062,
+      "error_message": null,
+      "last_updated": "2025-08-20T13:32:40.326637",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "680c38b864da9682",
+          "page_count": 3,
+          "word_count": 666,
+          "department": "H",
+          "course_code": "H",
+          "course_number": "20",
+          "level": "100",
+          "document_type": "solution",
+          "topics": [
+            "chemical_engineering"
+          ],
+          "keywords": [
+            "Trouton",
+            "extraction",
+            "distillation",
+            "Clausius",
+            "What",
+            "Calculate",
+            "adsorption",
+            "Clapeyron Equation"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "category": "PQ",
+            "filename": "chm 102 exam objectives.pdf",
+            "stem": "chm 102 exam objectives",
+            "course_folder": "PQ",
+            "group_key": "COMPILATION-CHM-102",
+            "processing_method": "ocr",
+            "chunks_generated": 3,
+            "embeddings_generated": 3,
+            "department": "H",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "solution",
+            "length": "short",
+            "domains": [
+              "chemical_engineering"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\2\\PQ\\CHM 102 PAST QUESTIONS.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\2\\PQ\\CHM 102 PAST QUESTIONS.pdf",
+      "status": "completed",
+      "chunks_extracted": 2,
+      "embeddings_generated": 0,
+      "processing_time": 7.947070837020874,
+      "error_message": null,
+      "last_updated": "2025-08-20T13:32:42.270085",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "04dee640c4f818cc",
+          "page_count": 4,
+          "word_count": 545,
+          "department": "CHM",
+          "course_code": "CHM",
+          "course_number": "102",
+          "level": "100",
+          "document_type": null,
+          "topics": [],
+          "keywords": [
+            "Nitrogen",
+            "Oxidation",
+            "None",
+            "They",
+            "Alkenes",
+            "Retardation",
+            "Have",
+            "What",
+            "Stationary",
+            "Which"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 73.91304347826086,
+          "tags": {
+            "category": "PQ",
+            "filename": "CHM 102 PAST QUESTIONS.pdf",
+            "stem": "CHM 102 PAST QUESTIONS",
+            "course_folder": "PQ",
+            "group_key": "COMPILATION-CHM-102",
+            "processing_method": "ocr",
+            "chunks_generated": 2,
+            "embeddings_generated": 2,
+            "department": "CHM",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "length": "short"
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\2\\PQ\\NEW CHM 102 PQ.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\2\\PQ\\NEW CHM 102 PQ.pdf",
+      "status": "completed",
+      "chunks_extracted": 5,
+      "embeddings_generated": 0,
+      "processing_time": 22.32905077934265,
+      "error_message": null,
+      "last_updated": "2025-08-20T13:33:02.655755",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "bf6bf012b06b33f1",
+          "page_count": 27,
+          "word_count": 1584,
+          "department": "SESSION",
+          "course_code": "SESSION",
+          "course_number": "202",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [
+            "mechanical_engineering",
+            "chemical_engineering"
+          ],
+          "keywords": [
+            "Type",
+            "Sciences\nDepartment",
+            "cad",
+            "Course Code",
+            "General Chemistry",
+            "Give",
+            "Organic",
+            "What",
+            "College",
+            "adsorption",
+            "Reaction",
+            "Complete"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "category": "PQ",
+            "filename": "NEW CHM 102 PQ.pdf",
+            "stem": "NEW CHM 102 PQ",
+            "course_folder": "PQ",
+            "group_key": "COMPILATION-CHM-102",
+            "processing_method": "ocr",
+            "chunks_generated": 5,
+            "embeddings_generated": 5,
+            "department": "SESSION",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "medium",
+            "domains": [
+              "mechanical_engineering",
+              "chemical_engineering"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\2\\PQ\\PHY 102 EXAMINATION QUESTION CBT - 2014-15 SESSION (13-6-2015).pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\2\\PQ\\PHY 102 EXAMINATION QUESTION CBT - 2014-15 SESSION (13-6-2015).pdf",
+      "status": "completed",
+      "chunks_extracted": 15,
+      "embeddings_generated": 0,
+      "processing_time": 73.35456109046936,
+      "error_message": null,
+      "last_updated": "2025-08-20T13:33:55.626660",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "91ea4362eecf701e",
+          "page_count": 19,
+          "word_count": 4560,
+          "department": "TO",
+          "course_code": "TO",
+          "course_number": "24",
+          "level": "100",
+          "document_type": "exam",
+          "topics": [
+            "electrical_engineering"
+          ],
+          "keywords": [
+            "Newton",
+            "Obtain",
+            "None",
+            "Calculate",
+            "Only",
+            "Find",
+            "Sphere",
+            "iot",
+            "Which",
+            "What",
+            "Object"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "category": "PQ",
+            "filename": "PHY 102 EXAMINATION QUESTION CBT - 2014-15 SESSION (13-6-2015).pdf",
+            "stem": "PHY 102 EXAMINATION QUESTION CBT - 2014-15 SESSION (13-6-2015)",
+            "course_folder": "PQ",
+            "group_key": "COMPILATION-PHY-102",
+            "processing_method": "ocr",
+            "chunks_generated": 15,
+            "embeddings_generated": 15,
+            "department": "TO",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "exam",
+            "length": "medium",
+            "domains": [
+              "electrical_engineering"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\200\\1\\ENG 201\\Handwritten ENG201.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\200\\1\\ENG 201\\Handwritten ENG201.pdf",
+      "status": "failed",
+      "chunks_extracted": 0,
+      "embeddings_generated": 0,
+      "processing_time": 0.5317933559417725,
+      "error_message": "extract_failed: Cannot open empty file: filename='C:\\\\Users\\\\awun8\\\\Documents\\\\SCHOOL\\\\COMPILATION\\\\200\\\\1\\\\ENG 201\\\\Handwritten ENG201.pdf'.",
+      "last_updated": "2025-08-20T14:40:59.490456",
+      "metadata": {}
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\200\\1\\ENG 201\\The Science and Engineering of Materials - Askeland(6e).pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\200\\1\\ENG 201\\The Science and Engineering of Materials - Askeland(6e).pdf",
+      "status": "failed",
+      "chunks_extracted": 0,
+      "embeddings_generated": 0,
+      "processing_time": 0.0035762786865234375,
+      "error_message": "extract_failed: Cannot open empty file: filename='C:\\\\Users\\\\awun8\\\\Documents\\\\SCHOOL\\\\COMPILATION\\\\200\\\\1\\\\ENG 201\\\\The Science and Engineering of Materials - Askeland(6e).pdf'.",
+      "last_updated": "2025-08-20T14:40:59.495273",
+      "metadata": {}
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\200\\1\\ENG 203\\Strength of Materials and Structures - (Malestrom).pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\200\\1\\ENG 203\\Strength of Materials and Structures - (Malestrom).pdf",
+      "status": "completed",
+      "chunks_extracted": 422,
+      "embeddings_generated": 0,
+      "processing_time": 1977.4616627693176,
+      "error_message": null,
+      "last_updated": "2025-08-20T14:06:00.130209",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "8b901ade1c137c76",
+          "page_count": 719,
+          "word_count": 131948,
+          "department": "ENG",
+          "course_code": "ENG",
+          "course_number": "203",
+          "level": "200",
+          "document_type": "lecture",
+          "topics": [
+            "mathematics",
+            "mechanical_engineering",
+            "civil_engineering",
+            "chemical_engineering",
+            "computer_science",
+            "physics"
+          ],
+          "keywords": [
+            "numerical methods",
+            "strength of materials",
+            "reinforced concrete",
+            "Figure",
+            "integration",
+            "This",
+            "programming",
+            "heat transfer",
+            "When",
+            "acoustics",
+            "matrix algebra",
+            "statics",
+            "Substituting",
+            "steel structures",
+            "casting",
+            "mechanics",
+            "composites",
+            "cam",
+            "structural analysis",
+            "Suppose",
+            "dynamics",
+            "Shearing",
+            "engineering mechanics",
+            "differentiation",
+            "From",
+            "Consider",
+            "Then",
+            "Problem"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 73.91304347826086,
+          "tags": {
+            "filename": "Strength of Materials and Structures - (Malestrom).pdf",
+            "stem": "Strength of Materials and Structures - (Malestrom)",
+            "course_folder": "ENG 203",
+            "group_key": "COMPILATION-ENG-203",
+            "processing_method": "ocr",
+            "chunks_generated": 422,
+            "embeddings_generated": 422,
+            "department": "ENG",
+            "academic_level": "200",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "long",
+            "domains": [
+              "mathematics",
+              "mechanical_engineering",
+              "civil_engineering",
+              "chemical_engineering",
+              "computer_science",
+              "physics"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\200\\1\\ENG 203\\Strength of Materials by RS Khurmi.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\200\\1\\ENG 203\\Strength of Materials by RS Khurmi.pdf",
+      "status": "completed",
+      "chunks_extracted": 792,
+      "embeddings_generated": 0,
+      "processing_time": 2864.281179189682,
+      "error_message": null,
+      "last_updated": "2025-08-20T14:21:39.927353",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "3cbaa805ed57a6ad",
+          "page_count": 855,
+          "word_count": 266737,
+          "department": "ENG",
+          "course_code": "ENG",
+          "course_number": "203",
+          "level": "200",
+          "document_type": "lecture",
+          "topics": [
+            "mathematics",
+            "electrical_engineering",
+            "mechanical_engineering",
+            "civil_engineering",
+            "physics"
+          ],
+          "keywords": [
+            "Compression",
+            "strength of materials",
+            "Given",
+            "iot",
+            "reinforced concrete",
+            "Find",
+            "casting",
+            "differentiation",
+            "cad",
+            "Tension",
+            "Strength",
+            "welding",
+            "statics",
+            "Length",
+            "irrigation",
+            "Materials",
+            "integration",
+            "Similarly",
+            "Take",
+            "calculus",
+            "mechanics",
+            "Chapter"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 91.30434782608695,
+          "tags": {
+            "filename": "Strength of Materials by RS Khurmi.pdf",
+            "stem": "Strength of Materials by RS Khurmi",
+            "course_folder": "ENG 203",
+            "group_key": "COMPILATION-ENG-203",
+            "processing_method": "ocr",
+            "chunks_generated": 792,
+            "embeddings_generated": 792,
+            "department": "ENG",
+            "academic_level": "200",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "long",
+            "domains": [
+              "mathematics",
+              "electrical_engineering",
+              "mechanical_engineering",
+              "civil_engineering",
+              "physics"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\200\\1\\ENG 203\\STRENGTH OF METERIAL R.K. RAJPUT.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\200\\1\\ENG 203\\STRENGTH OF METERIAL R.K. RAJPUT.pdf",
+      "status": "skipped",
+      "chunks_extracted": 0,
+      "embeddings_generated": 0,
+      "processing_time": 0.0005931854248046875,
+      "error_message": null,
+      "last_updated": "2025-08-20T14:06:00.135452",
+      "metadata": {}
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\200\\1\\ENG 221\\Electrical Circuit Theory & Technology - 5th Edition - John Bird.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\200\\1\\ENG 221\\Electrical Circuit Theory & Technology - 5th Edition - John Bird.pdf",
+      "status": "completed",
+      "chunks_extracted": 1053,
+      "embeddings_generated": 0,
+      "processing_time": 29.71521544456482,
+      "error_message": null,
+      "last_updated": "2025-08-20T14:06:29.845425",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "341c45cae1d93d3e",
+          "page_count": 782,
+          "word_count": 312396,
+          "department": "ENG",
+          "course_code": "ENG",
+          "course_number": "221",
+          "level": "200",
+          "document_type": "lecture",
+          "topics": [
+            "mathematics",
+            "electrical_engineering",
+            "mechanical_engineering",
+            "chemical_engineering",
+            "computer_science",
+            "physics"
+          ],
+          "keywords": [
+            "electromagnetism",
+            "numerical methods",
+            "Technology",
+            "differential equations",
+            "signals",
+            "quantum mechanics",
+            "Figure",
+            "integration",
+            "electromagnetic fields",
+            "solar power",
+            "This",
+            "programming",
+            "telecommunications",
+            "When",
+            "Hence",
+            "generators",
+            "sensors",
+            "network",
+            "cad",
+            "vlsi",
+            "renewable energy",
+            "casting",
+            "algorithm",
+            "mechanics",
+            "Thus",
+            "electric machines",
+            "signal processing",
+            "communication systems",
+            "circuit theory",
+            "cam",
+            "Determine",
+            "extraction",
+            "transformers",
+            "dynamics",
+            "welding",
+            "calculus",
+            "iot",
+            "differentiation",
+            "optics",
+            "From",
+            "Electrical Circuit Theory",
+            "semiconductors",
+            "power systems",
+            "motors",
+            "Problem"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 91.30434782608695,
+          "tags": {
+            "filename": "Electrical Circuit Theory & Technology - 5th Edition - John Bird.pdf",
+            "stem": "Electrical Circuit Theory & Technology - 5th Edition - John Bird",
+            "course_folder": "ENG 221",
+            "group_key": "COMPILATION-ENG-221",
+            "processing_method": "ocr",
+            "chunks_generated": 1053,
+            "embeddings_generated": 1053,
+            "department": "ENG",
+            "academic_level": "200",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "long",
+            "domains": [
+              "mathematics",
+              "electrical_engineering",
+              "mechanical_engineering",
+              "chemical_engineering",
+              "computer_science",
+              "physics"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    }
+  }
+}

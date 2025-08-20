@@ -1,0 +1,92 @@
+Lecture 4
+UNDERSTANDING LIBRARY CATALOGUE AND CLASSIFICATION
+" Definition of library catalogue.
+= Forms of library catalogue (card, OPAC etc.)
+" Classification Scheme.
+Introduction
+
+In the past lectures, we have learnt among other things what a library is; that there are
+different types of libraries, which include the academic library, the special library, the
+private library, the National library and the Public Library.
+
+We learnt that whatever type of library we are referring to, it is a room or building or
+institution where books and non-books (audio-visual) materials are carefully selected and
+acquired for the purpose of study, research and recreation organized in such a way by
+professionals and non-professionals so as to facilitate easy retrieval.
+
+As the library materials are being organized by professionals and non-professionals to
+facilitate easy retrieval, a record is being created which the users would consult to find
+out whether the material they need is in the library, and if it is, how and where to locate
+the material, and this record is called the Library Catalogue.
+
+The Library Catalogue
+
+The library catalogue is a register of all bibliographic items found in a particular library
+or group of libraries. It is a comprehensive list of books, journals and non-book materials
+in a library collection usually arranged by author / title or by subjects in alphabetical
+order.
+
+Forms of Catalogue
+i. Card Catalogue
+li. Book Catalogue
+iii. Automated /On-line Catalogue (OPAC)
+
+Card Catalogue: This is the most common type of catalogue found in the libraries, with
+the entries for all materials in the library printed, typed or handwritten on cards (usually
+size 5*3 inches) and filed in trays or drawers which are housed in the card drawers by
+means of locking rods.
+
+The following items of information are recorded in almost any type of catalogue: Author
+of document, Title of document, Edition, Place of publication, Publisher and Year of
+publication, Pagination, Series statement, Notes, ISBN, Binding and Price, and the
+subject of the document. The card catalogue was a familiar sight to library users for
+generations, but it is now being effectively replaced by the online public access catalogue
+(OPAC).
+
+Book Catalogue: In this catalogue, instead of each card having bibliographic information
+of a book, several books can have their information on just one page of the book. This is
+the oldest type of catalogue. It is used in small libraries.
+
+Automated/On-line Catalogue: This is popularly known as Online Public Access
+Catalogue (OPAC). It is the most recent form of catalogue. This is facilitated by the
+present state of technology. This system allows the user to interact with the catalogue in
+an on-line mode thereby accessing the library collection with the aid of a computer.
+
+Objectives of Library Catalogue
+
+The library catalogue serves as a guide to the book collection. This is a chief means of
+discovering and locating materials in the library. Through the catalogues, one can know
+whether the library has in its collections a particular book specified by its author and title,
+subject and editor of a particular work.
+
+Classification
+
+Classification is simply the arrangement of books and non-book materials according to
+the areas of knowledge. Since it is convenient and important that all books on a subject
+be kept together, libraries have classification schemes as tools for achieving this goal.
+
+There are many classification schemes; however, the most commonly used schemes are
+the Dewey Decimal Classification (DDC) and the Library of Congress (LC) classification
+schemes.
+
+Dewey Decimal Classification (DDC) Scheme: The scheme divides the whole of human
+knowledge into ten main classes which are represented by Arabic numerals sequentially
+from 000-999 and each class is further sub-divided into divisions and sub-divisions. DDC
+is used mainly by Research Libraries, Public Libraries, School Libraries and some others.
+
+Library of Congress (LC) Classification Scheme: This classification scheme uses
+letters of the alphabets combined with Arabic numerals. It groups the whole field of
+knowledge into 21 main classes which are represented by capital letters A-Z singly used.
+
+Main classes are represented by two capital letters while topics under the classes and
+divisions are developed by the use of Arabic numerals sequentially from 1- 9999. LC is
+used mainly in Academic Libraries such as University, Polytechnic and Colleges of
+Education libraries.
+
+Some other classification schemes
+
+i. Elizabeth Moy’s Classification Scheme (Law)
+
+ii. National Library of Medicine Classification Scheme (Medicine)
+ili. Bliss Classification Scheme
+iv. Universal Decimal Classification Scheme (UDC)

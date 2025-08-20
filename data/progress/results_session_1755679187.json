@@ -1,0 +1,580 @@
+{
+  "session_id": "session_1755675889",
+  "total_files": 1941,
+  "completed_files": 0,
+  "failed_files": 0,
+  "skipped_files": 0,
+  "pending_files": 1941,
+  "total_chunks": 0,
+  "total_embeddings": 0,
+  "completion_percentage": 0.0,
+  "start_time": "2025-08-20T08:44:49.883909",
+  "last_updated": "2025-08-20T08:44:49.886605",
+  "detailed_results": {
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\AFE  101\\SUICIDE.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\AFE  101\\SUICIDE.pdf",
+      "status": "completed",
+      "chunks_extracted": 78,
+      "embeddings_generated": 0,
+      "processing_time": 4.592070817947388,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:47:30.421366",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "8e64076bd6e21343",
+          "page_count": 53,
+          "word_count": 18825,
+          "department": "AFE",
+          "course_code": "AFE",
+          "course_number": "101",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [
+            "mathematics",
+            "engineering",
+            "chemistry"
+          ],
+          "keywords": [
+            "This",
+            "statistics",
+            "Edward",
+            "probability",
+            "design",
+            "Youth Suicide",
+            "Suicide",
+            "Explaining",
+            "Glaeser",
+            "Karen",
+            "analysis",
+            "David",
+            "Rise",
+            "Cutler",
+            "control",
+            "algebra",
+            "physical"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 91.30434782608695,
+          "tags": {
+            "filename": "SUICIDE.pdf",
+            "stem": "SUICIDE",
+            "course_folder": "AFE  101",
+            "group_key": "COMPILATION-AFE-101",
+            "processing_method": "ocr",
+            "chunks_generated": 78,
+            "embeddings_generated": 78,
+            "department": "AFE",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "long",
+            "domains": [
+              "mathematics",
+              "engineering",
+              "chemistry"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\BIO 101\\BIO 103 - All notes.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\BIO 101\\BIO 103 - All notes.pdf",
+      "status": "completed",
+      "chunks_extracted": 39,
+      "embeddings_generated": 0,
+      "processing_time": 4.721088409423828,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:47:30.551111",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "d23096a00a5e88e1",
+          "page_count": 27,
+          "word_count": 9219,
+          "department": "BIO",
+          "course_code": "BIO",
+          "course_number": "101",
+          "level": "100",
+          "document_type": "exam",
+          "topics": [
+            "engineering",
+            "computer_science",
+            "chemistry"
+          ],
+          "keywords": [
+            "network",
+            "They",
+            "organic",
+            "These",
+            "There",
+            "system",
+            "Euglena",
+            "Sponges",
+            "Hydra",
+            "Each",
+            "Presence",
+            "This",
+            "control",
+            "Asexual"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "filename": "BIO 103 - All notes.pdf",
+            "stem": "BIO 103 - All notes",
+            "course_folder": "BIO 101",
+            "group_key": "COMPILATION-BIO-101",
+            "processing_method": "ocr",
+            "chunks_generated": 39,
+            "embeddings_generated": 39,
+            "department": "BIO",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "exam",
+            "length": "long",
+            "domains": [
+              "engineering",
+              "computer_science",
+              "chemistry"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\BIO 101\\complexions.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\BIO 101\\complexions.pdf",
+      "status": "completed",
+      "chunks_extracted": 6,
+      "embeddings_generated": 0,
+      "processing_time": 2.7673749923706055,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:47:33.189237",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "f4c88dec0a2afac9",
+          "page_count": 30,
+          "word_count": 1778,
+          "department": "BIO",
+          "course_code": "BIO",
+          "course_number": "101",
+          "level": "100",
+          "document_type": "solution",
+          "topics": [],
+          "keywords": [
+            "This",
+            "Min Ag",
+            "Calculate",
+            "Recall",
+            "Example",
+            "Notice",
+            "Complex",
+            "Write",
+            "Substitute",
+            "Lewis"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 91.30434782608695,
+          "tags": {
+            "filename": "complexions.pdf",
+            "stem": "complexions",
+            "course_folder": "BIO 101",
+            "group_key": "COMPILATION-BIO-101",
+            "processing_method": "ocr",
+            "chunks_generated": 6,
+            "embeddings_generated": 6,
+            "department": "BIO",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "solution",
+            "length": "medium"
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 1.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 1.pdf",
+      "status": "completed",
+      "chunks_extracted": 3,
+      "embeddings_generated": 0,
+      "processing_time": 2.7670576572418213,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:47:33.323280",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "fe94852c2688eb9d",
+          "page_count": 3,
+          "word_count": 685,
+          "department": "GST",
+          "course_code": "GST",
+          "course_number": "115",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [
+            "engineering"
+          ],
+          "keywords": [
+            "Medieval Era",
+            "Libraries",
+            "system",
+            "Library",
+            "Functions",
+            "History",
+            "Brief History",
+            "Education",
+            "Sumerians",
+            "Egypt",
+            "Babylonians"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "filename": "Lecture 1.pdf",
+            "stem": "Lecture 1",
+            "course_folder": "GST 115",
+            "group_key": "COMPILATION-GST-115",
+            "processing_method": "ocr",
+            "chunks_generated": 3,
+            "embeddings_generated": 3,
+            "department": "GST",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "short",
+            "domains": [
+              "engineering"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 2 & 3 GST 112.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 2 & 3 GST 112.pdf",
+      "status": "completed",
+      "chunks_extracted": 8,
+      "embeddings_generated": 0,
+      "processing_time": 2.750976800918579,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:47:35.941752",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "11b695bd8f2fed44",
+          "page_count": 7,
+          "word_count": 1870,
+          "department": "GST",
+          "course_code": "GST",
+          "course_number": "115",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [
+            "engineering",
+            "computer_science"
+          ],
+          "keywords": [
+            "This",
+            "Examples",
+            "Audio",
+            "Library",
+            "Types",
+            "These",
+            "database",
+            "College",
+            "Reference",
+            "They",
+            "control",
+            "system",
+            "Librarian"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "filename": "Lecture 2 & 3 GST 112.pdf",
+            "stem": "Lecture 2 & 3 GST 112",
+            "course_folder": "GST 115",
+            "group_key": "COMPILATION-GST-115",
+            "processing_method": "ocr",
+            "chunks_generated": 8,
+            "embeddings_generated": 8,
+            "department": "GST",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "medium",
+            "domains": [
+              "engineering",
+              "computer_science"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 2.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 2.pdf",
+      "status": "completed",
+      "chunks_extracted": 3,
+      "embeddings_generated": 0,
+      "processing_time": 6.771643161773682,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:47:40.090357",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "eda8d48a1968e28b",
+          "page_count": 3,
+          "word_count": 568,
+          "department": "GST",
+          "course_code": "GST",
+          "course_number": "115",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [],
+          "keywords": [
+            "National Library",
+            "Library",
+            "However",
+            "Other",
+            "Nigeria",
+            "Librarian",
+            "Academic"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "filename": "Lecture 2.pdf",
+            "stem": "Lecture 2",
+            "course_folder": "GST 115",
+            "group_key": "COMPILATION-GST-115",
+            "processing_method": "ocr",
+            "chunks_generated": 3,
+            "embeddings_generated": 3,
+            "department": "GST",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "short"
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 3.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 3.pdf",
+      "status": "completed",
+      "chunks_extracted": 4,
+      "embeddings_generated": 0,
+      "processing_time": 8.129802703857422,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:47:44.072269",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "3a41aee8e38871ef",
+          "page_count": 3,
+          "word_count": 813,
+          "department": "GST",
+          "course_code": "GST",
+          "course_number": "115",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [
+            "engineering",
+            "computer_science"
+          ],
+          "keywords": [
+            "This",
+            "Examples",
+            "Audio",
+            "Library Materials\n\nLibrary",
+            "Print",
+            "Types",
+            "These",
+            "database",
+            "Reference",
+            "They",
+            "system",
+            "Books"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "filename": "Lecture 3.pdf",
+            "stem": "Lecture 3",
+            "course_folder": "GST 115",
+            "group_key": "COMPILATION-GST-115",
+            "processing_method": "ocr",
+            "chunks_generated": 4,
+            "embeddings_generated": 4,
+            "department": "GST",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "short",
+            "domains": [
+              "engineering",
+              "computer_science"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 4.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 4.pdf",
+      "status": "completed",
+      "chunks_extracted": 3,
+      "embeddings_generated": 0,
+      "processing_time": 9.10281753540039,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:47:49.193838",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "72e907e4647bd143",
+          "page_count": 3,
+          "word_count": 732,
+          "department": "GST",
+          "course_code": "GST",
+          "course_number": "115",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [
+            "engineering"
+          ],
+          "keywords": [
+            "Classification Scheme",
+            "Forms",
+            "system",
+            "Library",
+            "Book Catalogue",
+            "Automated",
+            "Dewey Decimal Classification",
+            "Card Catalogue",
+            "Arabic",
+            "This",
+            "Catalogue"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "filename": "Lecture 4.pdf",
+            "stem": "Lecture 4",
+            "course_folder": "GST 115",
+            "group_key": "COMPILATION-GST-115",
+            "processing_method": "ocr",
+            "chunks_generated": 3,
+            "embeddings_generated": 3,
+            "department": "GST",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "short",
+            "domains": [
+              "engineering"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 5.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 5.pdf",
+      "status": "completed",
+      "chunks_extracted": 2,
+      "embeddings_generated": 0,
+      "processing_time": 7.629424333572388,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:47:51.700941",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "006fc3fb54e7cbb7",
+          "page_count": 2,
+          "word_count": 404,
+          "department": "GST",
+          "course_code": "GST",
+          "course_number": "115",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [],
+          "keywords": [
+            "Copyright",
+            "Nigeria"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "filename": "Lecture 5.pdf",
+            "stem": "Lecture 5",
+            "course_folder": "GST 115",
+            "group_key": "COMPILATION-GST-115",
+            "processing_method": "ocr",
+            "chunks_generated": 2,
+            "embeddings_generated": 2,
+            "department": "GST",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "short"
+          }
+        },
+        "extraction_status": "success"
+      }
+    },
+    "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 6.pdf": {
+      "file_path": "C:\\Users\\awun8\\Documents\\SCHOOL\\COMPILATION\\100\\1\\GST 115\\Lecture 6.pdf",
+      "status": "completed",
+      "chunks_extracted": 5,
+      "embeddings_generated": 0,
+      "processing_time": 16.15168285369873,
+      "error_message": null,
+      "last_updated": "2025-08-20T09:48:05.344807",
+      "metadata": {
+        "document_metadata": {
+          "file_hash": "ff795194efd25b28",
+          "page_count": 4,
+          "word_count": 927,
+          "department": "GST",
+          "course_code": "GST",
+          "course_number": "115",
+          "level": "100",
+          "document_type": "lecture",
+          "topics": [
+            "engineering"
+          ],
+          "keywords": [
+            "Style",
+            "Italicised",
+            "Ibadan",
+            "Title",
+            "Place",
+            "Edition",
+            "Year",
+            "Bibliographic",
+            "Author",
+            "control",
+            "Publisher"
+          ],
+          "processing_method": "unknown",
+          "completeness_score": 82.6086956521739,
+          "tags": {
+            "filename": "Lecture 6.pdf",
+            "stem": "Lecture 6",
+            "course_folder": "GST 115",
+            "group_key": "COMPILATION-GST-115",
+            "processing_method": "ocr",
+            "chunks_generated": 5,
+            "embeddings_generated": 5,
+            "department": "GST",
+            "academic_level": "100",
+            "difficulty": "beginner",
+            "content_type": "lecture",
+            "length": "short",
+            "domains": [
+              "engineering"
+            ]
+          }
+        },
+        "extraction_status": "success"
+      }
+    }
+  }
+}

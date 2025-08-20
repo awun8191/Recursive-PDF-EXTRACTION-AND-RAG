@@ -1,28 +1,53 @@
 #!/usr/bin/env python3
 r"""
-PDF → OCR (when needed) → paragraph chunks → per-course JSONL export (and optional Chroma), with MULTI-PROCESS workers.
+Simplified PDF → OCR → paragraph chunks → per-course JSONL export with ChromaDB, using OLLAMA embeddings only.
 
-Enhanced with:
-- Beautiful descriptive logging with emojis and colors
-- Real-time caching for improved performance
-- Gemini embeddings integration
-- ChromaDB storage optimization
+Hardcoded settings for efficiency:
+- Ollama embeddings with bge-m3:latest model
+- Advanced OCR detection enabled
+- Optimized chunking parameters
+- Predefined paths and settings
 
-Install (Python deps):
-    pip install chromadb==0.5.5 pymupdf pillow pytesseract duckdb
-
-Windows Tesseract:
-    C:\Program Files\Tesseract-OCR\tesseract.exe
-    Use --tesseract-cmd if it's not on PATH.
-
-Layout assumption (tail-based parsing exactly as requested):
+Layout assumption (tail-based parsing):
     ...\\\\DEPARTMENT\\\\LEVEL\\\\SEMESTER\\\\COURSE_FOLDER\\\\FILENAME.pdf
-Example:
-    C:\\\\Users\\\\...\\\\COMPILATION\\\\EEE\\\\300\\\\1\\\\EEE 313\\\\EEE 313.pdf
-Parsed as:
-    DEPARTMENT=EEE, LEVEL=300, SEMESTER=1, COURSE_CODE=EEE, COURSE_NUMBER=313
-If COURSE_FOLDER doesn't contain a code+number, we try the filename. If both fail, code/number stay empty.
 """
+
+# ==================== HARDCODED CONFIGURATION ====================
+# Paths
+DEFAULT_INPUT_DIR = r"C:\Users\awun8\Documents\SCHOOL\COMPILATION"
+DEFAULT_EXPORT_DIR = r"C:\Users\awun8\Documents\Recursive-PDF-EXTRACTION-AND-RAG\data\exported_data"
+DEFAULT_CACHE_DIR = r"C:\Users\awun8\Documents\Recursive-PDF-EXTRACTION-AND-RAG\data\ocr_cache"
+DEFAULT_CHROMA_DIR = r"C:\Users\awun8\Documents\Recursive-PDF-EXTRACTION-AND-RAG\chroma_db_ollama"
+
+# Processing settings
+DEFAULT_WORKERS = 10
+DEFAULT_OMP_THREADS = 3
+DEFAULT_EXPORT_INCLUDE = "text+ollama-embedding"
+DEFAULT_COLLECTION_NAME = "pdfs_ollama_1024"
+
+# OCR settings
+DEFAULT_OCR_DPI = 300
+DEFAULT_OCR_LANG = "eng"
+DEFAULT_MAX_PAGES_PER_PDF = 0  # All pages
+
+# Advanced OCR detection
+DEFAULT_TEXT_QUALITY_THRESHOLD = 0.6
+DEFAULT_SCANNED_CONTENT_THRESHOLD = 0.7
+DEFAULT_MIN_TEXT_DENSITY = 0.05
+DEFAULT_SAMPLE_PERCENTAGE = 0.1
+
+# Chunking
+DEFAULT_MIN_PAR_CHARS = 200
+DEFAULT_MAX_PAR_CHARS = 1800
+DEFAULT_CHUNK_OVERLAP = 100  # Characters to overlap between chunks
+
+# Ollama settings
+DEFAULT_OLLAMA_MODEL = "bge-m3:latest"
+DEFAULT_EMBEDDING_DIM = 1024
+
+# Tesseract path
+DEFAULT_TESSERACT_CMD = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+# ==================================================================
 
 import argparse
 import concurrent.futures as cf
@@ -33,7 +58,7 @@ import re
 import sys
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
+from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple, Set
 
 import fitz  # PyMuPDF
 from PIL import Image
@@ -62,13 +87,13 @@ except ImportError:
     from src.utils.progress_tracker import ProgressTracker, ProcessingStatus, resume_or_create_session
     from src.utils.metadata_extractor import MetadataExtractor, extract_document_metadata
 
-# ------------------ Optional Gemini loader ------------------
-def _try_get_gemini_service():
+# ------------------ Ollama loader ------------------
+def _get_ollama_service():
     try:
-        from src.services.Gemini.gemini_service import GeminiService  # type: ignore
-        return GeminiService
-    except Exception:
-        return None
+        from src.services.Ollama.ollama_service import OllamaService  # type: ignore
+        return OllamaService
+    except Exception as e:
+        raise RuntimeError(f"OllamaService not available: {e}") from e
 
 # ------------------ Hash helpers ------------------
 def sha1_text(s: str) -> str:
@@ -120,7 +145,7 @@ def _extract_course_from_text(text: str) -> tuple[str, str]:
 def parse_metadata_from_path(path: str | Path) -> Dict[str, str]:
     """
     Tail-based parsing per user rule:
-      ...\DEPARTMENT\LEVEL\SEMESTER\COURSE_FOLDER\FILENAME
+      ...\\DEPARTMENT\\LEVEL\\SEMESTER\\COURSE_FOLDER\\FILENAME
     """
     p = Path(path)
     parts = list(p.parts)
@@ -206,7 +231,7 @@ def split_into_paragraphs(text: str) -> List[str]:
     normalized = re.sub(r"\r\n?", "\n", text)
     return [p.strip() for p in re.split(r"\n\s*\n", normalized) if p.strip()]
 
-def merge_small_paragraphs(paras: List[str], min_chars: int = 200, max_chars: int = 1800) -> List[str]:
+def merge_small_paragraphs(paras: List[str], min_chars: int = 200, max_chars: int = 1800, overlap: int = 0) -> List[str]:
     merged: List[str] = []
     buf = ""
     for p in paras:
@@ -220,6 +245,8 @@ def merge_small_paragraphs(paras: List[str], min_chars: int = 200, max_chars: in
             buf = p
     if buf:
         merged.append(buf)
+    
+    # Apply sentence-aware splitting and overlap
     final: List[str] = []
     for chunk in merged:
         if len(chunk) <= max_chars:
@@ -241,10 +268,37 @@ def merge_small_paragraphs(paras: List[str], min_chars: int = 200, max_chars: in
                 cur = s
         if cur:
             final.append(cur)
+    
+    # Apply overlap between chunks
+    if overlap > 0 and len(final) > 1:
+        overlapped_chunks = []
+        for i, chunk in enumerate(final):
+            if i == 0:
+                # First chunk - no overlap needed
+                overlapped_chunks.append(chunk)
+            else:
+                # Get overlap from previous chunk
+                prev_chunk = final[i-1]
+                if len(prev_chunk) > overlap:
+                    # Take the last 'overlap' characters from previous chunk
+                    overlap_text = prev_chunk[-overlap:]
+                    # Find a good break point (word boundary)
+                    space_idx = overlap_text.find(' ')
+                    if space_idx > 0:
+                        overlap_text = overlap_text[space_idx+1:]
+                    
+                    # Combine overlap with current chunk
+                    overlapped_chunk = f"{overlap_text} {chunk}"
+                    overlapped_chunks.append(overlapped_chunk)
+                else:
+                    # Previous chunk too short for meaningful overlap
+                    overlapped_chunks.append(chunk)
+        return overlapped_chunks
+    
     return final
 
-def paragraph_chunk(text: str, min_chars: int = 200, max_chars: int = 1800) -> List[str]:
-    return merge_small_paragraphs(split_into_paragraphs(text), min_chars, max_chars)
+def paragraph_chunk(text: str, min_chars: int = 200, max_chars: int = 1800, overlap: int = 0) -> List[str]:
+    return merge_small_paragraphs(split_into_paragraphs(text), min_chars, max_chars, overlap)
 
 # ------------------ OCR cache ------------------
 def _cache_key(path: Path, extra: str = "") -> str:
@@ -277,7 +331,273 @@ class PDFAnalysis:
     avg_image_area_ratio: float
     total_chars_text_layer: int
 
-def analyze_pdf_sample(doc: fitz.Document, sample_pages: int = 5) -> PDFAnalysis:
+@dataclass
+class PDFAnalysisAdvanced:
+    pages_analyzed: int
+    total_pages: int
+    text_quality_score: float
+    avg_image_area_ratio: float
+    scanned_content_score: float
+    text_density_score: float
+    total_chars_text_layer: int
+    confidence_score: float
+    needs_ocr: bool
+    analysis_details: Dict[str, Any]
+
+def analyze_text_quality(text: str) -> float:
+    """Analyze the quality of extracted text to determine if OCR is needed.
+    Returns a score from 0.0 (poor quality, needs OCR) to 1.0 (good quality)."""
+    if not text or len(text.strip()) < 50:
+        return 0.0
+    
+    text = text.strip()
+    total_chars = len(text)
+    
+    # Check for readable words vs garbage
+    words = re.findall(r'\b[a-zA-Z]{2,}\b', text)
+    if not words:
+        return 0.0
+    
+    word_chars = sum(len(w) for w in words)
+    word_ratio = word_chars / max(total_chars, 1)
+    
+    # Check sentence structure
+    sentences = [s.strip() for s in re.split(r'[.!?]+', text) if s.strip()]
+    if not sentences:
+        return word_ratio * 0.5  # Some words but no sentences
+    
+    avg_sentence_length = sum(len(s.split()) for s in sentences) / len(sentences)
+    sentence_score = min(1.0, avg_sentence_length / 15)  # Optimal around 15 words
+    
+    # Check for repeated characters (OCR artifacts)
+    repeated_chars = len(re.findall(r'(.)\1{4,}', text))  # 5+ repeated chars
+    repetition_penalty = min(0.3, repeated_chars / 50)
+    
+    # Check for proper spacing and punctuation
+    spaces = text.count(' ')
+    space_ratio = spaces / max(total_chars, 1)
+    spacing_score = min(1.0, space_ratio * 10)  # Good spacing around 10%
+    
+    # Check for mixed case (indicates real text vs all caps OCR)
+    has_lower = any(c.islower() for c in text)
+    has_upper = any(c.isupper() for c in text)
+    case_score = 1.0 if (has_lower and has_upper) else 0.5
+    
+    # Combine scores
+    quality_score = (
+        word_ratio * 0.3 +
+        sentence_score * 0.25 +
+        spacing_score * 0.2 +
+        case_score * 0.15 +
+        (1 - repetition_penalty) * 0.1
+    )
+    
+    return max(0.0, min(1.0, quality_score))
+
+def smart_page_sampling(doc: fitz.Document, sample_percentage: float = 0.1, min_pages: int = 5, max_pages: int = 20) -> List[int]:
+    """Intelligently sample pages for analysis."""
+    total_pages = len(doc)
+    if total_pages <= min_pages:
+        return list(range(total_pages))
+    
+    # Calculate sample size
+    sample_size = max(min_pages, min(max_pages, int(total_pages * sample_percentage)))
+    
+    if sample_size >= total_pages:
+        return list(range(total_pages))
+    
+    # Always include first, last, and middle pages
+    key_pages = {0, total_pages - 1, total_pages // 2}
+    
+    # Add evenly distributed pages
+    step = total_pages / sample_size
+    sampled_pages = set()
+    for i in range(sample_size):
+        page_idx = int(i * step)
+        sampled_pages.add(min(page_idx, total_pages - 1))
+    
+    # Combine key pages with sampled pages
+    all_pages = key_pages | sampled_pages
+    
+    # If we still need more pages, add random ones
+    while len(all_pages) < sample_size and len(all_pages) < total_pages:
+        import random
+        remaining = set(range(total_pages)) - all_pages
+        if remaining:
+            all_pages.add(random.choice(list(remaining)))
+    
+    return sorted(list(all_pages))
+
+def detect_image_type(block: Dict[str, Any], page_area: float) -> str:
+    """Classify image blocks as scanned, embedded, or decorative."""
+    if block.get("type") != 1:  # Not an image block
+        return "none"
+    
+    bbox = block.get("bbox", [0, 0, 0, 0])
+    img_area = (bbox[2] - bbox[0]) * (bbox[3] - bbox[1])
+    area_ratio = img_area / max(page_area, 1)
+    
+    # Large images covering most of the page are likely scanned content
+    if area_ratio > 0.8:
+        return "scanned"
+    elif area_ratio > 0.3:
+        return "embedded"
+    else:
+        return "decorative"
+
+def calculate_text_density(page: fitz.Page) -> float:
+    """Calculate text density (text coverage) on a page."""
+    page_area = page.rect.width * page.rect.height
+    if page_area <= 0:
+        return 0.0
+    
+    text_blocks = page.get_text("dict")["blocks"]
+    text_area = 0.0
+    
+    for block in text_blocks:
+        if block.get("type") == 0:  # Text block
+            bbox = block.get("bbox", [0, 0, 0, 0])
+            text_area += (bbox[2] - bbox[0]) * (bbox[3] - bbox[1])
+    
+    return text_area / page_area
+
+def analyze_pdf_advanced(
+    doc: fitz.Document, 
+    sample_percentage: float = 0.1,
+    text_quality_threshold: float = 0.6,
+    scanned_content_threshold: float = 0.7,
+    min_text_density: float = 0.05
+) -> PDFAnalysisAdvanced:
+    """Advanced PDF analysis to determine if OCR is needed."""
+    total_pages = len(doc)
+    if total_pages == 0:
+        return PDFAnalysisAdvanced(
+            pages_analyzed=0, total_pages=0, text_quality_score=0.0,
+            avg_image_area_ratio=0.0, scanned_content_score=0.0,
+            text_density_score=0.0, total_chars_text_layer=0,
+            confidence_score=0.0, needs_ocr=True,
+            analysis_details={"reason": "empty_document"}
+        )
+    
+    # Smart sampling
+    sample_pages = smart_page_sampling(doc, sample_percentage)
+    
+    total_text_quality = 0.0
+    total_image_ratio = 0.0
+    total_scanned_score = 0.0
+    total_text_density = 0.0
+    total_chars = 0
+    page_details = []
+    
+    for page_idx in sample_pages:
+        page = doc[page_idx]
+        page_area = max(1.0, page.rect.width * page.rect.height)
+        
+        # Extract text and analyze quality
+        page_text = page.get_text("text")
+        text_quality = analyze_text_quality(page_text)
+        total_text_quality += text_quality
+        total_chars += len(page_text)
+        
+        # Analyze images and content type
+        raw_dict = page.get_text("rawdict")
+        blocks = raw_dict.get("blocks", [])
+        
+        img_area = 0.0
+        scanned_blocks = 0
+        total_image_blocks = 0
+        
+        for block in blocks:
+            if block.get("type") == 1:  # Image block
+                total_image_blocks += 1
+                bbox = block.get("bbox", [0, 0, 0, 0])
+                block_area = (bbox[2] - bbox[0]) * (bbox[3] - bbox[1])
+                img_area += block_area
+                
+                img_type = detect_image_type(block, page_area)
+                if img_type == "scanned":
+                    scanned_blocks += 1
+        
+        page_image_ratio = min(1.0, img_area / page_area)
+        page_scanned_score = scanned_blocks / max(total_image_blocks, 1) if total_image_blocks > 0 else 0.0
+        page_text_density = calculate_text_density(page)
+        
+        total_image_ratio += page_image_ratio
+        total_scanned_score += page_scanned_score
+        total_text_density += page_text_density
+        
+        page_details.append({
+            "page": page_idx,
+            "text_quality": text_quality,
+            "image_ratio": page_image_ratio,
+            "scanned_score": page_scanned_score,
+            "text_density": page_text_density,
+            "char_count": len(page_text)
+        })
+    
+    # Calculate averages
+    n_pages = len(sample_pages)
+    avg_text_quality = total_text_quality / n_pages
+    avg_image_ratio = total_image_ratio / n_pages
+    avg_scanned_score = total_scanned_score / n_pages
+    avg_text_density = total_text_density / n_pages
+    
+    # Decision logic with multiple factors
+    needs_ocr_reasons = []
+    
+    # Check text quality
+    if avg_text_quality < text_quality_threshold:
+        needs_ocr_reasons.append(f"low_text_quality_{avg_text_quality:.2f}")
+    
+    # Check scanned content
+    if avg_scanned_score > scanned_content_threshold:
+        needs_ocr_reasons.append(f"high_scanned_content_{avg_scanned_score:.2f}")
+    
+    # Check text density
+    if avg_text_density < min_text_density:
+        needs_ocr_reasons.append(f"low_text_density_{avg_text_density:.3f}")
+    
+    # Check absolute character count
+    if total_chars < 200:
+        needs_ocr_reasons.append(f"low_char_count_{total_chars}")
+    
+    needs_ocr = len(needs_ocr_reasons) > 0
+    
+    # Calculate confidence score
+    confidence_factors = [
+        avg_text_quality,
+        1.0 - avg_scanned_score,
+        min(1.0, avg_text_density * 10),  # Scale density to 0-1
+        min(1.0, total_chars / 1000)  # Scale char count to 0-1
+    ]
+    confidence_score = sum(confidence_factors) / len(confidence_factors)
+    
+    analysis_details = {
+        "sample_pages": sample_pages,
+        "page_details": page_details,
+        "needs_ocr_reasons": needs_ocr_reasons,
+        "thresholds": {
+            "text_quality": text_quality_threshold,
+            "scanned_content": scanned_content_threshold,
+            "min_text_density": min_text_density
+        }
+    }
+    
+    return PDFAnalysisAdvanced(
+        pages_analyzed=n_pages,
+        total_pages=total_pages,
+        text_quality_score=avg_text_quality,
+        avg_image_area_ratio=avg_image_ratio,
+        scanned_content_score=avg_scanned_score,
+        text_density_score=avg_text_density,
+        total_chars_text_layer=total_chars,
+        confidence_score=confidence_score,
+        needs_ocr=needs_ocr,
+        analysis_details=analysis_details
+    )
+
+def analyze_pdf_sample(doc: fitz.Document, sample_pages: int = 15) -> PDFAnalysis:
+    """Legacy function for backward compatibility."""
     total_ratio = 0.0
     total_chars = 0
     n = min(sample_pages, len(doc))
@@ -310,6 +630,12 @@ def extract_pdf_text(
     max_pages: int = 0,
     cache_dir: str = "",
     enhanced_cache: Optional[EnhancedCache] = None,
+    # New advanced analysis parameters
+    use_advanced_analysis: bool = True,
+    text_quality_threshold: float = 0.6,
+    scanned_content_threshold: float = 0.7,
+    min_text_density: float = 0.05,
+    sample_percentage: float = 0.1,
 ) -> str:
     logger = get_rag_logger("PDFExtractor")
     cache = enhanced_cache or get_enhanced_cache("pdf_extraction_cache.json")
@@ -317,7 +643,7 @@ def extract_pdf_text(
     # Generate cache key using enhanced cache
     cache_key = cache.cache_pdf_processing(
         str(path), 
-        f"extract_f={force_ocr}_t={image_threshold}_dpi={ocr_dpi}_lang={ocr_lang}_mp={max_pages}"
+        f"extract_f={force_ocr}_t={image_threshold}_dpi={ocr_dpi}_lang={ocr_lang}_mp={max_pages}_adv={use_advanced_analysis}"
     )
     
     # Check enhanced cache first
@@ -339,15 +665,41 @@ def extract_pdf_text(
     log_processing(f"Extracting text from PDF", str(path.name))
 
     with fitz.open(path) as doc:
-        analysis = analyze_pdf_sample(doc, sample_pages=5)
-        need_ocr = force_ocr or analysis.avg_image_area_ratio >= image_threshold or analysis.total_chars_text_layer < 200
-        
-        logger.info(f"ANALYSIS: {analysis.pages} pages, {analysis.avg_image_area_ratio:.2%} image ratio, {analysis.total_chars_text_layer} text chars")
-        
-        if need_ocr:
-            logger.info(f"OCR required (threshold: {image_threshold:.2%}, actual: {analysis.avg_image_area_ratio:.2%})")
+        # Use advanced analysis by default, fall back to legacy if disabled
+        if use_advanced_analysis and not force_ocr:
+            analysis = analyze_pdf_advanced(
+                doc, 
+                sample_percentage=sample_percentage,
+                text_quality_threshold=text_quality_threshold,
+                scanned_content_threshold=scanned_content_threshold,
+                min_text_density=min_text_density
+            )
+            need_ocr = analysis.needs_ocr
+            
+            logger.info(f"ADVANCED ANALYSIS: {analysis.pages_analyzed}/{analysis.total_pages} pages analyzed")
+            logger.info(f"Text quality: {analysis.text_quality_score:.3f}, Image ratio: {analysis.avg_image_area_ratio:.2%}")
+            logger.info(f"Scanned content: {analysis.scanned_content_score:.3f}, Text density: {analysis.text_density_score:.3f}")
+            logger.info(f"Confidence: {analysis.confidence_score:.3f}, Total chars: {analysis.total_chars_text_layer}")
+            
+            if need_ocr:
+                reasons = ", ".join(analysis.analysis_details.get("needs_ocr_reasons", []))
+                logger.info(f"OCR required - Reasons: {reasons}")
+            else:
+                logger.info(f"Direct text extraction - High quality text layer detected")
         else:
-            logger.info(f"Direct text extraction (sufficient text layer detected)")
+            # Legacy analysis for backward compatibility or when force_ocr is True
+            legacy_analysis = analyze_pdf_sample(doc, sample_pages=10)
+            need_ocr = force_ocr or legacy_analysis.avg_image_area_ratio >= image_threshold or legacy_analysis.total_chars_text_layer < 200
+            
+            logger.info(f"LEGACY ANALYSIS: {legacy_analysis.pages} pages, {legacy_analysis.avg_image_area_ratio:.2%} image ratio, {legacy_analysis.total_chars_text_layer} text chars")
+            
+            if need_ocr:
+                if force_ocr:
+                    logger.info(f"OCR forced by user")
+                else:
+                    logger.info(f"OCR required (threshold: {image_threshold:.2%}, actual: {legacy_analysis.avg_image_area_ratio:.2%})")
+            else:
+                logger.info(f"Direct text extraction (sufficient text layer detected)")
 
         texts: List[str] = []
         page_limit = len(doc) if not max_pages or max_pages <= 0 else min(max_pages, len(doc))
@@ -395,36 +747,34 @@ def extract_pdf_text(
 
 # ------------------ Embedding backend ------------------
 class Embedder:
-    def __init__(self, prefer_gemini: bool = True, fallback_dim: int = 768, cache: Optional[EnhancedCache] = None) -> None:
-        self._backend = "hash"
-        self._gemini_service = None
+    def __init__(self, cache: Optional[EnhancedCache] = None) -> None:
+        self._backend = "ollama"
+        self._ollama_service = None
         self._dim: Optional[int] = None
-        self._fallback_dim = fallback_dim
+        self._fallback_dim = DEFAULT_EMBEDDING_DIM
+        self._ollama_model = DEFAULT_OLLAMA_MODEL
         
-        # Set cache to gemini_cache directory
+        # Set cache to ollama_cache directory
         if cache is None:
             from pathlib import Path
-            cache_dir = Path(__file__).parent.parent.parent.parent / "data" / "gemini_cache"
+            cache_dir = Path(__file__).parent.parent.parent.parent / "data" / "ollama_cache"
             cache_dir.mkdir(parents=True, exist_ok=True)
             cache = get_enhanced_cache(str(cache_dir / "embeddings_cache.json"), default_ttl=86400)
         
         self.cache = cache
         self.logger = get_rag_logger("Embedder")
         
-        if prefer_gemini:
-            GeminiService = _try_get_gemini_service()
-            if GeminiService:
-                try:
-                    # Use default API keys from gemini_api_keys.py
-                    self._gemini_service = GeminiService()
-                    self._backend = "gemini"
-                    self.logger.success(f"Initialized Gemini embeddings with API keys")
-                except Exception as e:
-                    self.logger.warning(f"Failed to initialize Gemini service: {e}")
-                    self._gemini_service = None
-                    self._backend = "hash"
-            else:
-                self.logger.warning("GeminiService not available, falling back to hash embeddings")
+        # Initialize Ollama service
+        OllamaService = _get_ollama_service()
+        try:
+            self._ollama_service = OllamaService(model=self._ollama_model)
+            self.logger.success(f"Initialized Ollama embeddings with model {self._ollama_model}")
+            self.logger.info(f"Ollama embeddings dimension: {self._fallback_dim}")
+        except Exception as e:
+            self.logger.error(f"Ollama embedding failed: {e}")
+            self.logger.error("Make sure Ollama is running and the model is available")
+            self.logger.error(f"Try: ollama pull {self._ollama_model}")
+            raise RuntimeError(f"Failed to initialize Ollama embeddings. Is Ollama running? Error: {e}") from e
         
         self.logger.info(f"Embedder initialized with backend: {self._backend}, dimensions: {self._fallback_dim}")
 
@@ -438,33 +788,7 @@ class Embedder:
             return self._dim
         return self._fallback_dim if self._backend == "hash" else -1
 
-    def _ensure_dimension(self, vecs: List[List[float]]) -> None:
-        if not vecs:
-            return
-        
-        # Handle mixed dimensions from different embedding sources
-        dimensions = [len(v) for v in vecs]
-        unique_dims = set(dimensions)
-        
-        if len(unique_dims) > 1:
-            # If we have mixed dimensions, normalize to the most common one
-            from collections import Counter
-            most_common_dim = Counter(dimensions).most_common(1)[0][0]
-            
-            # Pad or truncate vectors to match the most common dimension
-            for i, vec in enumerate(vecs):
-                if len(vec) != most_common_dim:
-                    if len(vec) < most_common_dim:
-                        # Pad with zeros
-                        vecs[i] = vec + [0.0] * (most_common_dim - len(vec))
-                    else:
-                        # Truncate
-                        vecs[i] = vec[:most_common_dim]
-            
-            self.logger.warning(f"Mixed embedding dimensions detected. Normalized to {most_common_dim} dimensions.")
-        
-        if vecs and self._dim is None:
-            self._dim = len(vecs[0])
+
 
     def embed(self, texts: Sequence[str]) -> List[List[float]]:
         if not texts:
@@ -492,19 +816,14 @@ class Embedder:
         # Generate embeddings for uncached texts
         new_embeddings = []
         if uncached_texts:
-            log_embedding(f"Generating embeddings for {len(uncached_texts)} texts using {self._backend}", len(uncached_texts))
+            log_embedding(f"Generating embeddings for {len(uncached_texts)} texts using Ollama", len(uncached_texts))
             
-            if self._backend == "gemini" and self._gemini_service is not None:
-                try:
-                    # Pass target dimension to ensure consistency
-                    new_embeddings = self._gemini_service.embed(uncached_texts, target_dim=self._fallback_dim)
-                    log_success(f"Generated {len(new_embeddings)} Gemini embeddings")
-                except Exception as e:
-                    self.logger.error(f"Gemini embedding failed: {e}, falling back to hash embeddings")
-                    new_embeddings = [self._hash_embed(t, dim=self._fallback_dim) for t in uncached_texts]
-            else:
-                new_embeddings = [self._hash_embed(t, dim=self._fallback_dim) for t in uncached_texts]
-                log_processing(f"Generated {len(new_embeddings)} hash embeddings")
+            try:
+                new_embeddings = self._ollama_service.embed(list(uncached_texts), target_dim=self._fallback_dim)
+                log_success(f"Generated {len(new_embeddings)} Ollama embeddings")
+            except Exception as e:
+                self.logger.error(f"Ollama embedding failed: {e}")
+                raise RuntimeError(f"Failed to generate Ollama embeddings: {e}") from e
             
             # Cache the new embeddings
             for i, embedding in enumerate(new_embeddings):
@@ -529,22 +848,25 @@ class Embedder:
         log_success(f"Returned {len(final_embeddings)} embeddings ({len(cached_embeddings)} from cache, {len(new_embeddings)} newly generated)")
         return final_embeddings
 
-    @staticmethod
-    def _hash_embed(text: str, dim: int = 384) -> List[float]:
-        if not text:
-            return [0.0] * dim
-        vec = [0.0] * dim
-        t = text.strip()
-        for i in range(max(1, len(t) - 2)):
-            tri = t[i:i+3]
-            h1 = int(hashlib.md5(tri.encode("utf-8")).hexdigest(), 16)
-            h2 = int(hashlib.sha1(tri.encode("utf-8")).hexdigest(), 16)
-            vec[h1 % dim] += 1.0
-            vec[h2 % dim] += 0.5
-        norm = sum(v * v for v in vec) ** 0.5
-        if norm > 0:
-            vec = [v / norm for v in vec]
-        return vec
+    def _ensure_dimension(self, embeddings: List[List[float]]) -> None:
+        """
+        Validate that all embeddings in the batch have the same length and match expected Ollama dimensions.
+        """
+        if not embeddings:
+            return
+        detected = len(embeddings[0])
+        # Ensure batch consistency
+        for e in embeddings:
+            if len(e) != detected:
+                self.logger.error("Inconsistent embedding dimensions within batch")
+                raise RuntimeError("Inconsistent embedding dimensions within batch")
+        # Record detected dimension
+        self._dim = detected
+        # Validate expected size for Ollama
+        if detected != self._fallback_dim:
+            self.logger.error(f"Unexpected embedding dimension {detected} from Ollama; expected {self._fallback_dim}")
+            raise RuntimeError(f"Unexpected embedding dimension {detected} from Ollama; expected {self._fallback_dim}")
+        return
 
 # ------------------ Chroma helpers ------------------
 def build_client(persist_directory: str) -> chromadb.Client:
@@ -609,17 +931,9 @@ def _process_one_pdf(args: Dict[str, Any]) -> Dict[str, Any]:
     file_path = Path(args["file_path"])
     root = Path(args["root"])
     export_tmp = Path(args["export_tmp"])
-    export_include = args["export_include"]  # "text" or "text+hash-embedding"
     group_key_mode = args["group_key_mode"]
     force_ocr = args["force_ocr"]
     image_threshold = args["image_threshold"]
-    ocr_dpi = args["ocr_dpi"]
-    ocr_lang = args["ocr_lang"]
-    max_pages = args["max_pages"]
-    cache_dir = args["cache_dir"]
-    min_par = args["min_par"]
-    max_par = args["max_par"]
-    prefer_gemini = args["prefer_gemini"]
 
     stats = {"file": str(file_path), "chunks": 0, "tmp_files": [], "group_keys": []}
     start_time = time.time()
@@ -629,10 +943,15 @@ def _process_one_pdf(args: Dict[str, Any]) -> Dict[str, Any]:
             file_path,
             force_ocr=force_ocr,
             image_threshold=image_threshold,
-            ocr_dpi=ocr_dpi,
-            ocr_lang=ocr_lang,
-            max_pages=max_pages,
-            cache_dir=cache_dir,
+            ocr_dpi=DEFAULT_OCR_DPI,
+            ocr_lang=DEFAULT_OCR_LANG,
+            max_pages=DEFAULT_MAX_PAGES_PER_PDF,
+            cache_dir=DEFAULT_CACHE_DIR,
+            use_advanced_analysis=True,
+            text_quality_threshold=DEFAULT_TEXT_QUALITY_THRESHOLD,
+            scanned_content_threshold=DEFAULT_SCANNED_CONTENT_THRESHOLD,
+            min_text_density=DEFAULT_MIN_TEXT_DENSITY,
+            sample_percentage=DEFAULT_SAMPLE_PERCENTAGE,
         )
     except Exception as e:
         processing_time = time.time() - start_time
@@ -648,17 +967,19 @@ def _process_one_pdf(args: Dict[str, Any]) -> Dict[str, Any]:
     group_key = build_group_key(tags, mode=group_key_mode)
 
     file_hash = sha1_text(text)
-    chunks = paragraph_chunk(text, min_chars=min_par, max_chars=max_par)
+    chunks = paragraph_chunk(text, min_chars=DEFAULT_MIN_PAR_CHARS, max_chars=DEFAULT_MAX_PAR_CHARS, overlap=DEFAULT_CHUNK_OVERLAP)
     if not chunks:
         processing_time = time.time() - start_time
         return {**stats, "info": "no_chunks", "processing_time": processing_time}
 
-    # Optional embeddings inside export
+    # Generate Ollama embeddings
     pre_embs: List[List[float]] = []
-    if export_include in ["text+hash-embedding", "text+gemini-embedding"]:
-        prefer_gemini_emb = export_include == "text+gemini-embedding" or prefer_gemini
-        embedder = Embedder(prefer_gemini=prefer_gemini_emb, fallback_dim=768)
+    embedder = Embedder()
+    try:
         pre_embs = embedder.embed(chunks)
+    except Exception as e:
+        # Convert to simple string to avoid sending un-picklable objects
+        raise RuntimeError(f"Embedding failed: {e}") from None
 
     # Extract comprehensive metadata
     try:
@@ -727,10 +1048,13 @@ def _process_one_pdf(args: Dict[str, Any]) -> Dict[str, Any]:
                 # enhanced metadata
                 **metadata_dict
             }
-            record: Dict[str, Any] = {"id": doc_id, "text": chunk, "metadata": meta}
-            if export_include in ["text+hash-embedding", "text+gemini-embedding"]:
-                record["embedding"] = pre_embs[idx]
-                record["embedding_type"] = "gemini" if export_include == "text+gemini-embedding" else "hash"
+            record: Dict[str, Any] = {
+                "id": doc_id, 
+                "text": chunk, 
+                "metadata": meta,
+                "embedding": pre_embs[idx],
+                "embedding_type": "ollama"
+            }
             f.write(json.dumps(record, ensure_ascii=False) + "\n")
             stats["chunks"] += 1
 
@@ -746,7 +1070,6 @@ def _ingest_export_to_chroma(
     export_dir: Path,
     client: chromadb.Client,
     collection_name: str,
-    prefer_gemini: bool,
     include_embeddings: bool,
     batch_size: int = 64,
 ) -> Tuple[int, int]:
@@ -759,7 +1082,7 @@ def _ingest_export_to_chroma(
         metadata={"hnsw:space": "cosine"},
     )
     
-    embedder = Embedder(prefer_gemini=prefer_gemini, fallback_dim=768)
+    embedder = Embedder()
     logger.info(f"Embedder backend: {embedder.backend}")
 
     total = 0
@@ -767,6 +1090,7 @@ def _ingest_export_to_chroma(
     logger.info(f"Found {len(files)} course JSONL files to ingest")
     
     docs: List[str] = []; ids: List[str] = []; metas: List[Dict[str, Any]] = []; embs: List[List[float]] = []
+    seen_ids: Set[str] = set()  # Track IDs to prevent duplicates
     
     for file_idx, jf in enumerate(files, 1):
         log_file_operation("Processing", str(jf))
@@ -774,9 +1098,28 @@ def _ingest_export_to_chroma(
         with jf.open("r", encoding="utf-8") as f:
             for line in f:
                 rec = json.loads(line)
-                ids.append(rec["id"])
+                rec_id = rec["id"]
+                if rec_id in seen_ids:
+                    logger.warning(f"Duplicate ID detected, skipping: {rec_id}")
+                    continue
+                seen_ids.add(rec_id)
+                ids.append(rec_id)
                 docs.append(rec["text"])
-                metas.append(rec["metadata"])
+                meta = rec["metadata"]
+                # -------- sanitize --------
+                def _sanitize(d):
+                    for k, v in list(d.items()):
+                        # allow scalars or lists/tuples of scalars
+                        if isinstance(v, (str, int, float, bool)) or v is None:
+                            continue
+                        if isinstance(v, (list, tuple)):
+                            # stringify any non-scalar element inside list
+                            d[k] = [str(x) if not isinstance(x, (str, int, float, bool)) else x for x in v]
+                        else:
+                            # fallback: convert complex objects (dicts etc.) to JSON-string
+                            d[k] = json.dumps(v, ensure_ascii=False)
+                    return d
+                metas.append(_sanitize(meta))
                 
                 if include_embeddings and "embedding" in rec:
                     embs.append(rec["embedding"])
@@ -823,63 +1166,36 @@ def _ingest_export_to_chroma(
 def main():
     # Initialize beautiful logging
     logger = get_rag_logger("RAG-Pipeline", "rag_pipeline.log")
-    log_section_header("RAG PIPELINE INITIALIZATION")
+    log_section_header("SIMPLIFIED RAG PIPELINE INITIALIZATION")
     
-    ap = argparse.ArgumentParser(description="PDF → OCR → paragraph chunks → per-course JSONL export (optional Chroma), with multi-process workers.")
-    ap.add_argument("-i", "--input-dir", required=True, help="Root directory to scan recursively (PDFs only).")
-    ap.add_argument("--export-dir", type=str, default="vectorize_export", help="Directory to write per-course JSONL files.")
-    ap.add_argument("--export-include", choices=["text", "text+hash-embedding", "text+gemini-embedding"], default="text+gemini-embedding",
-                    help="Export text+metadata, with hash embeddings, or with Gemini embeddings.")
+    ap = argparse.ArgumentParser(description="Simplified PDF → OCR → Ollama embeddings → ChromaDB pipeline.")
+    # Essential arguments only
+    ap.add_argument("-i", "--input-dir", default=DEFAULT_INPUT_DIR, help="Root directory to scan recursively (PDFs only).")
+    ap.add_argument("--export-dir", default=DEFAULT_EXPORT_DIR, help="Directory to write per-course JSONL files.")
+    ap.add_argument("--cache-dir", default=DEFAULT_CACHE_DIR, help="Directory to cache OCR outputs.")
+    ap.add_argument("-c", "--collection", default=DEFAULT_COLLECTION_NAME, help="ChromaDB collection name.")
+    ap.add_argument("-p", "--persist-dir", default=DEFAULT_CHROMA_DIR, help="ChromaDB persist directory.")
+    ap.add_argument("--workers", type=int, default=DEFAULT_WORKERS, help="Number of worker processes.")
+    
+    # User-configurable arguments
     ap.add_argument("--group-key-mode", choices=["dept_code_num", "code_num", "dept_code", "dept"], default="dept_code_num",
                     help="How to group per-course files.")
-
-    # Workers
-    ap.add_argument("--workers", type=int, default=0, help="Number of worker processes (0 = auto = CPU count - 1, min 1).")
-    ap.add_argument("--omp-threads", type=int, default=1, help="Threads per Tesseract inside each worker (1 avoids oversubscription).")
-
-    # OCR / extraction config
-    ap.add_argument("--image-threshold", type=float, default=0.75, help="If avg image area ≥ threshold, OCR doc.")
     ap.add_argument("--force-ocr", action="store_true", help="Force OCR for all PDFs.")
-    ap.add_argument("--ocr-dpi", type=int, default=300, help="DPI used to render pages for OCR.")
-    ap.add_argument("--ocr-lang", type=str, default="eng", help="Tesseract languages, e.g., 'eng+equ' or 'eng+fra'.")
-    ap.add_argument("--max-pages-per-pdf", type=int, default=0, help="Limit pages per PDF (0 = all).")
-    ap.add_argument("--cache-dir", type=str, default="", help="Directory to cache OCR outputs.")
-
-    # Chunking
-    ap.add_argument("--min-par-chars", type=int, default=200, help="Min chars after merging for a paragraph chunk.")
-    ap.add_argument("--max-par-chars", type=int, default=1800, help="Max chars per paragraph chunk.")
-
-    # Discovery / control
-    ap.add_argument("--ignore-dirs", type=str, default="", help="Comma-separated directories to ignore.")
-    ap.add_argument("--max-pdfs", type=int, default=0, help="Limit number of PDFs (0 = no limit).")
-    ap.add_argument("--dry-run", action="store_true", help="Extract and export, skip only Chroma ingestion.")
-
-    # Tesseract EXE path (Windows convenience)
-    ap.add_argument("--tesseract-cmd", type=str, default="", help=r'Path to tesseract.exe (e.g., "C:\Program Files\Tesseract-OCR\tesseract.exe").')
-
-    # Embedding backend (local vs gemini)
-    ap.add_argument("--prefer-gemini", action="store_true", help="Use Gemini embeddings if configured (not recommended for cost).")
-
-    # Optional Chroma (post-merge ingestion)
-    ap.add_argument("--with-chroma", action="store_true", help="After export, ingest JSONL into local Chroma.")
-    ap.add_argument("-c", "--collection", default="pdfs", help="ChromaDB collection name.")
-    ap.add_argument("-p", "--persist-dir", default="chroma_db", help="ChromaDB persist directory.")
-
-    # Progress tracking arguments
+    ap.add_argument("--image-threshold", type=float, default=0.75, help="If avg image area ≥ threshold, OCR doc (legacy mode only).")
+    
+    # Control arguments
+    ap.add_argument("--with-chroma", action="store_true", default=True, help="Ingest JSONL into local Chroma.")
     ap.add_argument("--resume", action="store_true", help="Resume from previous session if available")
-    ap.add_argument("--progress-file", help="Custom progress file path")
-    ap.add_argument("--session-id", help="Custom session ID")
-    ap.add_argument("--cleanup-session", action="store_true", help="Clean up progress file after completion")
+    ap.add_argument("--max-pdfs", type=int, default=0, help="Limit number of PDFs (0 = no limit).")
 
     args = ap.parse_args()
 
-    # Configure Tesseract path on Windows if provided or use common default
-    if args.tesseract_cmd:
-        pytesseract.pytesseract.tesseract_cmd = args.tesseract_cmd
+    # Configure Tesseract path
+    if Path(DEFAULT_TESSERACT_CMD).exists():
+        pytesseract.pytesseract.tesseract_cmd = DEFAULT_TESSERACT_CMD
+        logger.info(f"Using Tesseract at: {DEFAULT_TESSERACT_CMD}")
     else:
-        default_win = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-        if os.name == "nt" and Path(default_win).exists():
-            pytesseract.pytesseract.tesseract_cmd = default_win
+        logger.warning(f"Tesseract not found at {DEFAULT_TESSERACT_CMD}, using system PATH")
 
     log_step("Validating input directory", 1, 8)
     root = Path(args.input_dir).expanduser().resolve()
@@ -889,20 +1205,16 @@ def main():
     log_success(f"Input directory validated: {root}")
 
     log_step("Discovering PDF files", 2, 8)
-    ignores = [d.strip() for d in args.ignore_dirs.split(",") if d.strip()] if args.ignore_dirs else None
-    if ignores:
-        logger.info(f"🚫 Ignoring directories: {', '.join(ignores)}")
-    
-    all_pdfs = discover_pdfs(root, ignore_dirs=ignores)
+    all_pdfs = discover_pdfs(root, ignore_dirs=None)
     all_pdfs.sort()
     log_success(f"Discovered {len(all_pdfs)} PDF files")
     
     # Initialize progress tracking
     log_step("Initializing progress tracking", 3, 8)
     if args.resume:
-        progress_tracker = resume_or_create_session(args.progress_file)
+        progress_tracker = resume_or_create_session(None)
     else:
-        progress_tracker = ProgressTracker(args.progress_file, args.session_id)
+        progress_tracker = ProgressTracker(None, None)
     
     # Check for resumable session
     existing_progress = progress_tracker.load_progress()
@@ -916,12 +1228,11 @@ def main():
         # Initialize new session
         processing_params = {
             'input_dir': args.input_dir,
-            'export_include': args.export_include,
+            'export_include': DEFAULT_EXPORT_INCLUDE,
             'workers': args.workers,
             'force_ocr': args.force_ocr,
             'image_threshold': args.image_threshold,
-            'max_pages': getattr(args, 'max_pages', 0),  # ✅ Safe access with default
-            'ocr_dpi': args.ocr_dpi
+            'ocr_dpi': DEFAULT_OCR_DPI
         }
         progress_tracker.initialize_session(len(all_pdfs), processing_params)
         logger.info(f"Started new session {progress_tracker.session_id}")
@@ -941,21 +1252,32 @@ def main():
     log_success(f"Export directory ready: {export_dir}")
 
     log_step("Configuring worker processes", 5, 8)
-    cpu = os.cpu_count() or 2
-    workers = (cpu - 1) if args.workers == 0 else max(1, args.workers)
-    logger.info(f"System CPUs: {cpu}, Using {workers} worker process(es)")
+    workers = args.workers
+    logger.info(f"Using {workers} worker process(es)")
     
-    # Initialize enhanced cache (will use data/gemini_cache by default)
+    # Initialize enhanced cache (will use data/ollama_cache by default)
     with get_enhanced_cache(default_ttl=86400) as cache:
         log_step("Cache system initialized", 6, 8)
         cache_stats = cache.get_stats()
         logger.info(f"Cache: {cache_stats['active_entries']} active entries, {cache_stats['expired_entries']} expired")
         
         log_section_header(f"PROCESSING {len(pdfs)} PDF FILES")
-        logger.info(f"Export mode: {args.export_include}")
+        logger.info(f"Export mode: {DEFAULT_EXPORT_INCLUDE}")
         logger.info(f"Grouping mode: {args.group_key_mode}")
         logger.info(f"Workers: {workers}")
         logger.info(f"Export directory: {export_dir}")
+        logger.info(f"Ollama model: {DEFAULT_OLLAMA_MODEL}")
+        logger.info(f"Chunk size: {DEFAULT_MIN_PAR_CHARS}-{DEFAULT_MAX_PAR_CHARS} chars with {DEFAULT_CHUNK_OVERLAP} char overlap")
+        
+        # Log OCR analysis mode
+        logger.info(f"OCR Detection: ADVANCED mode")
+        logger.info(f"   Text quality threshold: {DEFAULT_TEXT_QUALITY_THRESHOLD:.2f}")
+        logger.info(f"   Scanned content threshold: {DEFAULT_SCANNED_CONTENT_THRESHOLD:.2f}")
+        logger.info(f"   Min text density: {DEFAULT_MIN_TEXT_DENSITY:.3f}")
+        logger.info(f"   Sample percentage: {DEFAULT_SAMPLE_PERCENTAGE:.1%}")
+        
+        if args.force_ocr:
+            logger.info(f"WARNING: OCR FORCED for all PDFs (analysis will be bypassed)")
 
     tasks: List[Dict[str, Any]] = []
     for fp in pdfs:
@@ -963,17 +1285,9 @@ def main():
             "file_path": str(fp),
             "root": str(root),
             "export_tmp": str(export_tmp),
-            "export_include": args.export_include,
             "group_key_mode": args.group_key_mode,
             "force_ocr": args.force_ocr,
             "image_threshold": args.image_threshold,
-            "ocr_dpi": args.ocr_dpi,
-            "ocr_lang": args.ocr_lang,
-            "max_pages": args.max_pages_per_pdf,
-            "cache_dir": args.cache_dir,
-            "min_par": args.min_par_chars,
-            "max_par": args.max_par_chars,
-            "prefer_gemini": args.prefer_gemini,
         })
 
         log_step("Processing PDF files", 7, 8)
@@ -981,7 +1295,7 @@ def main():
         
         if workers == 1:
             logger.info("🔄 Single-threaded processing mode")
-            _init_worker(pytesseract.pytesseract.tesseract_cmd, args.omp_threads)
+            _init_worker(DEFAULT_TESSERACT_CMD, DEFAULT_OMP_THREADS)
             for i, t in enumerate(tasks, 1):
                 file_name = Path(t['file_path']).name
                 log_processing(f"Processing PDF {i}/{len(tasks)}", file_name)
@@ -1001,7 +1315,7 @@ def main():
             with cf.ProcessPoolExecutor(
                 max_workers=workers,
                 initializer=_init_worker,
-                initargs=(pytesseract.pytesseract.tesseract_cmd, args.omp_threads),
+                initargs=(DEFAULT_TESSERACT_CMD, DEFAULT_OMP_THREADS),
             ) as ex:
                 futures = [ex.submit(_process_one_pdf, t) for t in tasks]
                 completed = 0
@@ -1098,18 +1412,16 @@ def main():
             
             try:
                 client = build_client(args.persist_dir)
-                include_embeddings = args.export_include in ["text+hash-embedding", "text+gemini-embedding"]
                 
                 logger.info(f"Collection: {args.collection}")
-                logger.info(f"Include embeddings: {include_embeddings}")
-                logger.info(f"Prefer Gemini: {args.prefer_gemini}")
+                logger.info(f"Include embeddings: True (Ollama)")
+                logger.info(f"Ollama model: {DEFAULT_OLLAMA_MODEL}")
                 
                 files_ingested, vectors = _ingest_export_to_chroma(
                     export_dir=export_dir,
                     client=client,
                     collection_name=args.collection,
-                    prefer_gemini=args.prefer_gemini,
-                    include_embeddings=include_embeddings,
+                    include_embeddings=True,  # Always include embeddings since we always generate them
                     batch_size=64,
                 )
                 
@@ -1140,10 +1452,7 @@ def main():
         results_file = progress_tracker.export_results()
         logger.info(f"Detailed results exported to: {results_file}")
         
-        # Cleanup session if requested
-        if args.cleanup_session:
-            progress_tracker.cleanup_session()
-            logger.info("Progress session cleaned up")
+        # Note: Session cleanup removed in simplified version
         
         logger.info(f"Check the log file for detailed processing information")
         
@@ -1152,3 +1461,12 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+# EXECUTION
+
+# python .\convert_to_embeddings.py -i "C:\Users\awun8\Documents\SCHOOL\COMPILATION" --export-dir "C:\Users\awun8\Documents\Recursive-PDF-EXTRACTION-AND-RAG\data\exported_data" --cache-dir "C:\Users\awun8\Documents\Recursive-PDF-EXTRACTION-AND-RAG\data\ocr_cache" --workers 8 --omp-threads 1 --force-ocr --resume --with-chroma --collection pdfs --persist-dir chromadb_storage
+
+
+# python src/services/RAG/convert_to_embeddings.py -i "C:\Users\awun8\Documents\SCHOOL\COMPILATION" --export-dir "C:\Users\awun8\Documents\Recursive-PDF-EXTRACTION-AND-RAG\data\exported_data" --cache-dir "C:\Users\awun8\Documents\Recursive-PDF-EXTRACTION-AND-RAG\data\ocr_cache" --workers 2 --omp-threads 1 --force-ocr --resume --with-chroma -c pdfs_ollama_1024 -p chroma_db_ollama --prefer-ollama

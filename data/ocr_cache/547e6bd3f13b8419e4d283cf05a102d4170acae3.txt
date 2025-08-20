@@ -1,0 +1,4481 @@
+
+CAM Ry
+eee
+
+pee AMERY
+ome BO. <TH (ABUAD)
+
+= So KADY S APT DAMA,
+A ATA cTE, IGE. REA
+: Pb Set ANOLE
+
+‘ COLLEGE OF SCIENCES
+DEPARTMENT OF MATHEMATICAL AND PHYSICAL SCIENCES
+FIRST SEMESTER EXAMINATION 2020/2021 SESSION
+COURSE TITLE: PROBABILITY I COURSE CODE: STA 111
+. UNITS: 3UNITS.TIME ALLOWED: 2 HRS, 15 MINUTES
+INSTRUCTION: ANSWER FOUR QUESTIONS
+
+1. Define the following terms
+(i) Set Theory (ii) Union and Interception of a Set, (iii) Equal Set (iv) Event (v) Trail (vi)
+Mutually Exclusive Event (vii) Dependent and Independent Events
+
+1b. State three properties of Normal Distribution
+
+2. (a) State the conditions for approximation of the following distributions
+(i) Binomial to Poisson, ;
+(ii) Binomial to Normal, and
+(iii) Poisson to Normal
+
+(b) if 64% blocks built by Johnson are defective, find the probabilities that out of a
+sample of 400 of such blocks (i) more than 280 (ii) less than 250 (iii) between 250 and
+
+280 are defective
+
+3a State three laws of set theory
+(b) If a continuous probability distribution is defined as
+
+f(x) = {kx + 2x”), 0<x <1
+
+(Gi) For what value of k is f(x) well defined?
+(ii) Obtain the expected value of (x) .
+(iii) | Variance of (x)
+
+4 (a) Find the mean and variance of the probability distribution shown in the table below:
+
+
+SS Sine,
+}/ ADS ! (ABUAD)
+
+: A] i wy | M88, am manatonn we
+DEPARTMENT OF MATH! 3
+FIRST SEMESTIN TH. MATICAL & PHYSICAL SCIENCES
+
+MAKE-UP E
+STA 111: GB UNITS) - XAMINATION 2016/2017
+
+v,
+Reta Sass ASCE STAT, Neth,
+
+. TIME ALLOWED: 2HOURS 30 MINUTES
+4 INSTRUCTION: ANSWER FOUR QUEST.
+a).
+
+IONS
+| 1. (a) Define the following terms a,
+| | Ng (i) Experiment (ii) Sample space (iii) Event (iv) A trial (v) Equally-likely
+events (vi)Mutually exclusive events (vii) Dependent events (viii)
+Independent events .
+
+(b). Find the number of arrangements that can be made out of the letter of the word
+| TESTOSTERONE _
+
+VF a] 2. (a). — Two dice were thrown at random. Let A tepresent the first die and B represent the
+| . _ Second die. If X=JA-Bj, find the probability that a
+| @. X>2
+[ . a Gi) X<5
+| # _@ii) X>8
+| = (iv) Xis even number
+| | ' (v) Xisa prime number
+
+| c (b). If X follows a Poisson distribution, the parameters if P(x=1) = 4P(x=2). Use the
+} result to find the probability of x=2,
+
+| ot 3. (a) State three properties of a Binomial distribution
+j (b) If a continuous probability is defined as
+
+| A gt. f(x) =4x7.2x2, 0<x<2, . | . a
+Derive the Mean and the variance of X
+
+| | ae 4. If the probability that an engine will malfunction in a particular day is 1/5,
+|
+
+In five days operation what is the probability that the machine .
+| (i) —_-Will not breakdown (ii) will breakdown in only one day (iii) will breakdown in
+more than two days (iv) will breakdown in all five days
+} ,
+
+5. (a) Suppose that there is a genetic theory that adults should have various hair colour of
+black, brown, fair and red in the ratio 5:3:1:1. A random sample of 100 adults was taken
+
+to test this theory. Base on the data below, would you agree that hair colour should bein” |
+the ratio 5:3:1:1 respectively? :
+
+frequency | 56 | 24 12
+
+(a) State three properties of Poisson distribution a, ¥ ||
+
+6. Two dice were | ‘own at random. Let A represent the first die and B represent the second |
+- die, If X=fA-B find the mean and variance of X, fags 2” . |
+
+
+Vs
+a eT
+
+ER Shere ncnc,
+
+7M RS. Ae BAL
+ADO-EKITT. ALOLA WAY,
+ENC 5454 ADO RE NIGERIA.
+
+College of Sciences
+as Department of Chemical Sciences
+emester Examination 2019/2020 A i i
+é prot cademic Session
+ourse Title: General Chemistry I Course Code CHM 101 Time: 2 Hours
+
+Instruction: Answer ALL the questions in section A and Any other two in section B
+
+\ \ (Constants: Ry = 2.179 x 10" J, h= 6.63X 10°Js, C= 3.0 x 10° m/s, R=0.08206L.atm.Kmo!")
+
+SECTION A
+
+Question1 (a) Differentiate between monoprotic, diprotic and triprotic acid. (b) Calculate the value of PK,
+
+| of ethanoic acid if the K, of ethanoic acid is 1.85 X10°. (c) State Ostwald dilution law? (d) State
+the Arrhenius equation and compare it to the equation of a straight line. (i) Identify the slope and
+
+the intercept. (e) State the formula for calculating activation energy when two temperatures are
+
+involved. (f) State the unit for rate constant for a second order reaction.
+
+|
+\ Question 2 (a) State the colour change when the water of crystallization is removed from CuSO,.5H20. (b)
+Calculate the concentration in moldm™® of H»SO, used in the precipitation of BaSO, when the
+Ms mass of the precipitate obtained is 2.50g and volume of H SO, used was 10 mL. (c) What is the
+\ colour of the following hydrate salts: (i) CoCl. 6H20 (ii) CoCh. 2H,0? (d) Determine the
+| values for n, 1, mj and m, for an orbital represented as 4p. (e) A transition from higher energy
+
+\ level to lower energy level n=2 will give rise to what kind of series? (f) State the Heisenberg
+
+uncertainty principle equation.
+
+| Question 3 (a) In a tabular form state Dalton’s Atomic theories and their modification. (b) (i) State the
+number of electrons contained in a triple covalent bond. (ii) NaCl ( is a poor conductor of
+electricity while NaCl(aq is a good conductor. Why? (iii) What is the electron configuration of
+Mg”* (iv) Another name for artificial radioactivity is. (v) What is radioactivity? (ce) The
+und to contain 0.36M Ha, 0.22 M No and 0.95 M NH3.
+
+formation of ammonia gas at 500K was fo
+s temperature? (d) Pure solids and
+
+Calculate the concentration equilibrium constant Ke at thi
+
+liquids in a chemical equilibrium reaction have activities that are equal to?
+
+; SECTION B
+\ Question 4 (a) A 12eV electron can be shown to have a speed of 3.0 x 10° m/s. Assuming that the
+\ . ee this an is 2%, et ee can simultaneously measure the position of the
+\ electron? etermine the wavelength of the line in i
+\ the vin from n=5 to n=1. (c) Calculate the pH dtbemnnne ¥ oe nn net
+\ solution of phenylamine if Ky
+
+for phenylamine is 4.8 x 10° (d) Find the degree of dissociation and hydrogen ion concentration of
+
+0.5mol/dm?ethanoic acid if the dissociation constant of the acid is 1.85x10°mol/dm’. e
+
+Question 5 (a) (i) Write the rate expression in terms of disappearance of reactant and appearance of
+product for the decomposition of ozone (O3) to oxygen (Oz). (ii)Liquid A decomposes by first order
+kinetics and in a batch reactor 60 % of A is converted in 1 hour 40 minutes run, how much longer
+will it take to reach 85 % conversion in seconds? (b) (i) Briefly state the reason why atoms of.
+elements come together to form bonds. (ii) Ionization energy is a factor that influences the formation
+of ions by metallic elements. How? (iii) Using Lewis dot formulas of atoms, describe the formation
+of Li,O. (iv) Give a distinction between natural and artificial radioactivity.
+Question 6 (a) Caffeine has an elemental analysis of 49.48% Carbon, 5.19% Hydrogen, 16.47%
+Oxygen and 28.85% Nitrogen. It has a molar mass of 194.19g/mol. What is the molecular formula of
+Caffeine? (b) Elements in the periodic table are classified into four distinct classes based on their
+electronic configurations, State them. (c) What are the two factors that affect first ionization energy
+within a period? (d) If the value of the pressure equilibrium constant Kp for the reaction,
+N04) <* 2NO2(g) at a certain temperature was found to be 65.5. Calculate Ke if the temperature
+is 350K? (e) Determine the direction the equilibrium will shift, if you increase the number of
+gaseous reactant species of this reaction 2NOCl@ <* 2NO @ +Ch @-
+(f) Write the expressions for the concentration equilibrium constant Ke and pressure equilibrium
+constant Kp for the following reactions: (i) NH4Clks) <* NH3 @ + HCl @
+(ii) Nig +4CO@ <> Ni(CO)s@)
+
+NOTE
+
+MAKE UP TEST FOR ALL THE STUDENTS THAT MISSED THE MAIN TEST COMES UP
+IMMEDIATELY AFTER THE EXAM IN CHEMISTRY LABORATORY, TIME: 12 NOON.
+
+
+RAREST umes
+
+KN Rs. BABALOLA
+
+ADO. hace
+| 2 ern were SEACE, PaGienia.
+
+College of Sciences
+tt Department of Chemical Sciences
+Colbtie Thay Semester Examination 2019/2020 Academic Session
+itle: General Chemistry I Course Code CHM 101 Time: 2 Hours
+
+Instruction: Answer ALL the questions in section A and Any other two in section B
+
+(Constants: Ry = 2.179 x 10°? J, h= 6.63 103s, C= 3.0 x 10° m/s, R=0.08206L.atm.K" mol")
+
+SECTION A
+
+| Question] (a) Differentiate between monoprotic, diprotic and triprotic acid. (b) Calculate the value of PK,
+| of ethanoic acid if the K, of ethanoic acid is 1.85 X10°. (c) State Ostwald dilution law? (d) State
+| the Arrhenius equation and compare it to the equation of a straight line. (i) Identify the slope and
+
+the intercept. (e) State the formula for calculating activation energy when two temperatures are
+
+involved. (f) State the unit for rate constant for a second order reaction.
+
+Question 2 (a) State the colour change when the water of crystallization is removed from CuSQ4.5H20. (b)
+Calculate the concentration in moldm? of H2SO, used in the precipitation of BaSO, when the
+mass of the precipitate obtained is 2.50g and volume of H SO, used was 10 mL. (c) What is the
+colour of the following hydrate salts: (i) CoCl. 6H2O (ii) CoClo. 2H,O? (d) Determine the
+values for n, 1, m; and m, for an orbital represented as 4p. (e) A transition from higher energy
+
+level to lower energy level n=2 will give rise to what kind of series? (f) State the Heisenberg
+
+uncertainty principle equation.
+
+Question 3 (a) In a tabular form state Dalton’s Atomic theories and their modification. (b) (i) State the
+number of electrons contained in a triple covalent bond. (ii) NaCl (, is a poor conductor of
+electricity while NaClag) is a good conductor. Why? (iii) What is the electron configuration of
+Mg” (iv) Another name for artificial radioactivity is. (v) What is radioactivity? (ec) The
+formation of ammonia gas at 500K was found to contain 0.36M Hp, 0.22 M N2 and 0.95 M NH3.
+Calculate the concentration equilibrium constant Kc at this temperature? (d) Pure solids and
+
+liquids in a chemical equilibrium reaction have activities that are equal to?
+
+SECTION B
+
+uesti 4
+- jai pralnpis: can be wii to have a speed of 3.0 x 10° m/s. Assuming that the
+electron? (b) Determine sR “>, what ieee Mes simultaneously measure the position of the
+ie tein train sinks © bikcinas of the line in the Lyman series of hydrogen corresponding to
+
+0 n=1. (c) Calculate the pH of 0.75 mol/dm? solution of phenylamine if Ky
+for phenylamine is 4.8 x 10° (d) Find the degree of dissociation and hydrogen ion concentration of
+
+3 . . . . 2 ye
+0.5mol/dm*ethanoic acid if the dissociation constant of the acid is 1.85x10°mol/dm?.
+
+Question 5 (a) (i) Write the rate expression in terms of disappearance of reactant and appearance of
+product for the decomposition of ozone (O3) to oxygen (O2). (ii)Liquid A decomposes by first order
+kinetics and in a batch reactor 60 % of A is converted in 1 hour 40 minutes run, how much longer
+will it take to reach 85 % conversion in seconds? (b) (i) Briefly state the reason why atoms of
+elements come together to form bonds. (ii) Ionization energy is a factor that influences the formation
+of ions by metallic elements. How? (iii) Using Lewis dot formulas of atoms, describe the formation
+of Li2O. (iv) Give a distinction between natural and artificial radioactivity.
+
+Question 6 (a) Caffeine has an elemental analysis of 49.48% Carbon, 5.19% Hydrogen, 16.47%
+Oxygen and 28.85% Nitrogen. It has a molar mass of 194.19g/mol. What is the molecular formula of
+Caffeine? (b) Elements in the periodic table are classified into four distinct classes based on their
+electronic configurations, State them. (c) What are the two factors that affect first ionization energy
+
+within a period? (d) If the value of the pressure equilibrium constant Kp for the reaction,
+N204@) <*> 2NO2(g) at a certain temperature was found to be 65.5. Calculate Kc if the temperature
+is 350K? (e) Determine the direction the equilibrium will shift, if you increase the number of
+
+gaseous reactant species of this reaction 2NOC1@) <* 2NO @ tCh (>.
+
+(f) Write the expressions for the concentration equilibrium constant Ke and pressure equilibrium
+
+constant Kp for the following reactions: (i) NHuClg) << NH @ + HCl @
+(ii) Ni (s) + 4COgw Ni(CO)4 (g)
+
+NOTE
+
+TEST FOR ALL THE STUDENTS THAT MISSED THE MAIN TEST COMES UP
+
+MAKE UP :
+y AFTER THE EXAM IN CHEMISTRY LABORATORY, TIME: 12 NOON.
+
+IMMEDIATEL
+
+
+c: ,
+N PER ac UAD)
+
+| KM.8.3. AFE BABA:
+f Sad ABALOLA WAY
+| ADO-EKITI, EKITI STATE, NIGH
+| pM. sas4AbO-EKIN.
+
+College of Sciences
+‘are Department of Chemical Sciences
+emester Examination 2020/202 i i
+ideale 1 Academic Session
+wie -our itle: General Chemistry I Course Code CHM 101. Unit: 4 Time: 2 Hours
+
+SECTION A (40 marks)
+Instruction: Answer ALL the questions
+
+QUESTION 1
+
+(a) A 0.940g sample of Barium Chloride dehydrate is heated and 0.800g of anhydrous residue remains after cooling:
+(i) How many moles of anhydrous Barium Chloride were present in the sample? (ji) How many moles of water
+were present in the sample? (b) What are the colors of the following hydrates/anhydrous salts? (i) CuSO4.5H20
+(ii) CoCh.6H20 (iii) CoCh.2H20 (c) A glass vessel weighs 40.13 g when clean, dry, and evacuated; it weighs
+138.24 g when filled with water at 25.0°C (density of water = 0.9970 g/mL) and 40.30 g when filled with
+propylene gas at 735.3 mmHg. What is the molar mass of propylene? (d) Balance the following nuclear equations
+and mention the name of the reaction involved in each: (i) a + AD > as + ?(ii) i . Po = a PF 7
+
+1, 9 8 1 . \228 228 1 0 - .
+B+? 72 e+ ? 2 i
+(iil) 4 4B 0” (iv) 98 Ra > 39 Ac +? (y) 4P + _48 > ?(e) State Dalton’s Atomic
+
+theory. (f) Use the Planck’s equation to determine the energy in joules per photon of radiation of frequency
+7.39X10!7 s"!. (g) State the units for the following rate constants (i) Ki (1!) Ko (iii) Ks. (h) Find the pH of 0.5 mol
+
+dm sodium hydroxide. (i) Calculate the oxidation of the underline atom in the following compounds:
+(i) AIOH)s (ii) HxO2 (iii) MoOs
+
+SECTION B (20 marks)
+Instruction: Answer two questions ON LY
+
+QUESTION 2
+(a) Positron decay occurs through the conversion of proton to neutron, (i)Give the symbol for positron particle, (ii)
+(iii) What other decay process involves the conversion of proton
+
+te an equation to represent this conversion.
+the physical behavior of a gas? (c) State the three postulate of
+
+wri
+to neutron? (b) List four properties that determine
+
+Bohr atom and its shortcomings
+
+
+4
+
+QUESTION 3
+
+(a) Differentiate between continuous spectrum and discontinuous spectrum. (b)What are the relative abundances of
+
+Oy: se .
+sLi and ’3Li isotopes with RAM of 6.944, If their masses are 6.0167 and 7.0179 respectively. (c) A 0.75 mol dm s
+solution of ethanoic acid is found to be 1.30% ionize; calculate the value of acids equilibrium constant for the acid.
+
+QUESTION 4
+(a) (i) State Arrhenius equation. (ii) Identify the following: The slope, the intercept. (b) Find the value of collision
+
+factor when the intercept of graph of In k versus 1/T is 5. (c) List Two limitations of Arrhenius concept
+
+(d) Balance the following redox reactions (i) Pa > PH3 + H2POy (basic medium)
+
+(Constants: Ry = 2.179 x 10-8 J, h= 6.62607x10°4Js., c= 3.0 x.10* m/s, R = 0.082057 atmLmot'K"', Atomic mass
+
+for Ba=137g/mol, Cl=35.5 g/mol,
+
+NOTE
+
+MAKE UP TEST FOR ALL THE STUDENTS THAT MISSED THE MAIN TEST COMES UP IMMEDIATELY
+AFTER THE EXAM IN CHEMISTRY LABORATORY, TIME: 12 NOON.
+
+| laG) !{P A
+dr UP dic TM ‘
+
+hv Peaten shea
+
+Vel ume
+| re
+Cy Lb sbely i A IP li ls degen shorn 5, eleckcons aie eal sbyed a cottral, ae
+#70 allaed obih 2 |
+
+| electrons have a
+
+
+4
+
+, AFE BABAL |
+A OLAU
+i 3 NIVERSITY, ADO EKITI
+DEPARTMENT OF MATHEMATICAL AND PHYSICAL SCIENCES
+G
+ENERAL PHYSICS LABORATORY | (PHY 107) |
+
+FIR
+ST SEMESTER ALTERNATIVE PRACTICAL EXAM 2015/2016
+
+Instruction: |
+Sn ie ifet Pal. reais Time Allowed: 2 Hours |
+: r
+
+1) Ina Laborato
+r . .
+Y experiment to verify Hooke’s Law, the values obtained were tabulated below.
+
+Force F (N) 0.5 |
+1.0 15 2.0 2.5 [3.0 | |
+Length L (cm) | 3.0 4.9 6.6 8.3 102. |120 |
+
+If the initial length of the spiral spring measured with a metre rule is 1.2 cm and the other |
+
+lengths produced when the forces are added as shown in the table above. |
+
+a) Sketch a diagram to illustrate this experiment. :
+
+b) Copy and complete the table, determine the extension e produced by each force.
+
+c) If the two variables, force F and extension e, are connected by equation F = ke4,
+where k and x are constants. From your table, plot a graph of log F against log e and
+calculate the values of cand q.
+
+d) State two precautions you would put into consideration if you were to Carry out this
+experiment in the laboratory.
+
+e) State Hooke’s law and give its mathematical expression.
+
+2. A compound pendulum experiment was carried out by a student in physics laboratory and ? (a)
+the time t of 20 complete oscillations was obtained. In this experiment, the table below shows
+
+the measurement made while the centre of gravity and the mass of the meter rule were |
+
+measured to be 49.9cm and 125g respectively. if the radius of gyration is given as K = VJhyhe
+
+then the values of hy = 33.0cm and hz = 27.0cm.
+
+Where P is the distance from one end of the meter rule to the point of suspension.
+
+a) In tabular form, evaluate the values of period T, T2,P2 and PT’.
+b) Plot a graph of PT? against P* |
+c) Calculate the slope of the graph. |
+
+2
+d) Obtain the value of g from the slope (Hint: slope = Ant /g)-
+
+e) Determine the moment of inertial = MK*.
+f) State at least two possible precautions you would have to ensure an accurate
+
+result.
+
+
+COLLEGE OF SCIENCES
+DEPARTMENT OF CHEMICAL SCIENCES
+BSc, DEGREE EXAMINATIONS: (INDUSTRIAL CHEMISTRY)
+2016/2017 FIRST SEMESTER EXAMINATIONS
+COURSE: CHM 101: GENERAL CHEMISTRYI TIME ALLOWED: 2.5 HOURS
+
+Instruction: Answer all questions in Section A and any other three from section B
+
+SECTION A
+
+——_$
+
+i 1(a) Complete this table
+
+COLOUR IN
+DH_ Indicator Acid Alkali
+
+Litmus
+
+Methy] orange ? Yellow
+
+|Methylred S&P 2
+Phenophthalein ? Pink
+Congo red Blue if
+
+(b) An Industrial Chemistry student of Afe Babalola University, Ado-Bkiti performed a titration
+experiment in the chemistry laboratory by titrating 25cm? of NayCO; solution of 0.05moldm™® with HNO.
+He obtained 15cm’ as his average titre value. Calculate: (i) the molarity of the HNO; solution both in
+moldm” and gdm”. (ii) the number of-moles of HNO; which reacted with the 25cm” of Na,CO; solution
+(iii) State two precautions the student observed during the experiment (iv) write the balanced equation of
+reaction.
+
+2. (a) Define Half- life. (b) State the formulae for the half-life of following: (i) First order reaction (ii)
+second order reaction.
+
+(c) An ideal gas undergoes a reversible isothermal expansion from an initial volume V, to a final volume
+20V, and thereby does 20,000 J of work. The initial pressure was 100 atm. (a) Calculate Vj. (b) If there
+were 2 moles of gas, what must its temperature have been? [R=8.314jmol'K"].
+
+3. (a) 130g of ethyne was combusted in the presence of excess oxygen. Calculate the mass of CO,
+
+6
+produced in the process as well as the volume produced at S. T. P. ron
+v
+
+(b) Calculate the percentage composition by mass of N, Ca and C in calcium cyanide? (N = 14, Ca = 40,
+C= 12).
+4. (a) The formation of ammonia gas at 500 K was found to contain 0.36 M Hb», 0.30 M Nz and 0.90 M
+NH. Calculate the concentration equilibrium constant K, at this temperature. my
+
+WWE «OO ve,
+
+(b) List and explain factors affecting a reaction at equilibrium, Ss ay
+
+5, (a) Mention two major types of chemical bonding,
+
+(b) Complete the spaces in the following nuclear reactions: (i) 7U + {O > “Fm+?
+
+
+" 0 ee
+, y
+1 ATT pana °
+p TAT ApUNTER TERT CEI “~
+oi j
+
+Gi) SK + JB? Gil) 241 *Sity (iv) (;CL+2?— 28+ 3He (v) “N+? !H+?
+
+6. (a) Identify the Bronsted- -Lowry acid and base for the forward reaction in each of the following
+equations:
+
+(i) HClO2(aq) + NalO (aq) ———> HIO (aq) + NaClOz (aq)
+
+(iy) 4S @q) + HF(aq) ——» HS (aq) + F (aq)
+HS (aq) + OH" (ag) ———» §* (aq) + H,0() |
+
+ie |
+3H,0 (()
+
+(iii)
+
+3NaOH (aq) ————* NagAsO,y (aq) +
+
+(b) Write the Henderson-Hasselbalch equation for an acid buffer system.
+|
+
+x
+
+SECTION B
+
+7. 25 cm? of 1.00 mol/dm? HCl at 294.5 K placed in a polystyrene cup and 25 cm? of 1.00 mol/dm’
+~ NaOH at 294.5 K were added. The mixture was stirred and the temperature rose to 320K. The density of
+each solution is 2.0 g/cm? and the specific heat capacity of each solution is 4.18 JK"g’. Calculate the
+
+molar enthalpy of neutralization: {R=8.314 Jmol"K"'].
+
+(8) (a) State the three factors affect ionization energy in the-periodic table.
+(b) Calculate the mass of NazCO; present in 300 cm* of 0.1 M. (Na = 23, C= 12, O= 16).
+
+9.(a) A reaction mixture at 850K consists of 0.15 M Hz, 0.22M, N2 and 0.24 M NH3. Calculate the
+equilibrium concentration K, at this temperature for the formation of Ammonia.
+
+(b) Calculate the pressure equilibrium constant Kp for the reaction at this temperature in 9(a) above (R =
+0.0821 LatmK™'mol", (ii) Determine the direction the equilibrium will shift.
+(c) Write the expressions for the concentration equilibrium constant K, and pressure equilibrium constant
+
+Kp for the following reactions: (i) NH4Cl(s) «+ NHs (g) + HCl (g)
+
+(ii) CO.(g) + 2NH3 «+ CO(NH2), + H20(1)
+
+10 (a) Briefly explain the basis for chemical bonding.
+
+(b) The actual mass of “Zn is 63.9291 amu. Calculate the: (ii) the nuclear energy of binding “Zn if the
+masses of neutron, proton and electron are 1.0087, 1.0073 and 0.00055 amu respectively.
+
+11. (ai) Calculate the pH of NaOH 0.5 moldm® (ii) If this solution is diluted 10-fold, what will be the
+resulting pH. (b)Calculate the [H,0*] and pH of a buffer solution that is 0.2 M acetic acid and
+
+0.15 M sodium acetate. [Ka = 1.8 x 10°}.
+
+
+AFE BABALOLA UNIVERSITY, ADO EKITI, NIGERIA
+COLLEGE OF SCIENCES
+DEPARTMENT OF CHEMICAL SCIENCES
+18 SEMESTER 2015/2016 EXAMINATION
+
+GENERAL CHEMISTRY I (CHM 101) PART A
+
+Time: 2hrs 30 minutes
+
+Course Unit: 4
+
+INSTRUCTIONS: ANSWER ALL QUESTIONS IN THIS PART; TOTAL WEIGHTED MARKS IS 30
+
+PART A
+
+s of the burette with the liquid level at the beginning and at the end
+
+4. The diagrams below show part
+lution (prepared by dissolving 2.65 8
+
+of acid-base titration between dilute HNO3 and NazCO3 so
+anhydrous Na,CO3 in 250 ml of distilled water).
+
+1* titration 2™ titration 3" titration
+25 28
+1
+2
+vi .
+
+i ii iii iv Vv
+
+initial titre values are: i, iii, V
+final titre values are: ii, iv, Vi
+
+a. Use the diagrams to draw table of values.
+
+b. Find the average volume of HNO; used fro
+c. Calculate the number of moles of HNO; which reacted with the
+
+m the best titration values.
+25 cm’ of Na,CO3 solution.
+
+1
+
+
+DEPARTMENT OF CHEMICAL SCIENCE
+1ST SEMESTER 2017/2018 EXAMINATION °
+Course Unit: 4.
+Course Title:_ GENERAL _(CHM101)__ Time Allowed: 25555
+
+INSTRUCTION: ANSWER ALL QUESTIONS IN SECTION A AND ANY THREE IN SECTION B
+
+SECTION A
+
+1@) The quantity AG gives a direct criterion of ‘spontaneity of reaction, complete the following;
+(i) If AG is negative, the reaction iS .....ceceeeeeeee ? (ii) If AG is positive, the reaction is
+2 (iii) If AGis zero, the reaction is ...... 2 (b) State the unit for the following
+
+specific rate constants (i) Ki (it) Ke (iii) Ks. (c) Calculate the entropy change when 1.26g of CO2
+hanged from 330mmH¢g to
+
+at 298K is compressed isothermally while the gas pressure is ¢
+157mmHg. (R=8.314 jmol!K", C=12g/mol, O=16g/mol).
+
+2. (a) What is chemical bond? (b) Predict whether the product resulting from each of the
+following combinations of elements is ionic or covalent: (i) K + Br KBn (ii) C + Ha > CHs
+
+(c) Complete the spaces in the following nuclear reactions: (i) 7U +07 mm wl
+
+Gi) 2+ {/H > 2Sit+ 7
+
+(ii) HCOs" (iii) H20 Gv) NH"
+
+3. (a) Give the conjugate bases of the following: (i) HC2H302
+in each of the
+
+(b) — Identify the Bronsted-Lowry acid and base for the forward reaction
+
+following equations:
+HCIO,(aq) + NalO (aq) ————" HIO (aq) + NaClo, (aq)
+
+@)
+(ii) HS (aq) + HF(aq) ——> HS (aq) + F (aq)
+Giy "Seo + OH’ (aq) ————>__ 8" (aq) + H20 0)
+(iv) H,AsO, (ag) + 3NaOH (aq); Te Na,AsO, (aq) + 3H20 (!)
+(ii) If this solution is diluted 5-fold, what will be
+
+(ci) Calculate the pH of NaOH 0.5 moldm”
+
+the resulting pH.
+4(a). Inan experiment 46.0g of chlorobenzene were obtained from a 40g sample of benzene.
+
+Calculate the percentage yield.
+
+(b). Balance the following equations:
+(i) ZnS + O3 = ZnO + SQ2
+(i) Coe + Or > CO2 + #0
+
+(iii) Pb(NOs)2 > PbO + O2 + NO2
+
+5, (a) The formation of ammonia gas at 500k was found to contain 0.36M Ho, 0.22 M Na and
+0.95 M NBs. Calculate the concentration equilibrium constant Ke at this temperature?
+
+(b) Pure solids and liquids in a chemical equilibrium reaction have activities that are equal to___
+
+
+6. (a) Cobalt (ii sit
+
+dic formula oor eae * hans ing rhein from chemical supply houses as a hydrate with
+. ’ : ysis sho : ‘
+
+What is the percent water by weight in this wae” Ce ee atern a alll
+
+(b) An ‘
+. ate? (c culate the densi id wi
+whose displacement in water is 3.24cem? cei hcreranee eerie! ears
+
+SECTION B (Answer any three questions from this Section)
+
+1 -( V
+(a) Show that: (i) Work done = mRT'In—* (b) After 500seconds, half of NO2 has reacted. How
+
+1
+
+much of gas will react after 800 seconds, if the reaction is first order? (c) State the formula for
+
+the following order of reactions (i) First order reaction (ii) Second order reaction.
+
+2(a) Briefly describe the positron decay process.
+(b) In a tabular form, state the characteristics of the particles emitted during radioactive decay |
+Je covalent bond
+
+processes. (c) How many electrons are shared between two atoms in: (i) a sing
+(ii) a double covalent bond Gii) a triple covalent bond
+3 (a) Give 2 examples each of strong and weak acids.
+
+(b) Write the Henderson-Hasselbalch equation for an acid buffer system.
+e buffer systems
+
+(c) Give one example each of acid and bas
+presence of excess oxygen. Calculate
+
+4(a). 120g of propyne was combusted in the d the mass of
+CO» produced in the process.
+
+(b). what is the relative abundances of .
+masses are 6.0167 and 7.0179 respectively.
+
+(c ) Caffeine has an elemental analysis 0
+
+3Li and 73Li isotopes with RAM of 6.944. If their
+
+£ 49.48% carbon, 5.190% hydrogen, 16.47% oxygen,
+
+£ 194.19 g/mol. What is the molecular formula of
+
+and 28.85% nitrogen. It has a molar mass ©
+
+caffeine?
+5, (a) If the value of the pressure equilibrium constant Kp for the reaction, :
+: e
+ature was found to be 65.5. Calculate Ke if -
+
+N2OAg) <> INO2(g) at a certain temper
+m the
+
+50K (R=0.08206L.atm.K mol’
+
+f you increase the number of
+—> INO(g) +Ch (g)- (c) Write the expressions for the |
+
+reaction INOCK(g) <<
+nt K, and pressure equilibrium constant Kp for the
+
+concentration equilibrium consta
+
+following reactions:
+(i) NHACI): NH (g) + HCI (g) (ii) Ni (s) + 4CO(g) = Ni(CO)s (g)
+
+1), (b) Determine the directio
+
+the temperature is 3
+gaseous reactant species of this
+
+equilibrium will shift, i
+
+2
+
+
+f
+{
+
+1 RAW AaRS AREER ORI
+
+College of Sciences
+i Se ' aa veers of Chemical Sciences
+mester Examination 2018/2019 Academic Session
+: Course Title: General Chemistry | Course Code CHM 101
+nstruction: Answer ALL Questions in Section A and any two in section B
+
+Time: 2'? Hours
+
+SECTION A
+
+ersion of proton to neutron. (i) Write
+process that occurs
+Give the pH of
+bases. (ii) Salts
+
+Question 1: (a) Positrons are ejected from nuclei having p/n >1 through conv
+a nuclear equation to represent this conversion. (ii) Give the name of another nuclear decay
+through the conversion of proton to neutron. Hence, give a nuclear equation for this process. (b)
+the following salts on hydrolysis in aqueous solutions :(i) Salts of strong acids and strong
+of strong acids and weak bases..(c) Find the pH of 0.10 moldm” sodium hydroxide.
+
+and in a batch reactor, 50% of A is converted in a five
+version. (b) State the colour of the following hydrates
+
+f a hydrate: (i) CoClo, 6H20 (it) CuSO,4.5H20 (iii)
+ion stating the products
+
+Question 2 (a) Liquid A decomposes by first order kinetics
+minutes run, how much longer will it take to reach 70% con
+as used in the determination of water of crystallization ©
+CoCl,.2H,0. (c) The reaction of BaCl, and H,SO, produces a precipitate. Show the react
+formed and the colour of the precipitate.
+
+eactions involved in the electrochemical process of rusting of iron. (b)
+
+Question 3 (a) State the anode and cathode r
+lizes each of the following reactions:
+
+Write the anode and cathode reactions for galvanic cell that uti
+e electronic configuration of the
+
+2 + Fe (ii) Ag" eq) + Fe™ eq) Agi + Fe™(aq) (©) Write th
+165, Determine the following:
+
+etical element is represented by
+ns (iii) number of electrons.
+
+(i) Nig) + 2Fe™” > N
+following: (i) Ca** (ii) Mg (iii) CF (d) A hypoth
+(i) number of protons (ii) number of neutro
+
+SECTION B (ANSWER 2 QUESTIONS ONLY)
+
+Question 4: (a) Define Bond energy. (b) Use the odd-even rule to predict which one of the following you would
+expect to be radioactive in each pairs: (i) Nei and'"Neo — (ii)”*Chzand CO], (iii) Bes and “Bes
+(c)Calculate the number of moles of SO, at 300K that will be compressed isothermally if the gas pressure is
+changed from 330 mmHg to 159 mmHg, given the entropy change for the process to be 1.24J/K (S=32, O=16,
+R=8.314Jmol''k"'). (d) Calculate the pressure equilibrium constant K, of the equilibrium reaction. Given that K. =
+
+0.75, if the temperature was found to be 250°C from the production of ammonia. R=8.206x 107%, L.atm.K'mol"
+
+f sodium propanoate must be added to 250 cm? of propanoic acid of concentration
+f pH 8.0? [Pk, of propanoic acid is 4.87at 298K, Na = 23.0, C = 12.0, H =1.0, O
+gas (measured at STP) would be liberated by a current of 2.5A flowing for a
+period of 1,8 mins through an aqueous solution of silver chloride? (c) The rate constant of a second order reaction
+is 2.5*10% s‘! and the initial concentration is 0.1mol/dm?. What is the initial rate in moldm?s"? (a) Identify the
+
+type of bonding in each of the following compounds: (i) NaNQ; (ii) ClO2
+
+Question 5: (a) What mass 0
+0.lmoldm“to give a solution o
+=16.0]. (b) What volume of chlorine
+
+h 6.42g of Na2S in solution according to the following equation: 2FeBr;
+
++3 .Na,S — Fe,S3 + 6 NaBr. (i) Which reagent is in limiting quantity? (ii) Which reagent is in excess and by how
+much? (iii) How much of Fe,S, would be formed? (iv) If the mass of Fe,S; after washing and drying is 0.99.
+What is the percentage yield? [Fe=55.8, Br = 79.9, Na= 23, S = 32]. (c) State three (3) Dalton’s atomic theory.
+
+MAKE UP TEST COMES UP IMMEDIATELY AFTER CHM 101 EXAM
+
+Question 6: 3.56g of FeBr; was mixed wit
+
+' NOTE: CHM 101
+VENUE: CHEMISTRY LAB
+
+TIME; 12 NOON
+
+Course Title: General Chemistry I
+
+; FERAL vas Wad)
+
+KM. 8.5. APE BABALOLA WAY,
+DO-EKITL, EKITI STATE, NIGERIA
+M.R $484 ADO-EKITI.
+
+College of Sciences
+
+Department of Chemical Sciences
+1ST Semester Examination 2020/2021 Academic Session
+Course Code CHM 101. Unit: 4 Time: 2 Hours
+
+SECTION A (40 marks)
+
+Instruction: Answer ALL the questions
+
+QUESTION 1
+
+(a) A 0.940g sample of Barium Chloride dehydrate is heated and 0.800g of anhydrous residue remains after cooling:
+
+(i) How many moles of anhydrous Barium Chloride were present in the sample? (ji) How many moles of water
+were present in the sample? (b) What are the colors of the following hydrates/anhydrous salts? (4) CuSOs.5H20
+
+(ii) CoCl.6H20 (iii) CoCl2.2H2O (c) A glass vessel weighs 40.13 g when clean, dry, and evacuated; it weighs
+
+138.24 g when filled with water at 25.0°C (density of water = 0.9970 g/mL) and 40.30 g when filled with
+
+propylene gas at 735.3 mmHg. What is the molar mass of propylene? (d) Balance the following nuclear equations
+and mention the name of the reaction involved in each: (i) a + O° 2 re + ? (ii) Pe > meas +9
+(it) 78. +29 eB. + o (ivy PRa > a Ae +9 (v) iP + °B > 2(e) State Dalton’s Atomic
+theory. (f) Use the Planck’s equation to determine the energy in joules per photon of radiation of frequency
+7.39x10!7 s"!. (g) State the units for the following rate constants (i) Ki (ii) Ke (iii) Ks. (h) Find the pH of 0.5 mol
+dm sodium hydroxide. (i) Calculate the oxidation of the underline atom in the following compounds:
+
+(i) AKOH)s (ii) H2O2 (iii) MoOs
+SECTI@N B (2@ marks)
+
+Instruction: Answer two questions @NLY
+
+(a)
+
+QUESTION 2
+Positron decay occurs through the conversion of proton to neutron; (i)Give the symbol for positron particle, (ii)
+write an equation to represent this conversion. (iit) What other decay process involves the conversion of proton
+
+to neutron? (b) List four properties that determine the physical behavior of a gas? (c) State the three postulate of
+
+Bohr atom and its shortcomings
+
+
+QUESTION 3
+(a) Differentiate between continuous spectrum and discontinuous spectrum. (b)What are the relative abundances of
+6sLi and 73Li isotopes with RAM of 6.944. If their masses are 6.0167 and 7.0179 respectively. (c) A 0.75 mo! dm?
+
+solution of ethanoic acid is found to be 1.30% ionize; calculate the value of acids equilibrium constant for the acid.
+
+QUESTION 4
+
+(a) (i) State Arrhenius equation. (ii) Identify the following: The slope, the intercept. (b) Find the value of collision
+
+factor when the intercept of graph of In k versus 1/T is 5. (c) List Two limitations of Arrhenius concept.
+
+(d) Balance the following redox, reactions (i) Pa > PH3 + H2POx (basic medium)
+
+(Constants: Ry = 2.179 x 108 J, h= 6.62607x10°4Js., c= 3.0 x 10° m/s, R = 0.082057 atmLmot'K:', Atomic mass
+
+for Ba=137g/mol, Cl=35.5 g/mol,
+
+NOTE
+
+MAKE UP TEST FOR ALL THE STUDENTS THAT MISSED THE MAIN TEST COMES UP IMM EDIATELY
+
+AFTER THE EXAM IN CHEMISTRY LABORAT ORY, TIME: 12 NOON.
+
+CAM Ry
+eee
+
+pee AMERY
+ome BO. <TH (ABUAD)
+
+= So KADY S APT DAMA,
+A ATA cTE, IGE. REA
+: Pb Set ANOLE
+
+‘ COLLEGE OF SCIENCES
+DEPARTMENT OF MATHEMATICAL AND PHYSICAL SCIENCES
+FIRST SEMESTER EXAMINATION 2020/2021 SESSION
+COURSE TITLE: PROBABILITY I COURSE CODE: STA 111
+. UNITS: 3UNITS.TIME ALLOWED: 2 HRS, 15 MINUTES
+INSTRUCTION: ANSWER FOUR QUESTIONS
+
+1. Define the following terms
+(i) Set Theory (ii) Union and Interception of a Set, (iii) Equal Set (iv) Event (v) Trail (vi)
+Mutually Exclusive Event (vii) Dependent and Independent Events
+
+1b. State three properties of Normal Distribution
+
+2. (a) State the conditions for approximation of the following distributions
+(i) Binomial to Poisson, ;
+(ii) Binomial to Normal, and
+(iii) Poisson to Normal
+
+(b) if 64% blocks built by Johnson are defective, find the probabilities that out of a
+sample of 400 of such blocks (i) more than 280 (ii) less than 250 (iii) between 250 and
+
+280 are defective
+
+3a State three laws of set theory
+(b) If a continuous probability distribution is defined as
+
+f(x) = {kx + 2x”), 0<x <1
+
+(Gi) For what value of k is f(x) well defined?
+(ii) Obtain the expected value of (x) .
+(iii) | Variance of (x)
+
+4 (a) Find the mean and variance of the probability distribution shown in the table below:
+
+
+“ as
+Fry ~
+
+NIVERSITY.
+, ADO-
+SMATICAL AND GAL (ABUAD
+
+’ SEMESTER TRE SICAL oe
+R TEST 2020/2031 GEN CES ON etree 1
+"AMES ea SION
+C OLLEGE ee
+RRR aS Fo ee ; _—
+20 min,
+
+with probability 16/81. Find the value of p
+
+5b. One bag contains 2 red and 3 whi
+he /hite balls, another bi " .
+If one ball is drawn from each bag, find the probabiliti a 4 red balls and 2 white balls.
+
+(a) Both are red
+(b) Both ate white
+Cig
+_ (c) One is red and one is white
+e
+‘% 6a. Consider the single throw of two dice A and B, let X be the sum of the sample space values of
+. the two dice find the probability (a) Function of X. (6) Obtaining (i) a sum of Jor 11 (i) a sum
+by, .
+4 greater than 8 (iil) a sum greater than 3 but less than 6.
+
+6b. State the axioms of probability.
+
+R YY
+
+\o°
+
+eo ‘ Pr _
+
+AFE BABALOLA UNIVERSITY, ADO-EKITI
+’ vm ABUAD 2 sage inpleeesneinlaa
+DEPARTMENT OF MATHEMATICAL AND eETEIGEL SCENGER ani wri
+Y 101 (MECHANICS) MID SEMESTER TEST 2020/2021 SESSION
+
+SURNAME3.....sccssessceeeeeseneeeees OTHER NAMES: .......s0s0sscesee AD
+is seatiegemomee ne ace te
+ARTMENT3.......ccccceccsseeeeceeneneneesncnsereeenes COLLEGE: ........0ce0005 000% -peotenas sosmenariene, 2H JR ;
+MATRIC NO}... .. cc eeece scene ee ee eneneneen snes } 2X
+Instructions: (1) Tick the correct answer on your question paper _ time: 30 min Rsy
+. ay
+1. pie of the following is the dimension for Pressure cat
+(b) ML~1T~2 ;
+(c) ML“1T-3
+(d) MLT a
+2.0
+
+2. Which theorem states that when a body is acted upon by a force or resultant force, the
+by the force is equal to the change in kinetic energy of the body?
+
+(a) Energy theorem
+
+(b) Work-Kinetic energy theorem
+
+(c) work theorem
+
+(d) work-potential energy theorem
+
+3. A body moves with velocity v=3i+2j-3k m/s under the influence of a constant force F=(2i+3}-
+2k)N. Determine the instantaneous power?
+
+(a) 32W
+
+(b) 24 W
+
+(c) 21 W
+
+(d) 18 W
+
+4. Acar of mass 1250 kg driven at a speed of 28.6m/s has a kinetic energy of .....--+-
+
+(a) 1.02 x10°J
+(b) 5.11 x10°
+(c) 3.11 x10°J
+
+(d) 2.02 x10°I
+
+is the study of effects of external forces on bodies at rest or in motion.
+
+5. caveececeeenteoeeeee
+(a) Mechanics
+
+(b) Kinematics
+
+(c) Kinetics
+
+(d) Statics
+
+comaman see Tee SUT Ce
+
+6. The modulus of Elasticity Y is the ratio of the stress on a material to its strain. Obtain the |
+dimension of Y. \
+
+(a) [ML~?T~?]
+
+(b) (M2L-1T~7]
+
+(c) [ML“1T~?]
+
+(d) [MLT~7]
+
+7. The following are uses of dimensional analysis except?
+(a) To check the homogeneity of a physical equation
+
+(b) To derive the exact form of a physical equation
+
+(c) To derive the magnitude of a physical constant
+
+(d) To derive the unit of a physical quantity.
+
+RT I IT
+
+8. The position of a particle moving on the x-axis is given by x = (3t3 + 2¢2 _ 3)m., Whetisthe ‘eis \
+position at 2s? €
+(a) 24m iT
+(b) 29m Y, 4
+(c) 44m
+een een eee a pre
+
+(d) 29m
+. |
+
+9. The position vector of a particle is initially A= (—3m)i + (2m)j + (Sm)k and then later is |
+
+# = (9m)i + (2m)j + (8m)k. What is the magnitude of the particle’s displacement 7,to 72? |
+(a) [A#| = 14.37m
+(b) Af = (12m)i + (3m)k
+(c) |A#] = 12.37m
+(d) A? = (6m) + (4m)j + (3m)k
+
+10. Olympic gold medalist Usein Bolt runs one time around the track - 400 meters in 38 seconds.
+
+" TEED ASIST A RET eT
+
+What is his displacementd?_
+(b) d=10.53m .,
+(c) d=0m . |
+(d) d=105.3m |
+11. Find the magnitude of a rabbit whose velocity is given as v= (—12m/s)i + (-16m/s))j.
+(a) 28m/s a!
+(b) 32m/s
+(c) 20m/s
+(d) 2m/s
+12. A 5ON force is applied at an angle of 30 degrees to the horizontal. What are the components F,
+and F, of the force
+(a) F, = 43N, and F, = 7N
+(b) F, = 43.3N, and K, = 25N
+(c) & = 35N, and K, = 15N
+(d) F, = 25N, and F, = 25N
+13. Three forces that act on a particle are given by F, = (202 — 367 + 73k)N, F, = (-177 +217 -
+
+46k)N , and F, = (201 — 36f — 73K)N Find their resultant (net) vector.
+(a) Free = [230 — 51f — 58k|N
+(b) Free = [232 - 57 — 58K]N
+(c) Free = [232 - 51f — 58K]N
+(d) Free = [23¢ - 51f — 46K]N
+
+14. Which of the following forces acts perpendicular to a surface which supports an object?
+
+(a) Contact force
+
+(b) Gravitational force
+
+(c) Normal force
+
+(d) Weight
+
+15. The time taken for a projectile to reach its highest point of motion is
+
+2 jn 2
+(a) ¢ = ose 6
+
+2g
+(b) + meee Bi 2 y =
+
+2vo sin8@
+ce) t= ——
+(c) 7
+(d) t — vat2sin 8 cos 6)
+g
+
+vad
+
+ae ae
+
+FL @)6.696 om
+| (C) 6.696 x 10°mm
+() 6.696 x 10? m
+| 24. The elastic limit of steel is 5.0 Pa (N/m), find
+\ /+ | _. the minimum diameter a steel wire can tc
+1 Cee | Support a 700 N weight without exceeding its
+\ elastic limit.
+| (a) 6.67 m
+Loge | (b) 13.3 m
+\ ' (c) 6.67 cm
+Ce | (d) 6.67 mm
+\ 25. The distortion of the earth’s crust is an example
+\ \) | of sheer on a large scale. A particular rock has a
+\ \ I sheer modulus of 1.5 x10!° Pa (N/m?). What
+\ shear stress is applied when a 10 km layer of
+tock is sheared a distance of 5m.
+(a) 7.5 x 10° N/m?
+fo ()7.5x 10°N/m
+| (c) 7.5 x 10’ N/m?
+| (d) 7.5 x 10° Kg/m?
+\ 26. The buoyant force on an object is dependent on
+| (a) the object's density. :
+(b) the submerged volume of the object.
+- | (c) the mass of the object.
+| (d) the shape of the object.
+| 27. The buoyant force on an object fully submerged
+; \ | in a fluid depends on
+fg (a) the object's density.
+\ (b) the fluid's density.
+(c) the acceleration due to gravity
+| (d) (b) and (c) but not (a).
+28. states that a body fully
+
+or partially immersed in a fluid experience an.
+
+\ | upward force (buoyancy) which is equal to the
+\| weight of the liquid displaced.
+
+(a) Pascal principle
+
+(b) Superposition principle
+
+(c) Archimedes principle
+
+(d) Buoyancy principle
+29. A swimmer whose body’s surface area is
+
+approximately 1.6 m? lies at a depth of 3 m
+
+below the water surface. How much force is
+
+exerted on his body due to water pressure?
+
+(a) 13,183 N
+
+(b) 47,040 N
+
+(c) 29,400 N
+
+-ALOLA UNIVERSITY
+
+IGERIA
+, ADO-EKITI, N 3
+—- =v AMINATION
+
+(d) 34,600 N
+30. The force of attraction between molecules of the
+Same substance is called ee
+(a) Frictional force
+(6) Cohesion
+(c) Contact force
+(d) Adhesion
+31. When adhesive forces outweigh cohesive forces
+(a) @ > 90°
+(b) meniscus curves downward.
+(c) 6 = 90°
+(d) The liquid level rises in the tube
+32. When cohesive forces outweigh adhesive forces
+(a) The liquid level is depressed in the tube
+(b) 8 < 90° :
+(c) meniscus curves upward
+(d) 6 = 90°
+33. The angle (@) between the container wall and the
+meniscus at the point of contact is called
+
+CoO eee eevserecvccscececesesces
+
+(a) meniscus angle
+(b) angle of dip
+(c) contact angle
+(d) declination angle
+34. A'50 kg mass is placed on a piston fitted to a gas
+cylinder. If 149] of heat energy is supplied to the
+gas cylinder, increasing its internal energy by
+10J, determine the height to which the mass on
+the piston is raised.
+(a) 0.3m
+(b) 0.1m
+(c) 0.5m
+(d) 14.9m
+35. Find the change in the internal energy of the
+system if 1210 calories is removed from a gas
+held at constant volume.
+(a) 1210J
+(b) 5060J
+(c) -5060J
+(d) — 1210J
+36. Determine the quantity of heat conducted ...
+through an iron plate of 0.02m thickness and
+area of 0.1 m? in 1 minute if the temperature of
+the two sides are 25°C and 45°C. (Thermal
+conductivity, K = 50.4 J/s.m.°C)
+(a) 9.07 x 107-8]
+
+(b) 9.07 x 1057
+an (c) 5.04 « 103J/s 0 ws
+\ (d) 3.02 x 1057 rant es rik
+37. Conduction through a metal rod is a result of
+\ (a) of molecules upon increase in
+FA (b) thereby setting neighbouring
+oa molecules into vibration after colliding with
+\ them.
+(a) vibration, temperature
+(b) temperature, vibration
+(c) displacement, heat
+
+(c) Isothermal process
+(d) Isobaric process
+39, Ina thermodynamic system, AW is negative
+when
+(a) The system does work
+(b)The system is adiabatic
+(c) The system exchange heat
+(d) Work is done on the system
+40. A system which has no exchange of matter and
+heat with its surroundings is called
+
+(d) heating, temperature | ae (a) Open system
+38. The thermodynamic process in which no heat is (b) Closed system
+transferred from or to the system is called (c) Isolated system
+(a) Isochoric process (d) Isobaric system
+(b) Adiabatic process
+SECTION B
+
+-1. Ina car lift used in a service station compressed air exerts a force on a small piston that
+
+has circular cross section and radius of 5.00 cm. This pressure is transmitted by a liquid ©
+
+to the piston that has a radius of 15.0 cm. What force must the compressed air exert to lift
+a car weighing 13300 N what air pressure produces this force? (5 Marks)
+
+. The gauge pressure of a certain amount of gas occupying a volume of 0.05m° at a
+
+temperature of 27°C is 9.8 x 10*Pa. Calculate the new gauge pressure if the volume is
+decreased to 0.02m? and the temperature increased to 127°C. (5 Marks)
+
+_ The tendon in a man’s leg is 10cm long and 0.45cm in diameter. How much will it be .
+stretched by force of 5N if the young’s modulus for the tendon is 1.6 X 108 N/m? ? (5
+
+Marks)
+
+_ A malaria patient has a body temperature of 100°F, What would be the temperature of the
+
+patient in degree celcuis? (5 Marks)
+
+
+5.
+
+6.
+
+~
+
+4.
+
+AFE BABALOLA UNIVE
+DEP RSITY, ADO-EKITI (ABUAD)
+PHY 103 (PROPER REMENT OF MATHEMATICAL AND PHYSICAL SCIENCES
+MATTER) FIRST SEMESTER EXAMINATION 2020/2021 SESSION
+
+SURNAME:
+oD OTHERNAMES:
+
+DEPARTMENT: ise
+LLEGE:
+
+Instructions: (1) mek wee
+: (1) Tick or fill the correct answer on your question paper where applicable
+
+Constants; & = 9.8 m/s2
+
+An heii is a form of shear ona large scale. 8.
+as a sheer modulus of 3.0 iY
+
+What shear stress is applied when a 13 k 1 yee thd a
+rock is sheared a distance of 2.5 m? post ot PR
+
+(a) 5.77x 106 N/m2
+
+(b) 5x 105 N/m?
+
+(c) 7.5x 10°N/m2
+
+(d) 7x10 N/m2 9
+The density of mercury is 13.6 g/cm? and that of alcohol
+is 0.8 g/cm3, In which of these substances will a solid
+cube of density is8.6 x 1073 kg/m3 sink?
+
+(a) Mercury ;
+
+(b) Alcohol
+
+(c) Both
+
+(d) None
+Obtain the weight of the water in a water bed mattress
+whose length, breadth and height are 1.8 m, 1.8 m and
+35 cm respectively. it
+
+(a) 7.88 x 103N
+
+(b) 2.88 x 103N
+
+(c) 3.88 x 103N
+
+(d) 1.11 x 10°N
+The area of a piston of a force pump is 8.5 x 1073m?.
+What force must be applied to the piston to raise oil of
+density780 kg/m?to a height of 6.0 m?
+
+(a) 36.69N
+
+(b) 4574N
+
+(c) 67.44N
+
+(d) 3.9 x 107N
+A solid copper cylinder has a measured mass of 8.9 g in
+air and 7.2 g in turpentine. What is the buoyant force?
+
+(a) 0.017N
+
+(b) 0.023N
+
+(c) 0.230N
+
+(d) 0.107N
+What temperatures will the Kelvin and Fahrenheit
+
+temperature record the same readings?
+(a) 453.23k or 453.23F
+(b) 253.23k or 253.23F
+(c) 483.23k or 483.23F
+
+(d) 574.25k or 574.25F
+The value of thethermal conductivities of Copper, Mercury,
+
+Aluminium and Steel are given as 3.85 W/cm.K, 8.30
+W/mK, 205.0 W/ m.K and 50.2 W/m.K respectively. Which
+of this substanceis the best conductor of heat?
+
+(a) Aluminium
+
+(b) Copper
+
+(c) Steel
+
+(d) Mercury
+
+Type C
+
+MATRIC NO:___S
+Time:1hr.45 min.
+
+If the temperatures of two bodies A and B are T, and Tg
+respectively where T, > Tg. Thermal equilibrium can be
+achieved between the two bodies when
+
+(a) Heat is transferred from body B to body A.
+
+(b) Heat is transferred from body A to body B.
+
+(c) T, > Tz.
+
+(d) T, < Tp.
+The rate of heat flow by conduction
+bye = —-kA, < What is the implication of the negative
+sign?
+
+is given
+
+(a) Heat flows from a cold region to a hot region.
+
+(b) Temperature gradient = is negative.
+
+(c) Thermal conductivity k is negative.
+
+(d) Temperature T decreases as x decreases.
+
+10. The linear expansivity of a bar of steel is 12 x 106 K
+1 and the Young modulus is 2 x 1011 Nm. Calculate
+the force that would compress the natural length of
+the bar if the temperature difference is 100°C fora
+
+cross-sectional area of 4 cm?2.
+
+An iron rod is 2.00 m long and 0.500 cm? in cross-
+section stretches 1.00 mm when a mass of 225 kg is
+hung from its lower end. Compute the Young
+modulus for the iron.
+(a) 1764 MPa
+(b) 176 GPa
+(c) 882 x 108 N/m?
+(d) 1764x10*N/m _
+When a submarine dives to a depth of 60 m, to how
+large a total pressure is its exterior surface
+
+11.
+
+12.
+
+subjected?
+(a) 5.9x105N/m?
+(b) 1.21x 105N/m2
+(c) 1x10? Pa
+(d) 1.31 MPa
+13. The principle that state that when the pressure of
+any part of a confined fluid is changed, the pressure
+on every other part of the fluid is also changed by
+the same amount is
+(a) Archimedes principle
+(b) Hooke’s law
+(c) Dalton’s principle
+(d) Pascal’s principle
+14. A metal plate 2 cm thick has a temperature
+difference of 12°C between its faces. It transmits
+
+
+200 kcal/hr through an area of 5 cm?. Calculate the
+thermal conductivity of this metal in w/m«. (1 cal
+is equivalent to 4.184 J) ___—_
+15. The force of attraction between molecules of
+different substance is called _____—
+(a) Frictional force
+(b) Cohesion
+(c) Contact force
+(d) Adhesion
+16. Conduction through a metal rod is a result of __(a)_—
+of molecules upon increase in __{b) — thereby
+setting neighbouring molecules into vibration after
+colliding with them.
+(a) vibration, temperature
+(b) temperature, vibration
+(c) displacement, heat
+(d) heating, temperature
+17. At what temperature will the Celsius and Fahrenheit
+temperature scales record the same reading?
+
+(a) —40°
+(b) —50°
+(c) —60°
+(d) —35°
+
+18. The ratio of the tangential force to the area A that is
+
+being sheared is
+
+(a) Shear strain
+
+(b) Shear stress
+
+(c) Shear modulus
+
+(d) Shear elasticity
+
+19. Find the density and relative density of gasoline if
+
+51 g occupies 75 cm}.
+
+(a) 6.8 x 10 kg/m? and 6.8 x 10°
+
+(b) 6.8 x 102 kg/m? and 0.68 Kg/m3
+
+(c) 6.8 x 102 kg/m? and 0.68
+
+(d) 6.8 x 10? kg/m? and 6.8 x 10-5 Kg/m?
+
+—$$$—_—$__—_
+
+20. Vv
+Which of the following equations best describe
+
+the shaded area?
+
+(a) Qat+Qr=W
+(b) W= uy where n is efficiency
+
+(c) w=0
+(d) W =P(V, — V1)
+21. Which of the following heat transfer processes can
+take place through vacuum?
+is Conduction
+ii. Convection
+iii. Radiation
+(a) ionly
+(b) iii only
+(c) iandiionly
+(d) i, ii and iii
+
+22.
+
+23.
+
+24.
+
+25. Conduction happens in
+
+26. Aniron rod stretches 1
+
+i nr ee
+27. Object A is 2 kg with a temperature of 40°C and has
+
+28. A malaria patient has a body temperature of
+
+29. A piece of alloy has a measured mass of 86 g in air
+
+lowing ratio of the 4
+ich of the fo ‘:
+faumber of mole, ” mass; m, number of moje
+
+N, and molecular weight, M) represen; : "
+ro’s number?
+
+Avogadr re
+
+(a) No =
+
+(b) No =
+
+(c) No =
+(d) No =
+The spec
+mass of 60 c
+Consider a me
+cross-sectiona
+represents sm
+force F on the r'
+
+3 |aa [32 |
+
+Be gravity of cast iron is 7.20. find the
+
+3 of it
+netal rod of original length / having a
+
+i lus y. Ife
+area A with young modu
+all extensions created by a deforming
+od, then the Hooke’s law can be
+
+written as
+(a) F="Te
+Fe
+(b) y= 4
+(0) Yh
+(d) F= —kx
+
+(a) Solid only
+(b) Gas only
+(c) Liquid and gas only
+
+d) Solid liquid and gas
+te mm when a mass of 200 kg
+
+is hung from its lower end. What is the Young's
+modulus if the rod is 3m long and 0.4 cm? in cross
+section? (Take g = 9.8 m/s?
+
+an internal energy of 500000 J. Object B is 2 kg with
+a temperature of 40°C and has an internal energy of
+400000 J. Which of the following statements is
+correct if A is in thermal contact with B?
+
+(a) Heat will flow from object A to B
+
+(b) Heat will flow from object B to A
+
+(c) No heat flow between object A and B
+
+(d) None of the above
+
+103.1°F. What would be the temperature of the
+patient in degree Celsius?
+
+(a) 30°C
+
+(b) 39.5°C
+
+(c) 42.2°C
+
+(d) 32°C
+
+and 73 g when immersed in water. Find its volume
+and density.
+
+(a) 1.3 mm3 and 1000 kg/m?
+
+(b) 1.3x 103 mm? and 66 kg/m?
+
+(c) 0.842 m3 and 66000 kg/m3
+
+(d) 1.3 x 105 m3 and 6.6 x 103 kg/m?
+
+). The density of a substance is 1 I
+density of the substance is 8/cm?. The relat
+The gauge pressure at SP. ofa cennc i
+SP ae, is 1 89 aE of 0.5 Pet han amount of
+is 1. x 105 Pa. Cal a tempe
+
+. Cale ratu
+
+pressure if the volume is decrees the new sai
+the temperature increased to ed to 0.12 cm3 bs
+
+(a) 6.63 x 10° Pa 127°C, “ae
+(b)1.11 x 106 Pa
+(c) 6.36 x 105 Pa
+(d) 1.11 x 10° atm
+
+32. Given that the average kinetic energy of
+
+molecules is: 5 KgT, the root mean By of gas
+expressed as: square velocity is
+(a) (3KgT/m)*/2
+(b) aKeT fie
+(d) (3KgT /m)1/2
+33. What is the root mea
+
+ns ,
+
+molecule at 27°C given that ke Bneed of a atrogen
+
+1.38 X 1073 J/K,N, =
+M = 28 g/mol? o = 6.02 x 10°* molecule/moland
+(a) 516.8 m/s
+
+(b) 561.8 m/s
+(c) 516.8 m/s?
+(d) 521.0 m/s
+1 34. According to the kinetic theory of matter, all matter
+is made of tiny particles called (i ‘
+
+Molecules of solids are held together by an attractive
+force called (ii) 4
+(a) (i) atoms, (ii) adhesive force
+(b) (i) molecules (ii) adhesive force
+(c) (i) molecules (ii) contact force
+(d) (i) molecules (ii) cohesive force
+35. The ratio of the molar gas constant and avogadro’s
+number is a constant called
+(a) Gas constant
+(b) Boltzmann’s constant
+(c) Molar mass
+
+(d) Number of moles
++mmer whose body's su
+
+rface area is
+
+° soproximatelY 1.6 m? lies ata depth of 3m below the
+water surface. How much force 1S exerted on is
+body due to water pressure?
+
+(a) 13,183 N
+(b) 18,375N
+(c) 29,400N
+“4 eeu hung from a spring that stretches
+
+s
+i cere to 62.2 cm. what is the k for the
+spring?
+(a) 7.86 N/m
+(b) 2.45 N
+(c) 7.86N
+(d) 2.45 N /m
+
+38. The h
+eels ona
+of 0.5 cmat th pair of women’s shoes have a radius
+wo e bottom. If 30% of th i
+man 480N is supported e weight of a
+sternal excites! ed by each heel, find the
+(a) 1.83 x 107 N/m2
+(b) 1.83 x 106 N/m?
+(c) 7.85 x 10-5 N/m?
+e 1.83 x 10° N/m?
+‘ ie elastic limit of steel is 5.0 Pa (N/m2), find the
+N rn diameter a steel wire can to support a 700
+eight without exceeding its elastic limi
+ase al g astic limit.
+(b) 13.3 m
+(c) 6.67 cm
+(d) 6.67 mm
+40. The angle (@) between the container wall and the
+
+meniscus at the point of contact is called
+
+(a) meniscus angle
+(b) angle of dip
+
+(c) contact angle
+
+(d) declination angle
+
+
+AF
+COLLEGE OF SCIENCE: Dern ea ADO EXIT
+FIRST SeMEsine DEPARTMENT OF COMPUTER SCIENCE
+EXAMINATION 2020/2021 SESSION
+
+CSC 101: INTRODUCTION TO COMPUTER SCIENCE
+TIME ALLOWED: 50minutes UNITS: 3
+INSTRUCTION: Answer All Questions Te:
+
+NAME:
+MATRICNO:
+
+DEPARTMENT: COLLEGE:
+
+1. Which of the following is among the cornerstone of computer science?
+5 ‘ Computers~ b. Flowchart __c. Programming Languages d. Algorithms
+, e generation of computers where thousands of integrated circuits were built onto a single silicon chip is
+a. Second generation b. Third generation c. Fourth generation’ d, Fifth generation
+3. The following comprises of the computer components except
+a. Keyboard, mouse, CD, sound system b. Printer, motherboard, DVD, system unit c. Sound
+system, clock speed, monitor, mouse: d. USB flash, CPU, MODEM, hard disk
+4. Cable television network available in many cities and covers area equivalent to a city or other municipality
+is an example of
+a. GAN~ b.MAN-~ c.LAN_ d. PAN
+5. Which of the following is a feature of system software?
+a. More interactive. b. Difficult to design c. Big in size d. slow in speed
+«6. The following are ways of writing the Computer notation for this expression 2y*+ 3y? + 4y — 5/ 2y
+.. 2ayayry + Beyey + 44y—5
+ye eee
+(ii) QeyA34+3*ty*24H4*y-S/2*Y
+(iii) 2x yxyxy + 3 xyxyt4xy/2xy
+(iv) 24 y ty ty +3 *y*tyt4ty/2%y
+a. i,iiandiv b. ii and iv c. ii, iii and iv d. all of the above
+¢7. The special transistors that store data and instructions as they are being manipulated by the control unit
+
+and ALU is
+a. Registers b. Cache c. Accumulator d.RAM
+
+8. All are function of system software except .
+a. It coordinates the activities and functions of hardware and software
+
+b. It controls the operations of computer hardware
++c. It helps the computer system monitor itself in order to function efficiently
+
+d. It helps computer programs to carry out specific task
+
+9. is a special program that processes statements written in a particular programming
+language called source code and converts them into machine language or “machine code” that a computer’s
+processor uses at once.
+
+Interpreter b. Compiler +c. Assembler d. Converter
+
+a.
+10. A small picture that represents a folder, program or other things
+a. Desktop <b. Icon c. Graphic d. Image
+
+er as
+
+
+in a linear format, with
+
+an, ed
+re arrane gether, shape of a
+
+1 1. * r . rk nodes al
+
+sons sssguabaraaenessenen is a topology type in which netwo ts cables to
+
+each node connected directly to te al cable with T-connector (connee
+
+capital T) or Tap. 4. Ht prid Topology
+
+a. BusTopology _b. Mesh Topology =“ star Topology oy
+
+12. The following are the categories of Optical Technology excePt RAM)
+
+' a. Recordable (R) b.Rewritable(RW) °% Rewrite- only (RW- i.
+3. Which of the option is not a feature of second generation Fe cote input/printouts wc. The computers
+
+hea ¢ on technology
+
+d. Read- only (ROM)
+
+a. It makes use of transistor b. They relied on punc f
+were limited to solving one problem at a time d. It make use © m dint
+14, is a named collection of data that exists on 4 storage ™ ;
+a. Directory b. File —_‘c. Folder d. None of the above
+15. is the spelling error in a program. :
+d, Debugging error
+
+a. Semanticerror 6. Symbolic error _c. Syntax error
+
+16. This is NOT an example of magnetic tape technology
+a. Hard di , i .d. Floppy '@P®
+ard disk b. Floppy disk — ©. Magnetic tape ppy tap self and sprea ds to other files
+
+17. A set of program instructions that attaches itself to a file, reproduces it
+
+is known as
+d. Trojan horse ; E ;
+ational operations In 4
+
+a. timebomb  -b. virus c. worms
+18. Which of the following symbols is used to perform comparison oF rel
+
+flowchart?
+c. Parallelogram d. None of the above
+
+a. Rhombus / Diamond b. Rectangle
+19. The platform where people interact with their friends is KNOWN @S.-+++eerr777 77"
+a. WhatsApp b. Facebook c, Online social networks 4. Internet
+20. ____isa physical computing device that safeguards and manages digital keys for strong
+
+authentication and provides crypto-processing
+a. Hardware Secured Mechanism _ b. Digital Security key ©. Hardware Security Module
+d. Authentication Security Key
+ae Inter-network connection is refers to as when two or more networks or network segments connected
+of the OSI Basic Reference Model, such as 4 router
+
+using devices that operate at the......cseereerseserenes
+a, Networklayer Db. Application layer. Physical layer d. Data Link layer
+
+22. DVD+R means
+a. Digital versatile disk recordable b. Digital video disk rewritable
+
+d. Digital versatile disc read-only
+is any computation in computing that evaluates to a value
+
+PB gt ete
+a. Operation b. Computation ©. Programming 4. Expression
+24. Which of the following is not a type of application Software
+
+a. Commercial software _ b. Disk operating system = ©. Shareware d. Open source
+25. Engineers developed digital electronic devices and refine the electronic components that are used in
+
+building digital electronics between
+«a. 1940’s and 1950’s b. 1950’s and 1960’s
+
+26. Computers can be protected against power sur
+into a wall outlet.
+
+a. Surge suppressor b. Surge protector
+is a personal computer connected to the network
+
+b. Personal Computer © Workgroup 4. Adhoc
+
+are storage devices are except
+d. Data transfer rate
+
+c. Digital video disc readable
+
+2d,
+
+Pr ee es
+
+c. 1920’s and 1930’s d. None of the above
+ge by plugging into instead of directly
+
+c. Surge strips d. All of the above
+
+|,
+a. Workstation
+
+28. The criteria to comp
+a. Versatility b. Speed Cost
+
+a.
+
+1970
+30. The software that has
+a. Businessware
+
+29, Which year did software applications for personal computers started gaining ground
+
+b. 1972 c.1974 & 1976
+been permanently stored in hardware is called --------------------
+b’ Firmware __c. Dataware d. Blockware
+
+31. The logical, expression or actual program error is known as
+
+a.
+
+Symbolic error
+
+b. Syntax error c. Semantic error d. Debugging error
+
+32. Processing techniques involves the following except
+
+a.
+b.
+c.
+d.
+
+33.
+a.
+
+Noise b. Signal «
+
+Execution of instruction before the completion of another
+Execution of instruction in a clockwise manner
+
+Execution of an instruction at a given time
+
+Execution of various instructions at the same time
+is an electromagnetic communication that is being transmitted across a network media
+
+c. Attenuation d. Information
+
+34, Examples of monitors are except
+d. Impact-dot matrix
+
+a.
+
+35. The first digital computer was built by engineers during
+
+Liquid crystal display b. Light emitting diodes _c. Cathode ray tube
+for breaking codes and calculating
+
+ballistic missile trajectories.
+d. 1950’s
+
+a.
+
+1940’s_ — b: World war II c. World war I
+
+36. Which of the following Editor is closely associated with application packages?
+d. Link Editor
+
+a.
+
+Book Editor b. Text Editor _c. Linkage Editor
+
+37. Which of the following is not true about algorithms?
+c. A cooking recipe is not an
+
+a.
+
+38. The ALU
+
+a
+
+They are finite b. Poor algorithms results in poor outcome
+
+algorithm d. Algorithms encode human intelligence into serial steps.
+the instruction and returns result to an accumulator and storage registers
+
+Fetches b. Decodes c. Executes d, Stores
+
+39. “Computers are only as good as the algorithms they are given” Which of the following best explains this
+
+sentence?
+
+a.
+
+41. The third generation of computers were used from
+
+a.
+
+42. Non-impact printer is also known as
+
+a.
+
+43. ...
+usually caus
+
+a.
+44,
+a.
+
+a. Allalgorithms are good b. Garbage in, garbage out +c. Computers are good d. None of the above
+40. The directory immediately below the current directory is called the
+
+Parent Directory b. Child directory  c. Root directory d. Absolute directory
+
+eer eee ee ee
+
+1956-1963 b.1924-1932 c. 1964-1971 d. 1940 — 1963
+
+Page printer _b. Paper printer c.Drumprinter —d. Chain printer
+is the degradation or reduction of signals as it travels across the network medium. It is
+
+eee reorercereerneee
+
+ed by the accumulation of noise or fading strength of the signal.
+
+Attenuation b. Signals —_c. Communication d. Noise
+this is a form of electronic communication for the masses.
+
+Bulletin boards b. chart group c. E-mail d. Blogs
+
+45. bits is equivalent to Ibyte. And each byte represents a unique
+
+a.
+
+Data __ b. Character c. Code d. Digit
+me but can vary throughout the program execution is called
+
+46. The location that stores only one value at a ti
+
+a.
+
+47. The following are the different kind of ways in
+
+a.
+
+c. Identifier | d. Keyword
+which file can be manipulated except
+
+c. Edit d. Backup
+
+Constant b. Variable
+
+Open b. Throw
+
+48. Examples of input devices are:
+a. Tract-ball, joystick, mouse, projector, scanner
+
+AFE BABALOLA UNIVERSITY. » ADO EKITI, NIGERIA
+COLLEGE OF SCIENCES
+DEPARTMENT OF MATHEMATICAL AND PHYSICAL SCIENCES
+FIRST SEMESTER EXAMINATION 2017/2018 SESSION
+I MAT 101: GENERAL MATHEMATICS 1 TIME ALLOWED: 2HRS 15 MIN
+SURNAME: OTHER NAMES
+MATRIC NO: COLLEGE/DEPARTMENT:
+
+INSTRUCTION: ANSWER ALL QUESTIONS AND WRITE ONLY THE FINAL ANSWERS
+
+| ON THE SPACES PROVIDED
+
+|
+1. Using Binomial Theorem, expand (8 — 3x)73, up to the third term.
+
+2. Use De-Moivre’s theorem to compute (3 + 4i)*
+} 3. Two aircrafts left an airfield at the same time. One travels due north at an average speed of
+
+300km/h and the other due east at an average speed of 220km/h. Calculate their distance apart
+
+after 4 hours.
+
+4. The third term of a geometric progression is 6 and the fifth term is 567. Find the sum of the
+
+first six terms of the progression for r > 1
+
+) 5. Obtain V1.03 to five significant figures without using calculator
+6. In an examination for the final year students of a school, 60 offered History, 50 offered
+’ Economics and 48 offered Literature. 30 offered History and Economics, 16 offered History
+and Literature, 22 offered Economics and Literature. If 10 Candidates offered all the three
+subjects, how many candidates sat for the examination.
+
+oO
+
+7. If@ and f are the roots of the equation 6x? — 13x + 6 = 0. Find BF +03
+8. Ifa and B are the roots of the equation 2x? + 8x + 3 = 0. Form an equation whose roots are
+
+& _ @ and © :
+| ye
+
+
+9. IfX = {1,2,3,4}. List out P(A) ee
+10. If Sin 8 =3 _ Find cot?@+Cosec?6 ee
+
+Cos @
+
+M1. IfSin A= and Cos B = 5 Find Tan(A + ee
+
+5
+12. If zy = —7 — 2i and zz, =5—i. Find Re(ZyZ2) —_—$__——___
+
+13. Ifz, = 2+ Siand zz = 3 +41. Find Im ® eT
+
+2
+, aa) za22)
+14. Given that z= 7+ 3i,z2 =4—2i and z3=1+i. Find [ReGazz) Im(’ Zs yy
+
+15, Find the values of q for which the equation (4q + 1x? — 2qx +4 = O has equal roots.
+
+16, Find the sum of all integers between 83 and 721 which are exactly divisible by 4 ___—_
+
+17. Find the coefficient of x® in Ge)" Fe a oe mere
+18. Evaluate Ps +°Cs se ee ee
+
+Given that universal set = {All positive integers Jess than or equal 30},
+
+M = {all even positive intergers less than or equal to 20},
+
+Q = {all odd positive intergers less than or equal to 49}, R = {x:10 <x < 30}
+
+19, Find MAQ ecepein ee
+20, Find n[M n(RVQ')] a
+
+
+AFE BABALOLA UNIVERSITY,ADO EKITI,NIGERIA
+COLLEGE OF SCIENCES
+DEPARTMENT OF MATHEMATICAL AND PHYSICAL SCIENCES
+
+1st Semester Examinations
+MAT 101: GENERAL MATHEMATICS I
+
+ANSWER ANY FOUR QUESTION
+n?(n+1)2
+4
+
+1. Prove by Mathematical Induction that Y%_, 73 =
+
+b) The sum of the 3 ang 7th
+terms of the progression,
+
+c)Let @ and B be the roots of the equation 3x2 — 7x —1 = 0,
+Find (i) a® + 6° (ii) 2+ Gil) (a — g)
+2. Find the roots of the equation z? —z +1 = 0,
+giving your answers in the form atib
+(ii) Obtain the modulus and argument of each root.
+
+(iii) Show that each root also satisfies the equation z
+
+(1+c0s6)(sec@—-1)
+(b) Show that (1—cos0)(secd+1)
+
+2016/2017 Session
+TIME ALLOWED: 2HRS
+(4 marks)
+
+term of an A.p is 6, their product is 8. Find the sum of the first 16
+] (4 marks)
+
+(7 marks)
+
+(3 marks)
+(3 marks)
+(3 marks)
+
+(3 marks)
+
+(c) Find (0.95)? binomially without the use of calculator and correct to 4 d.p (3 marks)
+
+3. If 2, = 3 + 4i,z) = 8 — 4i and zy = 2 + 3i. Find (i) Re|#*2]
+" 3
+
+(ii)Show that |z,z, |= |z4[|z9|
+(b) Find the term independent of y in the expansion of Gr yo
+4. In a group of 60 students, 22 offered F rench, 22 offered En
+French and English, 10 English and History,
+
+the three subjects.
+
+(a) Draw a venn-diagram to represent the data
+
+(5 marks)
+(4 marks)
+
+(6 marks)
+
+glish, 36 offered History, 8 offered
+12 French and History while 6 did not offer any of
+
+(2 marks)
+
+(b) Use your diagram in (a) to find the number of students who offered
+
+(i) All the three subjects
+
+(2 marks)
+
+
+(ii) History only,
+. 2
+(b) If cos @ = ~ Evaluate (i) cosec a — tan'a + sec a
+(ii) 2 sin a@ + 3cot @ -cos @
+(c) Simplify i3(i+1) + i5(3-i) + i7(2+4)
+5S. Given that ax? + bx +c =0.
+
+(a) Show by completing the square method that
+
+- —bivb*-4ac
+
+= 2a H
+Hence Solve 2x? + 8x+3=0
+
+(b) Using binomial theorem expand (2x +.4y)®
+
+es 12 cos2@
+(ii) If cot@ = a Evaluate <iaiccont
+
+(2 marks)
+(3 marks)
+(3: marks)
+
+(3 marks)
+
+(5 marks)
+
+(3 marks)
+
+(4 marks)
+
+(3 marks)
+
+6. (a) If u = {Whole numbers between 1 and 20},X = {x:11 <x < 15}
+
+and Y = {y:13 <y <17}
+
+(i) Find n(X u Y) Gi) P(X n Y) Git) XAY |
+
+(6 marks)
+
+(b)Let a and f be the roots of the equation Ax? — 5x — 2 = 0. Find (i) a? + B*
+
+(ii) at : (iii) Form an equation whose roots:are 2a + B and 2B +a
+
+(iv) If cos A == and sin B = =, Find cos(A + B)
+
+(7 marks)
+
+(2 marks)
+
+7 5] AFE BABALOLA UNIVERSITY, ADO-EKITI
+a DEPARTMENT OF SPORTS SCIENCE
+SIGNATURE FIRST SEMESTER EXAMINATION 2016/2017
+7 " COURSE TITLE: HEALTH AWARENESS 1 COURSE CODE:. AFE 101 TIME: 1°/2 HOUR
+“*y NAME: COLLEGE:
+, MATRIC NO.: SERIAL NO. DEPARTMENT:___—
+4 INSTRUCTION: ANSWER ALL QUESTIONS IN THE ANSWER SHEET PROVIDED ON THE LAST PAGE
+SUBMIT BOTH QUESTIONS AND ANSWER SHEET
+1. Sex Education could be defined as a systematic training and instruction which prepares a person from
+relationship early childhood through school to adulthood, to deal effectively with the problems and
+social relationship directly or indirectly associated with the sex urge. It means that
+(a) Sex education provides knowledge and training for individual to cope with sexual pressure and build
+
+healthy sexual life
+(b) Sex education is the absolute solution to sex urge
+(c) Sex education is a transition process from early childhood to adulthoo
+
+d and should be available for
+
+everyone
+(d) Sex education from early childhood to adulthood is primaril
+
+social workers to effectively deal with sex urge
+
+2. Sex education is a lifelong process means that.
+(a) It promotes long life and process of making sexual relationship possible overtime
+
+(b) Sex education is a lesson that should be learnt from day to day in the classroom
+(c) The process of sex education requires that a lifelong educational program should be applied for
+every desired individual i
+_(d) Every individual is a student in the school of
+3. The variety of subjects that are covered under s
+(a) the physical processes of human reproduction; the wor
+(b) the psycho-physiological causes and consequences of sex,
+(c) the origin, dissemination, and effects of venereal disease;
+(d) family roles and structures;
+4. Teaching method that could be emplo
+(a) moderate discussion (b) lecture teaching met
+
+5. Aperson’s erotic or romantic sexual attraction is termed
+(a) sexual orientation (b) Sexual perception (c) sexual cultural perspective (d) sexuality |
+
+6. Impact of can be far greater that better known calamities.
+(a) wellness (b)disease (c) war (d) influenza
+
+7. One of the following is wrong about Disease
+(a) Some diseases are due to the body’s not being supp
+
+,(b)Disease is unavoidable calamity
+
+(c) Some diseases are caused by poisons entering the body
+(d) Diseases may be brought on by wrong habits
+
+8. An example of infectious diseases
+
+(a) cancer (b) diabetes (c) heart disease(d)common cold
+
+is a functional abnormality or disturbance
+
+1
+
+y the responsibility of educators and
+
+sex education from childhood to adulthood
+
+ex education program Include the following except
+kings of male and female sex organs;
+marriage, and parenting.
+
+yed in sex education program include the following except
+hod (c)mouth to mouth teaching method (d) Visual aids
+
+rs ~
+
+lied with the proper kinds of nourishment ‘i
+
+
+» FTPs
+
+en schizophren'@ , ees PO 269 F LF WD
+(a) Disease (b)Disorder (c) stroke a) wee nee <csatpiok asco ke s es és < Pd SS > ¢
+
+m of disease © : « eeesse ed
+
+coral = izophrenia b) comorbidity (c)iliness QD” s&s FF Ss
+: (a) schizoP sexual is ref Wee Ff £ FS CFF
+
+ous with homosexuality: A tran eferred to aK é eee ve,
+
+- 41. Transsexuality js not synon im is not consistent with his oF her anatomical features  & x NS RS &e S
+e SF FS es
+
+, (a) One whose sexual perceP ~ onsp with nals esis ej
+
+(b) One who prefers to have sexual re ex relationship LESS s.
+neal features transcen® opposite $ . f
+
+i one another ¢ é
+
+QS &
+
+BSS
+
+ndrome
+
+(c) One whose S$
+re sexual trang
+
+(d) Having sexual
+
+12. Which of the
+
+(a) Human immu
+
+(b) Human immu
+infections
+
+(c) Human immu
+
+has become a
+
+(d) Human immunode
+13. Gonorrhea and Chlamydia may produ
+
+(a) they can lead to outbreak of other
+(b) they can lead to sterility if left untreated.
+
+{c) they can lead to other sexually transmitted di
+(d) they can lead to paralysis, psychiatric illness, i
+
+14. which of the following is not true about sex education
+
+(a) Sex education help to enlighten student as regard huma
+(b) Sex education serve as check to misuse and abuse of sex.
+
+(c) Sex education promotes the fight against abstinence and self-control
+
+(d) Sex education provides youth with information to be able to make balanc
+
+their own behavior.
+
+15. Which of the following is no
+(a) Chlamydia is caused by a virus Ca
+(b) Chlamydia can be treated with antibiotics
+
+(c) Chlamydia is a sexually transmitted infection
+
+(d) Chlamydia is curable
+16. Which of the following diseases is caused by human papillovirus
+
+(a) Chlamydia (b) Genital Warts (c) Herpes Simplex Virus (c) Trichomoniasis
+17. Sexually transmitted infection can be diagnosed by
+(a) Testing the blood (b) By inserting thermometer into the genitalia
+a i area a swab of the vagina or penis secretions (d) Testing the urine
+- s of the following statement is true about secondary virginity
+i) secon sain means that virginity is preserved beyond secondary sc
+(c) secondary Meaty mean’ the vie is yet to De compromised
+id} Secondary ne means sticking to one sex partner with the use of c
+19, Which of the foll . Oo means no more sex until marriage after the virginit
+iat Yigp artnonedh g statement is true about clinical depression
+re chemical messengers may be responsible for clinica
+
+unodeficiency sy
+
+ed Imm
+drome a
+
+Acquir
+odeficiency syn
+
+d Immun
+owing epidemic while Acquired immunodeficiency sy
+eficiency syndrome
+
+ncy virus is a gr
+but
+
+nodeficie
+growing epidemic
+ficiency virus is the acute stage of the Ac
+ce no obvious symptoms
+
+mmunity, i
+
+mmunod
+
+quired 1
+an at the acute stage,
+
+diseases in the co
+
+seases, if left untreated.
+
+f left untreated
+
+n reproduction... 7
+
+ed moral decision about
+
+t true about chlamydia
+lled chlamydia trachomatis
+
+hool education
+
+m for sexual intercourse
+
+ondo
+mised
+
+y has been compro
+
+| depression
+
+2
+
+~ PoINgyy vey
+Awysuoyers 195
+
+- Peop
+(a)
+(c)A
+
+Peoph
+(a) Ch
+
+(b) Expe
+
+(QExpey
+
+Vhich aff
+
+) Interg
+
+Psychot
+
+individu
+
+task de;
+task den
+ask dem
+isk dem,
+'Of the;
+essisa j
+
+Slee w
+420514
+
+SOINZL$ [EI Woyeur 39)
+
+SE 0} Pa1s944 Si jenxassueny-4
+
+wip)
+
+Auprgy
+
+ssoulf! (9)
+
+L2uaized ay} s}a}Je UoIpUoD
+
+an imbalance in cert
+certain chemi
+mical m
+| messengers called two neurotransmitters called noradrenaline
+
+and serotonin
+c) It is an imbalance b
+‘ etween two ch
+(d) It is an acute stage of depressio ema messengers whose relationship are
+20. Which of the following will n n in a normal individual
+(a)Positive or negative went cause depression
+(b) Major illness such as sciaea, wana the death of loved one or promotion
+(c) internal loc e, cancer or heart attack
+(d) Ab us of control and self-efficacy
+7 ) Abuse of drug and alcohol
+fet ISO ,
+(a)Spiritual athe as when one’s values and belief are aligned w
+22. Spiritual co ness (b) Fitness (c) Environmental wellness (c) Cultural wellness
+challenges a provides. ss & in life and enables you to gr
+oa Cinniateh , a) prayer and meditation (b)emotion and value (c)meaning and direction
+fathed e magrars that does not foster spiritual wellness. ,
+oA. Whi . itation (b) prayer (c) Exercise (4) Inspirational books
+. et of the following is not a social support system
+0 ° atients (b)friends (c) cousins
+» 20. ne of the factors that does not foster occupational wellness
+(a)Give more time to your work (b) Updating resume (c) Ma
+26. People who live with depressive condition called dysthymia
+
+(a) Are seriously depressed for years (b) Are mildly depressed for years
+(c) Are clinically depressed (d) Are chronically depressed
+
+27. People with bipolar disorder
+(a) Change back and forth between periods of depression and mania
+(b) Experience episodes of clinical depression
+
+(c) Suffer depression occasionally
+
+(d)Experience bipolar behavioral characteristics that can only be explained clinically
+
+28. Which of the following psychotherapy helps change negative thinking and beliavior pattern
+(b) Cognitive behavioral therapy
+
+(a) Interpersonal behavioral therapy
+(c)Psychotherapy behavioral procedure (d)Therapeutic behavioral proce
+29. An individual could be a victim of stress if
+
+(a) task demand is equivalent to the persona
+(b) task demand and capacity to cope with the tas
+(c) task demand exceed the personal and social res'
+(d) task demand is parallel to the task ye to be defined
+
+30. which of the following statement is not true about stress
+(a) stress is a product of everyday life regardless of individua
+
+the situation
+
+(b) stress is part of e
+(c) It is not necessaril
+(d) Change in sleep pa
+31. The differences in mortality and morbidity
+(a)environment (b) culture (c) Diseases (d) fitness
+
+still unknown
+
+ith ones actions.
+
+ow, learn & meet new
+
+(d) love and charity
+
+(d) course mate
+
+king friends (d) Taking break
+
+dure
+
+| and social resources at hand
+
+k is efficient
+
+ources the individual is able to mobilize.
+
+\ contributions to the event
+
+ectly
+
+but how we react to the events
+
+veryday life directly or indir
+y events that cause stress,
+
+ttern could cause stress
+
+help to relate the impact of wellness on
+
+3
+
+s that surround
+
+ey
+
+- 25. Observation of the laws of health leads to
+
+* 30. Which of the following is not in
+
+(d) Diseases ma
+; YY be brou
+; ght onb
+8. a example of infectious disease Ywrongsnabts
+a) cancer (b) di .
+) diabetes (c) heart disease(d
+s a functional abn , advan
+(a) Disease (b)Disorder ( ' ormality or disturbance
+20. Existence of pS (A) i
+aity for ; izophrenia
+
+bu) m of disease or degree that health conditi
+
+Bere . ta) schizophrenia ts ition affects the patient is known as
+erences in mortality and ) Comorbidity (c)illness —_(c)Morbidl
+
+{ajenvironment (b y and morbidity help to relate thei ——
+
+ae | (b) culture (c) Diseases raytine e impact of weliness on
+: ernal locus of cont *
+r
+(a) Spiritual wellne ol and a strong sense of self -efficacy are powerful tools in ing__—_
+ss (b) Emotional wellness (c) Int M CT
+ellectual wellness (d) physical wellness
+
+19.
+
+23 P
+.___ isa powerful em i
+(a) smoking aticnal tools that has consistency been found to increase the risk of heart attack
+24. = tb) anxiety (c) Anger (d) Nageing
+oping mesmen in positive lifestyle habit
+ical well ;
+ness (b) Emotional wellness (c) fitness (d) Health education
+
+; ; (a)Long life (b) Death (c) wellness d) fitness
+ze ane aladin is not B type of love ina relationship .
+27. Sweaty hands, increa i. ‘nhe oe . ae ne
+‘a otystotogle idee see " nen rate and change In eating pattern are
+(c) Physical and en i = am f ra peyehophc oe
+ERE ” ah Saat gica symptom of stress (d)Cognitive symptom of stress
+g statement IS not true about the effect of stress in college
+(a) Having difficulty retrieving key words and concepts when answering essay questions
+(b) reading and understanding the questions on the exam paper with little or NO difficulty
+(c) Mental Blocking: Going blank on
+(d) Remembering the correct answers as soon as the exam is over
+29. ABC technique to prioritize to do jist for college student is defined as
+(a) Upper, middle and lowest priority (b) First, second and third priority
+(d) First thing first priority
+
+(c) Highest, medium and lowest priority
+the acronym of stress
+
+(b) Examination preparation (c) Self-talk (d) Seek support
+en one’s values and belief are aligned with ones actions.
+
+) Fitness (c) Environmental wellness (c) Cultural wellness
+in life and enables you to grow, learn & meet new
+nd charity
+
+32. Spiritual component provides
+yer and meditation (b)emotion and value (c)meaning and direction (d) love 2
+
+challenges. (a) pra
+
+33. One of the factors that does not foster spiritual wellness.
+
+(a) meditation (b) prayer (c) Exercise (d) inspirational books
+
+34. Which of the following is not a social support system
+(a)Patients (b)friends (c) cousins
+
+35. One of the factors that does not foster occupational wellness
+(a)Give more time to your work (b) Updating resume i (d) Taking break
+live with depressive condition called dysthymia
+
+sly depressed for years (b) Are mildly depressé
+3
+
+(d) Manic love
+
+of stress
+
+(a) Time taken
+
+31. is defined as wh
+
+———
+(a)Spiritual wellness (b
+
+(d) course mate
+
+36. people who
+d for years
+
+(a) Are seriou
+
+
+3 5 CR HB =
+
+Bs} —
+O 6 0 GC S&S SESE EZ =
+a 24 32552222245
+— — -~ 60 ZEL2E 222-8"
+en 7a © es 625 $74
+
+cams) ‘ Oo A 4 4a
+
+(c) Are clinically depressed (d) Are chronically depressed ~
+
+37. People with bipolar disorder .
+(a) Change back and forth between periods of depression and mania
+
+(b) Experience episodes of clinical depression
+
+(c) Suffer depression occasionally
+(d)Experience bipolar behavioral characteristics that can only be explained clinically
+hinking and behavior
+
+38. Which of the following psychotherapy helps change negative t
+(a) interpersonal behavioral therapy (b) Cognitive behavioral therapy
+(c)PsychotheraPY behavioral procedure (d)Therapeutic behavioral procedure
+
+39. An individual could be a victim of stress if
+(a) task demand is equivalent to the personal and social resources at hand
+
+(b) task demand and capacity to cope with the task is efficient
+(c) task demand exceed the personal and social resources the individual is able to mobilize.
+
+(d) task demand is parallel to the task ye to be defined
+bout stress
+
+40. which of the following statement is not true @
+(a) stress is a product of everyday life regardless
+the situation .
+(b) stress is part of everyday life directly oF indirectly
+{c) It is not necessarily events that cause stress, but how we
+
+(d) Change in sleep pattern could cause stress
+d-hand smoke
+
+— «4Al. Which of the following statement is not true about secon
+(a) second-hand smoke is a class A carcinogen and contains approximately 4000 chemicals
+tal tobacco smoke
+
+(b) second-hand smoke is also called environmen
+(c) second-hand smoke is 4 class A carcinogen \
+(d) second-hand smoke is 2 class A carcinogen and contains approximately 2000 chemicals
+42. Former smokers enjoy the following health benefits except . ’
+(a) Enhanced gmell andtaste 6 joo :
+(b) improved blood circulation and lung function
+(c)instant body system adaptation to healthy lifestyle
+(d) Decrease in chance of heart attack
+
+43. One of the problems emanating from social activities is uncontrolled
+: (p)Social heavy drinking
+
+(a) Periodic heavy drinking
+(c) Bigotry heavy drinking (d)Executive light drinking
+44. Which of the following stages in alcoholism is the blackout and excessive drinking staze
+, (a) pre-alcoholic stage (b) Forewarning stage
+| (c)Crucial stage (d) Chronic stabe
+45. Which of the following statement is true about-addiction
+ves pronounced distress
+
+s| (a) a physiological dependence ona substance that involv: |
+(b) a physiological dependence ona substance, that, in its absence, involves pronounce
+
+as.a withdrawal or abstinence syndrome
+
+of individual contributions to the events that surround
+
+react to the events
+
+binge drinking which means
+
+d distress, known
+
+wi
+| (c) astrons emotional need for a substance |
+io ‘(d) an emotional and physical dependence ona substance known to be friendly and unfriendly to health |
+rn — A6 is the impact of a health problem in an area measured by financial cost, morbidity ete:
+i , ‘ . . 4 \
+i , (a) comorbidity (b) Disease burden . (c) Cryptogente | (a) Disorder |
+
+; A |
+
+. mv)
+
+
+e following are efforts to Cc
+
+7 Prove a dj
+(a) self-care | (b) Medication a disease or other health
+
+Problems except
+
+“Ub. IS a disease whos . (c) Surgery d) p .
+(a) Ebola disease (b) sity one 'S currently unknown (¢) Preventive therapy
+. Ophrenia .
+
+_49. Wellne (c) Progressive di
+-49 a a Product of just like fitness © diseases (d) Cryptogenic diseases
+
+(a)healthy life style (b) heatth whem 5S is the product of regular exercise,
+
+on
+
+50 a following are factors that determine good health exce 0 health (d) awareness
+
+a) Age (b) Sex
+51. Which of the followin (c) Heredity (d) Environment
+
+& Categories of drugs disturb
+5 S the nervous system and distort th
+(a) marijuana (b) depressants
+
+llowing does not determin
+(a) the method of adminis
+
+53. which of the followin
+(a) Assistive
+(c) Intensified
+54, Which of the following statement does not b
+(a) males, who are considerably more likel
+drugs heavily
+
+of reality e user's perception
+
+(c) stimulants (d) hallucinogens
+e drug effects
+
+tration (b) Purity of drug (c) drug distillation (
+& 's not in the stages of drug abuse
+(b)Experimental
+(d)Compulsive
+
+elong to the social profile of drug users
+
+YY to use drugs regularly, and extremely more likely to use
+
+d) the degree of habituation
+
+(b) those who spends more time being alone than being in the company of others
+(c) those who are relatively young, especially those free from parental control and responsibilities
+(d) those who are likely to have parents who use legal drugs, and friends who first gave them drugs
+55. which of the following is true about gateway hypothesis
+(a) the use of hard drugs inevitably leads to the use of soft drugs
+(b) the use of soft drugs inevitably leads to the use of harder drugs
+(c) drug users can easily adapt to any kind of drug in its first administration
+(d) drugs have common gateway to the system of the drug users
+56. which of the following problems begin with the mind
+(a) physiological illness (b) mental illness (c) physical illness ({d) social illness
+57. which of the following diseases is described by the opacity of the lens
+(a) lensdetraction (b) migraines (c) myopia (d) cataracts
+58. which of the following non-communicable disease is not caused by deficiency
+
+(a) anemia (b) pellagra (c) scurvy (d) allergies
+59. which of the following non-communicable disease is not caused by wear and tear in the body
+(a) asthma (b) stroke . (c) cancer (d) heart attack
+
+60. which of the following is not a sign of heart attack
+(a) pressure in the center of the chest
+(b) serious migraine that runs from the heart to every part of the body
+(c) pain in shoulders, neck or arms
+(d) chest discomfort with fainting, sweating or nausea
+
+
+lo)
+
+Fa
+
+_ Which of the following statement i
+
+_ Which of the follo
+
+, Former smo
+
+One of the prob
+
+_ Which of the following stag
+
+e
+
+° wd .
+cle patie AFE BABALOLA UNIVERSITY, ADO-EKITI
+
+— GENERAL STUDIES DEPARTMENT
+INVIGILATOR’S SIGNATURE FIRST SEMESTER EXAMINATION 2018/2019
+
+MATRIC NO.:____— Sama SS es”
+INSTRUCTION: ANSWER ALL QUESTIONS (UNDERLINE THE CORRECT ANSWER)
+
+—__—— is defined as when one’s values and belief are aligned with one’s actions.
+(a)Spiritual wellness (b) Fitness (c) Environmental wellness (d) Cultural wellness
+& life and enables you to gr
+
+meaning and direction (d) love and charity
+
+Spiritual component provides ow, learn & meet new challenges. (2)
+prayer and meditation (b)emotion and value (c)
+One of the factors that does not foster spiritual wellness.
+
+(a) meditation (b) prayer (c) Exercise (d) Inspirational books
+Which of the following is not a social support system
+(a)Patients (b)friends (c) cousins
+One of the factors that does not foster occupational wellness
+(a)Give more time to your work (b) Updating resume (Cc) Making friends
+
+People who live with depressive condition called dysthymia
+(b) Are mildly depressed for years
+
+(a) Are seriously depressed for years
+(c) Are clinically depressed (d) Are chronically depressed
+
+People with bipolar disorder
+(a) Change back and forth between periods of dep
+
+(b) Experience episodes of clinical depression (c) Su
+(d)Experience bipolar. behavioral characteristics that can only
+Which of the following psychotherapy helps chan
+(a) Interpersonal behavioral therapy .
+(c)Psychotherapy behavioral procedure
+An individual could be a victim of stress if
+(a) task demand is equivalent to the personal and so
+(b) task demand and capacity to cope with the task is efficient
+(c) task demand exceed the personal and social resources the in
+(d) task demand is parallel to the task ye to be defined
+
+5 not true about stress
+individual contributions to the events that surround the situation
+
+(d} course mate
+
+(d) Taking break
+
+ression and mania
+ffer depression occasionally
+be explained clinically
+
+ge negative thinking and behavior pattern
+(b) Cognitive behavioral therapy
+
+(d)Therapeutic behavioral procedure
+
+cial resources at hand
+
+dividual is able to mobilize.
+
+ry
+
+everyday life regardless of
+(b) stress is part of everyday life directly or indirectly _
+(c) itis not necessarily events that cause stress, but how
+
+(d) Change in sleep pattern could cause stress
+wing statement is not true about second-hand
+
+(a) second-hand smoke is a class A carcinogen and contains approxim
+(b) second-hand smoke is also called environmental tobacco smoke .
+(c) second-hand smoke is a class A carcinogen
+
+(d) second-hand smoke is @ class A carcinogen and contain
+
+kers enjoy the following health benefits except
+(a) Enhanced smell and taste (b) improved blood circulation and lung function
+
+(c)Instant body system adaptation to healthy lifestyle (d) Decrease in chance of heart attack °
+lems emanating from social activities is uncontrolled binge drinking which means
+
+drinking(b)Social heavy drinking (c) Bigotry heavy drinking (d)Executive light drinking
+es in alcoholism is the blackout and excessive drinking stage
+
+1
+
+(a) stress is a product of
+we react to the events
+
+smoke
+ately 4000 chemicals
+
+s approximately 2000 chemicals
+
+(a) Periodic heavy
+
+
+; a: \ Sa er
+) Pre-alcoholic stage (b) Forewarning stage (c)Crucial stage (d) Chronic stage N Wer ook
+HWhich of the following statement is true about addiction ;
+a) a physiological depentiens on a substance that involves pronounced pane pronounced distress,
+b) a physiological dependence on a substance, that, in its absence, inv tance
+
+withdrawal or abstinence syndrome (c) a strong emotional need for a subs tan ,
+overt (d) an emotional and physical dependence on a substance known to be friendly an bidity
+
+is the impact of a health problem in an area measured by financial cost and oe ed sisordet
+(a) Comorbidity (b) Disease burden (c) Cryptogenic
+rhe following are efforts to cure or improve a disease or other health problems AE oa
+_ ha) self-care (b) Medication (c) Surgery (d) Preventive therapy
+
+per¥ Pr) is a disease whose cause is currently unknown ledimeniee
+- are® cnt O* " (a) Ebola disease (b) schizophrenia (c) Progressive diseases (d) Cryptogenic sea
+2 oxen ester® Wellness isthe product of___——_just like fitness is the product of regular exercise.
+
+st oes ggv®e}healthy life style (b) health education {c} health
+an _-lhe following are factors that determine good health except
+oa) Age (b) Sex (c) Heredity (dg) Environment
+are a\ownich of the following categories of drugs disturbs the nervous system and distort the user's percept
+7 ove (2} marijuana {b) depressants (c) stimulants (d) hallucinogens
+
+—<a™ which of the following does not determine drug effects
+; pre gor a) the method of administration (b) purity of drug (c) drug distillation (d) the degree of habituation
+e enw? \ \We? which of the following is not in the stages of drug abuse a
+gw neta) Assistive (b)Expezimental (c) intensified (d}Compulsive
+com goWhich of the following statement does not belong to the sociai profile of drug users
+ove? an a) males, who are considerably more likely to use drugs regularly, and extremely more likely to use drugs heavily
+
+known as a \, oO
+
+unfriendly to health
+
+(d) awareness
+
+ion of reality
+
+eo? ¢) those who are relatively young, especially those free from parental control and responsibilities
+6 gue ew d) those who are likely to have parents who use legal drugs, and friends who first gave them drugs
+err ger? which of the following is true about gateway hypothesis
+a "not = a) the use of hard drugs inevitably leads to the use of soft drugs
+" cor! the use of soft drugs inevitably leads to the use of harder drugs
+ANS ove of 2°) drug users can easily adapt to any kind of drug in its first administration
+SS 500? e 0) se* .G) drugs have common gateway to the system of the drug users
+ee gi gue pi of the following problems begin with the mind , '
+ay bk ot a) physiological illness (b) mental illness (c} physical illness (d) social illness
+end? “e e Pwhich of the following diseases is describéd by the opacity of the lens oa
+gise® es? io¥ a) lens detraction (b) migraines (c) myopia (d) cataracts ;
+wet en™ which of the following non-communicable disease is not caused by deficiency
+4a) we nor? °'a) anemia (b) pellagra (c) scurvy (d) allergies
+pn er 18 which of the following non-communicable disease is not caused by wear and tear in the body
+ce 2a) asthma (b) stroke (c) cancer (d) heart attack
+en? which of the following is not a sign of heart attack
+a pressure in the center of the chest
+“ove™ ob) serious migraine that runs from the heart to every part of the body
+(2) °c} pain in shoulders, neck or arms
+\ 42- —tl chest discomfort with fainting, sweating or nausea
+\ ot
+
+\ 43.6
+
+
+~ -anial east. morbidity etc.
+
+(b) It is an imbalance j i i
+and serotonts ce In certain chemical messengers called two neurotransmitters called noradrenaline
+(c) Itis an imbalance between twoc i
+(d) it is an acute stage of depression Tne nar assengers whose Penh ae than
+20. Which of the following will not cause depression
+(a)Positive Or negative events including the death of loved one or i
+(b) Major illness such as stroke, cancer or heart attack Promotion
+(c) internal locus of control and self-efficacy
+
+(d) Abuse of drug and alcohol
+is defined as when one’s values and belief are aligned with Ones actions
+
+(a)Spiritual wellness (b) Fitness (c) Environmental wellness (c) Cultural wellness
+22. Spiritual component provides & in life and enables you to grow, learn & meet new
+challenges. (a) prayer and meditation (b)emotion and value (c)meaning and divecsitin (d) love and charity
+23. One of the factors that does not foster spiritual wellness.
+(a) meditation (b) prayer (c) Exercise (d) Inspirational books
+24. Which of the following is not a social support system
+(a)Patients (b)friends (c) cousins (d) course mate
+
+- 25. One of the factors that does not foster occupational wellness
+(a)Give more time to your work {b) Updating resume {c) Making friends (d) Taking break
+
+21,
+
+ER
+
+TS 26. People who live with depressive condition called dysthymia
+
+QT (a) Are seriously depressed for years (b) Are mildly depressed for years
+aS (c) Are clinically depressed (d) Are chronically depressed
+
+27. People with bipolar disorder
+(a) Change back and forth between periods of depression and mania
+
+(b) Experience episodes of clinical depression
+
+N (c) Suffer depression occasionally
+(d)Experience bipolar behavioral characteristics that can only be explained clinically
+
+28. Which of the following psychotherapy helps change negative thinking and behavior pattern
+(b) Cognitive behavioral therapy
+
+(a) Interpersonal behavioral therapy
+(d)Therapeutic behavioral procedure
+
+(c)Psychotherapy behavioral procedure
+29. An individual could be a victim of stress if.
+
+(a) task demand is equivalent to the personal and social resources at hand
+
+(b) task demand and capacity to cope with the task is efficient
+
+(c) task demand exceed the personal and social resources the individual is able to mobilize.
+
+(d) task demand is parallel to the task ye to be defined
+
+30. which of the following statement is not true about stress
+(a) stress is a product of everyday life regardless of individual contributions to the events that surround
+
+the situation
+(b) stress is part of everyday life directly or indirectly
+(c) It is not necessarily events that cause stress, but how we react to the events
+
+(d) Change in sleep pattern could cause stress ;
+31. The differences in mortality and morbidity help to relate the impact of wellness on
+
+(a)environment (b) culture (c) Diseases (d) fitness
+
+
+; eA :
+
+33 ual wellness (b) Emotional wellness (c) Intellectual w ad Wellness. EXSs) cont yrre' j
+
+"is a powerful emotional tools that has consistency been found to increase the ris, Q 7 ave ae uit ino"
+
+™ (a) Smoking (b) anxiety (c) Anger (d) Nagging iN ase” 20 wo
+
+; PR is an investment in positive lifestyle habit (d) Health educar De. ees yr ae
+
+35. Obs alien wellness (b) Emotional wellness (c) fitness i education \ sae -
+
+os weston of the laws of health leads to (a)Long life (b) Death (c) wellness (d) fity ey 9. eat “eo
+
+“ ich of the following is not a type of love ina relationship \ ik) ,orow™ woe
+
+(8) Erotic love (b) Luvic love (c) Storgic love (d) Manic love \ <9. 7” vow
+
+, on hands, increased in heart rate and change in eating pattern ae ; \ @ one ws
+
+(c) Physio oe symptom of stress (b) Psychophysiological are of stress oe SiON et
+
+38. Whi and physiological symptom of stress (d)Cognitive symptom of stress “it ete
+
+ich of the following statement is not true about the effect of stress in college SL ane ere
+
+j/ / i) Having difficulty retrieving key words and concepts when answering essay eesENarTs gi . ne 5a?
+/ eading and understanding the questions on the exam paper with little or no difficulty ps okt
+! | (c) Mental Blocking: Going blank on questions on Ks
+{ j ee " aamamnbering the correct answers as soon as the exam is over cae a
+: technique to prioritize to do list for college student is defined as A" gv
+(a) Upper, middle and lowest priority (b) First, second and third priority we
+40, i ae ven ais tM priority (d) First thing first priority Cy
+(a) Time A ae owing is not in the acronym of stress e
+{b) Examination preparation (c) Self-talk  (d) Seek support
+
+41. Which of the following statement is not true about second-hand smoke
+(a) Second-hand smoke is a class A carcinogen and contains approximately 4000 chemicals
+(b) Second-hand smoke is also called environmental tobacco smoke
+(c) Second-hand smoke is a class A carcinogen
+
+(d) Second-hand smoke is a class A carcinogen and contains approximately 2000 chemicals
+Former smokers enjoy the following health benefits except
+
+{a) Enhanced smell and taste
+
+(b) Improved blood circulation and lung function
+
+(c)Instant body system adaptation to healthy lifestyle
+
+(d) Decrease in chance of heart attack
+
+43. One of the problems emanating from social activities is uncontrolled binge drinking which means
+
+42,
+
+(a) Periodic heavy drinking (b)Social heavy drinking -
+(c) Bigotry heavy drinking (d)Executive light drinking
+44. Which of the following stages in alcoholism is the blackout and excessive drinking stage
+(a) Pre-alcoholic stage (b) Forewarning stage
+(c)Crucial stage (d) Chronic stage
+
+45. Which of the following statement is true about addiction
+(a) a physiological dependence on a substance that involves pronounced distress
+(b) a physiological dependence on a substance, that, in its absence, involves pronounced distress, known
+as a withdrawal or abstinence syndrome
+(c) a strong emotional need for a substance
+(d) an emotional and physical dependence on a substance known to be friendly and unfriendly to health
+
+4
+
+Trichomoniasig
+
+lea(d)
+
+
+
+(d) Diseases may be brought on bv wrong hahits
+
+vf
+
+: IVIGILATOR’S SiGnavUne cena en OF SPORTS SCIENCE
+: : DURSE TITLE: CONTEMPORARY EMESTER EXAMINATION 2017/2018
+Same: HEALTH ISSUES 1 COURSE:CODE: AFE 101 TIME: 14/2 HOUR
+KIRIGNO. ee COLLEGE:
+WerucriGu;ene ATTENDANCE NO.: DEPARTMENT:
+: WER ALL QUESTIONS (UNDERLINE THE CORRECT ANSWER)
+
+1. reaper we eas oe where persons rise above their physical, mental or social limitations to
+. von 8 ul and Sea Ute (a) Wellness (b)Health (c) Fitness (d) Health Education
+
+: —_—__Is defined as combination of planned learning experiences based on sound theories that
+Provide individuals, groups, and communities the opportunity to acquire information and the skills
+needed to make quality health decisions. (a) Health Education (b) Health (c)Wellness (d) Exercise...
+_ 3. A person who is attracted to both men and women is labeled | ,
+(a) Bisexual (b) Transsexual (c) Gay (d) Lesbian “ _
+
+4. is not a. sexually transmitted infection (a) Genital secretion (b)Chlamydia (c)Gonorrhea(d)
+
+Syphilis
+5. A person’s erotic or romantic sexual attraction is termed
+(a) Sexuality (b) Sexual perception (c) sexual cultural perspective (d) sexual orientation ~
+_6. Impact of___- scan be far greater that better known calamities.(a) wellness (b) sex (c) war (d)
+disease
+7. Wellness is the Product of healthy lifestyle and Fitness is the product of regular
+(a) Nourishment (b) Sex (c) Teaching (d) Exercise
+8. An example of infectious diseases (a) cancer (b) diabetes (c) heart disease(d) common cold
+9; is a functional abnormality or disturbance (a) Disease (b) Disorder (c) stroke (d) schizophrenia
+10. Existence of any form of disease or degree that health condition affects the patient is known as
+(a) schizophrenia. (b) comorbidity (c) illness (d) morbidity
+11. One whose sexual perception is not consistent with his or her anatomical features is called_____
+|  ° (a) Transgender (b) Homosexuality (c) Transsexuality (d) Bisexuality
+12. is the state of complete physical, mental and social well-being,
+7 or infirmity (a) Wellness (b)Fitness (c) Health (d) Sickness
+, 13. Gonorrhea and Chlamydia are examples of diseases (a)cough (b)sexual (c)morbidity (d)cancer
+
+' 14. which of the following is not true about sex education
+(a) Sex education help to enlighten student as regard human reproduction.
+(b) Sex education is not good for teenager and youth (c) Sex education serve as check to misuse and ‘
+abuse of sex (d) Sex education provides youth with information to be able to make balanced moral
+
+decision about their own behavior.
+15. Which of the following is not true about Chlamydia
+(a) Chlamydia is a sexually transmitted infection
+(b) Chlamydia can be treated with antibiotics
+(c) Chlamydia is good for youth health
+(d) Chlamydia is curable
+16. Which of the following diseases is caused by human papillovirus .
+(a) Chlamydia (b) Herpes Simpleyerus (c) Genital Warts (d) Trichomoniasis
+
+|
+A
+|
+
+not merely absence of diseases
+
+
+4 as ve
+aA Ny
+
+Diseases M
+xample of . :
+"at (b)« 17. Sexually transmitted infection can be diagnosed by ,
+Cc . . . .
+ea (a) Testing the blood (b) By inserting thermometer into the genitalia (c)Testing a swab of the vagina or
+
+Penis secretions (d) Testing the urine
+
+te
+isease (b vin ; :
+Dise he 18. virginity means no more sex until marriage after the virginity has. been compromised
+
+stence Of i (a) Secondary (b)Primary (c) Tertiary (d) Higher
+19. A state of mind producing serious, long term lowering of enjoyment of life or inability to visualize a
+e differen happy future is called (a) imbalance (b)stress (c) depression (d)addiction |
+|
+
+environm 20. The treatment given to depressed patients is called (a)Physiotherapy (b) Emotional therapy (c)
+Psychotherapy (d) Physical therapy 4 ;
+
+, internal
+) Spiritual 22. is defined as when one’s values and belief are aligned with ones actions.
+is¢ (a)Spiritual wellness (b) Fitness (c) Environmental wellness (d) Cultural wellness
+
+) smokin 22. Person's belief in his or her own ability to accomplish a specific task or behavior is (a) Self efficacy (b)
+i Internal locus of control (c) self-confidence and determination (d) external locus of control
+
+)Physicé 23. One of the factors that does not foster spiritual wellness. (a) meditation (b) prayer (c) emotional
+
+connection (d) Inspirational books
+
+|
+bservat ee ae
+Ylhich of is a physiological dependence ona substance that in its absence, involves pronounced distress,
+a) Erot known as a withdrawal or abstinence syndrome. (a) Patients (b) Addiction (c) Drug (d) Stress
+sayiasl 25.______s Wellness is centered on learning and keeping the mind engaged in stimulating activities. :
+
+a) Phy (a) Intellectual (b) Social (c) Emotional (d) Occupational
+c).Phy; 26. People who live with depressive condition called dysthymia
+mer (a) Are mildly depressed for years (b) Are seriously depressed for years . |
+
+Which)
+(a) ‘Ha (c) Are clinically depressed (d) Are chronically depressed °
+(b) re 727. People with bipolar disorder
+rc vi ; (a) Change back and forth between periods of depression and mania
+(a) R (b) Experience episodes of clinical depression
+{c) Suffer depression occasionally |
+
+5 vo (d)Experience bipolar behavioral characteristics that can only be explained clinically
+f | 28. Which of the following psychotherapy helps change negative thinking and behavior pattern
+
+| —- (a) Cognitive behavioral therapy (b) Interpersonal behavioral therapy pt et
+
+B (c)Psychotherapy behavioral procedure (d) Therapeutic behavioral procedure
+
+4 29. A person’s view of attitude about his or her role in wellness and illness is called (a) Personal perception
+3 (b) Locus of control (c) self-control (d) self-efficacy
+
+30. which of the following statement is not true about stress
+(a) stress is a product of everyday life regardless of individual contributions to the events that surround
+
+the situation
+
+C (b) Change in sleep pattern could cause stress
+( (c) It is not necessarily events that cause stress, but how we react to the events
+1! (d) stress is part of everyday life directly or indirectly
+AN
+5. gil
+7
+i6
+
+
+(d) Diseases may be brought on by wrong habits
+18. An example of infectious diseases
+(a) cancer (b) diabetes (c) heart disease(d)common cold
+
+a 19. is a functional abnormality or disturbance
+& (a) Disease (b)Disorder (c) stroke (d) schizophrenia
+\f 20. Existence of any form of disease or degree that health condition affects the patient is known as
+(a) schizophrenia (b) Comorbidity (c) ilness (c)Morbidity
+
+21. The differchices in mortality and morbidity help to relate the impact of wellness on
+
+(a)environment (b) culture (c (c) Diseases (d) fitness
+22. An internal locus of control and a strong sense of self —efficacy are powerful tools in promoting
+
+(a) Spiritual wellness (b (b) Emotional wellness (c) Intellectual wellness (d) physical wellness
+
+23. is a powerful emotional tools that has consistency been found to increase the risk of heart attack
+(a) smoking (b) anxiety (c) Anger (d) Nagging :
+24. is an investment in positive lifestyle habit ‘
+(a)Physical wellness (b) Emotional wellness (c) fitness (d) Health education
+
+25. Observation of the laws of health leads to (a)Long life (b) Death (c) wellness (d) fitness
+26. Which of the following is not a type of Jove ina relationship
+
+(a) Erotic love b) Luvic love (c) Storgic love d) Manic love
+27..Sweaty hands, increased in heart rate and change in eating pattern are.” ~.-
+_. falePhysielogical. symptom of stress (b) Psychophysiological symptom of stress
+
+RL (e), Physicakani physiological symptom of stress —_ (d)Cognitive symptom of stress-
+
+_ 28.\Which of the following statement is not true about the effect of stress in college
+
+~~ (a) Having: difficulty retrieving key words and concepts when answering essay questions
+ey reading and understanding the questions on the exam paper with little or no difficulty .
+
+I A. (c}) Mentai Blocking: Going biank on questions
+F jf (d) Remembering the correct answers, as soon as the exam is over
+a 29 ABC technique to prioritize to do list-for college student is defined as
+i ’(a) Upper, middle and lowest priority ‘ (b) First, second and third priority
+(c) Highest, medium and lowest priority (d) First thing first priority
+30.:Which of the following is not in the acronym of stress ian
+) Time taken (b), Examination preparation (c) Self-talk (d) Seek support
+is is defined as when one’s values and belief are aligned with ones actions.
+_ {a)Spiritual, wellness (b) Fitness (c) Environmental wellness.(c) Cultural wellness
+32} ‘Spiritual component provides _ & in life and énables you to grow, learn & meet new
+> challenges. . (a) prayer and meditation (b)emotion and valteé}meaning and direction (d) love and charity
+
+33. One of the factors that: does not foster spiritual wellness.
+(a). meditation (b) prayer (c) Exercisé: (d) Inspirational books
+34. Which of the follawing i is nota social: ‘support system
+{a)Patients (b)friends © (c) cousins (d) course mate
+35.)One of the factors that does not foster occupational wellness ’
+(a)Give more time to your work ‘(b): Updating resume _{e. Making | friends, (d) Taking break
+36. People who live. with depressive condition called dysthymia
+
+(a) Are seriously depressed for years '(b) Are mildly depressed for years
+ait |
+
+ze) Castine” 1997). The analysis orm Te
+
+| tas at ey
+1970; Shaw
+
+hnology
+nd_U
+
+of metal (bron
+
+archaeologica
+niversity of Ibadan |
+
+an elaborate tec
+
+ack ana torth ‘between Meriods of depression and mania
+perience episodes of clinical depression
+(c) Suffer depression occasionally ;
+so (d)Experience bipolar behavioral characteristics that can only be explained clinically y
+ak 3 Which of-the following psychotherapy helps change negative thinking and behavior pattern
+“=(a) Interpersonal behavioral therapy (p) Cognitive behavioral therapy
+
+(c)Psychotherapy behavioral procedure (d)Therapeutic behavioral procedure
+39. An individual could be a victim of stress ‘if ,
+
+(a) task demand is equivalent to, the | personal and social resources at hand
+
+(b) task demand and capacity to ope withthe task is efficient
+
+Ac) task demand exceed the'persénal’and social resources the individual is able to mobilize.
+
+(d) task demand is parallel to the task ye to be defined
+40}which of the following statement is not true about stress ~
+
+fa) stress is is.a product of everyday life regardless of individual contributions to the events that surround
+the situ lation a <
+
+~
+
+‘(o) Iiss not necessarily events that calise stress, but how’we react to the events
+- (d) shana in 1 sleep Patterns could cause stress
+
+AW
+
+: sala: marijuana (b) depressants (c) stimulants Ad). hallucinogens
+42. which of ihe. following does not determine drug effects.
+(a) the method: of. administration (b) purity of drug (c (Qarug distillation (d) the degree of habituation
+43. abit of the following is not in the stages of drug abuse: .
+’ (o}Experimenta
+
+‘drilgs Keavily. )
+{b) those who pnenas i more time erage alate than el
+
+he sana of others
+pare wget: and: desparate
+
+sers can easily adapt to's any Fan of drug’ in its ts first jiministration
+id): drugs have common gateway to the system of the drug users
+-which of: the following problems begin with the mind
+
+(a) physiological illness ~(b) mental illness —_(c) physical illness (d) social illness.
+which ¢ of the following diseases i is described by the opacity of the lens : \e
+) Jens detraction (b) migraines (c)’myopia (d) cataracts :
+
+d by deficiency a oo
+~ (d) allergies
+
+which: of the following non- -communicable disease:is not as
+: 4a) anemia (b) pellagra {c) scurvy ~
+
+4
+
+
+Qu
+
+Qu
+
+BAR | (ABUAD)
+
+KM, 8.5, AFE BABALOLA WAY,
+ADO-EKIT!, EKITI STATE, NIGERIA.
+P.M.B $454 ADO-EKITL
+
+GENERAL STUDIES UNIT
+
+FIRST SEMESTER EXAMINATIONS 2019/2020 ACADEMIC SESSION
+COURSE TITLE: COMMUNICATION IN ENGLISH I
+
+COURSE CODE: GST 111 TIME ALLOWED: 2HRS
+GENERAL INSTRUCTION: Answer all questions in the Examination Booklet
+
+SECTION A
+
+Comprehension Passage
+Instruction: Read the following passage and answer the questions on it.
+
+Africa had been integrated into international cinema circuits since the beginning of cinema—
+there were film screenings in Lagos in 1903 (Ekwuazi, 1991). But Africa was integrated on the
+worse possible terms. Cinema was a one-way street: Africans watched films but could not make
+them for lack of capital to fund productions and because of the complex and expensive training,
+infrastructure, and technical apparatus celluloid cinema requires. The films that were imported
+were chosen to appeal to the colonial elite or because they were the cheaper thing that could be
+“dumped on the market. They were often racists and often estranged from African realities| As
+_ Brian Larkin puts it, “until recently, in African postcolonies like Nigeria, a trip to the cinema has
+always been translocal, a stepping outside Africa to places elsewhere” (2008, 124). Onookome
+Okome relates that when he was growing up in Sapele, in Niger Delta, the Pidgin phrase “na
+cinema be dat” (“that’s cinema”) meant that something was unreal, impossible. Nevertheless,
+Africans were and are avid filmgoers. Cinemas were one of the prime attractions of urban
+modernity. Hollywood movies sank deep into the popular imagination. Africans were subjected
+to a second kind of film, besides the commercial imports: the instructional and propaganda films
+created for African audiences by the British, French and Belgian colonial film units, which were
+taken by mobile cinema vans into villages and neighborhood that had no other experience of
+movies. Usually these films were unbearably condescending, but they left an important legacy:
+postcolonial African: governments and many filmmakers continue to conceive of cinema (and
+television) as a tool for modernizing and shaping society (Larkin 2008, chapter 3; Garritano
+
+2013, Chapter 1).
+
+The scholarships on African cinema, the contrast between French and British mode of support
+for cinema in the colonial and postcolonial epochs is a familiar theme (Martin 1982; Diawara
+1992; Ukadike 1994; Shaka 2004). The French restricted African film production during the
+colonial era but afterwards vigorously provided financing, technicians and noncommercial
+distribution channels, resulting in a strong if small corpus of feature films but very little film
+
+
+qtiat© vé
+; acid if
+is eq!
+cept ¢
+4.0”
+
+are We ‘
+gate i
+of =
+jour of
+gues fc
+\ev ay
+
+33 @)
+pus
+
+el¢
+
+é,
+
+ey)
+
+Ss
+
+Be RICA
+
+ge S Rew 5
+
+: ; ican filmmakers in q;. Bos
+
+the ground i Africa. The es E i ve ae ESR |
+
+making infrestuctl™ a rencb, but SH) ‘jominated by Europe) haveneegh 4 Sos ¢
+
+i 3 tats oc a
+
+no longet overwhelming Mg necessary t0 make films but also the sophistication a 2 é ve:
+
+technical and aesthetic education oa They are perforce members of the intellean s Sard: €
+j 1 5 . aj So
+
+this complicated international syst® are burdened with the full set of responsibijiy ® = SS. s KS
+
+conscious of managing 4 scarce resour Say et
+
+African intellectuals carry. § ee \ RS
+
+Africa because film distribution in African fay «: 2
+
+o
+
+by Africans in
+foreign compan
+which are far ¢
+the distribution circuits,
+stained manner and so
+ous films. It has alw
+
+s that make money by importing third — yyy \
+heaper than African films that need to recoup their
+African cinema has never been able to
+had failed to become 4 real industry that
+ays been clear that a celluloid film
+
+frica without substantial government support which has
+
+Their films are seldom seen
+always been dominated by
+
+Hollywood or Chinese movies,
+production costs. Shut out of
+reach African populations in a su
+makes films from the profits of previ
+industry would be nearly impossible in A
+never materialized.
+
+ie
+
+ture in Africa, including the
+h did little or nothing
+e Nigerian Film
+
+d create a film making infrastruc
+from the 1950s on the Britis
+igerian government founded th
+bout strengthening, defending, and propagating
+h, effectively left feature filmmaking to
+
+The British Colonial Films Units di
+training of a cadre of African technicians, but
+to encourage feature film production. The N
+Corporation amidst cultural nationalist rhetoric a
+African values and the national image but, like the Britis
+the commercial sector (Ekwuazi 1991).
+
+(Excerpted from Jonathan Haynes’ Nollywood: the Creation of Nigerian Film Genres)
+
+QUESTIONS
+
+a. Mention any two important traits of films imported to Africa by the colonialists
+b. Beyond the economic gains, what two other factors we i
+, re responsible for th
+films that the colonialists exposed Africans to? ee
+c. What is the difference between French and British mode of support for African cinema?
+d. What was the major fault of the Nigerian government, in spite of their creati nae
+Nigerian film corporation? sation obi
+
+€. .... that were imported...
+ty What grammatical name is the above as used in the passage?
+
+je What is its grammatical function?
+
+£ Write a word or a phrase that means the same and can replace each of the followi
+used in the passage: i. Integrated ii. Avid il Condescending iv. Vigorously v Mineo as
+é : om vi. cadre —
+
+
+1, What reading method involves identifyi ‘
+/ Poor retention is an indication of . NB Certain items in a :
+3, SQ3R stands for.. 41.4 Ser Se Yeates eee heli
+A. What listening method involves a focus is on ig
+noticing these parts, listeners constru ir | main parts
+the text through inferring? oeiher Understanding of te Te tiscourse and b
+5. Mention any two guidelines to speaking, webs Agro, mB of Whole of
+6. Psychological problem and ear defects are dod .
+effective. .000) examples of factors affectin
+7. Identi i :
+a om the various voiced and voiceless sounds in the following pairs:
+b. g, k ;
+c.6,5 |
+d. b, p
+8, Identify the underlined sounds in the following words
+a. Puzzle > ©
+b. rise
+c. luggage 9
+d. . gigantic +z
+
+9, “Identify the underlined vowels in the following words
+a. bee
+b. sugar
+
+SECTION C
+Instruction: Carefully read the following questions and provide appropriate answers.
+
+J. Identify and mention the type of conjunction used in this sentence: Sade and
+Sophia are coincidentally in the same department.
+
+.. The male lecturers that unjustly failed the female student have been issued a query. What
+type of clause is the underlined expression and what is its function?
+
+3. Break the following sentence into main and subordinate clauses: Abimifoluwa rounded
+off the tour with a concert at Glover Memorial Hall even though he initially rejected the
+arrangement. : |
+
+~4. Write out the pronoun used in the following sentence and state its type: The
+Generals greeted one another at the state function.
+
+5. Identify the Primary auxiliary verb in the following sentence: Ogaga and Ibifrii
+are requesting permission to film at the White Rock.
+
+6. Identify the adjective in the following sentence and indicate whether it is used
+attributively or predicatively: The newly commissioned road that links the two states is
+
+the best in South-West.
+
+
+7. Identi i
+a and mention the type of adverb in the following sentence: The Registrar
+| : - sign the cheque whenever he brings it.
+| . He decided to see the man in black uniform. Give the grammatical name of the
+underlined expression.
+9. Identify the type of noun underlined in this sentence: J don’t need salt again.
+10. What is the plural form of phenomenon?
+
+Study the statements below and make appropriate corrections
+
+11. If I knew the answer, I will tell you.
+
+12. Rice and stew are good for breakfast.
+
+13. ABUAD, in conjunction with EKSU, are organising a one-week seminar for us.
+14, The Governor and Visitor to the university were at the event last week.
+
+15. A number of students has already apply for the scholarship.
+
+16. Neither the servants nor their master were attentive.
+
+17. Whether he comes late do not matter.
+
+SECTION D
+
+State the tense used in each of the following sentences:
+
+1. The hunter has suspended his. hunting.
+
+2. In the middle of the night, my baby always cried.
+
+3. The maids will have been decorating the palace by 1. pm on Saturday.
+4. My parents will arrive ABUAD on Tuesday.
+
+5. Janet and James were attending the meeting.
+
+6. We had been sitting’in the hall before the lecturer came in.
+
+SECTION E (Literature)
+
+_ What narrative technique is employed in Once Upon a Jambite? .
+1 of how many chapters?
+
+1
+
+2. Once Upon a Jambite is a nove
+
+3. What is the central theme of Once Upon a Jambite?
+
+4. Who is the character that Pato sees as his greatest riva
+Khena? .
+
+5. What is the plot structure of Once Upon a Jambite?
+
+6. Who first broke the news of Patrick’s admission to him?
+
+f Patrick’s elder sister?
+
+| regarding his relationship with
+
+7, What is the name 0 é | i ol
+g. What is the age gap between Patrick and his sister?
+9. When was Once Upon a Jambite published? -
+
+10. Who raped Khena?
+
+
+AFE BABALOLA UNIVERSITY, ADO EKITI
+
+is GENERAL STUDIES UNIT
+IRST SEMESTER EXAMINATION 2019/2020 SESSION
+AFE 103 (LEADERSHIP)
+1 UNIT
+
+Name:
+
+Matric Number:
+
+Department:
+_ Signature:
+
+Instruction: Answer ALL Questions in the spaces provided Time Allowed: 1:30mins.
+
+1. What is leadership? igh te gpg gf ee
+
+nn aoe
+2. List three principles of leadership you know:
+3. A type of leadership based on et individual’s personality is known 4s
+4. List two qualities of a good leader: | | and
+5. Leadership comes with :
+
+_ first.
+
+6. Aservant-leader isa
+7. A charismatic leader gains influence mainly from :
+ht is
+
+8. The system of segregation prevalent in South Africa that Nelson Mandela foug'
+?
+
+" known as
+9, List two sources of leadership power
+
+10. Great leaders start off as great
+11. According to Mullins, L.J. (1985), there are six types of leaders. List 2 —
+
+12. Mention TWO charismatic leaders you know:
+
+and Tee
+
+—_—_——-
+
+13. What qualities/attributes does Aare Afe Babalola possess that makes him an
+outstanding leader? : an
+of United Kingdom
+
+14. Margaret Thatcher was the
+15. Name two traditional leaders in Nigeria, with their titles
+
+and
+16. Who is an appointed leader? ( pe ee
+ame popular during the i
+
+17, The Great Man leadership theory bec
+Man theory?
+
+e on the Great ons ee
+
+18. Which historian made a major influenc
+19, The trait approach to personality is focused on __
+
+20. propounded the trait theory in the year
+21. The behavioural theories of leadership are based upon the belief that great leaders are
+and not
+
+—_—_—_——
+
+[ee
+
+- 42. Leadership and followership are
+types of followers. Mention TWO
+
+. ‘ - deal leadership style is one that take “
+srt teh eres pes ite eg : oot
+3 the theory suggests more appropriate styles of haul om
+23% - : Co
+
+jeadership for certain types of decision making. de- ess
+
+i i also known as _——————rm of rewards e
+ee Transactional theories are als So ce bane ‘cadership on @ system of rewards and an “oe
+26 ae alae which theory of leadership was described by the ao!
+Co —
+
+Sociologist Max Weber, and further explored by Bernard M. Bass. “od cso
+27. The components of transformational leadership include ___—=-_~-_-___———— : ave
+, | “oe
+
+ee
+
+“g speaker’s character is the ee ae
+
+28. According to Aristotle,
+
+their ideas to their audience.
+
+30. Speakers should expertly
+31. List the three parts of a presentation, = °
+
+and
+
+32. What must be maintained with the audience during a presentation
+33. The rate of speech to use in a presentation should be and
+
+hb ee is a reflection of personal qualities
+35. According to , the “speaker’s character is the most potent
+of all the means of persuasion.” let on
+
+36. List TWO of the three types of counselling: =
+
+en ee ee eee
+37. Z is designed to maximise followers’
+strength and minimize weaknesses.
+
+38. Leaders conduct
+
+situation.
+39. Organising teams, hiring new followers, training new followers are all part of
+
+Sn
+is the process used by leaders to review the
+
+ential.
+
+i lel al et eit
+followers’ demonstrated performance and pot .
+dership is to produce more
+
+4]. According to Ralph Nader, the function of lea
+and not more
+
+to cover a specific event or
+
+40.
+
+, not positions
+
+43. In Kellerman’s Typology, there are five
+and
+
+_
+AA. Who is a Passive follower?
+
+List two ways a follower can influence a leader: |
+the leader
+
+45.
+
+see when they ~ jlook at
+
+46. Mention one quality followers
+
+oe
+
+47, Beyond “leadership,” followers also seek
+® 2 948 . sng creccene
+48. Coaching involves many activities, list TWO ;
+a: eee
+and
+
+50. Mention TWO types of Non-verbal communication ,
+i ee Tk aie glee, Sle
+| SECTION B (10 Marks. This section is to be answered inside this question paper)
+
+Using the lessons learnt during your group presentations as a guide, out
+
+line possible benefits
+and pitfalls of working as a team leader and/or as a member of a team to achieve set goals.
+
+BAER UAD)
+
+RM. ran roa BABALOLA WAY,
+ITl, EKITI STAC NIGERIA,
+PMB B erry) ADO-EK. A
+
+GENERAL STUDIES UNIT
+FIRST SEMESTER EXAMINATIONS 2018/2019 ACADEMIC SESSION
+COURSE TITLE: COMMUNICATION IN ENGLISH I
+COURSE CODE: GST 111 TIME ALLOWED: 2HRS
+GENERAL INSTRUCTION: Answer all questions in the Examination Booklet
+
+SECTION A
+
+Comprehension Passage
+Instruction: Read the following passage and answer the questions on it.
+
+“Love” is a word that is on the lips of many people in our world today but,
+unfortunately, not in their hearts. It is the theme of the lyrics of most hip-hop, reggae, raga,
+pop-funk, blues, secular, spiritual, local, and even international music, to mention but a few.
+It is the major or sole preoccupation of most creative works and critical essays of authors like
+poets, novelists, and playwrights. Sculptors and other artists also display love with their
+crafts. But ironically, most people have little or no correct or complete idea of what the word
+actually means. It is thus worthwhile to consider most people’s concepts of love.
+
+Consider a strikingly handsome rich young man who met a breath-taking beautiful
+woman for the first time. The man got fascinated by her beauty, wealth and intellect. The
+lady too was swept off her feet by the man’s handsomeness, achievements caréer-wise, his
+wealth and general charisma. That same day, when they had hardly known each other, they
+professed their love for each other. In the next forty hours, they had chatted on the telephone
+several minutes running into several hours on several occasions. On the fourth day, they
+ended up in bed for a session rounds of rumpy pumpy. But they did not know that the love
+they felt for each other was the type they called infatuation based on sheer physical attraction
+
+and sex appeal.
+
+Love could also be platonic. This usually does not begin as love at first sight. The
+people concemed are brought together by circumstances of work or any other common
+interest in normal living. The longer they stay together, the more they discover more things
+that make them fonder of each other. They are urged on by the fact that their relationship is
+mutually beneficial. But neither of them harbours any thought of sleeping with the other.
+
+This world order is generally believed to have been created by a Supreme Being .
+known as God. God, we are taught, loves all men so amazingly that He does good to all, the
+grateful and the ungrateful alike. He loves even the most unlovable and does not withhold His ©
+
+
+a.
+
+care from the unworthy. ial and unconditional love 7s in ae agape,
+the kind of love that God demands exercise 10 all, friends and foes alike.
+
+Our youths need to be well taught about all kinds of love so that they may know the
+appropriate way to show love, (and) the approptiate kind of love.... Many youths have
+inadvertently transmitted wrong messages that landed them: 1 big troubles. Many ladies have
+thrown their pearls to the swine that trampled the precious jewels because they were amateurs
+or even complete novices in matters of love. And this must be avoided at all cost.
+
+aised and dumped by
+
+This gelf-sacrific
+that we
+
+their consent to be
+
+Many youths have also unwittingly given.
+smart people who had been consumed by infatuation put not genuine love. But a youth who
+5h can identify and: interpret the tell-tale signs of infatuation and differentiate it from the
+sES oe te ahaa of true love would take well informed caution. So, it is advisable to teach the .
+Nps: , ¥ 1 principles of love in order to avoid being exploited by insincere but. merely
+Pr NS infatuated wolves who feign love.
+Embezzl i
+yw > ace dinteoyinad aati of public funds, rape, armed robbery, ritual killing and other vices that
+yensi® positive chang deo pices liters of love for others. One may not expect much
+ee Sees thet eu ugh the activities of governmental and non-governmental organisations
+ic fbi = fe pobre can be likened to cutting an unwanted tree from the branches
+v essfully ing our i. , ;
+a? : people about love would uproot i i
+; — minds and thus help us attain peace. : oameuanieets from their hearts and
+se PO QUESTIONS
+exo 10% \ Wh
+a. ‘Who are the three maj “et
+ssa dees e major categories of artists that proclain 7
+ee : List an various types of love that are described inl through their arts?
+| priat a, g true love? preventing people from
+ain? . oe ept off her feet
+oxe ie What figure of speech is the above?
+cit ii, What does it mean?
+is e. What, according to the passage, i
+: ge, 18 the most effecti ‘
+‘ f mene ee to our society? ective way to eradicate social vices and
+1. what grammatical name is the rahi but no — love.
+ii, What is its grammatical function? mer tipedl ts the passage?
+g a a word or group of words that mean the same
+plowing as used in the passage: : ieanieaily aa a can replace each of the
+Rumpy pumpy v. Supreme vi. Unwittingly ; ogly iii. Charisma iv
+SECTION B
+
+‘1. What method is normal! |
+ins y employed for studyi de, as
+critical analysis and interpretation? ying for examination and reading for
+
+e is ag0°
+
+ending d
+on the phon
+
+tands for..+++*"*
+
+>.
+
+La
+culty in compre
+
+/
+Listening
+
+‘4
+
+
+ART
+
+EYN
+
+om
+nt
+
+sty in comprehending details is an ;
+ACU. $18 ‘ants
+om stands for indication of
+
+etd oelre satya Gere Gaees P e ed
+
+y5Q
+jistening on the phone is a good example of
+5, What are the three basic steps to listenine?
+6, Distraction 1s a factor that affects
+7, Mention any two guidelines to speaking.
+; tre A ms three systems of speech organs are.........:
+. Identify the diphthong sound in this word: choice. :
+
+10. In which of the followin i
+
+g words is /t/ sound realised: sach
+
+| — i et, stopped, b 2
+| ' , aig is silent in which of the following words: quick, sword, one overt? vee
+Transcribe the sound underlined in the word occasion.
+
+o Which type of bound morpheme is underlined in the word ‘education?’
+. Arrange the Grammatical Rank Scale in an ascending order.
+
+SECTION C
+
+Instruction: Carefully read the following questions and provide appropriate answers.
+1. The tall lady is the wife of Lagos State Governor. Give the grammatical name’and
+function of the underlined expression.
+2. Break the following sentence into main and subordinate clauses: Before you eat the
+food, wash your hands. ;
+3. The man that stole the wallet has confessed. What type of clause is the underlined
+| expression and what is its function? :
+| 4. Identify the adjective in the following sentence and indicate whether it is used
+attributively or predicatively: That nosy lady has now been arrested.
+_ 5, Write out the pronoun used in the following sentence and state its type: The
+lady slapped me without hesitation.
+6. Identify the Primary auxiliary verb in the following sentence: Angel is
+considering the implications of her action.
+7, Identify and mention the type of adverb in the following sentence: The
+Registrar will sign the cheque whenever he brings it.
+8. Identify and mention the type of conjunction used in this sentence: Either
+Anointing or Je’Kens signed the approval.
+9, Identify the type of noun underlined in this sentence: The police are your
+
+friend.
+
+Study the statements below and make appropriate corrections i
+te is the Helen that makes my head t 69 * war, eventhough I meet her JUS 2S
+
+month.
+11. [like your house. How long are you living there?
+12, ‘Do you still smoke?’ ‘No, I gave it up. 1 don’t smoke for years.’
+
+3
+
+
+is fy Aw
+ant
+43; That! iS AVERY. ald bicycle. How: wiingd a6 you have it?
+iM. The number of applicants } have increased considerably.
+~4ASs “One of the boys that was caught smoking Indian hemp have been expelled.
+
+16. Either her brothers 0 or her nephew are sick.
+
+| SECTION D
+
+“— ange the following from direct to indirect speech or vice versa
+
+ro
+\
+
+se Vice-Chancellor ordered all lecturers to see him then.
+
+3. Tope asked Ebunoluwa if she had seen her stolen wrist watch.
+
+a Angel and Bob-Manuel insisted that they m must come to school the following month.
+
+5, Farida said, "I saw River Niger last year."
+
+ECTION E. (Literature)
+
+Who defined drama as Gmitated human action’?
+
+I
+3,’ Who is Dionysus?
+
+3: Drama is realized primarily through......ss '
+4
+
+5
+
+: ‘Mention any two elements of drama.
+is the central meaning/dominating idea or message in a literary
+
+“work.
+6. ‘What are the two supernatural forces responsible for Iyase’s tragic end in Ahmed
+
+“" Xeeima’s Iyase?
+
+1 What year was Lyase first published? | ron
+“shat fole does Baba play in Iyase?
+
+9. “Who fathered Iyase?
+
+10. ‘Mention two central themes in Iyase.
+
+11, What constitutes Tyase’s hu bris?
+
+12. Iyase is situated in which culture?
+
+13. Who is otherwise regarded as Onire in Iyase?
+
+14, Mention any major dramatic technique employed in Tyase.
+
+15, Who is Osaretin in Iyase?
+
+
+ST Te
+
+century CE (Shaw and, University ©
+
+Ses heen
+GENERAL STUDIES UNIT
+Satie Ke ADI EXAMINATION
+
+18 ACADEMIC SESSION
+
+oman TITLE: Communication in English I
+OURSE CODE: GST 111
+paler ALLOWED: 2HRS
+NERAL INSTRUCTION: Answer all questions in the Examination Booklet
+
+Section A
+Comprehension Passage
+Instruction: Carefully read the passage below and answer the questions set on it.
+
+‘The historiography of precolonial Igbo society, that is, of Igboland before ca.
+1990,' relies on a variety of sources and methodologies: linguistic and archaeological
+research, oral narratives and the products of their transformation into written accounts
+during the twentieth century, ethnographic and social anthropological studies (on political
+and kinship institutions, performances, and the arts), and’a very limited number of written
+accounts by European visitors since the mid-nineteenth century.
+
+Historical linguistics provides the earliest \evel of historical analysis. The Igbo
+language belongs to the Kwa subfamily of the larger Niger-Congo language family;
+glottochronology points to a point in time about 6,000 years ago when Igbo separated
+from proto-Kwa, assumed to be spoken in the Niger-Benue confluence area. Igbo has
+numerous dialectics. Variations in spelling grammar, or word use are common even
+among neighbouring villages, creating 4 continuum of dialectical variation in Igboland
+that restricts mutual intelligibility among speakers of distant dialects. The Igbo literary
+standard developed since the late colonial period... became only partially successful as a
+written vernacular; the Igbo educated elite continues to prefer English to written Igbo as
+means of communication even among itself, within the large number of dialectics— Pat
+Ndukwe (1992: 664) mentions estimates from 100 to 300, thereby indicating the
+uncertainty of classification 4 smaller number of major Igbo linguistics about them.”
+The linguistic evidence, over all, points at diversity in [gboland.
+
+Archaeology has provided information about the history © settlements technology
+and_trade. Neolithic farming communities settled in [gboland at least from 1000 BCE
+onward (Chikwendu 1992: 72-74). Early concentrations of populations, with developed
+ceramic production, have been indentified around Nsukka and Afikpo, but due to the
+sketchy evidence it remains unclear whether these were isolated centers OF examples of a
+more general expansion of neolithic culture (Chikwendu 1992: 87-90). The famous
+archaeological finds at |gbo-Ukwu (Anambra State) showed that there was a society with
+
+an elaborate technology of metal (bronze) casting in the Anambra area by the tenth
+f Ibadan 1970; Shaw 1997). The analysis of the origi"
+
+
+standing long-a hi.
+ta
+
+d long-
+ther finds showe
+f beads and me ; used in these @ Oo mitie areas further UP the River Ni \
+trade connection etween | com 4 Sl 997). Bo archaeological and ™~
+— G eyon (Insoll an rthen Igboland th WS
+extending a for connections etween no gboland and the
+historical research provic’ a enc peciall ov several hundred years (Oghuagha -
+pee if 4 sor gent 1 2-59). e earli t rem s of iron-s naelting: siles \.
+Oo ’ . i } .
+— heen dated to abou 0 CE probabl directly co” ted to SE of local
+w as
+blacksmithing that are strons n northern Igbo communitles such as es ris ies
+(Excerpted from | Harneit-Sieve s’ Constructions of be onging: Igbo
+Communities and the Nigerian State in the T wentieth Century)
+1, What restricts mutual intelligibility among speakers of distant dialects in Igboland?
+historiography of precolonial |gboland.
+Benue confluence area?
+
+2, Mention two sources of the
+3, What language tyPe is assumed to be in use in the Niger
+the Igbo literary standard partially successful as @
+
+4. Why was
+5, ...the history of settlements. technology and trade.
+matical name of the underlined expression, as used in the passage?
+
+written vernacular?
+
+i). What is the gram
++, What is its function?
+6. Find another word or a phrase that can replace each of the following words as used
+in the passage:
+(iii) intelligibility (iv) sketchy (v) famous
+
+i) Earliest (ii) Variations
+(vi) remains
+
+Section B
+I. What does SQ3R stand for?
+
+2. What is skimming?
+
+3. Difficulty in interpreting the main idea of a text is regarded as one of the
+
+problems.
+
+ee he
+
+4. What reading type requires a detailed reading of a text?
+
+5, Reading | )
+ing is one OF the -...--rererrerm skills through which knowledge is acquired.
+
+6. Mention two examples of non-face-to-face listening
+
+7. What does it mean for a listener to listen with his/her eyes?
+
+8. Mention two types of listening.
+d speaking which is not prone to scrutiny?
+
+9, Between listening an
+
+10. Mention two factors affecting Effective Listening
+
+
+(a) Africans
+
+(b) Educationists
+(c) Multicultural
+(d) Famished
+
+(e) Hung
+
+Identify the
+post- i in thi
+modifier in this structure: The woman behi
+Wowie tery | ehind the wheel
+: ms .
+! pre-modifier in this structure: The tall light-skinned lad
+- ed lady.
+
+. They call hi
+im a loot .
+underlined a footer. What is the grammatical name and functi
+part in the sentence given above? silon oF ths
+
+17. Eating heav i
+meal in the morning i i
+s not advisable. What is the grammati
+of the underlined part in the sentence above? ° ee
+
+18. What are the sentence types according to structure?
+
+19. If approved by the board, purchase all the equipment. The underlined part in the
+sentence given is a good example OE severe cane dees clause.
+
+20. The robbers who killed Mr President have been apprehended. What is the
+
+grammatical name of the underlined expression in the sentence given?
+
+21. Kindness is a good example Of seer noun,
+
+is a good example Of... noun,
+
+22, Committee
+derlined in the word ‘lecturers?’
+
+23. Which type of bound morpheme is un
+24, Break ‘sleeping’ into free and bound morpheme
+25. Arrange the Grammatical Rank Scale in a descen
+
+26 pistinguish between 4 clause and a phrase.
+
+ding order.
+
+Identify the tense used in questions 27 and 28
+is spherical
+
+27. The earth
+e not later tha
+
+e in the hous n 1Opm today:
+
+28. | shall b
+
+
+or
+
+«ws
+ad
+~-
+4
+é
+
+State the aspect being signified in questions 29-31
+29, Father had died before Uncle Tunde arrived.
+30. The Founder will be coming back to school next week.
+31. Amaka has taken the whole money in my wallet.
+
+s 32- 36)
+
+Rewrite the following sentences appropriately (question
+
+32. Neither his mates nor Chime are qualified for the scholarship.
+33. The members of committee, together with the Chairman, was praised for a job
+
+well done.
+34. Corruption is one of the problems whi
+
+developed.
+35. The number that fail public exams keeps mounting.
+
+36. The police has arrested Buhari for raping his wife.
+
+ch has to be tackled if we are to be
+
+Section D
+din the production of sounds/b/ and /m/?
+
+37, Which organs of speech are involve
+have in the English sound system?
+
+38. How many diphthong sounds do we
+39. Identify the diphthong sounds in Late and Blow.
+
+40. In which of junior, forge and unity is the sound /j/ pronounced?
+
+41. In which of the following words— Tight, But, that, then— is the soun
+42. Give the consonant sound underlined in the word Chair.
+
+43. /b/ is realised in which of the following words- dumb, tomb and barb?
+44, Identify the word with the sound /a/ among Blood, Journey and egg.
+
+Section E
+
+d /t/ silent?
+
+45. Who said “Poetry is the record of the best and happiest moments of the best and
+
+_ happiest minds”?
+46.
+
+is a simple narrative kind of poem made up of short
+
+prises four lines — quartet.
+
+7
+stanzas, each of which com
+the death of a particular person is called
+
+47. A poem that primarily sets out to mourn
+
+48. Who wrote the poem “Stanley Meets Mutesa’”?
+
+49. Mention two important themes of the poem “Stanley Meets Mutesa”’.
+50. What figure of speech is used in the description of Henry Stanley as “the spirit that
+
+inspired” in the poem, “Stanley Meets Mutesa”?
+

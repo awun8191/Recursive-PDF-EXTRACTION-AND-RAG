@@ -101,12 +101,102 @@ class MetadataExtractor:
         
         # Common academic keywords
         self.academic_keywords = {
-            'mathematics': ['calculus', 'algebra', 'geometry', 'statistics', 'probability'],
-            'engineering': ['circuit', 'design', 'analysis', 'system', 'control'],
-            'computer_science': ['algorithm', 'programming', 'software', 'database', 'network'],
-            'physics': ['mechanics', 'thermodynamics', 'electromagnetism', 'quantum'],
-            'chemistry': ['organic', 'inorganic', 'analytical', 'physical', 'biochemistry'],
-        }
+    'mathematics': [
+        'calculus', 'differentiation', 'integration', 'differential equations',
+        'ordinary differential equations', 'partial differential equations',
+        'linear algebra', 'matrix algebra', 'vector algebra',
+        'probability', 'statistics', 'random variables', 'stochastic processes',
+        'discrete math', 'complex analysis', 'real analysis',
+        'numerical methods', 'numerical analysis', 'optimization',
+        'operations research', 'mathematical modeling',
+        'graph theory', 'set theory', 'number theory', 'topology',
+        'game theory', 'fuzzy logic'
+    ],
+
+    'electrical_engineering': [
+        'circuit theory', 'digital electronics', 'analog electronics',
+        'power systems', 'power electronics', 'signals', 'signal processing',
+        'control systems', 'linear systems', 'feedback systems',
+        'electromagnetic fields', 'high voltage engineering',
+        'renewable energy', 'solar power', 'wind energy',
+        'electric machines', 'transformers', 'motors', 'generators',
+        'embedded systems', 'microcontrollers', 'arduino', 'fpga',
+        'communication systems', 'telecommunications', 'wireless networks',
+        'antenna design', 'microwave engineering', 'vlsi', 'semiconductors',
+        'instrumentation', 'sensors', 'iot', 'smart grid'
+    ],
+
+    'mechanical_engineering': [
+        'engineering mechanics', 'statics', 'dynamics',
+        'kinematics', 'strength of materials', 'machine design',
+        'mechanical vibrations', 'tribology', 'fluid mechanics',
+        'hydraulics', 'pneumatics', 'heat transfer', 'thermodynamics',
+        'ic engines', 'turbomachinery', 'refrigeration', 'hvac',
+        'manufacturing', 'welding', 'casting', 'machining',
+        'robotics', 'automation', 'mechatronics',
+        'computer aided design', 'cad', 'cam', 'finite element analysis',
+        'nanotechnology', 'materials science', 'composites'
+    ],
+
+    'civil_engineering': [
+        'structural analysis', 'reinforced concrete', 'steel structures',
+        'geotechnical engineering', 'soil mechanics', 'foundation engineering',
+        'surveying', 'geomatics', 'hydrology', 'hydraulic engineering',
+        'water resources', 'irrigation', 'transportation engineering',
+        'highway engineering', 'railway engineering', 'airport engineering',
+        'construction management', 'project management',
+        'environmental engineering', 'sanitary engineering',
+        'urban planning', 'town planning', 'building technology',
+        'earthquake engineering'
+    ],
+
+    'chemical_engineering': [
+        'process design', 'chemical reaction engineering',
+        'heat transfer', 'mass transfer', 'momentum transfer',
+        'unit operations', 'thermodynamics', 'chemical kinetics',
+        'biochemical engineering', 'bioprocess engineering',
+        'polymer engineering', 'petroleum refining',
+        'electrochemical processes', 'catalysis',
+        'environmental engineering', 'waste treatment',
+        'nanomaterials', 'separation processes', 'distillation',
+        'adsorption', 'membrane separation', 'extraction'
+    ],
+
+    'computer_science': [
+        'algorithm', 'data structure', 'complexity analysis',
+        'programming', 'software engineering', 'database',
+        'data management', 'network', 'computer networks',
+        'operating systems', 'distributed systems',
+        'computer architecture', 'microarchitecture', 'compilers',
+        'machine learning', 'artificial intelligence', 'neural networks',
+        'deep learning', 'reinforcement learning', 'nlp', 'computer vision',
+        'cybersecurity', 'cryptography', 'information security',
+        'human-computer interaction', 'data mining', 'data science',
+        'cloud computing', 'parallel computing', 'high performance computing',
+        'web development', 'mobile computing', 'big data',
+        'blockchain', 'computer graphics', 'simulation'
+    ],
+
+    'physics': [
+        'mechanics', 'thermodynamics', 'electromagnetism', 'quantum mechanics',
+        'optics', 'nuclear physics', 'atomic physics', 'relativity',
+        'acoustics', 'plasma physics', 'condensed matter',
+        'solid state physics', 'particle physics', 'astrophysics',
+        'fluid mechanics', 'classical mechanics', 'modern physics',
+        'biophysics', 'computational physics', 'applied physics'
+    ],
+
+    'chemistry': [
+        'organic chemistry', 'inorganic chemistry', 'analytical chemistry',
+        'physical chemistry', 'biochemistry', 'polymer chemistry',
+        'electrochemistry', 'thermochemistry', 'spectroscopy',
+        'quantum chemistry', 'industrial chemistry', 'environmental chemistry',
+        'computational chemistry', 'materials chemistry',
+        'chemical kinetics', 'surface chemistry', 'photochemistry',
+        'green chemistry', 'nano chemistry'
+    ]
+}
+
     
     def extract_metadata(self, file_path: str, content: str = None, 
                         pdf_analysis: Dict = None) -> DocumentMetadata:

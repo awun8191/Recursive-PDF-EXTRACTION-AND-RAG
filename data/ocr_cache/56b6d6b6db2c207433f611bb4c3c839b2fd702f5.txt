@@ -1,0 +1,100 @@
+(1) Sublimation is used to separate volatile solids, which pass directly into vapour state on
+heating from
+
+(a) volatile solid (b) non-volatile solid (c) volatile liquid (d) non-volatile liquid
+
+(2) The technique used to separate the components of organic mixtures based on the distribution
+of a solute between two immiscible phases or solvents is called
+
+(a) solvent extraction b) fractional distillations (c) purification d) fractional crystallization
+
+(3) The distribution coefficient of I, between CCl, and H20 is 85. Calculate the concentration of
+I, remaining after extracting 50.0ml of an aqueous 1.00x10° M solution of I, with 50.0 ml CCl,
+
+(a) 1.14x 105M (b)1.16x 105M (c)5.29x10"°M = (d) 5.28x 10°M
+
+(4) A purification technique where a process of dissolution and crystallization is repeated a number of
+times is called
+
+(a) dissolution process (b) crystallization technique (c) fractional crystallization (d) fractional
+distillation
+
+(5) Decolorizing a solution during crystallization is done by simply boiling the solution with
+(a) hot solution (b) activated charcoal (c) suitable solvent (d) activated solution
+
+(6) The normal boiling point of chlorobenzene is 132°C (132+273=405K). What is the boiling
+point at a pressure of 25 mm?
+
+(a) 33°C (b) 34°C (c)36°C (d) 32°C
+
+(7) Consider the distillation of a mixture of water and bromobenzene, which is almost
+completely immiscible with water. At 95.3°C, the vapor pressure of water is 641 mm and that of
+bromobenzene is 119 mm. What is the relative mass ratio of bromobenzene to water in the
+distillate? The molecular mass of bromobenzene is 157 g/mol and that of water is 18 g/mol.
+
+(a) 1.3 (b)14 (c)15 (d) 1.6
+
+(8) The lowering of pressure on the surface of a liquid lowers its
+
+(a) boiling point (b) melting point (c) pressure (d) surface
+
+(9) The challenge that lies in isolating organic compounds from natural sources is
+(a) biological sources (b) purification (c) isolation (d) distillation
+
+(10) Solvent extraction is an equilibrium process which is governed by
+
+(a) Nernst Distribution Law (b) Trouton Rule (c) Clausitus-Clapeyron Equation (d) Trouton
+Law
+
+(11) is used for separating liquids having boiling points differing by 10-20 degrees.
+
+(a) Distillation under reduced pressure (b) fractional distillation (c) simple distillation (d)
+distillation
+
+(12) The decrease in boiling point with reduction in pressure can be predicted approximately by
+making use of two rules
+
+(a) Nernst and Trouton rule (b) Trouton rule and Clausius-Clapeyron Equation (c) Clausius-
+Clapeyron and reduced boiling rule (d) Trouton and reduced boiling rule
+
+(13) The hydrocarbon terpinene was found to distil freely steam at a temperature of 95°C when
+the atmospheric pressure was 744 mm. The vapor pressure of pure water at this temperature is
+634 mm and the distillate? Contained 55% by weight of terpinene. Calculate the molecular
+weight of terpinene.
+
+(a) 127 g/mol (b) 123 g/mol (c) 125 g/mol (d) 135 g/mol
+
+(14) The principle behind chromatographic technique is the of the various
+components of a mixture between two different phases.
+
+(a) differential fixed phases (b) differential mobile phase (c) differential absorption (d)
+differential adsorption
+
+(15) In column chromatography, the stationary phase is a solid like that is used as the
+adsorbent and the mobile phase is a liquid or the solvent.
+
+(a) alumina (A1l,0;) (b) silica gel (c) carboxylic polymethacrylate resin (d) sulphonated
+polysterene resin
+
+(16) The basis of separation in ion-exchange chromatography is rather than
+adsorption.
+
+(a) chemical exchange (b) ion-exchange (c) physical exchange (d) resin exchange
+
+(17) The basis of separation in paper chromatography is the of the various
+components between two liquid phases.
+
+(a) partition (b) adsorption (c) absoroption (d) chromatography
+
+(18) A compound returns the following analysis: C = 54.55%, H = 9.09%. What is its empirical
+formula? Assume O = 100 (54.55 + 9.09) = 36.36%.
+
+(a) C,H,O (b) C3;H-O (c) C4HsO (d) C,H-O
+
+(19) Mass Spectrometry is used to determine the
+(a) functional group (b) Molecular weight and formula (c) chromophores (d) empirical
+formula
+
+(20) The region of an infrared spectrum below 1500 cm' is termed the
+
+(a) vibrational region (b)radiational region (c) absorption region (d) fingerprint region
