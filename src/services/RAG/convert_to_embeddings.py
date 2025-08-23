@@ -262,9 +262,8 @@ def get_paddle_ocr(lang: str = "en") -> Optional[PaddleOCR]:
     if _PADDLE is None:
         # fast mode, angle_cls on, use rec+det; adjust det_db_box_thresh if needed
         _PADDLE = PaddleOCR(
-            use_angle_cls=True,
-            lang=lang,
-            show_log=False
+            use_textline_orientation=True,
+            lang=lang
         )
     return _PADDLE
 
