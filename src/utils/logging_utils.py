@@ -166,21 +166,21 @@ class RAGLogger:
         self.logger.info(f"{Colors.BRIGHT_CYAN}| {Colors.BOLD}{title}{Colors.RESET}{Colors.BRIGHT_CYAN} |{Colors.RESET}")
         self.logger.info(f"{Colors.BRIGHT_CYAN}{border}{Colors.RESET}\n")
     
-    def warning(self, message: str):
-        """Log a warning message."""
-        self.logger.warning(message)
+    def warning(self, message: str, *args, **kwargs):
+        """Log a warning message (supports printf-style formatting)."""
+        self.logger.warning(message, *args, **kwargs)
     
-    def error(self, message: str):
-        """Log an error message."""
-        self.logger.error(message)
+    def error(self, message: str, *args, **kwargs):
+        """Log an error message (supports printf-style formatting)."""
+        self.logger.error(message, *args, **kwargs)
     
-    def debug(self, message: str):
-        """Log a debug message."""
-        self.logger.debug(message)
+    def debug(self, message: str, *args, **kwargs):
+        """Log a debug message (supports printf-style formatting)."""
+        self.logger.debug(message, *args, **kwargs)
     
-    def info(self, message: str):
-        """Log an info message."""
-        self.logger.info(message)
+    def info(self, message: str, *args, **kwargs):
+        """Log an info message (supports printf-style formatting)."""
+        self.logger.info(message, *args, **kwargs)
 
 # Global logger instance
 _rag_logger = None

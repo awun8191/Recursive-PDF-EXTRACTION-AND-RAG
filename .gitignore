@@ -108,3 +108,9 @@ compressed/
 TEXTBOOKS/**/*.pdf
 TEXTBOOKS/**/*.docx
 TEXTBOOKS/**/*.sgy
+
+
+
+chroma_db_bge_m3
+data/gemini_cache
+data/exported_data
