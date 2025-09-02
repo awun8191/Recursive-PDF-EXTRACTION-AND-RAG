@@ -1,0 +1,47 @@
+{
+  "version": "simple-1",
+  "files": {
+    "/tmp/rag_one/Fuzzy Logic.pdf": {
+      "status": "in_progress",
+      "file_size": 3727413,
+      "file_mtime": 1756786877,
+      "discovered_at": "2025-09-02T04:24:30.305606+00:00",
+      "started_at": "2025-09-02T04:24:31.997613+00:00"
+    },
+    "/home/raregazetto/Documents/SCHOOL/COMPILATION/100/1/AFE  101/SUICIDE.pdf": {
+      "status": "in_progress",
+      "file_size": 266055,
+      "file_mtime": 1354289088,
+      "discovered_at": "2025-09-02T04:39:15.219153+00:00",
+      "started_at": "2025-09-02T04:39:57.869372+00:00",
+      "error": "exception: None: Max retries exceeded with url: /client/v4/accounts/c1719c3cf4696ae260e6a5f57b1f3100/ai/run/@cf/baai/bge-m3 (Caused by NewConnectionError('None: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+      "finished_at": "2025-09-02T04:39:21.371811+00:00"
+    },
+    "/home/raregazetto/Documents/SCHOOL/COMPILATION/100/1/BIO 101/BIO 103 - All notes.pdf": {
+      "status": "skipped",
+      "file_size": 762080,
+      "file_mtime": 1438352792,
+      "discovered_at": "2025-09-02T04:39:15.219957+00:00",
+      "started_at": "2025-09-02T04:39:21.372918+00:00",
+      "jsonl_name": "COMPILATION-BIO-101__df1bd686b6a59d03220e2ccd4d66843b79781abe.jsonl",
+      "jsonl_archived": true,
+      "chroma_upserted": true,
+      "chunks": 40,
+      "duplicates": 0,
+      "finished_at": "2025-09-02T04:39:56.324770+00:00",
+      "reason": "already_processed"
+    },
+    "/home/raregazetto/Documents/SCHOOL/COMPILATION/100/1/BIO 101/complexions.pdf": {
+      "status": "pending",
+      "file_size": 73342,
+      "file_mtime": 1414874674,
+      "discovered_at": "2025-09-02T04:39:56.324891+00:00"
+    },
+    "/home/raregazetto/Documents/SCHOOL/COMPILATION/100/1/GST 115/Lecture 1.pdf": {
+      "status": "pending",
+      "file_size": 22099,
+      "file_mtime": 1459554854,
+      "discovered_at": "2025-09-02T04:39:56.325047+00:00"
+    }
+  }
+}

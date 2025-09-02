@@ -1,3 +1,4 @@
+from __future__ import annotations
 import logging
 import re
 from pathlib import Path
@@ -5,7 +6,6 @@ from pathlib import Path
 
 import fitz
 
-from .. import GeminiService
 from src.data_models.ocr_data_model import OCRData
 from src.utils.Caching.cache import Cache
 

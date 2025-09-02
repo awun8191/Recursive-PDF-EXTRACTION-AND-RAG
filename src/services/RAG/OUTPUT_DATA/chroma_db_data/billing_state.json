@@ -1,0 +1,17 @@
+{
+  "model": "@cf/baai/bge-m3",
+  "price_per_m": 0.012,
+  "totals": {
+    "tokens": 15540,
+    "cost": 0.00018648000000000002,
+    "batches": 1,
+    "files": 1
+  },
+  "files": {
+    "/home/raregazetto/Documents/SCHOOL/COMPILATION/100/1/BIO 101/BIO 103 - All notes.pdf": {
+      "tokens": 15540,
+      "cost": 0.00018648000000000002,
+      "batches": 1
+    }
+  }
+}
