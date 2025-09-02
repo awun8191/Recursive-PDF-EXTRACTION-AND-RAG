@@ -18,6 +18,8 @@ class Config:
     document_source: str = os.getenv('DOCUMENT_SOURCE', '')
     test_directory: str = os.getenv('TEST_DIRECTORY', '')
     gemini_api_keys: list[str] = field(default_factory=lambda: os.getenv('GEMINI_API_KEYS', '').split(','))
+    chroma_persist_dir: str = os.getenv('CHROMA_PERSIST_DIR', 'chromadb_storage')
+    collections_json_path: str = os.getenv('COLLECTIONS_JSON_PATH', 'collections.json')
 
 
 def load_config() -> Config:

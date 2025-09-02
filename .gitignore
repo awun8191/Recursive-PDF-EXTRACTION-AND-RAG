@@ -114,3 +114,6 @@ TEXTBOOKS/**/*.sgy
 chroma_db_bge_m3
 data/gemini_cache
 data/exported_data
+
+
+src/sevices/RAG/OUTPUT_DATA

@@ -3,6 +3,7 @@ botocore==1.39.14
 chromadb==1.0.15
 firebase_admin==7.0.0
 google-generativeai==0.8.3
+google-genai>=0.3.0
 PyMuPDF==1.24.9
 openai==1.97.1
 pdf2image==1.17.0
@@ -11,7 +12,8 @@ pillow_heif==1.0.0
 protobuf==6.31.1
 pydantic==2.11.7
 pypdf==5.9.0
-pytesseract==0.3.13
+easyocr==1.7.1
+pytesseract==0.3.13  # optional; not used by default fallback
 python-dotenv==1.1.1
 Requests==2.32.4
 ollama==0.3.3

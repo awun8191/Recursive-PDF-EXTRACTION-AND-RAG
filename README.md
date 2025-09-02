@@ -2,6 +2,18 @@
 
 This repository provides an end-to-end, resumable pipeline that converts folders of PDFs into searchable embeddings with robust OCR, caching, and vector database ingestion. It emphasizes observability (logs, progress ledgers), cost tracking, and predictable metadata.
 
+## Project Structure
+- `src/services/RAG`: Core indexing pipeline (OCR, chunking, embeddings, Chroma upsert)
+- `src/services/Gemini`: Gemini API client and key management
+- `src/services/Ollama`: Ollama embeddings client for retrieval
+- `src/services/Cloudflare`: Cloudflare BGE-M3 client helpers
+- `src/services/Firestore`: Firestore utilities
+- `src/utils`: Logging, caching, data cleaning, progress utilities
+- `src/data_models`: Pydantic models for configs and structured outputs
+- `scripts/`: Helper/utility scripts (e.g., OCR debug, ingestion)
+- `data/`: Example inputs/outputs, export/cache folders (gitignored)
+- `chromadb_storage/`: Chroma persistence directory (gitignored)
+
 High-level flow (per PDF):
 - Detect whether the PDF has an extractable text layer; if not, OCR the pages.
 - OCR quality helpers: orientation detection, OpenCV preprocessing, tunable Tesseract options.

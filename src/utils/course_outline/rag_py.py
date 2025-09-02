@@ -1,4 +1,4 @@
-import google.generativeai as genai
+from google import genai
 from pypdf import PdfReader
 import re
 import os
@@ -78,9 +78,10 @@ class CourseOutlineGenerator:
             logger.error(error_msg)
             raise ValueError(error_msg)
         try:
-            genai.configure(api_key=self.api_key)
-            self.generative_model = genai.GenerativeModel("gemini-2.5-flash-preview-04-17")
-            logger.info("Google Generative AI configured successfully using gemini-2.5-flash-preview-04-17")
+            # New Google GenAI client
+            self.genai_client = genai.Client(api_key=self.api_key)
+            self.model_name = "gemini-2.5-flash-preview-04-17"
+            logger.info("Google GenAI client configured successfully using gemini-2.5-flash-preview-04-17")
         except Exception as e:
             logger.error(f"Failed to configure Google AI: {e}")
             raise
@@ -204,9 +205,14 @@ class CourseOutlineGenerator:
         for attempt in range(max_retries):
             try:
                 logger.info(f"Generating embeddings for {len(text_list)} chunks (attempt {attempt + 1}/{max_retries})")
-                result = genai.embed_content(model=model_name, content=text_list, task_type=task_type)
-                logger.info(f"Generated {len(result['embedding'])} embeddings")
-                return result['embedding']
+                resp = self.genai_client.models.embed_content(
+                    model=model_name,
+                    contents=text_list,
+                    config={"task_type": task_type.lower()},
+                )
+                embeddings = [e.values for e in (resp.embeddings or [])]
+                logger.info(f"Generated {len(embeddings)} embeddings")
+                return embeddings
             except Exception as e:
                 logger.warning(f"Embedding attempt {attempt + 1} failed: {e}")
                 if attempt == max_retries - 1: logger.error("All embedding attempts failed")
@@ -317,7 +323,15 @@ Based on the instructions and the source material provided above, generate the c
 """
             prompt = custom_prompt or default_prompt
             logger.info("Generating synthesized course outline with the Gemini model...")
-            response = self.generative_model.generate_content(prompt)
+            response = self.genai_client.models.generate_content(
+                model=self.model_name,
+                contents=prompt,
+            )
+            # response.text contains the combined text output
+            class _R: pass
+            _r = _R()
+            _r.text = getattr(response, 'text', None) or ''
+            response = _r
             if not response.text: raise ValueError("Received an empty response from the AI model.")
             logger.info("Course outline generated successfully.")
             return response.text

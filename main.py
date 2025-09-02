@@ -39,9 +39,9 @@ else:
 # Model used when creating text embeddings for the ChromaDB documents
 EMBED_MODEL = "models/embedding-001"
 # Directory where ChromaDB will persist its data
-CHROMA_PATH = "./chromadb_storage"
+CHROMA_PATH = getattr(config, "chroma_persist_dir", "./chromadb_storage") or "./chromadb_storage"
 # Metadata about processed PDF collections is stored here
-COLLECTIONS_JSON_PATH = "./collections.json"
+COLLECTIONS_JSON_PATH = getattr(config, "collections_json_path", "./collections.json") or "./collections.json"
 
 # --- ChromaDB Client ---
 chroma_client = None
